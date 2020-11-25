@@ -1,10 +1,67 @@
+%===============================================================
+%   Requirements Specification
+%===============================================================
+
 \documentclass[parskip=full]{scrartcl}
 \usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
 \usepackage[T1]{fontenc} % avoid garbled Unicode text in pdf
-\usepackage[german]{babel} % german hyphenation, quotes, etc
 \usepackage{hyperref} % detailed hyperlink/pdf configuration
-\hypersetup{ % ‘texdoc hyperref‘ for options
-pdftitle={PSE: Tipps},
-bookmarks=true,
-}
 \usepackage{csquotes} % provides \enquote{} macro for "quotes"
+\usepackage{graphicx} % embed graphics
+\usepackage[makeindex]{glossaries}
+\makeglossaries
+
+% definitions
+\newcommand{\pseAuthors}{authors here (TBD)} 
+\newcommand{\pseTitle}{Project Name (TBD)}
+\newcommand{\pseDocTitle}{Requirements Specification}
+
+\hypersetup{ % ‘texdoc hyperref‘ for options
+pdftitle={\pseDocTitle},
+pdfauthor={\pseAuthors}}
+\title{%
+    \pseTitle \\
+    \large \pseDocTitle}
+\author{\pseAuthors}
+\date{\today}
+
+% BEGIN DOCUMENT
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\tableofcontents
+
+\include{sections/product-overview}
+\newpage
+\include{sections/purpose}
+\newpage
+\include{sections/usage}
+\newpage
+\include{sections/operating-environment}
+\newpage
+\include{sections/functional-requirements}
+\newpage
+\include{sections/data}
+\newpage
+\include{sections/nonfunctional-requirements}
+\newpage
+\include{sections/system-models}
+\newpage
+\include{sections/user-interface}
+\newpage
+
+\section{??Qualitatszielbestimmung??}
+\newpage
+
+\include{sections/teststuff}
+\newpage
+\include{sections/dev-environment}
+\newpage
+
+\printglossary
+
+% END DOCUMENT
+\end{document}
