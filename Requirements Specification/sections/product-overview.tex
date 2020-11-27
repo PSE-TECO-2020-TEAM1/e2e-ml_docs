@@ -1,10 +1,11 @@
 \section{Product Overview}
 
-{\pseProjectName} is a software suite enabling it's users to create, edit and manage machine learning models on rapidly-changing sensor data. {\pseProjectName} consists of two primary components:
+ {\pseProjectName} is a web-tool enabling its users to create, edit and manage machine learning models on different sensor data. {\pseProjectName} consists of two primary components:
 
 \begin{enumerate}
-    \item A server application that handles model training and storage and makes these models available through a REST API. Supports multiple models and multiple users.
-    \item Client applications to manage and interact with the model, eg. adding new data points, identifying given data points and setting parameters for model training. A model can be utilized on different clients at the same time \emph{(maybe a little problematic, what happens if a client triggers training while the other one is supplying sensor data?)}. Clients have different capabilites depending on the platform, mobile clients allow input of new data points in form of raw sensor data, while desktop clients allow managmeent features. \emph{(automatic feature detection maybe, allow laptops with sensors to input sensor data too?, maybe as an optional criteria)}
+    \item A server application that handles model training and storage, and makes these models available through a REST API. Supports multiple models and multiple users.
+    \item Client applications to manage and interact with the model, e.g. adding new data points, identifying given data points and setting parameters for model training. A model can be utilized on different clients at the same time. Clients have different capabilites depending on the platform, mobile clients allow input of new data points in form of raw sensor data, while desktop clients allow management features.
 \end{enumerate}
 
-Both components together allow for a streamlined and easy-to-use machine learning experience for both the tech illiterate \emph{(a nicer synonym would be better)} and the expert.
+Both components together allow for a streamlined and easy-to-use machine learning experience for both the tech illiterate
+\emph{(a nicer synonym would be better)} and the expert.

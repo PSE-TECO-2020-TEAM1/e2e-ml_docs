@@ -11,6 +11,8 @@
 \usepackage[makeindex]{glossaries}
 \makeglossaries
 
+\loadglsentries{glossary}
+
 % definitions
 \newcommand{\pseAuthors}{authors here (TBD)} 
 \newcommand{\pseProjectName}{Project Name (TBD)}
@@ -62,7 +64,7 @@ pdfauthor={\pseAuthors}}
 \include{sections/dev-environment}
 \newpage
 
-\printglossary
+\printglossaries
 
 % END DOCUMENT
 \end{document}

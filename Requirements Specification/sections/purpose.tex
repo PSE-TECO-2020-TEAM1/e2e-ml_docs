@@ -1,52 +1,45 @@
 \section{Purpose}
 
-\subsection{Web Client}
-\subsubsection{Core criteria}
+
+
+% \subsection{Desktop Client}
+% \begin{itemize}
+% \end{itemize}
+
+\subsection{Core criteria}
 \begin{itemize}
-    \item The web page is the graphical user interface (GUI) for users and administrators.
-    \item Seperate web pages should be displayed on desktop and mobile devices. % (Can be more specific)
-    \item The desktop client presents a QR code that when scanned creates a new workspace and connects the mobile client to
-          this workspace.
-    \item The workspace serves a link to reaccess it.
-    \item The mobile web client allows for selecting the sensors the users wish to use.
+    \item The desktop client presents a QR code that when scanned by a mobile client connects it to the same \gls{workspace}.
+    \item The workspace provides a link to reaccess the workspace. 
+    \item The web pages are the graphical user interfaces (GUI) for users.
+    \item The desktop client allows management features.
+    \item The mobile web client allows input of new data points in form of raw sensor data.
+    \item The mobile web client allows for selecting the sensors the users wish to use. (e.g accelerometer)
     \item The mobile web client allows for labeling the recorded data.
     \item The mobile web client gives a real time feedback of sensor data to the user.
     \item The mobile web client sends the collected sensor data to the web server.
-    \item The desktop web client displays the collected samples and allows preprocessing and filtering.
+    \item The desktop web client displays the collected samples.
+    \item The desktop web client allows preprocessing and filtering of the data.
+    \item The features which were selected by the user are computed and stored in the database.
+    \item The sent sensor data is stored in the central database in a unified format.
+    \item Users can select a machine learning model they wish to use.
+    \item Users can change the hyperparameters of the machine learning model.
+    \item A model is trained and stored in the database.
     \item The mobile web client identifies the trained model in real time.
 \end{itemize}
-
-\subsubsection{Optional criteria}
+    
+\subsection{Optional criteria}
 \begin{itemize}
+    \item Links for previously accessed workspaces can be stored on the browser to ease reaccess.
     \item Other data capturing devices are supported, e.g. Arduino.
     \item The workspaces can be protected with a password.
     \item The mobile web client can define triggers if something is detected, e.g. play a sound.
-    \item The desktop web client can show performance metrics to the user.
+    \item The desktop web client can show performance metrics to the user. (OPTIONAL ?)
+    \item Access Control through read-only links
+    \item The user can train multiple models from the same data model.
 \end{itemize}
 
-\subsubsection{Exclusion criteria}
-\begin{itemize}
-    \item 
-\end{itemize}
-
-
-\subsection{Backend \emph{(change to Data Processing maybe?)}}
-\subsubsection{Core criteria}
-\begin{itemize}
-    \item The sent sensor data is stored in the central database in a unified format.
-    \item A selection of machine learning models are offered.
-    \item A model is trained and stored in the database.
-    \item The features which were selected by the user are computed and stored in the database.
-\end{itemize}
-
-\subsubsection{Optional criteria}
-\begin{itemize}
-    \item TBD
-\end{itemize}
-
-\subsubsection{Exclusion criteria}
+\subsection{Exclusion criteria}
 \begin{itemize}
     \item Auth (I honestly think it's outside of the scope of PSE, there are dozens of auth providers and every company already has it's own auth system in place (Shibboleth etc.) and we can't possibly support them all)
-    \item Access Control (Same reasoning as above)
     \item --> any sort of security
 \end{itemize}
