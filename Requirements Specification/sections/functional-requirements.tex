@@ -6,10 +6,9 @@ These functions must be implemented in order to fulfill the core criteria.
 \subsubsection{Web Client}
 The web client supports both desktop and mobile modes. The functionality that will be displayed is determined by the device information of the browser.
 
-The web client 
-
 \paragraph{Desktop Web Client}
 
+% improve on this with cross referencing, need to learn latex tho, later
 \def\twodigits#1{%
   \ifnum#1<10 0\fi
   \number#1}
@@ -19,26 +18,26 @@ The web client
     \item Provide a QR code on the welcome page to create a \gls{workspace}
     \item Show the management panel for a created workspace
     \item Display the collected data on the management panel
-    \item Enumerate the collected data chronologically
+    \item Enumerate the collected data chronologically on the management panel
     \item Allow naming of the model on the management panel
-    \item Allow selecting the possible actions on the data on the management panel % can be more specific
+    \item Allow creating new labels for the actions to be recorded
+    \item Allow selecting the possible actions on the data on the management panel % needs to be more specific % after ml workshop
     \item Request the processing of the data according to the selected options
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
 \begin{enumerate}[resume*]
-    \item Show a configuration page
-    \item Allow creating new labels for the actions to be recorded % before or after recording?
+    \item Show a configuration page with available labels
     \item Allow configuring the countdown duration until the recording starts
     \item Allow configuring the recording duration
-    \item Allow selecting the amount of data samples to be recorded %???
+    \item \textbf{Allow selecting the amount of data samples to be recorded ????} %???
     \item Allow configuring each sensor individually
     \item Show a button to initiate the recording
     \item Show a countdown page
     \item Display the configuration on the countdown page
     \item Show a recording page
     \item Display the sensor data in real-time as curve graphs
-    \item Show a recording completed page
+    \item Show a recording completed page % details in a later mockup?
 \end{enumerate}
 
 \subsubsection{Server API}
@@ -54,7 +53,7 @@ The web client
 
 \subsubsection{Data Processing}
 \begin{enumerate}[resume*]
-    \item TBD
+    \item \textbf{TBD, after workshop}
 \end{enumerate}
 
 \subsection{Extending Functions}
@@ -63,4 +62,5 @@ The web client
     \item Allow naming each data sample on the management panel
     \item Allow selecting existing data labels on the mobile client %?
     \item Delete an existing model in the workspace %Server API
+    \item \textbf{should the desktop client show data being collected in real time?}
 \end{enumerate}
