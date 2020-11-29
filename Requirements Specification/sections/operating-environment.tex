@@ -1,8 +1,28 @@
 \section{Operating Environment}
-TBD
+Database and the server appliance both run on a server, whereas different web browsers may be used for the clients. A Docker image may be provided for the server appliance.
 
 \subsection{Software}
-TBD
+\subsubsection{Server Appliance}
+\begin{itemize}
+    \item MongoDB support
+    \item Recent versions of node.js and python % are we using python at all, i'm still not that clear on the ML front
+\end{itemize}
+\subsubsection{Client Devices}
+\begin{itemize}
+    \item A modern web browser (Chrome 87+, Firefox 83+) supporting:
+    \begin{itemize}
+        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API}{Media Capture and Streams API}. % needed for qr code, 
+        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs}{Sensor APIs}
+        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API}{Web Storage API}
+    \end{itemize}
+\end{itemize}
 
 \subsection{Hardware}
-TBD
+\subsubsection{Server Appliance}
+\begin{itemize}
+    \item TBD (i really don't know if any hard requirements exist, we can always set something arbitrary tho, like 16 gigs of ram etc)
+\end{itemize}
+\subsubsection{Client Devices}
+\begin{itemize}
+    \item Video Device
+\end{itemize}
