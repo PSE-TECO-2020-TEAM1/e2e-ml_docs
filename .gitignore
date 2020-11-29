@@ -25,8 +25,9 @@
 # *.eps
 
 ## Generated if empty string is given at "Please type another file name for output:"
-
-# it's best if we leave this out for now as others don't know how to latex
+*.pdf
+# DON'T remove this, having this in the repo causes unnecessary merge problems
+# we can always use CI to create PDF on builds, lets not use git for that :)
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
