@@ -14,17 +14,24 @@ The web client supports both desktop and mobile modes. The functionality that wi
   \number#1}
 
 \begin{enumerate}[{label = \textbf{/F{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item Show a welcome page
-    \item Provide a QR code on the welcome page to create a \gls{workspace}
-    \item Show the management panel for a created workspace
-    \item Allow creating labels for the actions to be recorded
-    \item List and edit labels
-    \item Display the collected data on the management panel
+    \item Show a welcome page with the registration and login panel
+    \item List workspaces of the logged in user
+    \item Allow creating workspaces given the name and sensors to be used
+    \item List the available sensors for the recordings
+    \item Allow renaming workspaces
+    \item Show a workspace panel when a workspace is selected
+    \item Allow creating labels for the actions to be recorded on the workspace
+    \item List labels with their sample count
+    \item Allow renaming labels
+    \item Allow deleting labels which in turn deletes the data samples with the selected label
+    \item Display a link and the QR code with the same link embedded to be used for recording data
+    \item Display the collected data samples chronologically on the workspace panel
+    \item Display the date and time of the recording and data size of the selected sample
     \item Allow deleting samples
-    \item Enumerate the collected data chronologically on the management panel % maybe add different categories later as optional
     \item List the trained models
-    \item Allow naming of the model on the management panel
-    \item Allow selecting the possible actions on the data on the management panel % needs to be more specific % after ml workshop
+    \item Display the used parameters and data samples of the selected model
+    \item Display the performance metrics of the selected model
+    \item Allow selecting the possible options on the data on the management panel % needs to be more specific % after ml workshop
     \item Request the processing of the data according to the selected options
 \end{enumerate}
 
@@ -33,28 +40,28 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Show a configuration page with available labels
     \item Allow configuring the countdown duration until the recording starts
     \item Allow configuring the recording duration
-    \item Allow configuring each sensor individually
+    \item Allow configuring the sampling rate of the sensors
     \item Show a button to initiate the recording
     \item Show a countdown page
-    \item Display the configuration on the countdown page
+    \item Display the current configuration on the countdown page
     \item Show a recording page
     \item Display the sensor data in real-time as curve graphs
     \item Show a recording completed page
     \item Allow another recording with the same configurations
     \item Allow editing configurations for the next recording
-    \item Show a recording completed page with an option to go to the configuration page for a new recording% details in a later mockup?
 \end{enumerate}
 
 \subsubsection{Server API}
 \begin{enumerate}[resume*]
-    \item Generate and serve a link for a new workspace
-    \item Serve workspace information
-    \item Create labels
-    \item Rename labels
+    \item Serve authentication services
+    \item Serve workspace information for a user
+    \item Serve data set and recording link for a workspace
+    \item Create, rename and delete labels on a workspace
+    \item Serve label information to the mobile client
     \item Accept data from the mobile client
-    \item Create a model in the workspace
-    \item Rename a model
     \item Initiate the configured model training
+    \item Serve the model information on a workspace
+    \item Rename and delete models on a workspace
 \end{enumerate}
 
 \subsubsection{Data Processing}
@@ -64,9 +71,5 @@ The web client supports both desktop and mobile modes. The functionality that wi
 
 \subsection{Extending Functions}
 \begin{enumerate}[resume*]
-    \item Show the previously visited workspaces on the welcome page
-    \item Make the workspace link password protected
-    \item Delete an existing model in the workspace (Server API)
-    \item Create a read-only link for classifying (Server API)
-    \item \textbf{should the desktop client show data being collected in real time?}
+    \item Allow listing samples by label on the workspace panel
 \end{enumerate}
