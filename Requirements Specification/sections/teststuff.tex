@@ -11,21 +11,35 @@ basic requests.
         \item /T011/ via Google Chrome,
         \item /T012/ via Mozilla Firefox.
     \end{itemize}
-    \item /T020/ Create a new user.
-    \item /T020/ Login with existing credentials.
-    \item /T020/ Login with invalid credentials.
-    \item /T020/ Create a new workspace.
-    \item /T020/ Open an already existing workspace.
-    \item /T020/ Create new labels for recordings.
-    \item /T020/ Rename the workspace.
-    \item /T020/ Delete sample.
-    \item /T020/ Rename label.
-    \item /T020/ Delete label.
-    \item /T020/ 
+    \item /T020/ Create a new user. 010, 330
+    \item /T020/ Login with existing credentials. 010, 330
+    \item /T020/ Login with invalid credentials. 010, 330
+    \item /T020/ Open an already existing workspace. 020, 040, 060, 340
+    \item /T020/ Create a new workspace. 030
+    \item /T020/ Rename the workspace. 050
+    \item /T020/ Create new label. 070
+    \item /T020/ Rename label. 090
+    \item /T020/ Delete label. 100
+    \item /T020/ Delete sample. 140
+    \item /T020/ Scan QR code. 110
+    \item /T050/ Open the workspace link. 110
+    \item /T050/ Overview collected data. 120
+    \item /T050/ Overview an individual data sample. 130
+    \item /T050/ Overview trained models. 150
+    \item /T050/ Overview an individual model. 160
+    \item /T050/ Check performance metrics of a model. 170
+    \item /T050/ 180 ???
+    \item /T050/ 190 ???
     \item /T050/ 
-    \item /T040/ Select which sensors to use for recording.
-    \item /T050/ Set the duration for the countdown.
-    \item /T060/ 
+    \item /T050/ Choose a label for the recording. 200
+    \item /T040/ Select sensors to use for recording. 200
+    \item /T050/ Set the duration for the countdown. 210
+    \item /T060/ Set the duration of the recording. 220
+    \item /T050/ Set the sampling rate. 230
+    \item /T050/ Record with specified configuration. 240, 250, 260, 290, 300
+    \item /T050/ Overview sensor data whilst recording. 270, 280
+    \item /T050/ Record again with same configuration. 310
+    \item /T050/ Record again with different configuration. 320
 \end{itemize}
 \subsubsection{Extending Test Cases}
 \subsection{Test Scenarios}
