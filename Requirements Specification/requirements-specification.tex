@@ -15,10 +15,16 @@
 \makeglossaries
 
 \loadglsentries{glossary}
-
+ 
 % definitions
-\newcommand{\pseAuthors}{authors here (TBD)} 
-\newcommand{\pseProjectName}{Project Name (TBD)}
+\newcommand{\pseAuthors}{
+    \parbox{\linewidth}{\centering
+Tarek Gaddour\\
+Atalay Donat\\
+Ömer Erdinç Yagmurlu\\
+Mustafa Enes Batur\\
+Murat Kurnaz\\}}
+\newcommand{\pseProjectName}{An Interactive Data Collection and Labeling Web-Tool with Meta-Learning}
 \newcommand{\pseTitle}{\pseProjectName}
 \newcommand{\pseDocTitle}{Requirements Specification}
 
@@ -35,7 +41,7 @@ pdfauthor={\pseAuthors}}
 \begin{document}
 
 \begin{titlepage}
-\maketitle
+    \maketitle
 \end{titlepage}
 
 \tableofcontents
