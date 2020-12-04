@@ -11,7 +11,7 @@
 \usepackage{hyperref} % detailed hyperlink/pdf configuration
 \usepackage{csquotes} % provides \enquote{} macro for "quotes"
 \usepackage{graphicx} % embed graphics
-\usepackage[makeindex]{glossaries}
+\usepackage[toc]{glossaries}
 
  
 % definitions
@@ -26,15 +26,23 @@ pdfauthor={\pseAuthors}}
 \title{%
     \pseTitle \\
     \large \pseDocTitle}
-\author{\pseAuthors}
-\date{\today}
-
+    \date{\today}
+    
 \makenoidxglossaries
 \loadglsentries{glossary}
 \begin{document}
 
 \begin{titlepage}
     \maketitle
+    \begin{center}
+        \begin{tabular}{ r l }
+            Requirements Specification & \textbf{Murat Kurnaz}         \\
+            Design                     & \textbf{Mustafa Enes Batur}   \\
+            Implementation             & \textbf{Ömer Erdinç Yağmurlu} \\
+            QA / Testing               & \textbf{Tarek Gaddour}        \\
+            Final                      & \textbf{Atalay Donat}         \\
+        \end{tabular}
+    \end{center}
 \end{titlepage}
 
 \tableofcontents

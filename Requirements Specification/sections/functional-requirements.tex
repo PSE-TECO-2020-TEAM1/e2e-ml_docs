@@ -8,7 +8,6 @@ The web client supports both desktop and mobile modes. The functionality that wi
 
 \paragraph{Desktop Web Client}
 
-% improve on this with cross referencing, need to learn latex tho, later
 \def\twodigits#1{%
   \ifnum#1<10 0\fi
   \number#1}
@@ -26,15 +25,16 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Allow deleting labels which in turn deletes the data samples with the selected label
     \item Display a link and the QR code with the same link embedded to be used for recording data
     \item Display the collected data samples chronologically on the workspace panel
-    \item Display the metadata recording and allow selecting the relevant timeframes of the sample
-    \item Allow relabeling and deleting samples
-    \item Allow selecting the possible model training options on the management panel % needs to be more specific % after ml workshop
+    \item Display the metadata of the recording
+    \item Allow selecting the relevant timeframes of the sample
+    \item Allow relabeling samples
+    \item Allow deletion of samples
+    \item Allow selecting the possible model training options on the management panel 
     \item Request training and deploying a model according to the selected options
-    \item List the trained models
-    \item Display the used parameters and data samples of the selected model
+    \item List trained models
+    \item Display the used parameters of the selected model
     \item Display the performance metrics of the selected model
     \item Display a link and the QR code with the same link embedded to be used for classifying data
-    % \item Request the processing of the data according to the selected options
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
@@ -60,6 +60,7 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Serve authentication services
     \item Serve workspace information for a user
     \item Serve data set and recording link for a workspace
+    \item Allow editing the data set, e.g. for editing the label time frames and relabeling
     \item Create, rename and delete labels on a workspace
     \item Serve label information to the mobile client
     \item Accept data from the mobile client
@@ -76,5 +77,6 @@ The web client supports both desktop and mobile modes. The functionality that wi
 \subsection{Extending Functions}
 \begin{enumerate}[resume*]
     \item Allow listing samples by label on the workspace panel
-    \item Give non-visual feedback (e.g play a sound) to user if the identification is successful
+    \item \label{/F480/} Give non-visual feedback (e.g play a sound) to user if the identification is successful
+    \item Display the data samples used to train the selected model
 \end{enumerate}

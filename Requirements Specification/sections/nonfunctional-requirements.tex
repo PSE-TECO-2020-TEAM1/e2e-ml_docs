@@ -1,31 +1,31 @@
 \section{Nonfunctional Requirements}
 \subsection{Usability}
 \begin{itemize}
-    \item /N010/ User does not need to register to use the web-tool.
-    \item /N020/ User should be able to record a new sample in less then 3 interactions. %(alternative word for click ?)
-    \item /N030/ User should be able to train and deploy the machine learning model (/FXXX/) with a single click. %referencing
+    \item /N010/ User needs to register to use the web-tool.
+    \item /N020/ Once logged in, the user should be able to record a new sample in less than 5 interactions.
+    \item /N030/ Usage of the web-tool is self explanatory.
+    \item /N040/ Users should be able to train and deploy the machine learning model with a single click.
 \end{itemize}
 \subsection{Swiftness}
 \begin{itemize}
-    \item \textbf{lazy load components?}
-    \item /N040/ Sth about page load speed - might be too restrictive, cannot assess yet. % lighthouse
+    \item /N050/ Initial page load takes under 5 seconds.
+    \item /N060/ Consecutive accesses load under 1 second.
 \end{itemize}
 \subsection{Maintainability}
 \begin{itemize}
-    \item /N050/ Codebase is well documented to ease bug fixes.
+    \item /N070/ Codebase is well documented to ease bug fixes.
+    \item /N080/ Test coverage is more than 80 percent.
 \end{itemize}
 \subsection{Portability}
 \begin{itemize}
-    \item /N060/ Desktop web client /FXXX/ should be functioning on browsers newer than Chrome version XX, Firefox version XX, \dots
-    \item /N061/ Mobile web client /FXXX/  should be functioning on browsers newer than Chrome version XX, Firefox version XX. \dots
+    \item /N090/ Desktop web client should be functioning on browsers newer than Chrome version 87, Firefox version 83.
+    \item /N091/ Mobile web client should be functioning on browsers newer than Chrome version 87, Firefox version 83.
 \end{itemize}
 \subsection{Security}
 \begin{itemize}
-    \item /N070/ A workspace is inaccessible to other users without the QR code or the link to the workspace.
+    \item /N100/ A workspace is inaccessible to other users without the QR code or the link to the workspace.
 \end{itemize}
 \subsection{Scalability}
 \begin{itemize}
-    \item /N090/ A maximum of 10.000 ?? workspaces with a maximum of 10 ?? users at the same time is supported. 
+    \item /N110/ A maximum of 500 workspaces with a maximum of 100 users at the same time is supported. 
 \end{itemize}
-
-%(Compatibility, Reliability, Localization, ?? )

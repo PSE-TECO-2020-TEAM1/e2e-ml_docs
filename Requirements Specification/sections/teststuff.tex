@@ -28,8 +28,7 @@ basic requests.
     \item Overview trained models. 150
     \item Overview an individual model. 160
     \item Check performance metrics of a model. 170
-    \item 180 ???
-    \item 190 ???
+    \item Train and deploy a model. 190
     \item Set the duration of the recording. 220
     \item Set the sampling rate. 230
     \item Record with specified configuration. 240, 250, 260, 290, 300
@@ -42,6 +41,7 @@ basic requests.
 The test scenarios are composed of the mentioned test cases. Starred test scenarios indicate that the scenario includes extending functionalities.
 \subsubsection{Test Scenario 1 - First time user}
 A user who is new to machine learning applications opens the webpage on their computer and registers to the service. The user collects data using the default configuration with their phone and creates a machine learning model. The user then uses this model to identify new data they record. 
+\newpage
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T020/ Create a new user.
@@ -50,13 +50,15 @@ A user who is new to machine learning applications opens the webpage on their co
     \item /T120/ Scan QR code.
     \item /T270/ Record with specified configuration.
     \item /T290/ Record again with same configuration.
-    \item 
+    \item /T190/ Train and deploy a model.
 \end{enumerate}
 \subsection{Test Scenario 2 - Invalid credentials}
 User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T030/ Login with invalid credentials.
+    \item /T030/ Login with invalid credentials.
     \item /T030/ Login with existing credentials.
 \end{enumerate}
 \subsection{Test Scenario 3 - }
+TBD
