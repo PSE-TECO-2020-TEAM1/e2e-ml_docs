@@ -6,7 +6,7 @@ These test cases are necessary for the web-tool to work properly and succeed in 
 basic requests.
 
 \begin{enumerate}[{label = \textbf{/T{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item Access web page (/F010/)
+    \item Access web page \hyperref[/F010/]{/F010/}
     \begin{itemize}
         \item \textbf{/T011/} via Google Chrome,
         \item \textbf{/T012/} via Mozilla Firefox.
@@ -30,10 +30,6 @@ basic requests.
     \item Check performance metrics of a model. 170
     \item 180 ???
     \item 190 ???
-    \item 
-    \item Choose a label for the recording. 200
-    \item Select sensors to use for recording. 200
-    \item Set the duration for the countdown. 210
     \item Set the duration of the recording. 220
     \item Set the sampling rate. 230
     \item Record with specified configuration. 240, 250, 260, 290, 300
@@ -43,4 +39,24 @@ basic requests.
 \end{enumerate}
 \subsubsection{Extending Test Cases}
 \subsection{Test Scenarios}
-TBD
+The test scenarios are composed of the mentioned test cases. Starred test scenarios indicate that the scenario includes extending functionalities.
+\subsubsection{Test Scenario 1 - First time user}
+A user who is new to machine learning applications opens the webpage on their computer and registers to the service. The user collects data using the default configuration with their phone and creates a machine learning model. The user then uses this model to identify new data they record. 
+\begin{enumerate}
+    \item /T010/ Access web page.
+    \item /T020/ Create a new user.
+    \item /T030/ Login with existing credentials.
+    \item /T060/ Create a new workspace.
+    \item /T120/ Scan QR code.
+    \item /T270/ Record with specified configuration.
+    \item /T290/ Record again with same configuration.
+    \item 
+\end{enumerate}
+\subsection{Test Scenario 2 - Invalid credentials}
+User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
+\begin{enumerate}
+    \item /T010/ Access web page.
+    \item /T030/ Login with invalid credentials.
+    \item /T030/ Login with existing credentials.
+\end{enumerate}
+\subsection{Test Scenario 3 - }
