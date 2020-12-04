@@ -12,9 +12,7 @@
 \usepackage{csquotes} % provides \enquote{} macro for "quotes"
 \usepackage{graphicx} % embed graphics
 \usepackage[makeindex]{glossaries}
-\makeglossaries
 
-\loadglsentries{glossary}
  
 % definitions
 \newcommand{\pseAuthors}{TBD}
@@ -31,7 +29,8 @@ pdfauthor={\pseAuthors}}
 \author{\pseAuthors}
 \date{\today}
 
-% BEGIN DOCUMENT
+\makenoidxglossaries
+\loadglsentries{glossary}
 \begin{document}
 
 \begin{titlepage}
@@ -63,9 +62,8 @@ pdfauthor={\pseAuthors}}
 \include{sections/teststuff}
 \newpage
 \include{sections/dev-environment}
-\newpage
 
-\printglossaries
+\printnoidxglossary
 
 % END DOCUMENT
 \end{document}
