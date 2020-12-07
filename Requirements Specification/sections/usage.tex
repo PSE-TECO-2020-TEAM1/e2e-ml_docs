@@ -2,21 +2,18 @@
 \subsection{Area of Application}
 The application is for collecting and labeling sensor data, training a model from the collected data and serving the stored resulting model to the user to classify actions in real time.
 
-\subsection{Use Case Examples}
-\fbox{\parbox{\textwidth}{\label{ocfrank} Frank has sparse knowledge of machine learning. He just discovered “Explorer”. On the website that he views using his laptop, he creates a new account. After logging in, he creates a new workspace by selecting sensors to sample data (e.g., accelerometer). He sets up some simple labels (e.g. swipe right, swipe left). After opening the QR code of the workspace, he can select the action to perform on his phone from the available labels. He can also set the duration for a recorded sample and a countdown that is shown before recording. He performs some simple swipe gestures by moving his phone mid-air. The recorded data is labeled and is pushed to the laptop where he can see the data coming in. With a single click he can build a machine learning model that is immediately available on his smartphone to classify gestures.}}
-
-\fbox{\parbox{\textwidth}{\label{ocalice} Alice is an engineer at a washing machine company. Alice has been observing that HCSOB washing machines with clogged circulating pumps show an unusual pattern of movement during the washing process (error reference 404). The washing machine is moving in a specific rhythm, which Alice recognizes when she is at the customer’s home. However, Alice would rather make a diagnosis without having to go to the customer. Then she remembers the program "Explorer" which she can use to easily develop machine learning models. With the help of the smartphone acceleration sensors in her cell phone, she and her colleagues record the movement patterns at some of her repair sites. After she has collected enough data, she can use the Explorer program to automatically train and deploy a machine learning model with one click. When a new case comes in, Alice just sends the customer a URL to a website of the Explorer. The customer places his smartphone on the washing machine and the model can determine directly "on the edge" whether error 404 is present. This saves Alice money and time. Alice can order the parts for repair and perform the repair with a single visit.}}
-
 \subsection{Target Groups}
-The target audience of this application is people that want to create a machine learning model from mobile sensor data.
-That includes:
+The target audience of this application is people that want to create a machine learning model from mobile sensor data.That includes:
 \begin{itemize}
-    \item Inexperienced people (e.g. \hyperref[ocfrank]{Frank} in the first use case), who are new to machine learning and want an easy tool to discover machine learning and create models they can use.
-    \item Experienced engineers (e.g \hyperref[ocalice]{Alice} in the second use case), that have knowledge of machine learning but need a fast tool to collect data and create a model.
+    \item Inexperienced people who are new to machine learning and want an easy tool to discover machine learning and create models they can use.
+    \item Experienced engineers that have knowledge of machine learning but need a fast tool to collect data and create a model.
 \end{itemize}
-We assume a rather technical audience who has basic knowledge of how to use a web browser in a desktop and mobile client.
+We assume a rather technical audience who has basic knowledge of how to use a web browser in a desktop and mobile client See \hyperref[Use Cases]{\textbf{Use Cases}} for concrete examples.
 
 \subsection{Operating Conditions}
-The tool is a web application that can be run on any modern browser. Specific versions can be found in the operating environment section. A web browser must be installed on the user device to view the webpage. The application can be used from anywhere with a decent network connection.
+The tool is a web application that can be run on modern browsers. Specific versions can be found in the operating environment section. A web browser must be installed on the user device to view the webpage.
 
-Service Duration: 24 hours a day
+\textbf{Service Duration}: 24 hours a day
+\newline
+\newline
+\textbf{Service Environment}: The application can be used anywhere with a network connection. At least 1 Megabit/s upload speed is recommended for the mobile client to push the recorded data.

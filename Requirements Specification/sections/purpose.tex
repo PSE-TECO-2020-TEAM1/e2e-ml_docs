@@ -1,4 +1,5 @@
 \section{Purpose}
+A web tool that supports the entire machine learning process: from data collection to model deployment.
 
 \subsection{Core criteria}
 \begin{itemize}
@@ -6,28 +7,30 @@
     \item Users register a new account or login with their existing accounts to use the tool. The users are presented with their own set of workspaces after logging in or a prompt to create a new workspace if they do not have one.
     \item When creating a new workspace, the user chooses a name for their new workspace and the sensors that they wish to use when recording samples and classifying actions.
     \item The desktop client allows creating new labels and renaming the existing ones for the actions to be recorded in the workspace. It also shows the amount of recorded samples with the label. 
-    \item The desktop client presents a QR code specific to the selected workspace. The code connects the mobile client to the same \gls{workspace} when scanned.
-    \item The mobile web client allows recording of data samples in form of raw sensor data. The user chooses the label for which they wish to record. The recording parameters like sampling rate, countdown and recording duration can be configured.
+    \item The desktop client presents a QR for data collection. The code connects the mobile client to the same \gls{workspace} when scanned. Each workspace has its own unique QR code for data collection and the recorded data is only visible to the workspace that has served the QR code.
+    \item The mobile web client allows recording of data samples in form of raw sensor data. The user chooses the label for which they wish to record. Countdown and recording durations can be configured.
     \item The mobile web client gives a real time feedback of sensor data to the user during the recording period.
     \item Recorded data samples are stored in a database and displayed chronologically on the desktop web client. The user can view the metadata of the sample by clicking on it. The user can also view the data as a time graph on which he can label the relevant time frames. The user can remove or relabel samples.
     \item The desktop web client presents the user options/features \textbf{(Can we be more specific here somehow?)} to train a model with the data set of the workspace.
-    \item Trained and available models are listed on the desktop web client. The user can view the metadata of each model, e.g. parameters and data samples used for the training or performance metrics by clicking on the model.
+    \item Trained and available models of the current workspace are listed on the desktop web client. The user can view the metadata of each model, e.g. parameters and data samples used for the training or performance metrics\textbf{Add concrete metrics here} by clicking on the model.
     \item Each model is assigned a link which the user can use on a mobile device to classify action with the respective model. This identification happens in real time. The user can view the link as well as the QR code with the same link embedded to ease usage.
 \end{itemize}
 
 \subsection{Optional criteria}
 \begin{itemize}
     \item The desktop web client serves a "Stay Signed In" functionality.
-    \item Other data capturing devices are supported, e.g. Arduino.
     \item The desktop web client displays a status sign if a data collecting device is currently connected to the workspace, e.g. a green sign if connected and a red sign otherwise.
     \item The mobile web client can define triggers if something is detected, e.g. play a sound.
     \item Workspaces can be deleted together with the related data samples.
     \item Data samples can be transferred between compatible workspaces.
+    \item \textbf{Add more optional criteria}
 \end{itemize}
 
 \subsection{Exclusion criteria}
 \begin{itemize}
     \item The mobile web client does not implement a QR code scanner.
     \item The user cannot change the sensors used in a workspace.
-    \item Each web page is designed for either a desktop device or a mobile device. Trying to display a web page in an unsupported device has undefined behavior.
+    \item Each web page is designed for either a desktop device or a mobile device.
+    \item Trying to display a web page in an unsupported device shows an error to the client.
+    \item \textbf{Discuss if multiple users can share a workspace. (I think not)}
 \end{itemize}
