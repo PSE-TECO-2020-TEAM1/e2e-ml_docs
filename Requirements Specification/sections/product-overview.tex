@@ -4,13 +4,13 @@
 
 \begin{enumerate}
     \item \textbf{Desktop Web Client Application}
-    The desktop web client application lets the clients manage their data and train/deploy models. Managing the data set includes creating seperate workspaces, configuring sensors, creating new labels for the data and labeling the individual samples on an interactive graph.
+    The desktop web client application lets the clients create workspaces, manage their data and train/deploy models. Managing the data set includes creating new labels for the data and labeling the individual samples on an interactive graph.
 
-    \item \textbf{Mobile Application Client Application}
-    The mobile web client application lets the clients add new data samples or classify actions via the sensors of their devices. For the data recording, the clients can choose a label for the recording, set a countdown to recording duration and set the recording duration. For the classifying of the actions, the clients perform an action and the classification happens in real time.
+    \item \textbf{Mobile Web Client Application}
+    The mobile web client application lets the clients add new data samples or classify actions via the sensors of their devices. For the data recording, the clients can choose a label for the recording, set a countdown duration before recording and set the recording duration. To \gls{classify} an action, the clients perform the action and the classification happens in real time.
 
     \item \textbf{Server Application}
-    The server application makes services available via a REST API. Main functions of the server are handling the feature preprocessing, feature extraction, model deployment, model training, data storage and serving the web clients.
+     Main functions of the server are handling the feature preprocessing, feature extraction, model deployment, model training, data storage and serving the web clients. The server application makes services available via a REST API. \textbf{\emph{(Should it be stated that these services are seperate components?)}}
 \end{enumerate}
 
-Both components together allow for a streamlined and easy-to-use machine learning experience for the unexperienced and the expert.
+These components together allow for a streamlined and easy-to-use machine learning experience for the unexperienced and the expert.

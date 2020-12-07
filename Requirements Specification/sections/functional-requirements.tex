@@ -13,9 +13,10 @@ The web client supports both desktop and mobile modes. The functionality that wi
   \number#1}
 
 \begin{enumerate}[{label = \textbf{/F{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item \label{/F010/} Show a welcome page with the registration and login panel
-    \item List workspaces of the logged in user
-    \item Allow creating workspaces given the name and sensors to be used
+    \item \label{/F010/} Show a welcome page with a login panel when the website is accessed
+    \item Show registration panel when clicked on register in the welcome page
+    \item List workspaces when logged in
+    \item Allow creating workspaces with the given name, sensors to be used and their sampling rate
     \item List the available sensors for the recordings
     \item Allow renaming workspaces
     \item Show a workspace panel when a workspace is selected
@@ -25,16 +26,18 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Allow deleting labels which in turn deletes the data samples with the selected label
     \item Display a link and the QR code with the same link embedded to be used for recording data
     \item Display the collected data samples chronologically on the workspace panel
-    \item Display the metadata of the recording
-    \item Allow selecting the relevant timeframes of the sample
+    \item Display a curve graph that represents the data sample as a function of time \textbf{\emph{(more clear)}}
+    \item Display the metadata of the recording, i.e identifier of the recording device and recording date/time
+    \item Allow setting the start/end time of the labeled action on the graph view of the data sample
     \item Allow relabeling samples
     \item Allow deletion of samples
-    \item Allow selecting the possible model training options on the management panel 
-    \item Request training and deploying a model according to the selected options
+    \item Allow selecting the possible model training options \textbf{\emph{(which?)}} on the management panel 
+    \item Request training and deploying \textbf{\emph{(split)}} a model according to the selected options
     \item List trained models
     \item Display the used parameters of the selected model
-    \item Display the performance metrics of the selected model
-    \item Display a link and the QR code with the same link embedded to be used for classifying data
+    \item Display the performance metrics \textbf{\emph{(which?)}} of the selected model
+    \item Display a link to be used for classifying data
+    \item Display the QR code with the same link embedded
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
@@ -44,18 +47,17 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Allow configuring the recording duration
     \item Allow configuring the sampling rate of the sensors
     \item Show a button to initiate the recording
-    \item Show a countdown page
-    \item Display the current configuration on the countdown page
-    \item Show a recording page
-    \item Display the sensor data in real-time as curve graphs
-    \item Show a recording completed page
+    \item Show a countdown page with the current configuration on display \textbf{\emph{more precise}}
+    \item Show a recording page \textbf{\emph{more precise}}
+    \item Display the sensor data in real-time as curve graphs \textbf{\emph{more precise}}
+    \item Show a recording completed page \textbf{\emph{more precise}}
     \item Allow discarding the last recording
     \item Send the sensor data to the server
     \item Allow another recording with the same configurations
     \item Allow editing configurations for the next recording
 \end{enumerate}
 
-\subsubsection{Server API}
+\subsubsection{Server API} \textbf{\emph{more precise}}
 \begin{enumerate}[resume*]
     \item Serve authentication services
     \item Serve workspace information for a user

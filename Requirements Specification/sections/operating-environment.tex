@@ -1,20 +1,33 @@
 \section{Operating Environment}
+\textbf{\emph{(Add OS versions)}}
+
 Database and the server appliance both run on a server, whereas different web browsers may be used for the clients. A Docker image may be provided for the server appliance.
 
 \subsection{Software}
 \subsubsection{Server Appliance}
 \begin{itemize}
     \item MongoDB support
-    \item Recent versions of Node.js and Python 
+    \item Node.js 14.15.1+ and Python 3.9+
 \end{itemize}
 \subsubsection{Client Devices}
 \begin{itemize}
-    \item A modern web browser (Chrome 87+, Firefox 83+) supporting:
+    \item A modern desktop web browser (Chrome 87+, Firefox 83+) supporting:
+    \begin{itemize}
+        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API}{Web Storage API}
+    \end{itemize}
+    \item A modern mobile web browser (\textbf{\emph{Versions}}) supporting:
     \begin{itemize}
         \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs}{Sensor APIs}
-        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API}{Web Storage API}
     \end{itemize}
 \end{itemize}
 
-\subsection{Hardware} % omer
+\subsection{Hardware}
+\textbf{\emph{Unspecific, try to estimate}}
+
 The server has to be fast enough to support all clients. This depends on the expected number of clients. Most computations will be done on the server. Because of this reason there is no hard requirements for the client.
+
+\subsection{Orgware}
+\textbf{\emph{TBD}}
+
+\subsection{Product Interface}
+\textbf{\emph{TBD}}
