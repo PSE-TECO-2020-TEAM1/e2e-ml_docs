@@ -7,10 +7,11 @@
     The desktop web client application lets the clients create workspaces, manage their data and train/deploy models. Managing the data set includes creating new labels for the data and labeling the individual samples on an interactive graph.
 
     \item \textbf{Mobile Web Client Application}
-    The mobile web client application lets the clients add new data samples or classify actions via the sensors of their devices. For the data recording, the clients can choose a label for the recording, set a countdown duration before recording and set the recording duration. To \gls{classify} an action, the clients perform the action and the classification happens in real time.
+    The mobile web client application lets the clients add new data samples or classify actions via the accelerometer and gyroscope sensors of their devices. For the data recording, the clients can choose a label for the recording, set a countdown duration before recording and set the recording duration. To \gls{classify} an action, the clients perform the action and the classification happens in real time.
 
     \item \textbf{Server Application}
-     Main functions of the server are handling the feature preprocessing, feature extraction, model deployment, model training, data storage and serving the web clients. The server application makes services available via a REST API. \textbf{\emph{(Should it be stated that these services are seperate components?)}}
+     Main functions of the server are handling the machine learning process (feature extraction and preprocessing, model training and deployment), data storage and serving the web clients, all of which are implemented independently from one another. These are then made available via a REST API. 
+     
 \end{enumerate}
 
 These components together allow for a streamlined and easy-to-use machine learning experience for the unexperienced and the expert.

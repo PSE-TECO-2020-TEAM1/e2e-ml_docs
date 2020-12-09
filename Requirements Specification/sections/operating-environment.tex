@@ -1,21 +1,22 @@
 \section{Operating Environment}
-\textbf{\emph{(Add OS versions)}}
 
-Database and the server appliance both run on a server, whereas different web browsers may be used for the clients. A Docker image may be provided for the server appliance.
+Database and the server appliance both run on a server, whereas different web browsers may be used for the clients.
 
 \subsection{Software}
 \subsubsection{Server Appliance}
+A Docker image is provided with the project. The Docker image includes the following software:
 \begin{itemize}
     \item MongoDB support
-    \item Node.js 14.15.1+ and Python 3.9+
+    \item Node.js 14 LTS and Python 3.8
 \end{itemize}
 \subsubsection{Client Devices}
+Client interface is implemented using React 17.
 \begin{itemize}
     \item A modern desktop web browser (Chrome 87+, Firefox 83+) supporting:
     \begin{itemize}
         \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API}{Web Storage API}
     \end{itemize}
-    \item A modern mobile web browser (\textbf{\emph{Versions}}) supporting:
+    \item A modern mobile web browser (Chrome 87+, Firefox 83+) supporting:
     \begin{itemize}
         \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs}{Sensor APIs}
     \end{itemize}
@@ -24,10 +25,9 @@ Database and the server appliance both run on a server, whereas different web br
 \subsection{Hardware}
 \textbf{\emph{Unspecific, try to estimate}}
 
-The server has to be fast enough to support all clients. This depends on the expected number of clients. Most computations will be done on the server. Because of this reason there is no hard requirements for the client.
+The server supports 300 clients at the same time. The application needs a minimum of 64 GBs of system memory and minimum 16 CPU cores. Most computations will be done on the server. Because of this reason there are no hard requirements for the client.
 
 \subsection{Orgware}
-\textbf{\emph{TBD}}
+The server needs a internet throughput of 1 GBit/s with maximum latency of 1000 ms to clients to facilitate real-time action classification.
 
 \subsection{Product Interface}
-\textbf{\emph{TBD}}
