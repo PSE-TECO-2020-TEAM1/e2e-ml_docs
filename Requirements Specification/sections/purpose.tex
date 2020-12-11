@@ -4,16 +4,16 @@ A web-tool that supports the entire machine learning process: from data collecti
 \subsection{Core criteria}
 \begin{itemize}
     \item The web pages are the graphical user interfaces (GUI) for users.
-    \item Users register a new account or login with their existing accounts to use the tool. The users are presented with their own set of workspaces after logging in or a prompt to create a new workspace if they do not have one.
+    \item Users register a new account or login with their existing accounts to use the tool. After logging in, the users are presented with their own set of workspaces and a button to create a new workspace.
     \item When creating a new workspace, the user chooses a name for their new workspace, the sensors that they wish to use in the workspace and their sampling rate when recording samples and classifying actions. Supported sensors are accelerometer and gyroscope.
     \item The desktop client allows creating new labels and renaming the existing ones for the actions to be recorded in the workspace. It also shows the amount of recorded samples with the label. 
     \item The desktop client presents a QR code for data collection. The code connects the mobile client to the same \gls{workspace} when scanned. Each workspace has its own unique QR code for data collection and the recorded data is only visible to the workspace that has served the QR code.
     \item The mobile web client allows recording of data samples in form of raw sensor data. The user chooses the label for which they wish to record. Countdown and recording durations can be configured.
     \item The mobile web client gives a real time feedback of sensor data to the user during the recording period.
     \item Recorded data samples are stored in a database and displayed chronologically on the desktop web client. The user can view the metadata of the sample by clicking on it. The user can also view the data as a time graph on which he can label the relevant time frames. The user can remove or relabel samples.
-    \item The desktop web client presents the user feature extraction (min, max, mean, variance, skew and kurtosis) and feature preprocessing (RobustScaler, Normalizer, StandardScaler and MinMaxScaler) options.
-    \item The desktop web client allows training a model with the selected learning method (RandomForestClassifier and C-SVC), the selected options and the data set of the workspace.
-    \item Trained and available models of the current workspace are listed on the desktop web client. The user can view the metadata of each model, e.g. parameters and data samples used for the training or performance metrics (precision, accuracy and F1 scores) by clicking on the model.
+    \item The desktop web client presents the user feature extraction and feature preprocessing options.\footnote{\label{exact}Exact details can be found in the functional requirements}
+    \item The desktop web client allows training a model with the selected learning method, the selected options and the data set of the workspace.\textsuperscript{\ref{exact}}
+    \item Trained and available models of the current workspace are listed on the desktop web client. The user can view the metadata of each model, e.g. parameters and data samples used for the training or performance metrics by clicking on the model.\textsuperscript{\ref{exact}}
     \item Each model in a workspace is assigned a link which the user can use on a mobile device to classify action with the respective model. This identification happens in real time. The user can view the link as well as the QR code with the same link embedded to ease usage.
 \end{itemize}
 
@@ -26,10 +26,10 @@ A web-tool that supports the entire machine learning process: from data collecti
     \item Data samples can be transferred between compatible workspaces.
     \item Labels will have a description that can be edited on how the action has to be performed. This description will be shown on the mobile client when a data with that label is recorded.
     \item A single workspace can be shared among several accounts.
-    \item The desktop web client can also present more feature extraction and feature preprocessing options.
     \item The GUI can support several languagues.
     \item Other sensors can also be supported.
-    \item \textbf{\emph{ADD OPTIONAL}}
+    \item "Forgot password" option is presented to user on the desktop web client to recover credentials.
+    \item A CAPTCHA technology is implemented to prevent brute force attacks.
 \end{itemize}
 
 \subsection{Exclusion criteria}
