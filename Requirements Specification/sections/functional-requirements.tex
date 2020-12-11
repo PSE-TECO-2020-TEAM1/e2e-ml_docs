@@ -30,10 +30,10 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Display QR code with the same link in the previous function embedded to be used for recording data
     \item Display the collected data samples chronologically on the workspace panel
     \item Display the selected data sample as a graphs (line plot, bar plot, box plot, histogram, distplot, heatmaps, 2D and 3D Scatter plot)
-    \item Display the metadata of the recording (identifier of the recording device and recording date/time)
-    \item Allow setting the start/end time of the labeled actions on the graph view of the data sample
-    \item Allow relabeling data samples
-    \item Allow deletion of data samples
+    \item Display the metadata of the selected data sample (identifier of the recording device and recording date/time)
+    \item Allow setting the start/end time of the labeled actions on the graph view of the selected data sample
+    \item Allow relabeling the selected data sample
+    \item Allow deletion of the selected data sample
     \item Allow selecting data imputation options on the management panel: \\mean imputation, last observation carried forward imputation, linear or spline interpolation, moving average imputation
     \item Allow selecting feature extration options on the management panel: \\min, max, variance, energy, autoregressive correlation, mean, IQR, pearson correlation, skewness, kurtosis, fourier transform
     \item Allow selecting normalization options on the management panel: \\MinMaxScaler, Normalizer, QuantileTransformer, RobustScaler, StandardScaler
@@ -56,17 +56,23 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Show a countdown page with the current configuration on display (sensors used, sampling rate and label)
     \item Display the sensor data in real-time as curves for each sensor on a single graph
     \item Show a recording completed page when the recording duration times out
-    \item Allow discarding the completed recording
-    \item Allow another recording with the same configurations
+    \item Allow discarding the last recording
+    \item Allow another recording with the same configuration
     \item Allow editing configurations for the next recording
+    \item Show a classifying page when the link of a model is opened
+    \item Start listening to the sensor data of the mobile device right after the page is loaded
+    \item Display the sensor data in real-time as curves for each sensor on a single graph
+    \item Display the classified actions on the classifying window in real time
+    \item Allow stopping and resuming recording
+    \item Display the classified actions as a chronological list when the recording is stopped
 \end{enumerate}
 
-\subsubsection{Server API} \textbf{\emph{more precise}}
+\subsubsection{Server API}
 \begin{enumerate}[resume*]
     \item Serve authentication services
     \item Serve workspace information for a user
     \item Serve data set and recording link for a workspace
-    \item Allow editing the data set, e.g. for editing the label time frames and relabeling
+    \item Allow editing editing the label time frames and relabeling data samples
     \item Create, rename and delete labels on a workspace
     \item Serve label information to the mobile client
     \item Accept data from the mobile client
@@ -78,6 +84,7 @@ The web client supports both desktop and mobile modes. The functionality that wi
 \subsection{Extending Functions}
 \begin{enumerate}[resume*]
     \item Serve a "Stay Signed In" functionality on the desktop web client
+    \item Add captcha to login
     \item Show a sign if a data collecting device is currently active
     \item Allow listing samples by label on the workspace panel
     \item Allow adding descriptions to the labels to assist data collection

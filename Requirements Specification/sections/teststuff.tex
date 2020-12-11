@@ -3,7 +3,7 @@ TBD
 \subsection{Test Cases}
 \subsubsection{Main Test Cases}
 These test cases are necessary for the web-tool to work properly and succeed in serving
-basic requests.
+basic requests. Each test case represents a basic action user can take.
 
 \begin{enumerate}[{label = \textbf{/T{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
     \item Access web page \hyperref[/F010/]{/F010/}
@@ -21,7 +21,8 @@ basic requests.
     \item Rename label. 090
     \item Delete label. 100
     \item Delete sample. 140
-    \item Scan QR code. 110
+    \item Scan QR code for data collection. 110
+    \item Scan QR code for classifying data. 
     \item Open the workspace link. 110
     \item Overview collected data. 120
     \item Overview an individual data sample. 130
@@ -31,6 +32,10 @@ basic requests.
     \item Train and deploy a model. 190
     \item Set the duration of the recording. 220
     \item Set the sampling rate. 230
+    \item Select data imputation options
+    \item Select feature extration options
+    \item Select normalization options
+    \item Select machine learning model
     \item Record with specified configuration. 240, 250, 260, 290, 300
     \item Overview sensor data whilst recording. 270, 280
     \item Record again with same configuration. 310
@@ -41,7 +46,7 @@ TBD
 \subsection{Test Scenarios}
 The test scenarios are composed of the mentioned test cases. Starred test scenarios indicate that the scenario includes extending functionalities.
 \subsubsection{Test Scenario 1 - First Time User}
-A user who is new to machine learning applications opens the webpage on their computer and registers to the service. The user collects data using the default configuration with their phone and creates a machine learning model. The user then uses this model to identify new data they record. 
+A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record. 
 \newpage
 \begin{enumerate}
     \item /T010/ Access web page.
@@ -67,7 +72,10 @@ User opens the website on an unsupported desktop browser and is welcomed with an
     \item 
 \end{enumerate} 
 \subsubsection{Test Scenario 4 - Unsupported Mobile Client}
-User scans the QR code they received to begin recording data. It turns out their device doesn't support the Sensor API and  
+User scans the QR code they received to begin recording data. It turns out their device doesn't support the Sensor API and the website notifies the user about it.
+\begin{enumerate}
+    \item 
+\end{enumerate}
 \subsubsection{Test Scenario 4 - Forgotten Password}
 User tries to login with an invalid username and/or password. After a few attempts user requests a new password using the "Forgot Password" functionality and successfully manages to login using their new password.
 \begin{enumerate}
@@ -86,8 +94,27 @@ User uses the link they was provided previously to start collecting data. After 
 \end{enumerate}
 \subsubsection{Test Scenario 7 - Registration with Already Existing Credentials}
 User opens the website on their desktop device and tries to register with an already existing username.
+\begin{enumerate}
+    \item 
+\end{enumerate}
 \subsubsection{Test Scenario 8 - Multi-language Support*}
 User opens the website and changes the langauge option to German. 
-\subsubsection{Test Scenario 9 - Extensive Use of Main Functionalities} % better title pls
+\begin{enumerate}
+    \item 
+\end{enumerate}
+\subsubsection{Test Scenario 9 - Extensive Use of Main Functionalities}
 User opens the website and creates a new account. 
-\subsubsection{Test Scenario 10 - Extensive Use of All Functionalities} % better title pls cuz not all, dont include edge cases, rather show relevant use case
+\begin{enumerate}
+    \item 
+\end{enumerate}
+\subsubsection{Test Scenario 10 - Extensive Use of All Functionalities*}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+\subsubsection{Test Scenario 11 - Brute-force Attempt*}
+User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a CAPTCHA to solve.
+\begin{enumerate}
+    \item 
+\end{enumerate}
+\subsubsection{Test Scenario 12 - Multiple/Simultaneous Data Collection and Classification}
