@@ -6,23 +6,24 @@ These test cases are necessary for the web-tool to work properly and succeed in 
 basic requests. Each test case represents a basic action user can take.
 
 \begin{enumerate}[{label = \textbf{/T{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item Access web page \hyperref[/F010/]{/F010/}
+    \item Access web page \hyperref[welcome_page]{/F010/}
     \begin{itemize}
         \item \textbf{/T011/} via Google Chrome,
         \item \textbf{/T012/} via Mozilla Firefox.
     \end{itemize}
-    \item Create a new user. 010, 330
-    \item Login with existing credentials. 010, 330
-    \item Login with invalid credentials. 010, 330
-    \item Open an already existing workspace. 020, 040, 060, 340
-    \item Create a new workspace. 030
+    \item Create a new user. \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
+    \item Login with existing credentials. \hyperref[welcome_page]{/F010/}
+    \item Login with invalid credentials. \hyperref[welcome_page]{/F010/}
+    \item Overview the available workspaces linked to the account. F030
+    \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050 
+    \item Open an already existing workspace. F070
     \item Rename the workspace. 050
     \item Create new label. 070
     \item Rename label. 090
     \item Delete label. 100
     \item Delete sample. 140
-    \item Scan QR code for data collection. 110
-    \item Scan QR code for classifying data. 
+    \item Scan QR code to initiate data collection. 110
+    \item Scan QR code to initiate data classification. 
     \item Open the workspace link. 110
     \item Overview collected data. 120
     \item Overview an individual data sample. 130

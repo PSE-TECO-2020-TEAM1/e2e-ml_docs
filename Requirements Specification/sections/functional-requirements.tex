@@ -14,9 +14,9 @@ The web client supports both desktop and mobile modes. The functionality that wi
   \number#1}
 
 \begin{enumerate}[{label = \textbf{/F{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item \label{/F010/} Show a welcome page with a login panel when the website is accessed
-    \item Show registration panel when clicked on register in the welcome page
-    \item Show a workspaces overview where the available workspaces are listed after logged in
+    \item \label{welcome_page} Show a welcome page with a login panel when the website is accessed
+    \item \label{registration_panel}Show registration panel when clicked on register in the welcome page
+    \item \label{workspaces_ov}Show a workspaces overview where the available workspaces are listed after logged in
     \item Allow creating workspaces with the given name, sensors to be used and their sampling rate
     \item List the available sensors for the recordings on the workspace creation window
     \item Allow renaming workspaces on the workspaces overview
@@ -84,7 +84,7 @@ The web client supports both desktop and mobile modes. The functionality that wi
 \subsection{Extending Functions}
 \begin{enumerate}[resume*]
     \item Serve a "Stay Signed In" functionality on the desktop web client
-    \item Add captcha to login
+    \item Add captcha to login after 5 failed consecutive login attempts
     \item Show a sign if a data collecting device is currently active
     \item Allow listing samples by label on the workspace panel
     \item Allow adding descriptions to the labels to assist data collection
