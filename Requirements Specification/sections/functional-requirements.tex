@@ -29,21 +29,27 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Display a button to copy the link to the clipboard
     \item Display QR code with the same link in the previous function embedded to be used for recording data
     \item Display the collected data samples chronologically on the workspace panel
-    \item Visualize the selected data sample as a graph when the data sample is clicked on the workspace panel (line plot, bar plot, box plot, histogram, distplot, heatmaps, 2D and 3D Scatter plot)
+    \item Visualize the selected data sample as a graph when the data sample is clicked on the workspace panel 
+    \item Allow changing the graph type (line plot, bar plot, box plot, histogram, distplot, heatmaps, 2D and 3D Scatter plot)
     \item Display the metadata of the selected data sample (identifier of the recording device and recording date/time)
     \item Allow setting the start/end time of the labeled actions on the graph view of the selected data sample
     \item Allow relabeling the selected data sample
     \item Allow deletion of the selected data sample
-    \item Allow selecting data imputation options on the management panel: \\mean imputation, last observation carried forward imputation, linear or spline interpolation, moving average imputation
-    \item Allow selecting feature extration options on the management panel: \\min, max, variance, energy, autoregressive correlation, mean, IQR, pearson correlation, skewness, kurtosis, fourier transform
-    \item Allow selecting normalization options on the management panel: \\MinMaxScaler, Normalizer, QuantileTransformer, RobustScaler, StandardScaler
-    \item Allow selecting machine learning model on the management panel with the respective hyper parameters depending on the selected model: \\MLPClassifier, SVC, RandomForestClassifier, KNeighborsClassifier
-    \item Request training of the model according to the selected options
-    \item List trained models on the models overview
-    \item Display the used parameters of the selected model
-    \item Display the performance metrics of the selected model: \\Average Accuracy, Balanced Accuracy, Area under the Curve, Average Precision, Per Class Precision, Average Recall, Per Class Recall, f1-score, Per Class f1-score
-    \item Serve a link for each model to deploy it and start classifying actions
-    \item Display the QR code with the same link embedded
+    \item Allow selecting data imputation options on the workspace panel: \\mean imputation, last observation carried forward imputation, linear or spline interpolation, moving average imputation
+    \item Allow selecting feature extration options on the workspace panel: \\min, max, variance, energy, autoregressive correlation, mean, IQR, pearson correlation, skewness, kurtosis, fourier transform
+    \item Allow selecting normalization options on the workspace panel: \\MinMaxScaler, Normalizer, QuantileTransformer, RobustScaler, StandardScaler
+    \item Allow selecting machine learning model on the workspace panel with the respective hyperparameters depending on the selected model: \\MLPClassifier, SVC, RandomForestClassifier, KNeighborsClassifier
+    \item Request training of the model according to the selected options and automatically deploy it
+    \item List trained and deployed models on the models overview
+    \item Show the overview of the selected model when clicked on a model on the models overview
+    \begin{itemize}
+        \item \textbf{/F281/} Display the used parameters of the selected model
+        \item \textbf{/F282/} Display the performance metrics of the selected model: \\Average Accuracy, Balanced Accuracy, Area under the Curve, Average Precision, Per Class Precision, Average Recall, Per Class Recall, f1-score, Per Class f1-score
+    \end{itemize}
+    \item Display a mini QR code symbol for each model on the models overview
+    \item Display a link to use the deployed model on mobile devices when the mini QR code symbol is clicked
+    \item Display a button to copy the link to the clipboard
+    \item Display QR code with the same link in the previous function embedded to be used for classifying data
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
