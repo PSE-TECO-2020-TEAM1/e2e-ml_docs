@@ -19,8 +19,8 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item \label{workspaces_ov}Show a workspaces overview where the available workspaces are listed after logged in
     \item Allow creating workspaces with the given name, sensors to be used and their sampling rate
     \item List the available sensors for the recordings on the workspace creation window
-    \item Allow renaming workspaces on the workspaces overview
-    \item Show a workspace panel when a workspace is selected
+    \item Show the workspace panel when a workspace is selected
+    \item Allow renaming workspaces on the workspace panel by double clicking on the workspace name
     \item List labels with their sample count on the labels overview window
     \item Allow creating labels for the actions to be recorded in the workspace
     \item Allow renaming labels on the labels overview
@@ -71,14 +71,19 @@ The web client supports both desktop and mobile modes. The functionality that wi
 \begin{enumerate}[resume*]
     \item Serve authentication services
     \item Serve workspace information for a user
-    \item Serve data set and recording link for a workspace
-    \item Allow editing editing the label time frames and relabeling data samples
-    \item Create, rename and delete labels on a workspace
+    \item Serve data set information for a workspace
+    \item Edit the label time frames of a data sample
+    \item Relabel data sample
+    \item Delete data sample
+    \item Create labels on a workspace
+    \item Rename labels on a workspace
+    \item Delete labels on a workspace (which deletes the associated data samples as well)
     \item Serve label information to the mobile client
     \item Accept data from the mobile client
     \item Initiate the configured model training
     \item Serve the model information on a workspace
-    \item Rename and delete models on a workspace
+    \item Rename models on a workspace
+    \item Delete models on a workspace
 \end{enumerate}
 
 \subsection{Extending Functions}
