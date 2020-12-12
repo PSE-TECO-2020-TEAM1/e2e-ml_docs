@@ -5,6 +5,8 @@ Each functionality is tested by at least one of the following test cases. The te
 These test cases are necessary for the web-tool to work properly and succeed in serving
 basic requests. Each test case represents a basic action user can take.
 
+\paragraph{Desktop Web Client}
+
 \begin{enumerate}[{label = \textbf{/T{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
     \item Access web page \hyperref[welcome_page]{/F010/}
     \begin{itemize}
@@ -17,8 +19,8 @@ basic requests. Each test case represents a basic action user can take.
         \item /T031/ with existing credentials, \hyperref[welcome_page]{/F010/} , F520
         \item /T032/ with invalid credentials. \hyperref[welcome_page]{/F010/} , F520
     \end{itemize}
-    \item Overview the available workspaces linked to the account. \hyperref[workspaces_ov]{/F030/} , F530
-    \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050,   
+    \item Overview the available workspaces linked to the account. \hyperref[workspaces_ov]{/F030/} , F490
+    \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050, F540
     \item Open an already existing workspace. F030, F060
     \item Rename the workspace. F070
     \item Open the labels overview. F080
@@ -50,7 +52,11 @@ basic requests. Each test case represents a basic action user can take.
     \begin{itemize}
         \item /T241/ via using the link F310
         \item /T242/ via scanning the QR code. F320
-    \end{itemize}
+    \end{itemize} 
+\end{enumerate}
+
+\paragraph{Mobile Web Client}
+\begin{enumerate}[resume*]
     \item Choose a label for the data that will be recorded. F340, F350
     \item Set the countdown to start of recording. F360
     \item Set the recording duration. F370
@@ -59,21 +65,33 @@ basic requests. Each test case represents a basic action user can take.
     \item Record another data after one recording completes. F430, F440
     \item Record data to classify. F450, F460, F470, F480
     \item Stop the classification. F490
-    \item Overview the classified actions. F500 
-    \item Reinitiate the classification. F510
+    \item Overview the classified actions. F500
+    \item Restart the classification. F510
 \end{enumerate}
+
 \subsubsection{Extending Test Cases}
 These test cases are not necessary for the application to work properly, but vital for testing the extending functions. 
 \subsection{Test Scenarios}
 The following test scenarios are composed of the aforementioned test cases. Starred test scenarios indicate that extending functionalities are also tested in the scenario.
 \subsubsection{Test Scenario 1 - First Time User}
-A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record. 
-\newpage
+A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record in real-time. Lastly, the user stops the classification and examines the classified actions.
 \begin{enumerate}
-    \item Access web page.
-    \item Create a new user.
-    \item Login with existing credentials.
-
+    \item /T010/ Access web page.
+    \item /T020/ Create a new user.
+    \item /T031/ Login with existing credentials.
+    \item /T050/ Create a new workspace with a name, sampling rate value and required sensors.
+    \item /T080/ Open the labels overview.
+    \item /T081/ Create new label.
+    \item /T091/ Initiate data collection via scanning the QR code.
+    \item /T250/ Choose a label for the data that will be recorded.
+    \item /T280/ Record data.
+    \item /T300/ Record another data after one recording completes.
+    \item /T210/ Train the model.
+    \item /T220/ Overview the trained models.
+    \item /T241/ Initiate data classification via scanning the QR code.
+    \item /T310/ Record data to classify.
+    \item /T320/ Stop the classification.
+    \item /T330/ Overview the classified actions.
 \end{enumerate}
 \subsubsection{Test Scenario 2 - Invalid credentials}
 User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
