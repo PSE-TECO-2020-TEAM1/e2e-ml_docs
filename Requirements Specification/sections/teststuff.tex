@@ -12,9 +12,12 @@ basic requests. Each test case represents a basic action user can take.
         \item \textbf{/T012/} via Mozilla Firefox.
     \end{itemize}
     \item Create a new user. \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
-    \item Login with existing credentials. \hyperref[welcome_page]{/F010/}
-    \item Login with invalid credentials. \hyperref[welcome_page]{/F010/}
-    \item Overview the available workspaces linked to the account. \hyperref[workspaces_ov]{/F030/}
+    \item Login \hyperref[welcome_page]{/F010/} , F480
+    \begin{itemize}
+        \item /T031/ with existing credentials, \hyperref[welcome_page]{/F010/} , F480
+        \item /T032/ with invalid credentials. \hyperref[welcome_page]{/F010/} , F480
+    \end{itemize}
+    \item Overview the available workspaces linked to the account. \hyperref[workspaces_ov]{/F030/} , F490
     \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050 
     \item Open an already existing workspace. F030, F060
     \item Rename the workspace. F070
@@ -24,12 +27,20 @@ basic requests. Each test case represents a basic action user can take.
         \item /T082/ Rename label. F100
         \item /T083/ Delete label. F110
     \end{itemize}
+    \item Initiate data collection F060
+    \begin{itemize}
+        \item /T091/ via using the link F120, F130
+        \item /T092/ via scanning the QR code. F140
+    \end{itemize}
+    \item Overview collected data on the workspace panel. F150
+    \item Overview an individual data sample. F160
+    \item Choose another graph type to visualize data. F160 % bunun functionalitysi tam yok
+    \item \textbf{F170 related test}
+    \item Set the relevant time frame of the selected data sample on the graph. 
     \item Delete sample. 
-    \item Scan QR code to initiate data collection. 
-    \item Scan QR code to initiate data classification. 
     \item Open the workspace link. 110
+    \item Scan QR code to initiate data classification. 
     \item Overview collected data. 120
-    \item Overview an individual data sample. 130
     \item Overview trained models. 150
     \item Overview an individual model. 160
     \item Check performance metrics of a model. 170
@@ -46,9 +57,9 @@ basic requests. Each test case represents a basic action user can take.
     \item Record again with different configuration. 320
 \end{enumerate}
 \subsubsection{Extending Test Cases}
-TBD
+These test cases are not necessary for the application to work properly, but vital for testing the extending functions. 
 \subsection{Test Scenarios}
-The test scenarios are composed of the mentioned test cases. Starred test scenarios indicate that the scenario includes extending functionalities.
+The following test scenarios are composed of the aforementioned test cases. Starred test scenarios indicate that extending functionalities are also tested in the scenario.
 \subsubsection{Test Scenario 1 - First Time User}
 A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record. 
 \newpage
