@@ -27,34 +27,31 @@ basic requests. Each test case represents a basic action user can take.
         \item /T082/ Rename label. F100
         \item /T083/ Delete label. F110
     \end{itemize}
-    \item Initiate data collection F060
+    \item Initiate data collection. F060
     \begin{itemize}
         \item /T091/ via using the link F120, F130
         \item /T092/ via scanning the QR code. F140
     \end{itemize}
     \item Overview collected data on the workspace panel. F150
-    \item Overview an individual data sample. F160
-    \item Choose another graph type to visualize data. F160 % bunun functionalitysi tam yok
-    \item \textbf{F170 related test}
-    \item Set the relevant time frame of the selected data sample on the graph. 
-    \item Delete sample. 
-    \item Open the workspace link. 110
-    \item Scan QR code to initiate data classification. 
-    \item Overview collected data. 120
-    \item Overview trained models. 150
-    \item Overview an individual model. 160
-    \item Check performance metrics of a model. 170
-    \item Train and deploy a model. 190
-    \item Set the duration of the recording. 220
-    \item Set the sampling rate. 230
-    \item Select data imputation options
-    \item Select feature extration options
-    \item Select normalization options
-    \item Select machine learning model
-    \item Record with specified configuration. 240, 250, 260, 290, 300
-    \item Overview sensor data whilst recording. 270, 280
-    \item Record again with same configuration. 310
-    \item Record again with different configuration. 320
+    \item Overview an individual data sample. F160, F180
+    \item Choose another graph type to visualize data. F170
+    \item Set the relevant time frame of the selected data sample on the graph. F190
+    \item Relabel the selected sample. F200
+    \item Delete the selected sample. F210
+    \item Select the desired data imputation options. F220
+    \item Select the desired feautre extraction options. F230
+    \item Select the normalization options. F240
+    \item Select the desired machine learning model. F250
+    \item Set the hyperparameters of the model. F250
+    \item Train the model. F260
+    \item Overview the trained models. F270, F290
+    \item Overview a specific model. F280, F281, F282
+    \item Initiate data classification. F290, F300
+    \begin{itemize}
+        \item /T241/ via using the link F300, F310
+        \item /T242/ via scanning the QR code. F320
+    \end{itemize}
+    
 \end{enumerate}
 \subsubsection{Extending Test Cases}
 These test cases are not necessary for the application to work properly, but vital for testing the extending functions. 
