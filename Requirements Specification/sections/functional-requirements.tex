@@ -50,27 +50,29 @@ The web client supports both desktop and mobile modes. The functionality that wi
     \item Display a link to use the deployed model on mobile devices when the mini QR code symbol is clicked
     \item Display a button to copy the link to the clipboard
     \item Display QR code with the same link in the previous function embedded to be used for classifying data
+    \item Display a logout button on all pages
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
 \begin{enumerate}[resume*]
-    \item Show a configuration page with available labels of the workspace when the link to a workspace is opened
+    \item Show a list of available labels that will label the recorded data when the data collection is initiated
     \item Show an error if not all the required sensors are available in the device
     \item Allow configuring the countdown duration until the recording starts
     \item Allow configuring the recording duration
     \item Show a button to initiate the recording
-    \item Show a countdown page with the current configuration on display (sensors used, sampling rate and label)
+    \item Show a countdown page with the current configuration on display (label, sensors used and their sampling rates)
     \item Display the sensor data in real-time as curves for each sensor on a single graph
     \item Show a recording completed page when the recording duration times out
     \item Allow discarding the last recording
     \item Allow another recording with the same configuration
     \item Allow editing configurations for the next recording
-    \item Show a classifying page when the link of a model is opened
+    \item Show a page for classification when the link of a model is opened
     \item Start listening to the sensor data of the mobile device right after the page is loaded
     \item Display the sensor data in real-time as curves for each sensor on a single graph
-    \item Display the classified actions on the classifying window in real time
-    \item Allow stopping and resuming recording
+    \item Display the classified actions on the webpage in real time
+    \item Allow stopping the recording
     \item Display the classified actions as a chronological list when the recording is stopped
+    \item Allow restarting the recording
 \end{enumerate}
 
 \subsubsection{Server API}
