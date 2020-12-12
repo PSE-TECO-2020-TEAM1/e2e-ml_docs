@@ -11,31 +11,30 @@ basic requests. Each test case represents a basic action user can take.
     \item Access web page \hyperref[welcome_page]{/F010/}
     \begin{itemize}
         \item \textbf{/T011/} via Google Chrome,
-        \item \textbf{/T012/} via Mozilla Firefox.
+        \item \textbf{/T012/} via Mozilla Firefox,
+        \item \textbf{/T013/} via Internet Explorer 6.
     \end{itemize}
     \item Create a new user. \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
-    \item Login \hyperref[welcome_page]{/F010/} , F480
+    \item Login \hyperref[welcome_page]{/F010/}
     \begin{itemize}
         \item /T031/ with existing credentials, \hyperref[welcome_page]{/F010/} , F520
         \item /T032/ with invalid credentials. \hyperref[welcome_page]{/F010/} , F520
     \end{itemize}
-    \item Overview the available workspaces linked to the account. \hyperref[workspaces_ov]{/F030/} , F490
     \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050, F540
-    \item Open an already existing workspace. F030, F060
+    \item Open an already existing workspace. F030, F060, F150
     \item Rename the workspace. F070
     \item Open the labels overview. F080
     \begin{itemize}
-        \item /T081/ Create new label. F090
-        \item /T082/ Rename label. F100
-        \item /T083/ Delete label. F110
+        \item /T071/ Create new label. F090
+        \item /T072/ Rename label. F100
+        \item /T073/ Delete label. F110
     \end{itemize}
-    \item Initiate data collection. F060
+    \item Initiate data collection F060
     \begin{itemize}
-        \item /T091/ via using the link F120, F130
-        \item /T092/ via scanning the QR code. F140
+        \item /T081/ via using the link F120, F130
+        \item /T082/ via scanning the QR code. F140
     \end{itemize}
-    \item Overview collected data on the workspace panel. F150
-    \item Overview an individual data sample. F160, F180
+    \item Open the sample overview. F160, F180
     \item Choose another graph type to visualize data. F170
     \item Set the relevant time frame of the selected data sample on the graph. F190
     \item Relabel the selected sample. F200
@@ -46,12 +45,12 @@ basic requests. Each test case represents a basic action user can take.
     \item Select the desired machine learning model. F250
     \item Set the hyperparameters of the model. F250
     \item Train the model. F260
-    \item Overview the trained models. F270, F290
-    \item Overview a specific model. F280, F281, F282
-    \item Initiate data classification. F290, F300
+    \item Open the models overview. F270, F290
+    \item Open the overview of a specific model. F280, F281, F282
+    \item Initiate data classification F290, F300
     \begin{itemize}
-        \item /T241/ via using the link F310
-        \item /T242/ via scanning the QR code. F320
+        \item /T221/ via using the link, F310
+        \item /T222/ via scanning the QR code. F320
     \end{itemize} 
 \end{enumerate}
 
@@ -60,12 +59,11 @@ basic requests. Each test case represents a basic action user can take.
     \item Choose a label for the data that will be recorded. F340, F350
     \item Set the countdown to start of recording. F360
     \item Set the recording duration. F370
-    \item Record data. F380, F390, F400, F410
+    \item Start recording data. F380, F390, F400, F410
     \item Discard recorded data. F420
     \item Record another data after one recording completes. F430, F440
     \item Record data to classify. F450, F460, F470, F480
-    \item Stop the classification. F490
-    \item Overview the classified actions. F500
+    \item Stop the classification. F490, F500
     \item Restart the classification. F510
 \end{enumerate}
 
@@ -90,79 +88,78 @@ A user who is new to machine learning applications opens the webpage on their co
     \item /T010/ Access web page.
     \item /T020/ Create a new user.
     \item /T031/ Login with existing credentials.
-    \item /T050/ Create a new workspace with a name, sampling rate value and required sensors.
-    \item /T080/ Open the labels overview.
-    \item /T081/ Create new label.
-    \item /T091/ Initiate data collection via scanning the QR code.
-    \item /T250/ Choose a label for the data that will be recorded.
-    \item /T280/ Record data.
-    \item /T300/ Record another data after one recording completes.
-    \item /T210/ Train the model.
-    \item /T220/ Overview the trained models.
-    \item /T241/ Initiate data classification via scanning the QR code.
-    \item /T310/ Record data to classify.
-    \item /T320/ Stop the classification.
-    \item /T330/ Overview the classified actions.
+    \item /T040/ Create a new workspace with a name, sampling rate value and required sensors.
+    \item /T070/ Open the labels overview.
+    \item /T071/ Create new label.
+    \item /T081/ Initiate data collection via scanning the QR code.
+    \item /T230/ Choose a label for the data that will be recorded.
+    \item /T260/ Start recording data.
+    \item /T280/ Record another data after one recording completes.
+    \item /T190/ Train the model.
+    \item /T200/ Open the models overview.
+    \item /T221/ Initiate data classification via scanning the QR code.
+    \item /T290/ Record data to classify.
+    \item /T300/ Stop the classification.
 \end{enumerate}
 \subsubsection{Test Scenario 2 - Invalid credentials}
 User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
 \begin{enumerate}
     \item /T010/ Access web page.
-    \item /T030/ Login with invalid credentials.
-    \item /T030/ Login with invalid credentials.
-    \item /T030/ Login with existing credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T031/ Login with existing credentials.
 \end{enumerate}
 \subsubsection{Test Scenario 3 - Unsupported Desktop Client}
 User opens the website on an unsupported desktop browser and is welcomed with an error message.
 \begin{enumerate}
-    \item 
+    \item /T013/ Access web page via Internet Explorer 6.
 \end{enumerate} 
 \subsubsection{Test Scenario 4 - Unsupported Mobile Client}
 User scans the QR code they received to begin recording data. It turns out their device doesn't support the Sensor API and the website notifies the user about it.
 \begin{enumerate}
-    \item 
+    \item /T092/ Initiate date collection via scanning the QR code.
 \end{enumerate}
-\subsubsection{Test Scenario 4 - Forgotten Password}
+\subsubsection{Test Scenario 5 - Forgotten Password}
 User tries to login with an invalid username and/or password. After a few attempts user requests a new password using the "Forgot Password" functionality and successfully manages to login using their new password.
 \begin{enumerate}
     \item 
 \end{enumerate} 
-\subsubsection{Test Scenario 5 - Data Deletion} 
+\subsubsection{Test Scenario 6 - Data Deletion} 
 User logs in and opens their previously set workspace. User finds some data samples and labels to be improper and deletes them.
 \begin{enumerate}
     \item 
 \end{enumerate}
-\subsubsection{Test Scenario 6 - Interruption during Recording}
+\subsubsection{Test Scenario 7 - Interruption during Recording}
 User uses the link they was provided previously to start collecting data. After configuring the options the user starts the recording. Whilst recording user receives a phone call. Recording continues during the call. The user then discards the recording and start a new recording. 
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /
 \end{enumerate}
-\subsubsection{Test Scenario 7 - Registration with Already Existing Credentials}
+\subsubsection{Test Scenario 8 - Registration with Already Existing Credentials}
 User opens the website on their desktop device and tries to register with an already existing username.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item 
 \end{enumerate}
-\subsubsection{Test Scenario 8 - Multi-language Support*}
+\subsubsection{Test Scenario 9 - Multi-language Support*}
 User opens the website and changes the language option to German. 
 \begin{enumerate}
     \item 
 \end{enumerate}
-\subsubsection{Test Scenario 9 - Extensive Use of Main Functionalities}
+\subsubsection{Test Scenario 10 - Extensive Use of Main Functionalities}
 User opens the website and creates a new account. 
 \begin{enumerate}
     \item /T010/ Access web page
     \item /T020/ Create a new user
 \end{enumerate}
-\subsubsection{Test Scenario 10 - Extensive Use of All Functionalities*}
+\subsubsection{Test Scenario 11 - Extensive Use of All Functionalities*}
 
 \begin{enumerate}
     \item 
 \end{enumerate}
-\subsubsection{Test Scenario 11 - Brute-force Attempt*}
+\subsubsection{Test Scenario 12 - Brute-force Attempt*}
 User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a CAPTCHA to solve.
 \begin{enumerate}
     \item 
 \end{enumerate}
-\subsubsection{Test Scenario 12 - Multiple/Simultaneous Data Collection and Classification}
+\subsubsection{Test Scenario 13 - Multiple/Simultaneous Data Collection and Classification}
