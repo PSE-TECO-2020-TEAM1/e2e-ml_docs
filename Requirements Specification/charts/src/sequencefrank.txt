@@ -1,0 +1,124 @@
+autoactivation on
+
+actor User
+participant Desktop
+participant Server
+participant Mobile
+
+User->Desktop :open desktop\nwebsite
+
+Desktop->Desktop:register
+    Desktop->Server:				register_user(credentials)				
+    Server-->>Desktop:confirmation
+    deactivate Server
+deactivate Desktop
+
+
+Desktop->Desktop:login
+	Desktop->Server:validate_user(credentials)
+    Server-->>Desktop:auth response
+    deactivate Server
+deactivate Desktop
+
+Desktop->Desktop:create workspace
+  Desktop->Server:create and join workspace
+  Server-->>Desktop:workspace information
+  deactivate Server
+deactivate Desktop
+
+Desktop->Desktop:click "Labels"
+	Desktop->Desktop:create new label
+    	Desktop->Server:create_label("swipe right")
+        space -0.5
+        deactivate Server
+    deactivate Desktop
+    Desktop->Desktop:create new label
+    	Desktop->Server:create_label("swipe left")
+        space -0.5
+        deactivate Server
+    deactivate Desktop
+    space -0.5
+deactivate Desktop
+
+Desktop->Desktop:click qr code symbol on samples
+
+User->*Mobile:open mobile client
+space -4.3
+Mobile->Mobile:scan qr code
+Mobile->Server:join_workspace
+Server -->> Mobile:workspace information
+deactivate Mobile
+
+Mobile->Mobile:select label "swipe right"
+space -0.5
+deactivate Mobile
+
+Mobile->Mobile:start recording
+  autoactivation off
+  User->User:do some swipe\nright gestures
+  autoactivation on
+space -0.5
+deactivate Mobile
+
+Mobile->Server:send data sample\nfor label "swipe right"
+deactivateafter Mobile
+destroyafter Mobile
+deactivate Desktop
+space -3
+Server->Desktop:notify workspace consumers
+deactivate Server
+space -0.5
+deactivate Desktop
+
+
+Desktop->Desktop:click "Train and Deploy"
+note right of Desktop:with default options
+	Desktop->Server:train_deploy(model_options)
+    space -0.5
+deactivate Desktop
+
+Server->Desktop:notify workspace consumers
+deactivate Server
+
+space -0.5
+deactivate Desktop
+
+Desktop->Desktop:click "Models"
+	Desktop->Desktop:click qr code symbol of "Model 1"
+        space -0.5
+        
+User->*Mobile:open mobile client
+space -4.3
+Mobile->Mobile:scan qr code
+
+	deactivate Desktop
+space -0.5
+deactivate Desktop
+    
+space -0.5
+deactivate Desktop
+destroyafter Desktop
+
+Mobile->Server:join_workspace
+Server -->> Mobile:workspace information
+deactivate Mobile
+
+note left of Mobile:automatically starts\nlistening 
+Mobile->Mobile:start listening
+  Mobile->Server:send realtime data
+  note left of Server:this data is sent continuously\nin realtime to the server
+  autoactivation off
+  User->User:do some gestures
+  autoactivation on
+  
+  Mobile->Mobile:click "Stop Listening"
+  space -0.5
+  deactivate Mobile
+  Server-->>Mobile:classisfied labels\n and durations
+  deactivate Server
+  deactivate Mobile
+  note left of Mobile:classified labels\nand durations are shown
+deactivate Mobile
+space -0.5
+deactivate Mobile
+destroyafter Mobile
