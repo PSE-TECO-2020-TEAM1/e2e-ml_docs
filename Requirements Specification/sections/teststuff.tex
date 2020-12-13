@@ -8,81 +8,81 @@ basic requests. Each test case represents a basic action user can take.
 \paragraph{Desktop Web Client}
 
 \begin{enumerate}[{label = \textbf{/T{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item Access web page \hyperref[welcome_page]{/F010/}
+    \item Access web page (\ref{itm:welcome-page}) %\hyperref[welcome_page]{/F010/}
     \begin{itemize}
         \item \textbf{/T011/} via Google Chrome,
         \item \textbf{/T012/} via Mozilla Firefox,
         \item \textbf{/T013/} via Internet Explorer 6.
     \end{itemize}
-    \item Sign up with \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
+    \item Sign up with (\ref{itm:welcome-page} \ref{itm:registration-panel})
     \begin{itemize}
         \item \textbf{/T021/} new credentials,
         \item \textbf{/T022/} existing credentials.
     \end{itemize}
-    \item Login \hyperref[welcome_page]{/F010/}
+    \item Login (\ref{itm:welcome-page}, \ref{itm:authentication})
     \begin{itemize}
-        \item /T031/ with existing credentials, \hyperref[welcome_page]{/F010/} , F520
-        \item /T032/ with invalid credentials. \hyperref[welcome_page]{/F010/} , F520
+        \item /T031/ with existing credentials,
+        \item /T032/ with invalid credentials.
     \end{itemize}
-    \item Create a new workspace with a name, sampling rate value and required sensors. F040, F050, F540
-    \item Open an already existing workspace. F030, F060, F150
-    \item Rename the workspace. F070
-    \item Open the labels overview. F080
+    \item Create a new workspace with a name, sampling rate value and required sensors. (\ref{itm:create-workspace}, \ref{itm:cr-list-sensors}, F540)
+    \item Open an already existing workspace. (\ref{itm:workspaces-overview}, \ref{itm:workspace-panel}, \ref{itm:display-samples})
+    \item Rename the workspace. (\ref{itm:rename-workspace})
+    \item Open the labels overview. (\ref{itm:labels-overview})
     \begin{itemize}
-        \item /T071/ Create new label. F090
-        \item /T072/ Rename label. F100
-        \item /T073/ Delete label. F110
+        \item /T071/ Create new label. (\ref{itm:create-label})
+        \item /T072/ Rename label. (\ref{itm:rename-label})
+        \item /T073/ Delete label. (\ref{itm:delete-label})
     \end{itemize}
     \item Initiate data collection F060
     \begin{itemize}
-        \item /T081/ via using the link F120, F130
-        \item /T082/ via scanning the QR code. F140
+        \item /T081/ via using the link (\ref{itm:workspace-link}, \ref{itm:workspace-copy-link})
+        \item /T082/ via scanning the QR code. (\ref{itm:workspace-qr})
     \end{itemize}
-    \item Open the sample overview. F160, F180
-    \item Choose another graph type to visualize data. F170
-    \item Set the relevant time frame of the selected data sample on the graph. F190
-    \item Relabel the selected sample. F200
-    \item Delete the selected sample. F210
-    \item Select the desired data imputation options. F220
-    \item Select the desired feautre extraction options. F230
-    \item Select the normalization options. F240
-    \item Select the desired machine learning model. F250
-    \item Set the hyperparameters of the model. F250
-    \item Train the model. F260
-    \item Open the models overview. F270, F290
-    \item Open the overview of a specific model. F280, F281, F282
-    \item Initiate data classification F290, F300
+    \item Open the sample overview. (\ref{itm:visualize-sample}, \ref{itm:metadata})
+    \item Choose another graph type to visualize data. (\ref{itm:change-graph})
+    \item Set the relevant time frame of the selected data sample on the graph. (\ref{itm:set-timeframe})
+    \item Relabel the selected sample. (\ref{itm:relabel})
+    \item Delete the selected sample. (\ref{itm:delete-sample})
+    \item Select the desired data imputation options. (\ref{itm:imputation})
+    \item Select the desired feature extraction options. (\ref{itm:feature-extraction})
+    \item Select the normalization options. (\ref{itm:normalization})
+    \item Select the desired machine learning model. (\ref{itm:model-hyperparameters})
+    \item Set the hyperparameters of the model. (\ref{itm:model-hyperparameters})
+    \item Train the model. (\ref{itm:train})
+    \item Open the models overview. (\ref{itm:models-over-list}, \ref{itm:disp-miniqr-classify})
+    \item Open the overview of a specific model. (\ref{itm:models-over-over}, \ref{itm:models-over-1}, \ref{itm:models-over-2})
+    \item Initiate data classification (\ref{itm:disp-miniqr-classify}, \ref{itm:disp-link-classify})
     \begin{itemize}
-        \item /T221/ via using the link, F310
-        \item /T222/ via scanning the QR code. F320
+        \item /T221/ via using the link, (\ref{itm:disp-copy-classify})
+        \item /T222/ via scanning the QR code. (\ref{itm:disp-qr-classify})
     \end{itemize} 
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
 \begin{enumerate}[resume*]
-    \item Choose a label for the data that will be recorded. F340, F350
-    \item Set the countdown to start of recording. F360
-    \item Set the recording duration. F370
-    \item Start recording data. F380, F390, F400, F410
-    \item Discard recorded data. F420
-    \item Record another data after one recording completes. F430, F440
-    \item Record data to classify. F450, F460, F470, F480
-    \item Stop the classification. F490, F500
-    \item Restart the classification. F510
+    \item Choose a label for the data that will be recorded. (\ref{itm:conf-rec-label}, \ref{itm:conf-rec-nosensor})
+    \item Set the countdown to start of recording. (\ref{itm:conf-rec-count})
+    \item Set the recording duration. (\ref{itm:conf-rec-dur})
+    \item Start recording data. (\ref{itm:init-rec-button}, \ref{itm:init-rec-countdown}, \ref{itm:init-rec-realtime}, \ref{itm:init-rec-completed})
+    \item Discard recorded data. (\ref{itm:discard-record})
+    \item Record another data after one recording completes. (\ref{itm:next-record1}, \ref{itm:next-record1})
+    \item Record data to classify. (\ref{itm:show-classification}, \ref{itm:start-listening}, \ref{itm:display-sensor}, \ref{itm:diplay-classified})
+    \item Stop the classification. (\ref{itm:stop-recording}, \ref{itm:display-recording-chrono})
+    \item Restart the classification. (\ref{itm:restart-recording})
 \end{enumerate}
 
 \subsubsection{Extending Test Cases}
 These test cases are not necessary for the application to work properly, but vital for testing the extending functions. 
 \begin{enumerate}[resume*]
-    \item Toggle "Stay Signed In" checkbox.
-    \item Solve captcha.
-    \item Check if a data collecting device is connected on the desktop client.
-    \item Select a label to sort by.
-    \item Add a description to the label.
-    \item Set a sound to play in case of a classification on the desktop web client.
-    \item Change the language of the desktop web client.
-    \item Select the magnetometer sensor.
-    \item Select "Forgot Password".
+    \item Toggle "Stay Signed In" checkbox. (\ref{itm:stay-signed})
+    \item Solve captcha. (\ref{itm:captcha})
+    \item Check if a data collecting device is connected on the desktop client. (\ref{itm:active-sign})
+    \item Filter samples by label. (\ref{itm:filter-by-label})
+    \item Add a description to the label. (\ref{itm:label-description})
+    \item Set a sound to play in case of a classification on the desktop web client. (\ref{itm:sound-feedback})
+    \item Change the language of the desktop web client. (\ref{itm:language})
+    \item Select the magnetometer sensor. (\ref{itm:magnetometer})
+    \item Select "Forgot Password". (\ref{itm:forgot-password})
 \end{enumerate}
 
 \subsection{Test Scenarios}

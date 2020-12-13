@@ -2,7 +2,8 @@
 {
     name={workspace},
     description={Workspaces are created each time a QR Code scanned for the first time. Workspace represents the data collection Workspaces combine data and models together. Each workspace has only one set of data and multiple models on that data.
-    }
+    },
+    plural={workspaces}
 }
 \newglossaryentry{latex}
 {
@@ -12,7 +13,7 @@
 \newglossaryentry{classification}
 {
     name={classification},
-    description={\textbf{TBD!!!}}
+    description={Classification refers to a predictive modeling problem where a class label is predicted for a given example of input data.}
 }
 \newglossaryentry{meta-learning}
 {
@@ -96,6 +97,11 @@
     name={MongoDB},
     description={MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.}
 }
+\newglossaryentry{database}
+{
+    name={database},
+    description={Database: Support the storage of very large amount of data over a long period of time, allowing efficient access to the data for queries and data modification.}
+}
 \newglossaryentry{Node.js}
 {
     name={Node.js},
@@ -109,115 +115,110 @@
 \newglossaryentry{mean imputation}
 {
     name={mean imputation},
-    description={}
+    description={A method in which the missing value on a certain variable is replaced by the mean of the available cases.}
 }
 \newglossaryentry{last observation carried forward imputation}
 {
     name={last observation carried forward imputation},
-    description={}
+    description={In a last observation carried forward analysis, a missing follow-up visit value is replaced by (imputed as) that subject's previously observed value, that is, the last observation is carried forward. The combination of the observed and imputed data is then analyzed as though there were no missing data.}
 }
 \newglossaryentry{linear interpolation}
 {
     name={linear interpolation},
-    description={}
+    description={Linear interpolation is a method of curve fitting using linear polynomials to construct new data points within the range of a discrete set of known data points.}
 }
 \newglossaryentry{spline interpolation}
 {
     name={spline interpolation},
-    description={}
+    description={Spline interpolation is a form of interpolation where the interpolant is a special type of piecewise polynomial called a spline.}
 }
 \newglossaryentry{moving average imputation}
 {
     name={moving average imputation},
-    description={}
-}
-\newglossaryentry{energy}
-{
-    name={energy},
-    description={}
+    description={A moving average is a technique to get an overall idea of the trends in a data set; it is an average of any subset of numbers. The moving average is useful for forecasting long-term trends.}
 }
 \newglossaryentry{autoregressive correlation}
 {
     name={autoregressive correlation},
-    description={}
+    description={An autoregression model makes an assumption that the observations at previous time steps are useful to predict the value at the next time step.}
 }
 \newglossaryentry{IQR}
 {
     name={IQR},
-    description={}
+    description={The interquartile range, also called the midspread, middle 50\%, or H‑spread, is a measure of statistical dispersion, being equal to the difference between 75th and 25th percentiles, or between upper and lower quartiles}
 }
 \newglossaryentry{pearson correlation}
 {
     name={pearson correlation},
-    description={}
+    description={Pearson's correlation coefficient is the covariance of the two variables divided by the product of their standard deviations.}
 }
 \newglossaryentry{MinMaxScaler}
 {
     name={MinMaxScaler},
-    description={}
+    description={Transform features by scaling each feature to a given range. This estimator scales and translates each feature individually such that it is in the given range on the training set, e.g. between zero and one.}
 }
 \newglossaryentry{Normalizer}
 {
     name={Normalizer},
-    description={}
+    description={Normalize samples individually to unit norm. Each row of the data matrix with at least one non zero component is rescaled independently of other samples so that its norm equals one.}
 }
 \newglossaryentry{QuantileTransformer}
 {
     name={QuantileTransformer},
-    description={}
+    description={This method transforms the features using quantiles information to follow a uniform or a normal distribution. Therefore, for a given feature, this transformation tends to spread out the most frequent values.}
 }
 \newglossaryentry{RobustScaler}
 {
     name={RobustScaler},
-    description={}
+    description={RobustScaler scales features using statistics that are robust to outliers. This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range).}
 }
 \newglossaryentry{StandardScaler}
 {
     name={StandardScaler},
-    description={}
+    description={StandardScaler standardizes features by removing the mean and scaling to unit variance.}
 }
 \newglossaryentry{MLPClassifier}
 {
     name={MLPClassifier},
-    description={}
+    description={MLPClassifier stands for Multi-layer Perceptron classifier which in the name itself connects to a Neural Network. MLPClassifier relies on an underlying Neural Network to perform the task of classification.}
 }
 \newglossaryentry{SVC}
 {
     name={SVC},
-    description={}
+    description={Support-vector machines are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis.}
 }
 \newglossaryentry{RandomForestClassifier}
 {
     name={RandomForestClassifier},
-    description={}
+    description={A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.}
 }
 \newglossaryentry{KNeighborsClassifier}
 {
     name={KNeighborsClassifier},
-    description={}
+    description={Neighbors-based classification is a type of instance-based learning or non-generalizing learning: it does not attempt to construct a general internal model, but simply stores instances of the training data. Classification is computed from a simple majority vote of the nearest neighbors of each point: a query point is assigned the data class which has the most representatives within the nearest neighbors of the point.}
 }
 \newglossaryentry{accuracy}
 {
     name={accuracy},
-    description={}
+    description={Accuracy is defined as the percentage of correct predictions for the test data.}
 }
 \newglossaryentry{precision}
 {
     name={precision},
-    description={}
+    description={Precision is the ratio of correctly predicted positive observations to the total predicted positive observations.}
 }
 \newglossaryentry{f1-score}
 {
     name={f1-score},
-    description={}
+    description={F1 Score is the weighted average of Precision and Recall.}
 }
 \newglossaryentry{HTML}
 {
     name={HTML},
-    description={}
+    description={Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.}
 }
 \newglossaryentry{style-sheet}
 {
     name={style-sheet},
-    description={}
+    description={A web style sheet is a form of separation of presentation and content for web design in which the markup of a webpage contains the page's semantic content and structure, but does not define its visual layout.}
 }

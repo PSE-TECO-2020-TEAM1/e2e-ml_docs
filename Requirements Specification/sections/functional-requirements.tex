@@ -14,70 +14,70 @@ The web client supports both desktop and mobile modes. The functionality that wi
   \number#1}
 
 \begin{enumerate}[{label = \textbf{/F{\protect\twodigits{\arabic{enumi}}}0/}, leftmargin = *}]
-    \item \label{welcome_page} Show a welcome page with a login panel when the website is accessed
-    \item \label{registration_panel}Show registration panel when clicked on register in the welcome page
-    \item \label{workspaces_ov}Show a workspaces overview where the available workspaces are listed after logged in
-    \item Allow creating workspaces with the given name, sensors to be used and their sampling rate
-    \item List the available sensors for the recordings on the workspace creation window
-    \item Show the workspace panel when a workspace is selected
-    \item Allow renaming workspaces on the workspace panel by double clicking on the workspace name
-    \item List labels with their sample count on the labels overview window
-    \item Allow creating labels for the actions to be recorded in the workspace
-    \item Allow renaming labels on the labels overview
-    \item Allow deleting labels which in turn deletes the data samples with the selected label
-    \item Display a link to be used for recording data to the workspace when collect data is clicked
-    \item Display a button to copy the link to the clipboard
-    \item Display QR code with the same link in the previous function embedded to be used for recording data
-    \item Display the collected data samples chronologically on the workspace panel
-    \item Visualize the selected data sample as a graph when the data sample is clicked on the workspace panel 
-    \item Allow changing the graph type (line plot, bar plot, box plot, histogram, distplot, heatmaps, 2D and 3D Scatter plot)
-    \item Display the metadata of the selected data sample (identifier of the recording device and recording date/time)
-    \item Allow setting the start/end time of the labeled actions on the graph view of the selected data sample
-    \item Allow relabeling the selected data sample
-    \item Allow deletion of the selected data sample
-    \item Allow selecting data imputation options on the workspace panel: \\mean imputation, last observation carried forward imputation, linear or spline interpolation, moving average imputation
-    \item Allow selecting feature extraction options on the workspace panel: \\min, max, variance, energy, autoregressive correlation, mean, IQR, pearson correlation, skewness, kurtosis, fourier transform
-    \item Allow selecting normalization options on the workspace panel: \\MinMaxScaler, Normalizer, QuantileTransformer, RobustScaler, StandardScaler
-    \item Allow selecting machine learning model on the workspace panel with the respective hyperparameters depending on the selected model: \\MLPClassifier, SVC, RandomForestClassifier, KNeighborsClassifier
-    \item Request training of the model according to the selected options and automatically deploy it
-    \item List trained and deployed models on the models overview
-    \item Show the overview of the selected model when clicked on a model on the models overview
+    \item \label{itm:welcome-page}Show a welcome page with a login panel when the website is accessed
+    \item \label{itm:registration-panel}Show registration panel when clicked on register in the welcome page
+    \item \label{itm:workspaces-overview}Show a \glspl{workspace} overview where the available \glspl{workspace} are listed after logged in
+    \item \label{itm:create-workspace}Allow creating \glspl{workspace} with the given name, sensors to be used and their sampling rate
+    \item \label{itm:cr-list-sensors}List the available sensors for the recordings on the workspace creation window
+    \item \label{itm:workspace-panel}Show the \gls{workspace} panel when a \gls{workspace} is selected
+    \item \label{itm:rename-workspace}Allow renaming \glspl{workspace} on the \gls{workspace} panel by double clicking on the workspace name
+    \item \label{itm:labels-overview}List labels with their sample count on the labels overview window
+    \item \label{itm:create-label}Allow creating labels for the actions to be recorded in the workspace
+    \item \label{itm:rename-label}Allow renaming labels on the labels overview
+    \item \label{itm:delete-label}Allow deleting labels which in turn deletes the data samples with the selected label
+    \item \label{itm:workspace-link}Display a link to be used for recording data to the workspace when collect data is clicked
+    \item \label{itm:workspace-copy-link}Display a button to copy the link to the clipboard
+    \item \label{itm:workspace-qr}Display QR code with the same link in the previous function embedded to be used for recording data
+    \item \label{itm:display-samples}Display the collected data samples chronologically on the workspace panel
+    \item \label{itm:visualize-sample}Visualize the selected data sample as a graph when the data sample is clicked on the workspace panel 
+    \item \label{itm:change-graph}Allow changing the graph type (line plot, bar plot, box plot, histogram, distplot, heatmaps, 2D and 3D Scatter plot)
+    \item \label{itm:metadata}Display the metadata of the selected data sample (identifier of the recording device and recording date/time)
+    \item \label{itm:set-timeframe}Allow setting the start/end time of the labeled actions on the graph view of the selected data sample
+    \item \label{itm:relabel}Allow relabeling the selected data sample
+    \item \label{itm:delete-sample}Allow deletion of the selected data sample
+    \item \label{itm:imputation}Allow selecting data imputation options on the workspace panel: \\\gls{mean imputation}, \gls{last observation carried forward imputation}, \gls{linear interpolation}, \gls{spline interpolation}, \gls{moving average imputation}
+    \item \label{itm:feature-extraction}Allow selecting feature extration options on the workspace panel: \\min, max, variance, energy, autoregressive correlation, mean, IQR, pearson correlation, skewness, kurtosis, fourier transform
+    \item \label{itm:normalization}Allow selecting normalization options on the workspace panel: \\MinMaxScaler, Normalizer, QuantileTransformer, RobustScaler, StandardScaler
+    \item \label{itm:model-hyperparameters}Allow selecting machine learning model on the workspace panel with the respective hyperparameters depending on the selected model: \\MLPClassifier, SVC, RandomForestClassifier, KNeighborsClassifier
+    \item \label{itm:train}Request training of the model according to the selected options and automatically deploy it
+    \item \label{itm:models-over-list}List trained and deployed models on the models overview
+    \item \label{itm:models-over-over}Show the overview of the selected model when clicked on a model on the models overview
     \begin{itemize}
-        \item \textbf{/F281/} Display the used parameters of the selected model
-        \item \textbf{/F282/} Display the performance metrics of the selected model: \\Average Accuracy, Balanced Accuracy, Area under the Curve, Average Precision, Per Class Precision, Average Recall, Per Class Recall, f1-score, Per Class f1-score
+        \item \label{itm:models-over-1}\textbf{/F281/} Display the used parameters of the selected model
+        \item \label{itm:models-over-2}\textbf{/F282/} Display the performance metrics of the selected model: \\Average Accuracy, Balanced Accuracy, Area under the Curve, Average Precision, Per Class Precision, Average Recall, Per Class Recall, f1-score, Per Class f1-score
     \end{itemize}
-    \item Display a mini QR code symbol for each model on the models overview
-    \item Display a link to use the deployed model on mobile devices when the mini QR code symbol is clicked
-    \item Display a button to copy the link to the clipboard
-    \item Display QR code with the same link in the previous function embedded to be used for classifying data
+    \item \label{itm:disp-miniqr-classify}Display a mini QR code symbol for each model on the models overview
+    \item \label{itm:disp-link-classify}Display a link to use the deployed model on mobile devices when the mini QR code symbol is clicked
+    \item \label{itm:disp-copy-classify}Display a button to copy the link to the clipboard
+    \item \label{itm:disp-qr-classify}Display QR code with the same link in the previous function embedded to be used for classifying data
     \item Display a logout button on all pages
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
 \begin{enumerate}[resume*]
-    \item Show a list of available labels that will label the recorded data when the data collection is initiated
-    \item Show an error if not all the required sensors are available in the device
-    \item Allow configuring the countdown duration until the recording starts
-    \item Allow configuring the recording duration
-    \item Show a button to initiate the recording
-    \item Show a countdown page with the current configuration on display (label, sensors used and their sampling rates)
-    \item Display the sensor data in real-time as curves for each sensor on a single graph
-    \item Show a recording completed page when the recording duration times out
-    \item Allow discarding the last recording
-    \item Allow another recording with the same configuration
-    \item Allow editing configurations for the next recording
-    \item Show a page for classification when the link of a model is opened
-    \item Start listening to the sensor data of the mobile device right after the page is loaded
-    \item Display the sensor data in real-time as curves for each sensor on a single graph
-    \item Display the classified actions on the webpage in real time
-    \item Allow stopping the recording
-    \item Display the classified actions as a chronological list when the recording is stopped
-    \item Allow restarting the recording
+    \item \label{itm:conf-rec-label}Show a list of available labels that will label the recorded data when the data collection is initiated
+    \item \label{itm:conf-rec-nosensor}Show an error if not all the required sensors are available in the device
+    \item \label{itm:conf-rec-count}Allow configuring the countdown duration until the recording starts
+    \item \label{itm:conf-rec-dur}Allow configuring the recording duration
+    \item \label{itm:init-rec-button}Show a button to initiate the recording
+    \item \label{itm:init-rec-countdown}Show a countdown page with the current configuration on display (label, sensors used and their sampling rates)
+    \item \label{itm:init-rec-realtime}Display the sensor data in real-time as curves for each sensor on a single graph
+    \item \label{itm:init-rec-completed}Show a recording completed page when the recording duration times out
+    \item \label{itm:discard-record}Allow discarding the last recording
+    \item \label{itm:next-record1}Allow another recording with the same configuration
+    \item \label{itm:next-record2}Allow editing configurations for the next recording
+    \item \label{itm:show-classification}Show a page for classification when the link of a model is opened
+    \item \label{itm:start-listening}Start listening to the sensor data of the mobile device right after the page is loaded
+    \item \label{itm:display-sensor}Display the sensor data in real-time as curves for each sensor on a single graph
+    \item \label{itm:diplay-classified}Display the classified actions on the webpage in real time
+    \item \label{itm:stop-recording}Allow stopping the recording
+    \item \label{itm:display-recording-chrono}Display the classified actions as a chronological list when the recording is stopped
+    \item \label{itm:restart-recording}Allow restarting the recording
 \end{enumerate}
 
 \subsubsection{Server API}
 \begin{enumerate}[resume*]
-    \item Serve authentication services
+    \item \label{itm:authentication}Serve authentication services
     \item Serve workspace information for a user
     \item Serve data set information for a workspace
     \item Edit the label time frames of a data sample
@@ -96,14 +96,14 @@ The web client supports both desktop and mobile modes. The functionality that wi
 
 \subsection{Extending Functions}
 \begin{enumerate}[resume*]
-    \item Serve a "Stay Signed In" functionality on the desktop web client
-    \item Add captcha to login after 5 consecutive failed login attempts
-    \item Show a sign if a data collecting device is currently active
-    \item Allow listing samples by label on the workspace panel
-    \item Allow adding descriptions to the labels to assist data collection
-    \item \label{/F480/} Give the user non-visual feedback if an action is identified
-    \item Set a sound feedback to play when an action is identified
-    \item Serve a list of languages for the user interface
-    \item Support magnetometer sensor
-    \item Serve a "Forgot password" option that allows users to recover credentials
+    \item \label{itm:stay-signed}Serve a "Stay Signed In" functionality on the desktop web client
+    \item \label{itm:captcha}Add captcha to login after 5 consecutive failed login attempts
+    \item \label{itm:active-sign}Show a sign if a data collecting device is currently active
+    \item \label{itm:filter-by-label}Allow listing samples by label on the workspace panel
+    \item \label{itm:label-description}Allow adding descriptions to the labels to assist data collection
+    \item \label{itm:nonvisual-feedback} Give the user non-visual feedback if an action is identified
+    \item \label{itm:sound-feedback}Set a sound feedback to play when an action is identified
+    \item \label{itm:language}Serve a list of languages for the user interface
+    \item \label{itm:magnetometer}Support magnetometer sensor
+    \item \label{itm:forgot-password}Serve a "Forgot password" option that allows users to recover credentials
 \end{enumerate}
