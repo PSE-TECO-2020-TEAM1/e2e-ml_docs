@@ -14,7 +14,11 @@ basic requests. Each test case represents a basic action user can take.
         \item \textbf{/T012/} via Mozilla Firefox,
         \item \textbf{/T013/} via Internet Explorer 6.
     \end{itemize}
-    \item Create a new user. \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
+    \item Sign up with \hyperref[welcome_page]{/F010/} \hyperref[registration_panel]{/F020/}
+    \begin{itemize}
+        \item \textbf{/T021/} new credentials,
+        \item \textbf{/T022/} existing credentials.
+    \end{itemize}
     \item Login \hyperref[welcome_page]{/F010/}
     \begin{itemize}
         \item /T031/ with existing credentials, \hyperref[welcome_page]{/F010/} , F520
@@ -78,6 +82,7 @@ These test cases are not necessary for the application to work properly, but vit
     \item Set a sound to play in case of a classification on the desktop web client.
     \item Change the language of the desktop web client.
     \item Select the magnetometer sensor.
+    \item Select "Forgot Password".
 \end{enumerate}
 
 \subsection{Test Scenarios}
@@ -86,7 +91,7 @@ The following test scenarios are composed of the aforementioned test cases. Star
 A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record in real-time. Lastly, the user stops the classification and examines the classified actions.
 \begin{enumerate}
     \item /T010/ Access web page.
-    \item /T020/ Create a new user.
+    \item /T021/ Sign up with new credentials.
     \item /T031/ Login with existing credentials.
     \item /T040/ Create a new workspace with a name, sampling rate value and required sensors.
     \item /T070/ Open the labels overview.
@@ -122,35 +127,54 @@ User scans the QR code they received to begin recording data. It turns out their
 \subsubsection{Test Scenario 5 - Forgotten Password}
 User tries to login with an invalid username and/or password. After a few attempts user requests a new password using the "Forgot Password" functionality and successfully manages to login using their new password.
 \begin{enumerate}
-    \item 
+    \item /T010/ Access web page.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T400/ Select "Forgot Password".
+    \item /T031/ Login with existing credentials.
 \end{enumerate} 
 \subsubsection{Test Scenario 6 - Data Deletion} 
 User logs in and opens their previously set workspace. User finds some data samples and labels to be improper and deletes them.
 \begin{enumerate}
-    \item 
+    \item /T010/ Access web page.
+    \item /T031/ Login with existing credentials.
+    \item /T050/ Open an already existing workspace.
+    \item /T130/ Delete the selected sample.
+    \item /T070/ Open the labels overview.
+    \item /T072/ Delete label.
 \end{enumerate}
 \subsubsection{Test Scenario 7 - Interruption during Recording}
-User uses the link they was provided previously to start collecting data. After configuring the options the user starts the recording. Whilst recording user receives a phone call. Recording continues during the call. The user then discards the recording and start a new recording. 
+User uses the link that was provided previously to start collecting data. After configuring the options the user starts the recording. Whilst recording, the user receives a phone call. Recording continues during the call. The user then discards the recording and start a new recording. 
 \begin{enumerate}
     \item /T010/ Access web page.
-    \item /
+    \item /T031/ Login with existing credentials.
+    \item /T050/ Open an already existing workspace.
+    \item /T081/ Initiate data collection via using the link.
+    \item /T230/ Choose a label for the data that will be recorded.
+    \item /T240/ Set the countdown to start of recording.
+    \item /T250/ Set the recording duration.
+    \item /T260/ Start recording data.
+    \item /T270/ Discard recorded data.
+    \item /T280/ Record another data after one recording completes.
+    \item /T260/ Start recording data.
 \end{enumerate}
 \subsubsection{Test Scenario 8 - Registration with Already Existing Credentials}
 User opens the website on their desktop device and tries to register with an already existing username.
 \begin{enumerate}
     \item /T010/ Access web page.
-    \item 
+    \item /T022/ Sign up with existing credentials.
 \end{enumerate}
 \subsubsection{Test Scenario 9 - Multi-language Support*}
 User opens the website and changes the language option to German. 
 \begin{enumerate}
-    \item 
+    \item /T010/ Access web page.
+    \item /T380/ Change the language of the desktop web client.
 \end{enumerate}
 \subsubsection{Test Scenario 10 - Extensive Use of Main Functionalities}
 User opens the website and creates a new account. 
 \begin{enumerate}
-    \item /T010/ Access web page
-    \item /T020/ Create a new user
+    \item /T010/ Access web page.
+    \item /T021/ Sign up with new credentials.
 \end{enumerate}
 \subsubsection{Test Scenario 11 - Extensive Use of All Functionalities*}
 
@@ -160,6 +184,12 @@ User opens the website and creates a new account.
 \subsubsection{Test Scenario 12 - Brute-force Attempt*}
 User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a CAPTCHA to solve.
 \begin{enumerate}
-    \item 
+    \item /T010/ Access web page.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T330/ Solve captcha.
 \end{enumerate}
 \subsubsection{Test Scenario 13 - Multiple/Simultaneous Data Collection and Classification}
