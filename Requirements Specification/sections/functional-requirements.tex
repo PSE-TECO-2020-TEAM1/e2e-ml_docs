@@ -78,20 +78,12 @@ The web client supports both desktop and mobile modes. The functionality that wi
 \subsubsection{Server API}
 \begin{enumerate}[resume*]
     \item \label{itm:authentication}Serve authentication services
-    \item Serve \gls{workspace} information for a user
-    \item Serve data set information for a workspace
-    \item Edit the \gls{label} time frames of a \gls{data sample}
-    \item Relabel \gls{data sample}
-    \item Delete \gls{data sample}
-    \item Create labels on a workspace
-    \item Rename labels on a workspace
-    \item Delete labels on a \gls{workspace} (which deletes the associated \glspl{data sample} as well)
-    \item Serve \gls{label} information to the mobile client
-    \item Accept data from the mobile client
+    \item \label{itm:handle-workspace}Handle workspace information
+    \item Handle \gls{workspace} data set.
+    \item Handle \gls{label} information for a workspace
+    \item Store data coming from a mobile client
     \item Initiate the configured \glslink{machine learning model}{model} training
-    \item Serve the \glslink{machine learning model}{model} information on a workspace
-    \item Rename \glslink{machine learning model}{model}s on a workspace
-    \item Delete \glslink{machine learning model}{model}s on a workspace
+    \item Handle \glslink{machine learning model}{model} information for the workspace
 \end{enumerate}
 
 \subsection{Extending Functions}

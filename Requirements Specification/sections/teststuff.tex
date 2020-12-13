@@ -33,7 +33,7 @@ basic requests. Each test case represents a basic action user can take.
         \item /T072/ Rename label. (\ref{itm:rename-label})
         \item /T073/ Delete label. (\ref{itm:delete-label})
     \end{itemize}
-    \item Initiate data collection F060
+    \item Initiate data collection
     \begin{itemize}
         \item /T081/ via using the link (\ref{itm:workspace-link}, \ref{itm:workspace-copy-link})
         \item /T082/ via scanning the \gls{QR code}. (\ref{itm:workspace-qr})
@@ -173,11 +173,49 @@ User opens the website and changes the language option to German.
 \subsubsection{Test Scenario 10 - Extensive Use of Main Functionalities}
 User opens the website and creates a new account. 
 \begin{enumerate}
-    \item /T010/ Access web page.
+    \item /T010/ Access web page. 
     \item /T021/ Sign up with new credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T031/ Login with existing credentials.
+    \item /T040/ Create a new \gls{workspace} with a name, sampling rate value and required \glspl{sensor}.
+    \item /T060/ Rename the \gls{workspace}.
+    \item /T070/ Open the labels overview.
+    \item /T071/ Create new label.
+    \item /T072/ Rename label.
+    \item /T071/ Create new label.
+    \item /T073/ Delete label.
+    \item /T080/ Initiate data collection via scanning the \gls{QR code}.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
+    \item /T240/ Set the countdown to start of recording.
+    \item /T250/ Set the recording duration.
+    \item /T260/ Start recording data.
+    \item /T270/ Discard recorded data.
+    \item /T280/ Record another data after one recording completes.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
+    \item /T240/ Set the countdown to start of recording.
+    \item /T250/ Set the recording duration.
+    \item /T260/ Start recording data.
+    \item /T090/ Open the sample overview.
+    \item /T100/ Choose another graph type to visualize data.
+    \item /T120/ Relabel the selected sample.
+    \item /T110/ Set the relevant time frame of the selected \gls{data sample} on the graph.
+    \item /T130/ Delete the selected sample.
+    \item /T140/ Select the desired data imputation options.
+    \item /T150/ Select the desired \gls{feature extraction} options.
+    \item /T160/ Select the normalization options.
+    \item /T170/ Select the desired machine learning \glslink{machine learning model}{model}.
+    \item /T180/ Set the hyperparameters of the \glslink{machine learning model}{model}.
+    \item /T190/ Train the \glslink{machine learning model}{model}.
+    \item /T200/ Open the \glslink{machine learning model}{model}s overview. 
+    \item /T210/ Open the overview of a specific \glslink{machine learning model}{model}.
+    \item /T082/ Initiate data via scanning the \gls{QR code}.
+    \item /T290/ Record data to classify. 
+    \item /T300/ Stop the \gls{classification}.
+    \item /T310/ Restart the \gls{classification}.
+    \item /T300/ Stop the \gls{classification}.
 \end{enumerate}
-\subsubsection{Test Scenario 11 - Extensive Use of All Functionalities*}
 
+\subsubsection{Test Scenario 11 - Extensive Use of All Functionalities*}
 \begin{enumerate}
     \item 
 \end{enumerate}
@@ -193,3 +231,20 @@ User with malicious intents tries to hack an account through brute-forcing. Afte
     \item /T330/ Solve \gls{CAPTCHA}.
 \end{enumerate}
 \subsubsection{Test Scenario 13 - Multiple/Simultaneous Data Collection and Classification}
+Two mobile clients will first collect data for one workspace at the same time. Then they will classify actions at the same time.
+\begin{enumerate}
+    \item /T081/ Initiate data collection via using the link. (1)
+    \item /T082/ Initiate data collection via scanning the \gls{QR code}. (2)
+    \item /T230/ Choose a \gls{label} for the data that will be recorded. (1)
+    \item /T230/ Choose a \gls{label} for the data that will be recorded. (2)
+    \item /T240/ Set the countdown to start of recording. (1)
+    \item /T260/ Start recording data. (2)
+    \item /T250/ Set the recording duration. (1)
+    \item /T260/ Start recording data. (2)
+    \item /T221/ Initiate data \gls{classification} via using the link. (1)
+    \item /T222/ Initiate data \gls{classification} via scanning the QR code. (2)
+    \item /T290/ Record data to classify. (1)
+    \item /T290/ Record data to classify. (2)
+    \item /T300/ Stop the \gls{classification}. (1)
+    \item /T300/ Stop the \gls{classification}. (2)
+\end{enumerate}
