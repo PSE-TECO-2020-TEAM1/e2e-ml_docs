@@ -88,7 +88,7 @@ These test cases are not necessary for the application to work properly, but vit
 \subsection{Test Scenarios}
 The following test scenarios are composed of the aforementioned test cases. Starred test scenarios indicate that extending functionalities are also tested in the scenario.
 \subsubsection{Test Scenario 1 - First Time User}
-A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning \glslink{machine learning model}{model}. The user then deploys this \glslink{machine learning model}{model} and uses the deployed \glslink{machine learning model}{model}s' unique \gls{QR code} to identify new data they record in real-time. Lastly, the user stops the \gls{classification} and examines the classified actions.
+A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user creates a new workspace. The user adds a new label to this workspace and initiates data collection via scanning the QR code. On their mobile device they choose a label for the action they will record. The user then starts recording using the default configuration. After the recording concludes, the user starts another recording. With the data they have collected, the user trains a machine learning \glslink{machine learning model}{model}. The user then deploys this \glslink{machine learning model}{model} and uses the deployed \glslink{machine learning model}{model}s' unique \gls{QR code} to identify new data they record in real-time. Lastly, the user stops the \gls{classification} and examines the classified actions.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T021/ Sign up with new credentials.
@@ -124,7 +124,7 @@ User scans the \gls{QR code} they received to begin recording data. It turns out
 \begin{enumerate}
     \item /T092/ Initiate date collection via scanning the \gls{QR code}.
 \end{enumerate}
-\subsubsection{Test Scenario 5 - Forgotten Password}
+\subsubsection{Test Scenario 5 - Forgotten Password*}
 User tries to login with an invalid username and/or password. After a few attempts user requests a new password using the "Forgot Password" functionality and successfully manages to login using their new password.
 \begin{enumerate}
     \item /T010/ Access web page.
@@ -231,20 +231,18 @@ User with malicious intents tries to hack an account through brute-forcing. Afte
     \item /T330/ Solve \gls{CAPTCHA}.
 \end{enumerate}
 \subsubsection{Test Scenario 13 - Multiple/Simultaneous Data Collection and Classification}
-Two mobile clients will first collect data for one workspace at the same time. Then they will classify actions at the same time.
+Two mobile clients (A and B) collect data for one workspace simultaneously. Client A uses the link to initiate data collection, while client B scans the QR code. They both choose a label for their recording. Client A sets the recording countdown and duration, whereas client B start recording directly using the default configuration. While client A is recording their first data, client B starts another recording. After their recordings conclude, client A uses the link to initiate classification, while client B scans the QR link. They concurrently classify the data they record.
 \begin{enumerate}
-    \item /T081/ Initiate data collection via using the link. (1)
-    \item /T082/ Initiate data collection via scanning the \gls{QR code}. (2)
-    \item /T230/ Choose a \gls{label} for the data that will be recorded. (1)
-    \item /T230/ Choose a \gls{label} for the data that will be recorded. (2)
-    \item /T240/ Set the countdown to start of recording. (1)
-    \item /T260/ Start recording data. (2)
-    \item /T250/ Set the recording duration. (1)
-    \item /T260/ Start recording data. (2)
-    \item /T221/ Initiate data \gls{classification} via using the link. (1)
-    \item /T222/ Initiate data \gls{classification} via scanning the QR code. (2)
-    \item /T290/ Record data to classify. (1)
-    \item /T290/ Record data to classify. (2)
-    \item /T300/ Stop the \gls{classification}. (1)
-    \item /T300/ Stop the \gls{classification}. (2)
+    \item /T081/ Initiate data collection via using the link. (A)
+    \item /T082/ Initiate data collection via scanning the \gls{QR code}. (B)
+    \item /T230/ Choose a \gls{label} for the data that will be recorded. (A)
+    \item /T230/ Choose a \gls{label} for the data that will be recorded. (B)
+    \item /T240/ Set the countdown to start of recording. (A)
+    \item /T260/ Start recording data. (B)
+    \item /T250/ Set the recording duration. (A)
+    \item /T280/ Record another data after one recording completes. (B)
+    \item /T221/ Initiate data \gls{classification} via using the link. (A)
+    \item /T222/ Initiate data \gls{classification} via scanning the QR code. (B)
+    \item /T290/ Record data to classify. (A)
+    \item /T290/ Record data to classify. (B)
 \end{enumerate}
