@@ -24,9 +24,9 @@ basic requests. Each test case represents a basic action user can take.
         \item /T031/ with existing credentials,
         \item /T032/ with invalid credentials.
     \end{itemize}
-    \item Create a new workspace with a name, sampling rate value and required sensors. (\ref{itm:create-workspace}, \ref{itm:cr-list-sensors}, F540)
-    \item Open an already existing workspace. (\ref{itm:workspaces-overview}, \ref{itm:workspace-panel}, \ref{itm:display-samples})
-    \item Rename the workspace. (\ref{itm:rename-workspace})
+    \item Create a new \gls{workspace} with a name, sampling rate value and required \glspl{sensor}. (\ref{itm:create-workspace}, \ref{itm:cr-list-sensors}, F540)
+    \item Open an already existing \gls{workspace}. (\ref{itm:workspaces-overview}, \ref{itm:workspace-panel}, \ref{itm:display-samples})
+    \item Rename the \gls{workspace}. (\ref{itm:rename-workspace})
     \item Open the labels overview. (\ref{itm:labels-overview})
     \begin{itemize}
         \item /T071/ Create new label. (\ref{itm:create-label})
@@ -36,75 +36,75 @@ basic requests. Each test case represents a basic action user can take.
     \item Initiate data collection F060
     \begin{itemize}
         \item /T081/ via using the link (\ref{itm:workspace-link}, \ref{itm:workspace-copy-link})
-        \item /T082/ via scanning the QR code. (\ref{itm:workspace-qr})
+        \item /T082/ via scanning the \gls{QR code}. (\ref{itm:workspace-qr})
     \end{itemize}
     \item Open the sample overview. (\ref{itm:visualize-sample}, \ref{itm:metadata})
     \item Choose another graph type to visualize data. (\ref{itm:change-graph})
-    \item Set the relevant time frame of the selected data sample on the graph. (\ref{itm:set-timeframe})
+    \item Set the relevant time frame of the selected \gls{data sample} on the graph. (\ref{itm:set-timeframe})
     \item Relabel the selected sample. (\ref{itm:relabel})
     \item Delete the selected sample. (\ref{itm:delete-sample})
     \item Select the desired data imputation options. (\ref{itm:imputation})
-    \item Select the desired feature extraction options. (\ref{itm:feature-extraction})
+    \item Select the desired \gls{feature extraction} options. (\ref{itm:feature-extraction})
     \item Select the normalization options. (\ref{itm:normalization})
-    \item Select the desired machine learning model. (\ref{itm:model-hyperparameters})
-    \item Set the hyperparameters of the model. (\ref{itm:model-hyperparameters})
-    \item Train the model. (\ref{itm:train})
-    \item Open the models overview. (\ref{itm:models-over-list}, \ref{itm:disp-miniqr-classify})
-    \item Open the overview of a specific model. (\ref{itm:models-over-over}, \ref{itm:models-over-1}, \ref{itm:models-over-2})
-    \item Initiate data classification (\ref{itm:disp-miniqr-classify}, \ref{itm:disp-link-classify})
+    \item Select the desired machine learning \glslink{machine learning model}{model}. (\ref{itm:model-hyperparameters})
+    \item Set the hyperparameters of the \glslink{machine learning model}{model}. (\ref{itm:model-hyperparameters})
+    \item Train the \glslink{machine learning model}{model}. (\ref{itm:train})
+    \item Open the \glslink{machine learning model}{model}s overview. (\ref{itm:models-over-list}, \ref{itm:disp-miniqr-classify})
+    \item Open the overview of a specific \glslink{machine learning model}{model}. (\ref{itm:models-over-over}, \ref{itm:models-over-1}, \ref{itm:models-over-2})
+    \item Initiate data \gls{classification} (\ref{itm:disp-miniqr-classify}, \ref{itm:disp-link-classify})
     \begin{itemize}
         \item /T221/ via using the link, (\ref{itm:disp-copy-classify})
-        \item /T222/ via scanning the QR code. (\ref{itm:disp-qr-classify})
+        \item /T222/ via scanning the \gls{QR code}. (\ref{itm:disp-qr-classify})
     \end{itemize} 
 \end{enumerate}
 
 \paragraph{Mobile Web Client}
 \begin{enumerate}[resume*]
-    \item Choose a label for the data that will be recorded. (\ref{itm:conf-rec-label}, \ref{itm:conf-rec-nosensor})
+    \item Choose a \gls{label} for the data that will be recorded. (\ref{itm:conf-rec-label}, \ref{itm:conf-rec-nosensor})
     \item Set the countdown to start of recording. (\ref{itm:conf-rec-count})
     \item Set the recording duration. (\ref{itm:conf-rec-dur})
     \item Start recording data. (\ref{itm:init-rec-button}, \ref{itm:init-rec-countdown}, \ref{itm:init-rec-realtime}, \ref{itm:init-rec-completed})
     \item Discard recorded data. (\ref{itm:discard-record})
     \item Record another data after one recording completes. (\ref{itm:next-record1}, \ref{itm:next-record1})
     \item Record data to classify. (\ref{itm:show-classification}, \ref{itm:start-listening}, \ref{itm:display-sensor}, \ref{itm:diplay-classified})
-    \item Stop the classification. (\ref{itm:stop-recording}, \ref{itm:display-recording-chrono})
-    \item Restart the classification. (\ref{itm:restart-recording})
+    \item Stop the \gls{classification}. (\ref{itm:stop-recording}, \ref{itm:display-recording-chrono})
+    \item Restart the \gls{classification}. (\ref{itm:restart-recording})
 \end{enumerate}
 
 \subsubsection{Extending Test Cases}
 These test cases are not necessary for the application to work properly, but vital for testing the extending functions. 
 \begin{enumerate}[resume*]
     \item Toggle "Stay Signed In" checkbox. (\ref{itm:stay-signed})
-    \item Solve captcha. (\ref{itm:captcha})
+    \item Solve \gls{CAPTCHA}. (\ref{itm:CAPTCHA})
     \item Check if a data collecting device is connected on the desktop client. (\ref{itm:active-sign})
     \item Filter samples by label. (\ref{itm:filter-by-label})
     \item Add a description to the label. (\ref{itm:label-description})
-    \item Set a sound to play in case of a classification on the desktop web client. (\ref{itm:sound-feedback})
+    \item Set a sound to play in case of a \gls{classification} on the desktop web client. (\ref{itm:sound-feedback})
     \item Change the language of the desktop web client. (\ref{itm:language})
-    \item Select the magnetometer sensor. (\ref{itm:magnetometer})
+    \item Select the \gls{magnetometer} \gls{sensor}. (\ref{itm:magnetometer})
     \item Select "Forgot Password". (\ref{itm:forgot-password})
 \end{enumerate}
 
 \subsection{Test Scenarios}
 The following test scenarios are composed of the aforementioned test cases. Starred test scenarios indicate that extending functionalities are also tested in the scenario.
 \subsubsection{Test Scenario 1 - First Time User}
-A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning model. The user then deploys this model and uses the deployed models' unique QR code to identify new data they record in real-time. Lastly, the user stops the classification and examines the classified actions.
+A user who is new to machine learning applications opens the webpage on their computer and registers to the service. After logging in, the user collects data using the default configuration with their phone and trains a machine learning \glslink{machine learning model}{model}. The user then deploys this \glslink{machine learning model}{model} and uses the deployed \glslink{machine learning model}{model}s' unique \gls{QR code} to identify new data they record in real-time. Lastly, the user stops the \gls{classification} and examines the classified actions.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T021/ Sign up with new credentials.
     \item /T031/ Login with existing credentials.
-    \item /T040/ Create a new workspace with a name, sampling rate value and required sensors.
+    \item /T040/ Create a new \gls{workspace} with a name, sampling rate value and required \glspl{sensor}.
     \item /T070/ Open the labels overview.
     \item /T071/ Create new label.
-    \item /T081/ Initiate data collection via scanning the QR code.
-    \item /T230/ Choose a label for the data that will be recorded.
+    \item /T081/ Initiate data collection via scanning the \gls{QR code}.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
     \item /T260/ Start recording data.
     \item /T280/ Record another data after one recording completes.
-    \item /T190/ Train the model.
-    \item /T200/ Open the models overview.
-    \item /T221/ Initiate data classification via scanning the QR code.
+    \item /T190/ Train the \glslink{machine learning model}{model}.
+    \item /T200/ Open the \glslink{machine learning model}{model}s overview.
+    \item /T221/ Initiate data \gls{classification} via scanning the \gls{QR code}.
     \item /T290/ Record data to classify.
-    \item /T300/ Stop the classification.
+    \item /T300/ Stop the \gls{classification}.
 \end{enumerate}
 \subsubsection{Test Scenario 2 - Invalid credentials}
 User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
@@ -120,9 +120,9 @@ User opens the website on an unsupported desktop browser and is welcomed with an
     \item /T013/ Access web page via Internet Explorer 6.
 \end{enumerate} 
 \subsubsection{Test Scenario 4 - Unsupported Mobile Client}
-User scans the QR code they received to begin recording data. It turns out their device doesn't support the Sensor API and the website notifies the user about it.
+User scans the \gls{QR code} they received to begin recording data. It turns out their device doesn't support the \Gls{sensor} API and the website notifies the user about it.
 \begin{enumerate}
-    \item /T092/ Initiate date collection via scanning the QR code.
+    \item /T092/ Initiate date collection via scanning the \gls{QR code}.
 \end{enumerate}
 \subsubsection{Test Scenario 5 - Forgotten Password}
 User tries to login with an invalid username and/or password. After a few attempts user requests a new password using the "Forgot Password" functionality and successfully manages to login using their new password.
@@ -134,11 +134,11 @@ User tries to login with an invalid username and/or password. After a few attemp
     \item /T031/ Login with existing credentials.
 \end{enumerate} 
 \subsubsection{Test Scenario 6 - Data Deletion} 
-User logs in and opens their previously set workspace. User finds some data samples and labels to be improper and deletes them.
+User logs in and opens their previously set \gls{workspace}. User finds some \glspl{data sample} and labels to be improper and deletes them.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T031/ Login with existing credentials.
-    \item /T050/ Open an already existing workspace.
+    \item /T050/ Open an already existing \gls{workspace}.
     \item /T130/ Delete the selected sample.
     \item /T070/ Open the labels overview.
     \item /T072/ Delete label.
@@ -148,9 +148,9 @@ User uses the link that was provided previously to start collecting data. After 
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T031/ Login with existing credentials.
-    \item /T050/ Open an already existing workspace.
+    \item /T050/ Open an already existing \gls{workspace}.
     \item /T081/ Initiate data collection via using the link.
-    \item /T230/ Choose a label for the data that will be recorded.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
     \item /T240/ Set the countdown to start of recording.
     \item /T250/ Set the recording duration.
     \item /T260/ Start recording data.
@@ -182,7 +182,7 @@ User opens the website and creates a new account.
     \item 
 \end{enumerate}
 \subsubsection{Test Scenario 12 - Brute-force Attempt*}
-User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a CAPTCHA to solve.
+User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a \gls{CAPTCHA} to solve.
 \begin{enumerate}
     \item /T010/ Access web page.
     \item /T032/ Login with invalid credentials.
@@ -190,6 +190,6 @@ User with malicious intents tries to hack an account through brute-forcing. Afte
     \item /T032/ Login with invalid credentials.
     \item /T032/ Login with invalid credentials.
     \item /T032/ Login with invalid credentials.
-    \item /T330/ Solve captcha.
+    \item /T330/ Solve \gls{CAPTCHA}.
 \end{enumerate}
 \subsubsection{Test Scenario 13 - Multiple/Simultaneous Data Collection and Classification}

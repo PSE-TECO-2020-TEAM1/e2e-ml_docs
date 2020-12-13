@@ -1,16 +1,16 @@
 \section{Operating Environment}
 
-Database and the server appliance both run on a server, whereas different web browsers may be used for the clients.
+\Gls{database} and the server appliance both run on a server, whereas different web browsers may be used for the clients.
 
 \subsection{Software}
 \subsubsection{Server Appliance}
-A Docker image is provided with the project. The Docker image includes the following software:
+A \Gls{Docker} image is provided with the project. The \Gls{Docker} image includes the following software:
 \begin{itemize}
-    \item MongoDB support
-    \item Node.js 14 LTS and Python 3.8
+    \item \gls{MongoDB} support
+    \item \gls{Node.js} 14 LTS and Python 3.8
 \end{itemize}
 \subsubsection{Client Devices}
-Client interface is implemented using React 17.
+Client interface is implemented using \gls{React} 17.
 \begin{itemize}
     \item A modern desktop web browser (Chrome 87+, Firefox 83+) supporting:
     \begin{itemize}
@@ -18,7 +18,7 @@ Client interface is implemented using React 17.
     \end{itemize}
     \item A modern mobile web browser (Chrome 87+, Firefox 83+) supporting:
     \begin{itemize}
-        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs}{Sensor APIs}
+        \item \href{https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs}{\Gls{sensor} APIs}
     \end{itemize}
 \end{itemize}
 
@@ -27,7 +27,7 @@ Client interface is implemented using React 17.
 The server supports 300 clients at the same time. The application needs a minimum of 64 GBs of system memory and minimum 16 CPU cores. Most computations will be done on the server. Because of this reason there are no hard requirements for the client.
 
 \subsection{Orgware}
-The server needs a internet throughput of 1 GBit/s with maximum latency of 1000 ms to clients to facilitate real-time action classification.
+The server needs a internet throughput of 1 GBit/s with maximum latency of 1000 ms to clients to facilitate real-time action \gls{classification}.
 
 \subsection{Product Interface}
 None.
