@@ -216,8 +216,58 @@ User opens the website and creates a new account.
 \end{enumerate}
 
 \subsubsection{Test Scenario 11 - Extensive Use of All Functionalities*}
+User opens the website and creates a new account. 
 \begin{enumerate}
-    \item 
+    \item /T010/ Access web page. 
+    \item /T021/ Sign up with new credentials.
+    \item /T032/ Login with invalid credentials.
+    \item /T032/ Login with invalid credentials for 5 times.
+    \item /T330/ Login with invalid credentials after solving CAPTCHA.
+    \item /T400/ Click "Forgot Password".
+    \item /T320/ Toggle "Stay Signed In" checkbox.
+    \item /T031/ Login with existing credentials.
+    \item /T040/ Create a new \gls{workspace} with a name, sampling rate value and required \glspl{sensor}.
+    \item /T390/ Select the magnetometer sensor.
+    \item /T370/ Set a sound to play in case of a classification on the desktop web client.
+    \item /T380/ Change the language of the desktop web client
+    \item /T060/ Rename the \gls{workspace}.
+    \item /T340/ Check if a data collecting device is connected on the desktop client.
+    \item /T070/ Open the labels overview.
+    \item /T071/ Create new label.
+    \item /T360/ Add a description to the label.
+    \item /T072/ Rename label.
+    \item /T071/ Create new label.
+    \item /T073/ Delete label.
+    \item /T080/ Initiate data collection via scanning the \gls{QR code}.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
+    \item /T240/ Set the countdown to start of recording.
+    \item /T250/ Set the recording duration.
+    \item /T260/ Start recording data.
+    \item /T270/ Discard recorded data.
+    \item /T280/ Record another data after one recording completes.
+    \item /T230/ Choose a \gls{label} for the data that will be recorded.
+    \item /T240/ Set the countdown to start of recording.
+    \item /T250/ Set the recording duration.
+    \item /T260/ Start recording data.
+    \item /T090/ Open the sample overview.
+    \item /T350/ Filter samples by label.
+    \item /T100/ Choose another graph type to visualize data.
+    \item /T120/ Relabel the selected sample.
+    \item /T110/ Set the relevant time frame of the selected \gls{data sample} on the graph.
+    \item /T130/ Delete the selected sample.
+    \item /T140/ Select the desired data imputation options.
+    \item /T150/ Select the desired \gls{feature extraction} options.
+    \item /T160/ Select the normalization options.
+    \item /T170/ Select the desired machine learning \glslink{machine learning model}{model}.
+    \item /T180/ Set the hyperparameters of the \glslink{machine learning model}{model}.
+    \item /T190/ Train the \glslink{machine learning model}{model}.
+    \item /T200/ Open the \glslink{machine learning model}{model}s overview. 
+    \item /T210/ Open the overview of a specific \glslink{machine learning model}{model}.
+    \item /T082/ Initiate data via scanning the \gls{QR code}.
+    \item /T290/ Record data to classify. 
+    \item /T300/ Stop the \gls{classification}.
+    \item /T310/ Restart the \gls{classification}.
+    \item /T300/ Stop the \gls{classification}.
 \end{enumerate}
 \subsubsection{Test Scenario 12 - Brute-force Attempt*}
 User with malicious intents tries to hack an account through brute-forcing. After 5 unsuccessful login attempts, they are presented with a \gls{CAPTCHA} to solve.
