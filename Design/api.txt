@@ -1,0 +1,37 @@
+REST APIs
+
+AUTH
+/auth
+    TBD JsonWebToken passport
+
+NODE.JS
+/api
+    /sensors
+    /workspaces
+        /create
+        /:workspace
+            /rename
+            /collect #sitename.com/mobileapp?submission_id=5fcd23da7ffb?sensors=accelerometer
+            /samples
+                /windows_python_3_get_all_samples_formatted
+                /:sample
+                    /delete
+                    /relabel
+                    /timeframe
+            /labels
+                /create?name=asd
+                /:label
+                    /edit
+                    /delete
+        /submit_sample
+
+PYTHON
+/api
+    /parameters
+    /workspaces
+        /:workspace
+            /models
+                /train
+                /:model
+                    /predict #sitename.com/mobileapp?predict_id=bdsfs435
+        /submit_data_window

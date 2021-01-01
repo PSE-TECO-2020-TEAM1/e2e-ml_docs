@@ -1,0 +1,204 @@
+@startuml ExpressApp
+
+' ----------- LabelController ----------------
+
+interface CreateLabelReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+    +name: string
+}
+
+interface CreateLabelRes {
+    +success: boolean
+}
+
+CreateLabelReq -[hidden]-> CreateLabelRes
+
+interface GetLabelsReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId 
+}
+
+interface GetLabelsRes {
+    +success: boolean
+    +labels: Label[]
+}
+
+GetLabelsReq -[hidden]-> GetLabelsRes
+
+interface DeleteLabelReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+}
+
+interface DeleteLabelRes {
+    +success: boolean
+}
+
+DeleteLabelReq -[hidden]-> DeleteLabelRes
+
+interface RenameLabelReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+    +name: string
+}
+
+interface RenameLabelRes {
+    +success: boolean
+}
+
+RenameLabelReq -[hidden]-> RenameLabelRes
+
+interface DescribeReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+    +description: string
+}
+
+interface DescribeRes {
+    +success: boolean
+}
+
+DescribeReq -[hidden]-> DescribeRes
+
+class LabelController {
+    +createLabel(req: CreateLabelReq, res: Object) : void
+    +getLabels(req: GetLabelsReq, res: Object) : void
+    +deleteLabel(rq:DeleteLabelReq, res: Object) : void
+    +renameLabel(req: RenameLabelReq, res: Object) : void
+    +describe(req: DescribeReq, res: Object) : void
+}
+
+LabelController ...> CreateLabelReq
+LabelController ...> CreateLabelRes
+note bottom of CreateLabelRes: CreateLabelRes responseBody = {success: true};\nres.json(responseBody);
+
+LabelController ...> GetLabelsReq
+LabelController ...> GetLabelsRes
+
+LabelController ...> DeleteLabelReq
+LabelController ...> DeleteLabelRes
+
+LabelController ...> RenameLabelReq
+LabelController ...> RenameLabelRes
+
+LabelController ...> DescribeReq
+LabelController ...> DescribeRes
+
+' ------------- WorkspaceController ---------- 
+
+interface GetWorkspacesReq {
+    +userId: ObjectId
+}
+
+interface GetWorkspacesRes {
+    +success: boolean
+    +workspaces: Workspace[]
+}
+
+GetWorkspacesReq -[hidden]-> GetWorkspacesRes
+
+interface CreateWorkspaceReq {
+    +userId: ObjectId
+    +name: string
+    +sensors: Sensor[]
+}
+
+interface CreateWorkspaceRes {
+    +success: boolean
+}
+
+CreateWorkspaceReq -[hidden]-> CreateWorkspaceRes
+
+interface DeleteWorkspaceReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+}
+
+interface DeleteWorkspaceRes {
+    +success: boolean
+}
+
+DeleteWorkspaceReq -[hidden]-> DeleteWorkspaceRes
+
+interface GetSensorsReq {
+    +userId: ObjectId
+}
+
+interface GetSensorsRes {
+    +sensors: SensorType[]
+    +success: boolean
+}
+
+class WorkspaceController {
+    +getWorkspaces(req: GetWorkspacesReq, res: Object) : void
+    +createWorkspace(req: CreateWorkspaceReq, res: Object) : void
+    +deleteWorkspace(req: DeleteWorkspaceReq, res: Object) : void
+    +getSensors(req: GetSensorsReq, res: Object) : void
+}
+
+WorkspaceController ...> GetWorkspacesReq
+WorkspaceController ...> GetWorkspacesRes
+WorkspaceController ...> CreateWorkspaceReq
+WorkspaceController ...> CreateWorkspaceRes
+WorkspaceController ...> DeleteWorkspaceReq
+WorkspaceController ...> DeleteWorkspaceRes
+
+enum SensorType {
+    ACCELEROMETER(50),
+    GYROSCOPE(100),
+    MAGNETOMETER(250);
+
+    +maxSamplingRate: number
+    +data: string[]
+}
+
+class Sensor {
+    +id: ObjectId
+    +type: SensorType
+    +samplingRate: number
+}
+
+class DataPoint {
+    +id: ObjectId
+    +value: number[]
+    +timestamp: UnixTimestamp
+}
+
+class SensorDataPoints {
+    +id: ObjectId
+    +values: DataPoint[]
+}
+
+class TimeFrame {
+    +id: ObjectId
+    +start: UnixTimestamp
+    +end: UnixTimestamp
+}
+
+class Sample {
+    +id: ObjectId
+    +timeframes: TimeFrame[]
+    +label: Label
+    +data: SensorDataPoints[]
+    -start: UnixTimestamp
+    -end: UnixTimestamp
+    +setTimeFrames(timeframes: TimeFrame[])
+}
+
+class Label {
+    +id: ObjectId
+    +name: string
+    +samples: ObjectId[]
+    +description?: string
+}
+
+class WorkspaceModel {
+    +hasLabel(req: LabelRequest) : void
+}
+
+@enduml
