@@ -1,5 +1,13 @@
 @startuml ExpressApp
 
+class App {
+
+}
+
+App ---> "1" WorkspaceController
+App ---> "1" LabelController
+App ---> "1" SampleController
+
 ' ----------- LabelController ----------------
 
 interface CreateLabelReq {
@@ -17,7 +25,7 @@ CreateLabelReq -[hidden]-> CreateLabelRes
 
 interface GetLabelsReq {
     +userId: ObjectId
-    +workspaceId: ObjectId 
+    +workspaceId: ObjectId
 }
 
 interface GetLabelsRes {
@@ -73,6 +81,8 @@ class LabelController {
     +describe(req: DescribeReq, res: Object) : void
 }
 
+LabelController -----> "1" WorkspaceModel
+
 LabelController ...> CreateLabelReq
 LabelController ...> CreateLabelRes
 note bottom of CreateLabelRes: CreateLabelRes responseBody = {success: true};\nres.json(responseBody);
@@ -89,7 +99,7 @@ LabelController ...> RenameLabelRes
 LabelController ...> DescribeReq
 LabelController ...> DescribeRes
 
-' ------------- WorkspaceController ---------- 
+' ------------- WorkspaceController ----------
 
 interface GetWorkspacesReq {
     +userId: ObjectId
@@ -134,6 +144,8 @@ interface GetSensorsRes {
     +success: boolean
 }
 
+GetSensorsReq -[hidden]-> GetSensorsRes
+
 class WorkspaceController {
     +getWorkspaces(req: GetWorkspacesReq, res: Object) : void
     +createWorkspace(req: CreateWorkspaceReq, res: Object) : void
@@ -147,58 +159,182 @@ WorkspaceController ...> CreateWorkspaceReq
 WorkspaceController ...> CreateWorkspaceRes
 WorkspaceController ...> DeleteWorkspaceReq
 WorkspaceController ...> DeleteWorkspaceRes
+WorkspaceController ...> GetSensorsReq
+WorkspaceController ...> GetSensorsRes
+
+WorkspaceController ---> "1" WorkspaceModel
+
+'------------------ Sensor/Sample -----------------------
 
 enum SensorType {
-    ACCELEROMETER(50),
-    GYROSCOPE(100),
-    MAGNETOMETER(250);
+    ACCELEROMETER(50, {x, y, z}),
+    GYROSCOPE(100, {x, y, z}),
+    MAGNETOMETER(250, {x, y, z});
 
     +maxSamplingRate: number
     +data: string[]
 }
 
+' Schema
 class Sensor {
     +id: ObjectId
-    +type: SensorType
     +samplingRate: number
 }
 
-class DataPoint {
-    +id: ObjectId
+Sensor ---> "1" SensorType :type
+
+interface PrimitiveDataPoint {
     +value: number[]
     +timestamp: UnixTimestamp
 }
 
-class SensorDataPoints {
+class DataPoint implements PrimitiveDataPoint {
     +id: ObjectId
-    +values: DataPoint[]
 }
 
+class SensorDataPoints {
+    +id: ObjectId
+}
+
+SensorDataPoints "1" *--- "*" DataPoint : dataPoints
+
+' Schema
 class TimeFrame {
     +id: ObjectId
     +start: UnixTimestamp
     +end: UnixTimestamp
 }
 
+' Schema
 class Sample {
     +id: ObjectId
-    +timeframes: TimeFrame[]
-    +label: Label
-    +data: SensorDataPoints[]
     -start: UnixTimestamp
     -end: UnixTimestamp
     +setTimeFrames(timeframes: TimeFrame[])
 }
 
+' aggregation or relation?
+Sample "1" o--- "*" Timeframe : timeframes
+
+Sample "*" --- "1" Label
+Sample "1" *--- "*" SensorDataPoints : sensorDataPoints
+
+' mongoose.Model<Sample>
+class SampleModel {
+    +find(id: ObjectId) : Sample
+}
+
+SampleModel "1" *--- "*" Sample : samples
+
+' Schema
 class Label {
     +id: ObjectId
     +name: string
-    +samples: ObjectId[]
     +description?: string
 }
 
-class WorkspaceModel {
-    +hasLabel(req: LabelRequest) : void
+' Schema
+class Workspace {
+    +id: ObjectId
+    +name: String
 }
 
-@enduml
+Workspace *--- "*" Label
+Workspace *--- "*" Sensor
+Workspace o--- "*" Sample
+
+' mongoose.Model<Workspace>
+class WorkspaceModel {
+    +find(id: ObjectId) : Workspace
+}
+
+WorkspaceModel "1" *--- "*" Workspace : workspaces
+
+' --------------- SampleController -------------------
+
+interface AddSampleReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    ' SensorId: ObjectId
+    +dataPoints: Map<ObjectId, PrimitiveDataPoint[]>
+}
+
+AddSampleReq ...> PrimitiveDataPoint
+
+interface AddSampleRes {
+    +success: boolean
+}
+
+AddSampleReq -[hidden]-> AddSampleRes
+
+interface GetSamplesReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+}
+
+interface GetSamplesRes {
+    +success: boolean
+}
+
+GetSamplesReq -[hidden]-> GetSamplesRes
+
+interface RenameSampleReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
+    +name: string
+}
+
+interface RenameSampleRes {
+    +success: boolean
+}
+
+RenameSampleReq -[hidden]-> RenameSampleRes
+
+interface DeleteSampleReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
+}
+
+interface DeleteSampleRes {
+    +success: boolean
+}
+
+DeleteSampleReq -[hidden]-> DeleteSampleRes
+
+interface SetTimeFramesReq {
+    +userId: ObjectId
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
+    +timeFrames: TimeFrame[]
+}
+
+SetTimeFramesReq ...> TimeFrame
+
+interface SetTimeFramesRes {
+    +success: boolean
+}
+
+class SampleController {
+    +addSample(req: AddSampleReq, res: AddSampleRes) : void
+    +getSamples(req: GetSamplesReq, res: GetSamplesRes) : void
+    +renameSample(req: RenameSampleReq, res: RenameSampleRes) : void
+    +deleteSample(req: DeleteSampleReq, res: DeleteSampleReq) : void
+    +setTimeFrames(req: SetTimeFramesReq, res: SetTimeFrameRes) : void
+    }
+
+    SampleController ...> AddSampleReq
+    SampleController ...> AddSampleRes
+    SampleController ...> GetSamplesReq
+    SampleController ...> GetSamplesRes
+    SampleController ...> RenameSampleReq
+    SampleController ...> RenameSampleRes
+    SampleController ...> DeleteSampleReq
+    SampleController ...> DeleteSampleRes
+    SampleController ...> SetTimeFramesReq
+    SampleController ...> SetTimeFramesRes
+
+    SampleController ---> SampleModel
+
+    @enduml
