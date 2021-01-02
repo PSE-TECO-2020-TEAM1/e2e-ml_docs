@@ -9,10 +9,11 @@ NODE.JS
     /sensors
     /workspaces
         /create
-        /:workspace
+        /:workspace=?name=asdf
+            /sensors
             /rename
             /collect #sitename.com/mobileapp?submission_id=5fcd23da7ffb&sensors=accelerometer&samplingRate=50
-            /samples
+            /samples?listOnly=True
                 /windows_python_3_get_all_samples_formatted
                 /:sample
                     /delete
