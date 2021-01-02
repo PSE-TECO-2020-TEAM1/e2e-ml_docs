@@ -11,7 +11,7 @@ NODE.JS
         /create
         /:workspace
             /rename
-            /collect #sitename.com/mobileapp?submission_id=5fcd23da7ffb?sensors=accelerometer
+            /collect #sitename.com/mobileapp?submission_id=5fcd23da7ffb&sensors=accelerometer&samplingRate=50
             /samples
                 /windows_python_3_get_all_samples_formatted
                 /:sample
