@@ -11,17 +11,15 @@ NODE.JS
         /create
         /:workspace=?name=asdf
             /sensors
-            /rename
             /collect #sitename.com/mobileapp?submission_id=5fcd23da7ffb&sensors=accelerometer&samplingRate=50
             /samples?listOnly=True
-                /windows_python_3_get_all_samples_formatted
-                /:sample
+                /:sampleId
                     /delete
                     /relabel
                     /timeframe
             /labels
                 /create?name=asd
-                /:label
+                /:labelId
                     /edit
                     /delete
         /submit_sample
@@ -35,4 +33,4 @@ PYTHON
                 /train
                 /:model
                     /predict #sitename.com/mobileapp?predict_id=bdsfs435
-        /submit_data_window
+                /submit_data_window
