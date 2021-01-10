@@ -19,42 +19,52 @@ App ---> "1" SampleController
 ' ----------- LabelController ----------------
 
 interface CreateLabelReq {
+    -seeApiDocumentation
 }
 
 interface CreateLabelRes {
+    -seeApiDocumentation
 }
 
 CreateLabelReq -[hidden]-> CreateLabelRes
 
 interface GetLabelsReq {
+    -seeApiDocumentation
 }
 
 interface GetLabelsRes {
+    -seeApiDocumentation
 }
 
 GetLabelsReq -[hidden]-> GetLabelsRes
 
 interface DeleteLabelReq {
+    -seeApiDocumentation
 }
 
 interface DeleteLabelRes {
+    -seeApiDocumentation
 }
 
 DeleteLabelReq -[hidden]-> DeleteLabelRes
 
 interface RenameLabelReq {
+    -seeApiDocumentation
 }
 
 interface RenameLabelRes {
+    -seeApiDocumentation
     
 }
 
 RenameLabelReq -[hidden]-> RenameLabelRes
 
 interface DescribeReq {
+    -seeApiDocumentation
 }
 
 interface DescribeRes {
+    -seeApiDocumentation
     
 }
 
@@ -89,58 +99,72 @@ LabelController ...> DescribeRes
 ' ------------- WorkspaceController ----------
 
 interface GetWorkspacesReq {
+    -seeApiDocumentation
 }
 
 interface GetWorkspacesRes {
+    -seeApiDocumentation
 }
 
 GetWorkspacesReq -[hidden]-> GetWorkspacesRes
 
 interface CreateWorkspaceReq {
+    -seeApiDocumentation
 }
 
 interface CreateWorkspaceRes {
+    -seeApiDocumentation
 }
 
 CreateWorkspaceReq -[hidden]-> CreateWorkspaceRes
 
 interface DeleteWorkspaceReq {
+    -seeApiDocumentation
 }
 
 interface DeleteWorkspaceRes {
+    -seeApiDocumentation
     
 }
 
 DeleteWorkspaceReq -[hidden]-> DeleteWorkspaceRes
 
 interface GetSensorsReq {
+    -seeApiDocumentation
 }
 
 interface GetSensorsRes {
+    -seeApiDocumentation
 }
 
 GetSensorsReq -[hidden]-> GetSensorsRes
 
 interface GetSensorsOfWorkspaceReq {
+    -seeApiDocumentation
 }
 
 interface GetSensorsOfWorkspaceRes {
+    -seeApiDocumentation
 }
 
 GetSensorsOfWorkspaceReq -[hidden]-> GetSensorsOfWorkspaceRes
 
 interface GetSubmissionIdReq {
+    -seeApiDocumentation
 }
 
 interface GetSubmissionIdRes {
+    -seeApiDocumentation
 }
 
 GetSubmissionIdReq -[hidden]-> GetSubmissionIdRes
 
 interface GetSubmissionConfigReq {
+    -seeApiDocumentation
 }
 
 interface GetSubmissionConfigRes {
+    -seeApiDocumentation
 }
 
 GetSubmissionConfigReq -[hidden]-> GetSubmissionConfigRes
@@ -263,45 +287,55 @@ WorkspaceModel "1" *--- "*" Workspace : workspaces
 ' --------------- SampleController -------------------
 
 interface AddSampleReq {
+    -seeApiDocumentation
 }
 
 AddSampleReq ...> PrimitiveDataPoint
 
 interface AddSampleRes {
+    -seeApiDocumentation
 }
 
 AddSampleReq -[hidden]-> AddSampleRes
 
 interface GetSamplesReq {
+    -seeApiDocumentation
 }
 
 interface GetSamplesRes {
+    -seeApiDocumentation
 }
 
 GetSamplesReq -[hidden]-> GetSamplesRes
 
 interface RenameSampleReq {
+    -seeApiDocumentation
 }
 
 interface RenameSampleRes {
+    -seeApiDocumentation
 }
 
 RenameSampleReq -[hidden]-> RenameSampleRes
 
 interface DeleteSampleReq {
+    -seeApiDocumentation
 }
 
 interface DeleteSampleRes {
+    -seeApiDocumentation
 }
 
 DeleteSampleReq -[hidden]-> DeleteSampleRes
 
 interface SetTimeFramesReq {
+    -seeApiDocumentation
 }
 
 SetTimeFramesReq ...> TimeFrame
 
 interface SetTimeFramesRes {
+    -seeApiDocumentation
 }
 
 class SampleController {

@@ -1,0 +1,61 @@
+@startuml ExpressAppAuth
+
+class App {
+    -SERVER_SECRET: string
+}
+
+class AuthenticationController {
+    +signUp(req: SignUpReq, res: Object) : void
+    +login(req: LoginReq, res: Object) : void
+    +refresh(req: RefreshReq, res: Object) : void
+}
+
+interface SignUpReq {
+    -seeApiDocumentation
+}
+interface SignUpRes {
+    -seeApiDocumentation
+}
+SignUpReq -[hidden]-> SignUpRes
+
+interface LoginReq {
+    -seeApiDocumentation
+}
+interface LoginRes {
+    -seeApiDocumentation
+}
+LoginReq -[hidden]-> LoginRes
+
+interface RefreshReq {
+    -seeApiDocumentation
+}
+interface RefreshRes {
+    -seeApiDocumentation
+}
+RefreshReq -[hidden]-> RefreshRes
+
+AuthenticationController ..> SignUpReq
+AuthenticationController ..> SignUpRes
+AuthenticationController ..> LoginReq
+AuthenticationController ..> LoginRes
+AuthenticationController ..> RefreshReq
+AuthenticationController ..> RefreshRes
+
+App --> AuthenticationController
+
+class UserModel {
+    +find(username: string) : User
+}
+
+AuthenticationController --> UserModel
+
+class User {
+    +username: string
+    +passwordHash: string
+    +authToken: string
+    +refreshToken: string
+}
+
+UserModel *-- User : users
+
+@enduml
