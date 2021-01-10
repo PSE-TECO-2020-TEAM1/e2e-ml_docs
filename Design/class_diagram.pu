@@ -1,6 +1,14 @@
 @startuml ExpressApp
 
-class App {
+skinparam titleFontSize 100
+skinparam titleFontColor grey
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBackgroundColor Turquoise
+
+title An Interactive End-To-End Machine Learning Platform
+
+class App{
 
 }
 
@@ -11,64 +19,43 @@ App ---> "1" SampleController
 ' ----------- LabelController ----------------
 
 interface CreateLabelReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +labelId: ObjectId
-    +name: string
 }
 
 interface CreateLabelRes {
-    +success: boolean
 }
 
 CreateLabelReq -[hidden]-> CreateLabelRes
 
 interface GetLabelsReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
 }
 
 interface GetLabelsRes {
-    +success: boolean
-    +labels: Label[]
 }
 
 GetLabelsReq -[hidden]-> GetLabelsRes
 
 interface DeleteLabelReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +labelId: ObjectId
 }
 
 interface DeleteLabelRes {
-    +success: boolean
 }
 
 DeleteLabelReq -[hidden]-> DeleteLabelRes
 
 interface RenameLabelReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +labelId: ObjectId
-    +name: string
 }
 
 interface RenameLabelRes {
-    +success: boolean
+    
 }
 
 RenameLabelReq -[hidden]-> RenameLabelRes
 
 interface DescribeReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +labelId: ObjectId
-    +description: string
 }
 
 interface DescribeRes {
-    +success: boolean
+    
 }
 
 DescribeReq -[hidden]-> DescribeRes
@@ -102,55 +89,70 @@ LabelController ...> DescribeRes
 ' ------------- WorkspaceController ----------
 
 interface GetWorkspacesReq {
-    +userId: ObjectId
 }
 
 interface GetWorkspacesRes {
-    +success: boolean
-    +workspaces: Workspace[]
 }
 
 GetWorkspacesReq -[hidden]-> GetWorkspacesRes
 
 interface CreateWorkspaceReq {
-    +userId: ObjectId
-    +name: string
-    +sensors: Sensor[]
 }
 
 interface CreateWorkspaceRes {
-    +success: boolean
 }
 
 CreateWorkspaceReq -[hidden]-> CreateWorkspaceRes
 
 interface DeleteWorkspaceReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
 }
 
 interface DeleteWorkspaceRes {
-    +success: boolean
+    
 }
 
 DeleteWorkspaceReq -[hidden]-> DeleteWorkspaceRes
 
 interface GetSensorsReq {
-    +userId: ObjectId
 }
 
 interface GetSensorsRes {
-    +sensors: SensorType[]
-    +success: boolean
 }
 
 GetSensorsReq -[hidden]-> GetSensorsRes
+
+interface GetSensorsOfWorkspaceReq {
+}
+
+interface GetSensorsOfWorkspaceRes {
+}
+
+GetSensorsOfWorkspaceReq -[hidden]-> GetSensorsOfWorkspaceRes
+
+interface GetSubmissionIdReq {
+}
+
+interface GetSubmissionIdRes {
+}
+
+GetSubmissionIdReq -[hidden]-> GetSubmissionIdRes
+
+interface GetSubmissionConfigReq {
+}
+
+interface GetSubmissionConfigRes {
+}
+
+GetSubmissionConfigReq -[hidden]-> GetSubmissionConfigRes
 
 class WorkspaceController {
     +getWorkspaces(req: GetWorkspacesReq, res: Object) : void
     +createWorkspace(req: CreateWorkspaceReq, res: Object) : void
     +deleteWorkspace(req: DeleteWorkspaceReq, res: Object) : void
     +getSensors(req: GetSensorsReq, res: Object) : void
+    +getSensorsOfWorkspace(req: GetSensorsOfWorkspaceReq, res: Object): void
+    +getSubmissionId(req: GetSubmissionIdReq, res: Object) : void
+    +getSubmissionConfig(req: GetSubmissionConfigReq, res: Object): void
 }
 
 WorkspaceController ...> GetWorkspacesReq
@@ -161,18 +163,25 @@ WorkspaceController ...> DeleteWorkspaceReq
 WorkspaceController ...> DeleteWorkspaceRes
 WorkspaceController ...> GetSensorsReq
 WorkspaceController ...> GetSensorsRes
+WorkspaceController ...> GetSensorsOfWorkspaceReq
+WorkspaceController ...> GetSensorsOfWorkspaceRes
+WorkspaceController ...> GetSubmissionIdReq
+WorkspaceController ...> GetSubmissionIdRes
+WorkspaceController ...> GetSubmissionConfigReq
+WorkspaceController ...> GetSubmissionConfigRes
 
 WorkspaceController ---> "1" WorkspaceModel
 
 '------------------ Sensor/Sample -----------------------
 
 enum SensorType {
-    ACCELEROMETER(50, {x, y, z}),
-    GYROSCOPE(100, {x, y, z}),
-    MAGNETOMETER(250, {x, y, z});
+    ACCELEROMETER(50, 25, {x, y, z}),
+    GYROSCOPE(100, 70, {x, y, z}),
+    MAGNETOMETER(250, 250, {x, y, z});
 
     +maxSamplingRate: number
-    +data: string[]
+    +defaultSamplingRate: number
+    +dataFormat: string[]
 }
 
 ' Schema
@@ -214,7 +223,7 @@ class Sample {
 }
 
 ' aggregation or relation?
-Sample "1" o--- "*" Timeframe : timeframes
+Sample "1" o--- "*" TimeFrame : timeframes
 
 Sample "*" --- "1" Label
 Sample "1" *--- "*" SensorDataPoints : sensorDataPoints
@@ -236,7 +245,8 @@ class Label {
 ' Schema
 class Workspace {
     +id: ObjectId
-    +name: String
+    +name: string
+    +submission_ids: string[]
 }
 
 Workspace *--- "*" Label
@@ -253,76 +263,54 @@ WorkspaceModel "1" *--- "*" Workspace : workspaces
 ' --------------- SampleController -------------------
 
 interface AddSampleReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    ' SensorId: ObjectId
-    +dataPoints: Map<ObjectId, PrimitiveDataPoint[]>
 }
 
 AddSampleReq ...> PrimitiveDataPoint
 
 interface AddSampleRes {
-    +success: boolean
 }
 
 AddSampleReq -[hidden]-> AddSampleRes
 
 interface GetSamplesReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
 }
 
 interface GetSamplesRes {
-    +success: boolean
 }
 
 GetSamplesReq -[hidden]-> GetSamplesRes
 
 interface RenameSampleReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +sampleId: ObjectId
-    +name: string
 }
 
 interface RenameSampleRes {
-    +success: boolean
 }
 
 RenameSampleReq -[hidden]-> RenameSampleRes
 
 interface DeleteSampleReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +sampleId: ObjectId
 }
 
 interface DeleteSampleRes {
-    +success: boolean
 }
 
 DeleteSampleReq -[hidden]-> DeleteSampleRes
 
 interface SetTimeFramesReq {
-    +userId: ObjectId
-    +workspaceId: ObjectId
-    +sampleId: ObjectId
-    +timeFrames: TimeFrame[]
 }
 
 SetTimeFramesReq ...> TimeFrame
 
 interface SetTimeFramesRes {
-    +success: boolean
 }
 
 class SampleController {
-    +addSample(req: AddSampleReq, res: AddSampleRes) : void
-    +getSamples(req: GetSamplesReq, res: GetSamplesRes) : void
-    +renameSample(req: RenameSampleReq, res: RenameSampleRes) : void
-    +deleteSample(req: DeleteSampleReq, res: DeleteSampleReq) : void
-    +setTimeFrames(req: SetTimeFramesReq, res: SetTimeFrameRes) : void
-    }
+    +addSample(req: AddSampleReq, res: Object) : void
+    +getSamples(req: GetSamplesReq, res: Object) : void
+    +renameSample(req: RenameSampleReq, res: Object) : void
+    +deleteSample(req: DeleteSampleReq, res: Object) : void
+    +setTimeFrames(req: SetTimeFramesReq, res: Object) : void
+}
 
     SampleController ...> AddSampleReq
     SampleController ...> AddSampleRes
