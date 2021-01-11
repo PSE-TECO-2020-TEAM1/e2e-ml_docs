@@ -4,10 +4,17 @@ class App {
     -SERVER_SECRET: string
 }
 
+class TokenContent {
+    +username: string
+    +expiration: number
+}
+
 class AuthenticationController {
     +signUp(req: SignUpReq, res: Object) : void
     +login(req: LoginReq, res: Object) : void
+    -signToken(content: TokenContent, secret: string) : string
     +refresh(req: RefreshReq, res: Object) : void
+    -extractToken(token: string, secret: string) : TokenContent
 }
 
 interface SignUpReq {
@@ -44,7 +51,7 @@ AuthenticationController ..> RefreshRes
 App --> AuthenticationController
 
 class UserModel {
-    +find(username: string) : User
+    +findOne(username: string) : User
 }
 
 AuthenticationController --> UserModel
@@ -54,6 +61,8 @@ class User {
     +passwordHash: string
     +authToken: string
     +refreshToken: string
+    +isValidPassword() : boolean
+    +isValidRefreshToken(): boolean
 }
 
 UserModel *-- User : users

@@ -233,7 +233,6 @@ SensorDataPoints "1" *--- "*" DataPoint : dataPoints
 
 ' Schema
 class TimeFrame {
-    +id: ObjectId
     +start: UnixTimestamp
     +end: UnixTimestamp
 }
