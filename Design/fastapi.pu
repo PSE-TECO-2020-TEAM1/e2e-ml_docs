@@ -2,6 +2,8 @@
 
 class App {}
 
+App ---> "1" Router
+
 class WorkspaceModel {
     +find(id: ObjectId): Workspace
 }
@@ -13,27 +15,38 @@ class Workspace {
 }
 
 Workspace "*" *--- WorkspaceModel
+Workspace ---> "1" MLModelModel : mlModelModel
 
 class getParametersRes {
 }
 
-getParametersRes ---> "*" Imputation: imputations
-getParametersRes ---> "*" Feature: features
-getParametersRes ---> "*" Normalizer: normalizers
-getParametersRes ---> "*" Classifier: classifiers
+getParametersRes ---> "5" Imputation: imputations
+getParametersRes ---> "11" Feature: features
+getParametersRes ---> "5" Normalizer: normalizers
+getParametersRes ---> "4" Classifier: classifiers
 
 class trainReq {
+    model_name: string
+}
+
+class getModelRes {
+    
+}
+
+class getPredictionConfigRes {
 
 }
 
-class getModelsRes {
+class submitDataWindowReq {
 
 }
 
 class Router {
     -trainers: Map<ObjectId, Trainer> 
+    -predictors: Map<ObjectId, IClassifier>
+
     +getParameters(workspaceId: ObjectId): getParametersRes
-    +getModels(workspaceId: ObjectId): getModelsRes
+    +getModels(workspaceId: ObjectId): [(ObjectId, string)]
     +train(workspaceId: ObjectId, req: trainReq): void
     +trainingProgress(workspaceId: ObjectId): number
     +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
@@ -42,6 +55,13 @@ class Router {
     +submitDataWindow(predictionId: string, req: submitDataWindowReq): void
     -getDataset(workspaceId: ObjectId): Sample[]
 }
+
+Router ...> getParametersRes
+Router ...> trainReq
+Router ...> getModelRes
+Router ...> getPredictionConfigRes
+Router ...> submitDataWindowReq
+
 
 class Sample {
 
@@ -52,6 +72,13 @@ class Factory <<static>> {
     +{static} getNormalizer(normalizer: Normalizer): INormalizer
     +{static} getClassifier(classifier: Classifier, hyperparameters: Object): IClassifier
 }
+
+Factory ...> Imputation
+Factory ...> IImputer
+Factory ...> Normalizer
+Factory ...> INormalizer
+Factory ...> Classifier
+Factory ...> IClassifier
 
 interface IImputer {
     +fit(df: DataFrame): void
@@ -71,9 +98,6 @@ interface IClassifier {
 class Trainer {
     +progress: float
     -dataset: DataFrame
-    -imputation: IImputer
-    -normalizer: INormalizer
-    -classifier: IClassifier
     -windowSize: integer
     -slidingStep: integer
     +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[], normalizer: Normalizer, classifier: Classifier, hyperparameters: Object)
@@ -82,6 +106,17 @@ class Trainer {
     -extractFeature(): DataFrame
 }
 
+Trainer ---> "1" IImputer : imputer
+Trainer ---> "1" INormalizer : normalizer
+Trainer ---> "1" IClassifier : classifier
+
+Trainer ...> Imputation
+Trainer ...> Feature
+Trainer ...> Normalizer
+Trainer ...> Classifier
+Trainer ...> IClassifier
+Trainer ...> PerformanceMetrics
+
 class PerformanceMetrics {
     +labels: Map<string, List[(string, integer)]>
 }
@@ -89,16 +124,14 @@ class PerformanceMetrics {
 class MLModel {
     +id: ObjectId
     +name: string
-    +imputation: Imputation
-    +features: Features[]
-    +normalizer: Normalizer
-    +classifier: Classifier
-    +performance_metrics: PerformanceMetrics
-    +classifier_object: IClassifier
 }
 
-MLModel "1" ---> Imputation : imputation
-Feature "*" ---> MLModel
+MLModel ---> "1" Imputation : imputation
+MLModel ---> "1..*" Feature : features
+MLModel ---> "1" Normalizer : normalizer
+MLModel ---> "1" Classifier : classifier
+MLModel ---> "1" PerformanceMetrics : performance_metrics
+MLModel ---> "1" IClassifier : classifier_object
 
 class MLModelModel {
     +find(id: ObjectId): MLModel
