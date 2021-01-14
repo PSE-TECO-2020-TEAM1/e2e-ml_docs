@@ -1,0 +1,146 @@
+@startuml Model Management Class Diagram
+
+class App {}
+
+class WorkspaceModel {
+    +find(id: ObjectId): Workspace
+}
+
+class Workspace {
+    +id: ObjectId
+    +name: string
+    +user: string
+}
+
+Workspace "*" *--- WorkspaceModel
+
+class getParametersRes {
+}
+
+getParametersRes ---> "*" Imputation: imputations
+getParametersRes ---> "*" Feature: features
+getParametersRes ---> "*" Normalizer: normalizers
+getParametersRes ---> "*" Classifier: classifiers
+
+class trainReq {
+
+}
+
+class getModelsRes {
+
+}
+
+class Router {
+    -trainers: Map<ObjectId, Trainer> 
+    +getParameters(workspaceId: ObjectId): getParametersRes
+    +getModels(workspaceId: ObjectId): getModelsRes
+    +train(workspaceId: ObjectId, req: trainReq): void
+    +trainingProgress(workspaceId: ObjectId): number
+    +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
+    +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
+    +getPredictionConfig(predictionId: string): getPredictionConfigRes
+    +submitDataWindow(predictionId: string, req: submitDataWindowReq): void
+    -getDataset(workspaceId: ObjectId): Sample[]
+}
+
+class Sample {
+
+}
+
+class Factory <<static>> {
+    +{static} getImputation(imputation: Imputation): IImputer
+    +{static} getNormalizer(normalizer: Normalizer): INormalizer
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Object): IClassifier
+}
+
+interface IImputer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface INormalizer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface IClassifier {
+    +fit(df: DataFrame): void
+    +predict(): ndarray
+}
+
+class Trainer {
+    +progress: float
+    -dataset: DataFrame
+    -imputation: IImputer
+    -normalizer: INormalizer
+    -classifier: IClassifier
+    -windowSize: integer
+    -slidingStep: integer
+    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[], normalizer: Normalizer, classifier: Classifier, hyperparameters: Object)
+    +train(): (IClassifier, PerformanceMetrics)
+    -splitToWindows(dataSet: Sample[]): DataFrame
+    -extractFeature(): DataFrame
+}
+
+class PerformanceMetrics {
+    +labels: Map<string, List[(string, integer)]>
+}
+
+class MLModel {
+    +id: ObjectId
+    +name: string
+    +imputation: Imputation
+    +features: Features[]
+    +normalizer: Normalizer
+    +classifier: Classifier
+    +performance_metrics: PerformanceMetrics
+    +classifier_object: IClassifier
+}
+
+MLModel "1" ---> Imputation : imputation
+Feature "*" ---> MLModel
+
+class MLModelModel {
+    +find(id: ObjectId): MLModel
+}
+
+MLModel "*" *--- MLModelModel
+
+enum Imputation {
+    +MEAN_IMPUTATION
+    +LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION
+    +LINEAR_INTERPOLATION
+    +SPLINE_INTERPOLATION
+    +MOVING_AVERAGE_IMPUTATION
+}
+
+enum Feature {
+    +MIN
+    +MAX
+    +VARIANCE
+    +ENERGY
+    +AUTOREGRESSIVE_CORRELATION
+    +MEAN
+    +IQR
+    +PEARSON_CORRELATION
+    +SKEWNESS
+    +KURTOSIS
+    +FOURIER_TRANSFORM
+}
+
+enum Normalizer {
+    +MIN_MAX_SCALER
+    +NORMALIZER
+    +QUANTILE_TRANSFORMER
+    +ROBUST_SCALER
+    +STANDARD_SCALER
+} 
+
+enum Classifier {
+    +MLP_CLASSIFIER
+    +SV_CLASSIFIER
+    +RANDOM_FOREST_CLASSIFIER
+    +KNEIGHBOR_CLASSIFIER
+}
+
+@enduml

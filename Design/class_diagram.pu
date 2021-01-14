@@ -1,4 +1,4 @@
-@startuml ExpressApp
+@startuml Workspace Management Class Diagram
 
 skinparam titleFontSize 100
 skinparam titleFontColor grey
@@ -269,6 +269,7 @@ class Label {
 class Workspace {
     +id: ObjectId
     +name: string
+    +user: string
     +submission_ids: string[]
 }
 

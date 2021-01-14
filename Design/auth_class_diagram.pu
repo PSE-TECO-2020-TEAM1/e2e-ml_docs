@@ -1,4 +1,4 @@
-@startuml ExpressAppAuth
+@startuml Authentication Class Diagram
 
 class App {
     -SERVER_SECRET: string
@@ -16,6 +16,8 @@ class AuthenticationController {
     +refresh(req: RefreshReq, res: Object) : void
     -extractToken(token: string, secret: string) : TokenContent
 }
+
+AuthenticationController --> TokenContent
 
 interface SignUpReq {
     -seeApiDocumentation
@@ -62,7 +64,6 @@ class User {
     +authToken: string
     +refreshToken: string
     +isValidPassword() : boolean
-    +isValidRefreshToken(): boolean
 }
 
 UserModel *-- User : users
