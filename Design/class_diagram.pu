@@ -227,6 +227,7 @@ class DataPoint implements PrimitiveDataPoint {
 
 class SensorDataPoints {
     +id: ObjectId
+    +sensor_id: ObjectId
 }
 
 SensorDataPoints "1" *--- "*" DataPoint : dataPoints
@@ -249,7 +250,7 @@ class Sample {
 Sample "1" o--- "*" TimeFrame : timeframes
 
 Sample "*" --- "1" Label
-Sample "1" *--- "*" SensorDataPoints : sensorDataPoints
+Sample "1" *--- "*" SensorDataPoints : allSensorDataPoints
 
 ' mongoose.Model<Sample>
 class SampleModel {
@@ -308,15 +309,15 @@ interface GetSamplesRes {
 
 GetSamplesReq -[hidden]-> GetSamplesRes
 
-interface RenameSampleReq {
+interface RelabelSampleReq {
     -seeApiDocumentation
 }
 
-interface RenameSampleRes {
+interface RelabelSampleRes {
     -seeApiDocumentation
 }
 
-RenameSampleReq -[hidden]-> RenameSampleRes
+RelabelSampleReq -[hidden]-> RelabelSampleRes
 
 interface DeleteSampleReq {
     -seeApiDocumentation
@@ -341,7 +342,7 @@ interface SetTimeFramesRes {
 class SampleController {
     +addSample(req: AddSampleReq, res: Object) : void
     +getSamples(req: GetSamplesReq, res: Object) : void
-    +renameSample(req: RenameSampleReq, res: Object) : void
+    +relabelSample(req: RelabelSampleReq, res: Object) : void
     +deleteSample(req: DeleteSampleReq, res: Object) : void
     +setTimeFrames(req: SetTimeFramesReq, res: Object) : void
 }
@@ -350,8 +351,8 @@ class SampleController {
     SampleController ...> AddSampleRes
     SampleController ...> GetSamplesReq
     SampleController ...> GetSamplesRes
-    SampleController ...> RenameSampleReq
-    SampleController ...> RenameSampleRes
+    SampleController ...> RelabelSampleReq
+    SampleController ...> RelabelSampleRes
     SampleController ...> DeleteSampleReq
     SampleController ...> DeleteSampleRes
     SampleController ...> SetTimeFramesReq

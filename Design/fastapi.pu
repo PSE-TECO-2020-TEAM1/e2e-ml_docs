@@ -14,10 +14,28 @@ class Workspace {
     +user: string
 }
 
+Workspace *--- "*" Sensor : sensors
+
+class Sensor {
+    +name: string
+    +samplingRate: number
+}
+
 Workspace "*" *--- WorkspaceModel
 Workspace ---> "1" MLModelModel : mlModelModel
 
 class getParametersRes {
+    +imputation: string[]
+    +features: string[]
+    +normalizer: string[]
+    +classifier: (string, Hyperparameter[])[]
+}
+
+getParametersRes ...> Hyperparameter
+
+class Hyperparameter {
+    +name: string
+    +format: string
 }
 
 getParametersRes ---> "5" Imputation: imputations
@@ -26,51 +44,75 @@ getParametersRes ---> "5" Normalizer: normalizers
 getParametersRes ---> "4" Classifier: classifiers
 
 class trainReq {
-    model_name: string
+    +model_name: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: (string, Hyperparameter[])
 }
+
+trainReq ...> Hyperparameter
 
 class getModelRes {
-    
+    +performance_metrics: PerformanceMetrics
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: (string, Hyperparameter[])
 }
+
+getModelRes ...> Hyperparameter
 
 class getPredictionConfigRes {
-
-}
-
-class submitDataWindowReq {
-
+    +sensors: (string, integer)[]
 }
 
 class Router {
     -trainers: Map<ObjectId, Trainer> 
     -predictors: Map<ObjectId, IClassifier>
 
-    +getParameters(workspaceId: ObjectId): getParametersRes
-    +getModels(workspaceId: ObjectId): [(ObjectId, string)]
+    +getParameters(): getParametersRes
+    +createModelWorkspace(workspaceId: ObjectId) : void
+    +getModels(workspaceId: ObjectId): (ObjectId, string)[]
     +train(workspaceId: ObjectId, req: trainReq): void
     +trainingProgress(workspaceId: ObjectId): number
     +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
     +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
     +getPredictionConfig(predictionId: string): getPredictionConfigRes
-    +submitDataWindow(predictionId: string, req: submitDataWindowReq): void
+    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
     -getDataset(workspaceId: ObjectId): Sample[]
 }
+
+Router ...> SensorDataPoints
+Router ...> Sample
+Router ...> WorkspaceModel
+Router ...> Trainer
+
+class Sample {
+    +label: string
+}
+
+class SensorDataPoints {
+    +sensor: string
+}
+
+class DataPoint {
+    +timestamp: integer
+    +values: integer[]
+}
+
+Sample "1" ---> "*" SensorDataPoints : allSensorDataPoints
+SensorDataPoints "1" ---> "*" DataPoint : dataPoints
 
 Router ...> getParametersRes
 Router ...> trainReq
 Router ...> getModelRes
 Router ...> getPredictionConfigRes
-Router ...> submitDataWindowReq
-
-
-class Sample {
-
-}
 
 class Factory <<static>> {
     +{static} getImputation(imputation: Imputation): IImputer
     +{static} getNormalizer(normalizer: Normalizer): INormalizer
-    +{static} getClassifier(classifier: Classifier, hyperparameters: Object): IClassifier
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier
 }
 
 Factory ...> Imputation
@@ -79,6 +121,7 @@ Factory ...> Normalizer
 Factory ...> INormalizer
 Factory ...> Classifier
 Factory ...> IClassifier
+Factory ...> Hyperparameter
 
 interface IImputer {
     +fit(df: DataFrame): void
@@ -100,7 +143,7 @@ class Trainer {
     -dataset: DataFrame
     -windowSize: integer
     -slidingStep: integer
-    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[], normalizer: Normalizer, classifier: Classifier, hyperparameters: Object)
+    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[],\nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
     +train(): (IClassifier, PerformanceMetrics)
     -splitToWindows(dataSet: Sample[]): DataFrame
     -extractFeature(): DataFrame
@@ -116,6 +159,9 @@ Trainer ...> Normalizer
 Trainer ...> Classifier
 Trainer ...> IClassifier
 Trainer ...> PerformanceMetrics
+Trainer ...> Sample
+Trainer ...> Factory
+Trainer ...> Hyperparameter
 
 class PerformanceMetrics {
     +labels: Map<string, List[(string, integer)]>
@@ -130,6 +176,7 @@ MLModel ---> "1" Imputation : imputation
 MLModel ---> "1..*" Feature : features
 MLModel ---> "1" Normalizer : normalizer
 MLModel ---> "1" Classifier : classifier
+MLModel ...> "2..*" Hyperparameter: hyperparameters
 MLModel ---> "1" PerformanceMetrics : performance_metrics
 MLModel ---> "1" IClassifier : classifier_object
 
