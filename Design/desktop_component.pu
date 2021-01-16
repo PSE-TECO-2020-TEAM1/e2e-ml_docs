@@ -2,7 +2,7 @@
 ' skinparam monochrome true
 hide circle
 
-class "chart-js"
+class "highcharts"
 class "react-qr-code.QRCode" << component >>
 class "raviger.useRoutes" << hook >>
 class "raviger.Link" << component >>
@@ -20,6 +20,7 @@ class "MaterialUI.TableHead" << component >>
 class "MaterialUI.TableRow" << component >>
 class "MaterialUI.TableCell" << component >>
 class "MaterialUI.TableBody" << component >>
+class "MaterialUI.CircularProgressWithLabel" << component >>
 
 package DesktopApp {
     interface IModelOptions << interface >>
@@ -168,7 +169,7 @@ package DesktopApp {
         # sample: Sample
         # onRelabel: (frames: Timeframe[]): void
     }
-    SampleChart ...> "chart-js"
+    SampleChart ...> "highcharts"
 
     App --> WorkspaceModelsPage
     class WorkspaceModelsPage << component >> {
