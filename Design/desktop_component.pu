@@ -1,0 +1,208 @@
+@startuml DesktopApp
+' skinparam monochrome true
+hide circle
+
+class "highcharts"
+class "react-qr-code.QRCode" << component >>
+class "raviger.useRoutes" << hook >>
+class "raviger.Link" << component >>
+class "MaterialUI.TextField" << component >>
+class "MaterialUI.Button" << component >>
+class "MaterialUI.Checkbox" << component >>
+class "MaterialUI.Dropdown" << component >>
+class "MaterialUI.FormControlLabel" << component >>
+class "MaterialUI.Accordion" << component >>
+class "MaterialUI.List" << component >>
+class "MaterialUI.ListItem" << component >>
+class "MaterialUI.ListItemIcon" << component >>
+class "MaterialUI.Table" << component >>
+class "MaterialUI.TableHead" << component >>
+class "MaterialUI.TableRow" << component >>
+class "MaterialUI.TableCell" << component >>
+class "MaterialUI.TableBody" << component >>
+class "MaterialUI.CircularProgressWithLabel" << component >>
+
+package DesktopApp {
+    interface IModelOptions << interface >>
+    interface IWorkspace << interface >>
+    interface ISensor << interface >>
+    interface ILabel << interface >>
+    interface ISample << interface >>
+    interface ISampleDetails << interface >>
+
+    class API {
+        -token: string
+        +auth(username: string, password: string) : void
+        +isAuthenticated() : boolean
+        +train(options: IModelOptions) : boolean
+        +getWorkspaces(): IWorkspace[]
+        +createWorkspace(IWorkspace): void
+        +getAvailableSensors(): ISensor[]
+        +getSamples(): ISample[]
+        +deleteSample(sample: ISample): void
+        +getDataCollectionURL(): string
+        +getLabels(): ILabel[]
+        +deleteWorkspace(workspace: IWorkspace): void
+        +createLabel(ILabel): void
+        +getSampleDetails(sample: ISample): ISampleDetails
+        +setSampleTimeframe(sample: ISample, frame: Timeframe): void
+        +getModelMetrics(): IModelMetrics
+    }
+
+    API <... App
+    "raviger.useRoutes" <... App
+    class App << component >>
+    App --> Header
+    class Header << component >> {
+        ==props==
+        # route: component
+    }
+
+    App --> LoginPage
+    class LoginPage << component >> {
+        ==state==
+        # username: string
+        # password: string
+    }
+    LoginPage ...> "MaterialUI.TextField"
+    LoginPage ...> "MaterialUI.Button"
+    LoginPage ...> API
+
+    App --> WorkspacesListPage
+    class WorkspacesListPage << component >>
+    WorkspacesListPage ...> "MaterialUI.Button"
+    WorkspacesListPage ...> "raviger.Link"
+    WorkspacesListPage ...> API
+
+    App --> WorkspaceCreationPage
+    class WorkspaceCreationPage << component >> {
+        ==state==
+        # selectedSensors: string[]
+        # samplingRates: int[]
+
+    }
+    WorkspaceCreationPage ...> "MaterialUI.Button"
+    WorkspaceCreationPage ...> "MaterialUI.Checkbox"
+    WorkspaceCreationPage ...> "MaterialUI.FormControlLabel"
+    WorkspaceCreationPage ...> "MaterialUI.TextField"
+    WorkspaceCreationPage ...> "MaterialUI.Dropdown"
+    WorkspaceCreationPage ...> API
+
+    App --> WorkspacePage
+    class WorkspacePage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspacePage ...> "raviger.Link"
+    WorkspacePage ...> "MaterialUI.Button"
+    WorkspacePage ...> API
+
+    WorkspacePage --> SampleList
+    class SampleList << component >> {
+        ==props==
+        # samples: ISample[]
+        # onCollect: (): void
+        # onDelete: (sample: ISample): void
+    }
+    SampleList ...> "MaterialUI.Button"
+    SampleList ...> "MaterialUI.List"
+    SampleList ...> "MaterialUI.ListItem"
+    SampleList ...> "MaterialUI.ListItemIcon"
+
+    WorkspacePage --> ModelOptions
+    class ModelOptions << component >> {
+        ==props==
+        # onTrain: (options: IModelOptions): void 
+        ==state==
+        # options: IModelOptions
+    }
+    ModelOptions ...> "MaterialUI.Accordion"
+    ModelOptions ...> "MaterialUI.Button"
+    ModelOptions ...> "MaterialUI.Checkbox"
+
+    App --> WorkspaceLabelsPage
+    class WorkspaceLabelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceLabelsPage ...> API
+    WorkspaceLabelsPage ...> "MaterialUI.Button"
+    WorkspaceLabelsPage ...> "MaterialUI.TextField"
+    WorkspaceLabelsPage ...> "MaterialUI.Table"
+    WorkspaceLabelsPage ...> "MaterialUI.TableBody"
+    WorkspaceLabelsPage ...> "MaterialUI.TableHead"
+    WorkspaceLabelsPage ...> "MaterialUI.TableRow"
+    WorkspaceLabelsPage ...> "MaterialUI.TableCell"
+
+    App --> WorkspaceCollectDataPage
+    class WorkspaceCollectDataPage << component >> {
+        ==props==
+        # workspace: string
+    }
+
+    WorkspaceCollectDataPage --> QRView
+    class QRView << component >> {
+        ==props==
+        # text: string
+        # value: string
+    }
+    QRView ...> "react-qr-code.QRCode"
+
+    App --> WorkspaceSampleDetailsPage
+    class WorkspaceSampleDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # sample: string
+    }
+    WorkspaceSampleDetailsPage ...> API
+    
+    interface Timeframe {
+        + start: number
+        + end: number
+    }
+
+    WorkspaceSampleDetailsPage --> SampleChart
+    class SampleChart << component >> {
+        ==state==
+        # frames: Timeframe[]
+        ==props==
+        # sample: Sample
+        # onRelabel: (frames: Timeframe[]): void
+    }
+    SampleChart ...> "highcharts"
+
+    App --> WorkspaceModelsPage
+    class WorkspaceModelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceModelsPage ...> API
+    WorkspaceModelsPage ...> "MaterialUI.List"
+    WorkspaceModelsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelsPage ...> "MaterialUI.ListItemIcon"
+
+    App --> WorkspaceModelDetailsPage
+    class WorkspaceModelDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelDetailsPage ...> API
+    WorkspaceModelDetailsPage ...> "MaterialUI.List"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItemIcon"
+    WorkspaceModelDetailsPage ...> "MaterialUI.Table"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableBody"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableHead"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableRow"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableCell"
+
+    App --> WorkspaceModelClassifyPage
+    class WorkspaceModelClassifyPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelClassifyPage --> QRView
+
+}
