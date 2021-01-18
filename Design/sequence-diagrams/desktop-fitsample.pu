@@ -1,0 +1,38 @@
+@startuml Desktop Client - Create Workspace
+autoactivate on
+
+actor User as u
+participant WorkspacePage as wp << component >>
+participant SampleDetailsPage as sd << component >>
+participant highcharts as h << component >>
+participant API as api
+
+u -> wp: click on "Sample 1"
+wp -> sd **: sample: ISample
+deactivate wp
+activate sd
+sd -> api: getSampleDetails(sample: ISample)
+api ->]: REST
+return
+return sdetails: ISampleDetails
+sd -> sd: render sample metadata box
+deactivate
+sd -> h: render graph with fittings
+deactivate
+deactivate
+
+u -> sd: click "Relabel Sample"
+u -> h: select label windows
+h --> sd: fittings
+deactivate h
+sd -> api: setSampleTimeframe(sample: ISample, frame: Timeframe)
+api ->]: REST
+return
+return
+deactivate sd
+
+u -> sd: click back button
+sd -> wp
+destroy sd
+
+@enduml

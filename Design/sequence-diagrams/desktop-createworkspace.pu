@@ -1,0 +1,38 @@
+@startuml Desktop Client - Create Workspace
+autoactivate on
+
+actor User as u
+participant WorkspacesListPage as wl << component >>
+participant WorkspaceCreationPage as wp << component >>
+participant API as api
+
+u -> wl: click create workspace
+wl --> wp **
+deactivate wl
+activate wp
+wp -> api: getAvailableSensors()
+api ->]: REST
+return
+return sensors: ISensor[]
+wp -> wp: render sensors list
+deactivate
+deactivate
+
+u -> wp: enter workspace name "Test"
+deactivate
+u -> wp: select sensors "Sensor X" and "Sensor Y"
+return sampling rate dropdowns for both sensors activated
+
+u -> wp: select sampling rate for "Sensor X"
+deactivate
+u -> wp: select sampling rate for "Sensor Y"
+return create new workspace button enabled
+
+u -> wp: click create new workspace button
+wp -> api: createWorkspace(:IWorkspace)
+api ->]: REST
+return
+return success
+wp -> wl
+destroy wp
+@enduml
