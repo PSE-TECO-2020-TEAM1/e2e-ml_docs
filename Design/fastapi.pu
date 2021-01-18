@@ -2,56 +2,128 @@
 
 class App {}
 
+App ---> "1" Router
+
 class WorkspaceModel {
     +find(id: ObjectId): Workspace
 }
 
 class Workspace {
     +id: ObjectId
-    +name: string
     +user: string
+    +predictionIds: string[]
 }
 
-Workspace "*" *--- WorkspaceModel
+Workspace *--- Sensor : sensors
+
+class Sensor {
+    +name: string
+    +samplingRate: integer
+}
+
+Workspace ---* WorkspaceModel
+Workspace o--- "*" MLModel : mlModels
 
 class getParametersRes {
+    +imputation: string[]
+    +features: string[]
+    +normalizers: string[]
+    +classifiers: {string, Hyperparameter[]}[]
 }
 
-getParametersRes ---> "*" Imputation: imputations
-getParametersRes ---> "*" Feature: features
-getParametersRes ---> "*" Normalizer: normalizers
-getParametersRes ---> "*" Classifier: classifiers
+getParametersRes ...> Hyperparameter
+
+class Hyperparameter {
+    +name: string
+    +format: string
+}
+
+'getParametersRes ---> "5" Imputation: imputations
+'getParametersRes ---> "11" Feature: features
+'getParametersRes ---> "5" Normalizer: normalizers
+'getParametersRes ---> "4" Classifier: classifiers
 
 class trainReq {
-
+    +model_name: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
 }
 
-class getModelsRes {
+trainReq ...> Hyperparameter
 
+class getModelRes {
+    +performance_metrics: PerformanceMetrics
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+getModelRes ...> Hyperparameter
+getModelRes ...> PerformanceMetrics
+
+class getPredictionConfigRes {
+    +sensors: {string, integer}[]
 }
 
 class Router {
     -trainers: Map<ObjectId, Trainer> 
-    +getParameters(workspaceId: ObjectId): getParametersRes
-    +getModels(workspaceId: ObjectId): getModelsRes
+    -predictors: Map<ObjectId, IClassifier>
+
+    +createModelWorkspace(workspaceId: ObjectId) : void
+    +getParameters(): getParametersRes
     +train(workspaceId: ObjectId, req: trainReq): void
-    +trainingProgress(workspaceId: ObjectId): number
+    +trainingProgress(workspaceId: ObjectId): integer
+    +getModels(workspaceId: ObjectId): (ObjectId, string)[]
     +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
     +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
     +getPredictionConfig(predictionId: string): getPredictionConfigRes
-    +submitDataWindow(predictionId: string, req: submitDataWindowReq): void
+    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
     -getDataset(workspaceId: ObjectId): Sample[]
 }
 
-class Sample {
+Router ...> SensorDataPoints
+Router ...> Sample
+Router ---> WorkspaceModel
+Router ---> MLModelModel
+Router ...> Trainer
 
+class Sample {
+    +label: string
 }
+
+class SensorDataPoints {
+    +sensor: string
+}
+
+class DataPoint {
+    +timestamp: integer
+    +values: integer[]
+}
+
+Sample "1" ---> "*" SensorDataPoints : allSensorDataPoints
+SensorDataPoints "1" ---> "*" DataPoint : dataPoints
+
+Router ...> getParametersRes
+Router ...> trainReq
+Router ...> getModelRes
+Router ...> getPredictionConfigRes
 
 class Factory <<static>> {
-    +{static} getImputation(imputation: Imputation): IImputer
+    +{static} getImputer(imputation: Imputation): IImputer
     +{static} getNormalizer(normalizer: Normalizer): INormalizer
-    +{static} getClassifier(classifier: Classifier, hyperparameters: Object): IClassifier
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier
 }
+
+Factory ...> Imputation
+Factory ...> IImputer
+Factory ...> Normalizer
+Factory ...> INormalizer
+Factory ...> Classifier
+Factory ...> IClassifier
+Factory ...> Hyperparameter
 
 interface IImputer {
     +fit(df: DataFrame): void
@@ -70,17 +142,28 @@ interface IClassifier {
 
 class Trainer {
     +progress: float
-    -dataset: DataFrame
-    -imputation: IImputer
-    -normalizer: INormalizer
-    -classifier: IClassifier
+    -dataset: DataFrame[] | DataFrame
     -windowSize: integer
     -slidingStep: integer
-    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[], normalizer: Normalizer, classifier: Classifier, hyperparameters: Object)
+    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[],\nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
     +train(): (IClassifier, PerformanceMetrics)
-    -splitToWindows(dataSet: Sample[]): DataFrame
+    -splitToWindows(dataSet: Sample[]): DataFrame[]
     -extractFeature(): DataFrame
 }
+
+Trainer ---> "1" IImputer : imputer
+Trainer ---> "1" INormalizer : normalizer
+Trainer ---> "1" IClassifier : classifier
+
+Trainer ...> Imputation
+Trainer ...> Feature
+Trainer ...> Normalizer
+Trainer ...> Classifier
+Trainer ...> IClassifier
+Trainer ...> PerformanceMetrics
+Trainer ...> Sample
+Trainer ...> Factory
+Trainer ...> Hyperparameter
 
 class PerformanceMetrics {
     +labels: Map<string, List[(string, integer)]>
@@ -89,22 +172,21 @@ class PerformanceMetrics {
 class MLModel {
     +id: ObjectId
     +name: string
-    +imputation: Imputation
-    +features: Features[]
-    +normalizer: Normalizer
-    +classifier: Classifier
-    +performance_metrics: PerformanceMetrics
-    +classifier_object: IClassifier
 }
 
-MLModel "1" ---> Imputation : imputation
-Feature "*" ---> MLModel
+MLModel ---> "1" Imputation : imputation
+MLModel ---> "1..*" Feature : features
+MLModel ---> "1" Normalizer : normalizer
+MLModel ---> "1" Classifier : classifier
+MLModel ...> "1..*" Hyperparameter: hyperparameters
+MLModel ---> "1" PerformanceMetrics : performance_metrics
+MLModel ---> "1" IClassifier : classifier_object
 
 class MLModelModel {
     +find(id: ObjectId): MLModel
 }
 
-MLModel "*" *--- MLModelModel
+MLModel "*" ---* MLModelModel
 
 enum Imputation {
     +MEAN_IMPUTATION
