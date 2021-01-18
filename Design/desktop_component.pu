@@ -206,3 +206,5 @@ package DesktopApp {
     WorkspaceModelClassifyPage --> QRView
 
 }
+
+@enduml
