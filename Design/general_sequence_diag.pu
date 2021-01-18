@@ -1,0 +1,69 @@
+@startuml
+actor Client as Client
+Autoactivate on 
+Client -> DesktopApp: Opens the desktop app 
+DesktopApp -> AuthentificationController: signup(username: string, passwordHash: string) 
+return Success
+DesktopApp -> AuthentificationController: login(username: string, passwordHash: string)
+return access token + refresh token
+DesktopApp -> AuthentificationController: refresh(refreshToken: string)
+return Success
+
+|||
+|||
+
+DesktopApp -> WorkspaceController: getSensors()
+return list of the available Sensors
+DesktopApp -> WorkspaceController: getWorkspaces()
+return list of the available Workspaces
+DesktopApp -> WorkspaceController: create(name: string, sensors: Array of Objects, samplingRate: integer) 
+return workspace created
+DesktopApp -> WorkspaceController: rename(workspaceID: string, workspaceName: string) 
+return workspace renamed
+DesktopApp -> WorkspaceController: getSensors(workspaceID: string)
+return list of the available Sensors in the workspace with sampling rates.
+DesktopApp -> WorkspaceController: getSamples(workspaceID: string, onlyIDs boolean) 
+return list of the samples of the workspace
+DesktopApp -> WorkspaceController: getSample(workspaceID: string, sampleID: string) 
+return data points of the sample
+DesktopApp -> WorkspaceController: DeleteSample(workspaceID: string, sampleID: string) 
+return sample deleted
+DesktopApp -> WorkspaceController: relable(workspaceID: string, sampleID: string, labelID: String) 
+return Sample relabled
+DesktopApp -> WorkspaceController: timeframes(workspaceId: string, sampleID: string, timeframe: array of objects) 
+return Timeframes changed
+DesktopApp -> WorkspaceController: lables(workspaceId: string) 
+return List of the available lables 
+DesktopApp -> WorkspaceController: deleteLable(workspaceID: string, lableID: string) 
+return Lable and its samples deleted  
+DesktopApp -> WorkspaceController: renameLable(workspaceID: string, lableID: string, lable: string) 
+return Lable is renamed      
+DesktopApp -> WorkspaceController: describe(workspaceID: string, lableID: string, description: string) 
+return success
+DesktopApp -> WorkspaceController: submissionID(workspaceID: string) 
+return the submission id of workspace
+Client -> MobileApp: scan QR 
+MobileApp -> WorkspaceController: submissionConfig(submissionID: string) 
+return Configuration 
+MobileApp -> WorkspaceController: submitSample(submissionID: string) 
+return Success                             
+|||
+|||
+
+DesktopApp -> ModelController: getParameters()
+return list of the supported parameters
+DesktopApp -> ModelController: getModels(workspaceID: string)
+return list of all the trained models
+DesktopApp -> ModelController: train(workspaceID: string, parameters: Array of objects)
+return Success 
+DesktopApp -> ModelController: trainingProgress(workspaceID: string, parameters: Array of objects)
+return Percentage 
+DesktopApp -> ModelController: getModel(modelID: string)
+return Model
+DesktopApp -> ModelController: getPredictionID(modelID: string, workspaceID: string)
+return PredictionID
+DesktopApp -> ModelController: getPredictionConfig(predictionID: string)
+return Configuration
+DesktopApp -> ModelController: submitDataWindow(predictionID: string)
+return Success
+@enduml
