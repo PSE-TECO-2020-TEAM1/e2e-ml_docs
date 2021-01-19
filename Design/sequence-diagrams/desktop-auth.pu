@@ -1,0 +1,19 @@
+@startuml Desktop Client - Authentication
+autoactivate on
+
+actor User as u
+participant LoginPage as lp << component >>
+participant API as api
+
+u -> lp: enter username
+deactivate
+u -> lp: enter password
+return login button enabled
+
+u -> lp: click login button
+lp -> api: auth(username: string, password: string)
+api ->]: REST
+return token
+return success
+
+@enduml
