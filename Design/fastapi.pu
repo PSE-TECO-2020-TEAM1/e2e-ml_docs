@@ -6,10 +6,6 @@ class App {
 
 App ---> "1" Router
 
-class WorkspaceModel {
-    +find(id: ObjectId): Workspace
-}
-
 class Workspace {
     +id: ObjectId
     +user: string
@@ -23,7 +19,6 @@ class Sensor {
     +samplingRate: integer
 }
 
-Workspace ---* WorkspaceModel
 Workspace o--- "*" MLModel : mlModels
 
 class getParametersRes {
@@ -89,8 +84,6 @@ class Router {
 
 Router ...> SensorDataPoints
 Router ...> Sample
-Router ---> WorkspaceModel
-Router ---> MLModelModel
 Router ...> Trainer
 
 class Sample {
@@ -187,15 +180,9 @@ MLModel ---> "1" Normalizer : normalizer
 MLModel ---> "1" Classifier : classifier
 MLModel ...> "1..*" Hyperparameter: hyperparameters
 MLModel ---> "1" PerformanceMetrics : performance_metrics
-MLModel ...> "1" IImputer : imputer_object
-MLModel ...> "1" INormalizer: normalizer_object
+MLModel ---> "1" IImputer : imputer_object
+MLModel ---> "1" INormalizer: normalizer_object
 MLModel ---> "1" IClassifier : classifier_object
-
-class MLModelModel {
-    +find(id: ObjectId): MLModel
-}
-
-MLModel "*" ---* MLModelModel
 
 enum Imputation {
     +MEAN_IMPUTATION
