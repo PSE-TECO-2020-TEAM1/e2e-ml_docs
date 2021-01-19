@@ -19,56 +19,36 @@ App ---> "1" SampleController
 ' ----------- LabelController ----------------
 
 interface CreateLabelReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +labelName: string
 }
-
-interface CreateLabelRes {
-    -seeApiDocumentation
-}
-
-CreateLabelReq -[hidden]-> CreateLabelRes
 
 interface GetLabelsReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
 }
 
 interface GetLabelsRes {
-    -seeApiDocumentation
+    +labels: Label[]
 }
 
 GetLabelsReq -[hidden]-> GetLabelsRes
 
 interface DeleteLabelReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +labelId: ObjectId
 }
-
-interface DeleteLabelRes {
-    -seeApiDocumentation
-}
-
-DeleteLabelReq -[hidden]-> DeleteLabelRes
 
 interface RenameLabelReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+    +labelName: string
 }
-
-interface RenameLabelRes {
-    -seeApiDocumentation
-    
-}
-
-RenameLabelReq -[hidden]-> RenameLabelRes
 
 interface DescribeLabelReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +labelId: ObjectId
+    +description: string
 }
-
-interface DescribeLabelRes {
-    -seeApiDocumentation
-    
-}
-
-DescribeLabelReq -[hidden]-> DescribeLabelRes
 
 class LabelController {
     +createLabel(req: CreateLabelReq, res: Object) : void
@@ -79,98 +59,84 @@ class LabelController {
 }
 
 LabelController -----> "1" WorkspaceModel
+LabelController -----> "1" SampleModel
 
 LabelController ...> CreateLabelReq
-LabelController ...> CreateLabelRes
-note bottom of CreateLabelRes: CreateLabelRes responseBody = {success: true};\nres.json(responseBody);
 
 LabelController ...> GetLabelsReq
 LabelController ...> GetLabelsRes
 
 LabelController ...> DeleteLabelReq
-LabelController ...> DeleteLabelRes
 
 LabelController ...> RenameLabelReq
-LabelController ...> RenameLabelRes
 
 LabelController ...> DescribeLabelReq
-LabelController ...> DescribeLabelRes
 
 ' ------------- WorkspaceController ----------
 
-interface GetWorkspacesReq {
-    -seeApiDocumentation
-}
-
 interface GetWorkspacesRes {
-    -seeApiDocumentation
+    +workspaces: {ObjectId, string}[]
 }
-
-GetWorkspacesReq -[hidden]-> GetWorkspacesRes
+note top: {workspaceID, name}
 
 interface CreateWorkspaceReq {
-    -seeApiDocumentation
+    +name: string
+    +sensors: {"Accelerometer" | "Gyroscope" | "Magnetometer", integer}[]
 }
+note top: {sensorName, samplingRate}
 
 interface CreateWorkspaceRes {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
 }
 
 CreateWorkspaceReq -[hidden]-> CreateWorkspaceRes
 
 interface DeleteWorkspaceReq {
-    -seeApiDocumentation
-}
-
-interface DeleteWorkspaceRes {
-    -seeApiDocumentation
-    
-}
-
-DeleteWorkspaceReq -[hidden]-> DeleteWorkspaceRes
-
-interface GetSensorsReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
 }
 
 interface GetSensorsRes {
-    -seeApiDocumentation
+    +sensors: {string, integer, integer}[]
 }
+note top : {name, maxSamplingRate, defaultSamplingRate}
 
 GetSensorsReq -[hidden]-> GetSensorsRes
 
 interface GetWorkspaceSensorsReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
 }
 
 interface GetWorkspaceSensorsRes {
-    -seeApiDocumentation
+    +{ObjectId, string, string[], integer}[]
 }
+note top : {id, name, dataFormat, samplingRate}
 
 GetWorkspaceSensorsReq -[hidden]-> GetWorkspaceSensorsRes
 
 interface GetSubmissionIdReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
 }
 
 interface GetSubmissionIdRes {
-    -seeApiDocumentation
+    +submissionId: string
 }
 
 GetSubmissionIdReq -[hidden]-> GetSubmissionIdRes
 
 interface GetSubmissionConfigReq {
-    -seeApiDocumentation
+    +submissionId: string
 }
 
 interface GetSubmissionConfigRes {
-    -seeApiDocumentation
+    +sensors: {string, integer}[]
+    +labels: {string, string}
 }
+note top: sensors: {name, samplingRate}, labels: {name, description}
 
 GetSubmissionConfigReq -[hidden]-> GetSubmissionConfigRes
 
 class WorkspaceController {
-    +getWorkspaces(req: GetWorkspacesReq, res: Object) : void
+    +getWorkspaces(req: Object, res: Object) : void
     +createWorkspace(req: CreateWorkspaceReq, res: Object) : void
     +deleteWorkspace(req: DeleteWorkspaceReq, res: Object) : void
     +getSensors(req: GetSensorsReq, res: Object) : void
@@ -179,12 +145,10 @@ class WorkspaceController {
     +getSubmissionConfig(req: GetSubmissionConfigReq, res: Object): void
 }
 
-WorkspaceController ...> GetWorkspacesReq
 WorkspaceController ...> GetWorkspacesRes
 WorkspaceController ...> CreateWorkspaceReq
 WorkspaceController ...> CreateWorkspaceRes
 WorkspaceController ...> DeleteWorkspaceReq
-WorkspaceController ...> DeleteWorkspaceRes
 WorkspaceController ...> GetSensorsReq
 WorkspaceController ...> GetSensorsRes
 WorkspaceController ...> GetWorkspaceSensorsReq
@@ -194,7 +158,8 @@ WorkspaceController ...> GetSubmissionIdRes
 WorkspaceController ...> GetSubmissionConfigReq
 WorkspaceController ...> GetSubmissionConfigRes
 
-WorkspaceController ---> "1" WorkspaceModel
+WorkspaceController -----> "1" WorkspaceModel
+WorkspaceController -----> "1" SampleModel
 
 '------------------ Sensor/Sample -----------------------
 
@@ -216,12 +181,9 @@ class Sensor {
 
 Sensor ---> "1" SensorType :type
 
-interface PrimitiveDataPoint {
+class DataPoint {
     +value: number[]
     +timestamp: UnixTimestamp
-}
-
-class DataPoint implements PrimitiveDataPoint {
     +id: ObjectId
 }
 
@@ -271,7 +233,7 @@ class Workspace {
     +id: ObjectId
     +name: string
     +user: string
-    +submission_ids: string[]
+    +submissionIds: string[]
 }
 
 Workspace *--- "*" Label
@@ -288,76 +250,72 @@ WorkspaceModel "1" *--- "*" Workspace : workspaces
 ' --------------- SampleController -------------------
 
 interface SubmitSampleReq {
-    -seeApiDocumentation
-}
-
-SubmitSampleReq ...> PrimitiveDataPoint
-
-interface SubmitSampleRes {
-    -seeApiDocumentation
+    +samples: Sample[]
+    +submissionId: string
 }
 
 SubmitSampleReq -[hidden]-> SubmitSampleRes
 
 interface GetSamplesReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +onlyIds: boolean
 }
 
 interface GetSamplesRes {
-    -seeApiDocumentation
+    +samples: Sample[]
 }
 
 GetSamplesReq -[hidden]-> GetSamplesRes
 
 interface RelabelSampleReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
+    +labelId: LabelId
 }
-
-interface RelabelSampleRes {
-    -seeApiDocumentation
-}
-
-RelabelSampleReq -[hidden]-> RelabelSampleRes
 
 interface DeleteSampleReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
 }
-
-interface DeleteSampleRes {
-    -seeApiDocumentation
-}
-
-DeleteSampleReq -[hidden]-> DeleteSampleRes
 
 interface SetTimeFramesReq {
-    -seeApiDocumentation
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
+    +timeframes: TimeFrame[]
 }
 
 SetTimeFramesReq ...> TimeFrame
 
-interface SetTimeFramesRes {
-    -seeApiDocumentation
+interface GetSampleDataPointsReq {
+    +workspaceId: ObjectId
+    +sampleId: ObjectId
 }
+
+interface GetSampleDataPointsRes {
+    +sample: Sample
+}
+
+GetSampleDataPointsReq -[hidden]-> GetSampleDataPointsRes
 
 class SampleController {
     +submitSample(req: SubmitSampleReq, res: Object) : void
     +getSamples(req: GetSamplesReq, res: Object) : void
+    +getSampleDataPoints(req: GetSampleDataPointsReq, res: Object) : void
     +relabelSample(req: RelabelSampleReq, res: Object) : void
     +deleteSample(req: DeleteSampleReq, res: Object) : void
     +setTimeFrames(req: SetTimeFramesReq, res: Object) : void
 }
 
     SampleController ...> SubmitSampleReq
-    SampleController ...> SubmitSampleRes
     SampleController ...> GetSamplesReq
     SampleController ...> GetSamplesRes
     SampleController ...> RelabelSampleReq
-    SampleController ...> RelabelSampleRes
     SampleController ...> DeleteSampleReq
-    SampleController ...> DeleteSampleRes
     SampleController ...> SetTimeFramesReq
-    SampleController ...> SetTimeFramesRes
+    SampleController ...> GetSampleDataPointsReq
+    SampleController ...> GetSampleDataPointsRes
 
-    SampleController ---> SampleModel
+    SampleController -----> SampleModel
+    SampleController -----> WorkspaceModel
 
     @enduml

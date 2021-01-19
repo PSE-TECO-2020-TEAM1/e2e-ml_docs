@@ -1,6 +1,8 @@
 @startuml Model Management Class Diagram
 
-class App {}
+class App {
+    establishDatabaseConnection(): DatabaseClient
+}
 
 App ---> "1" Router
 
@@ -69,10 +71,12 @@ class getPredictionConfigRes {
 }
 
 class Router {
+    -databaseClient: DatabaseClient
     -trainers: Map<ObjectId, Trainer> 
     -predictors: Map<ObjectId, IClassifier>
 
-    +createModelWorkspace(workspaceId: ObjectId) : void
+    +<<create>> Router(databaseClient: DatabaseClient): void
+    +createModelWorkspace(workspaceId: ObjectId): void
     +getParameters(): getParametersRes
     +train(workspaceId: ObjectId, req: trainReq): void
     +trainingProgress(workspaceId: ObjectId): integer
@@ -81,7 +85,6 @@ class Router {
     +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
     +getPredictionConfig(predictionId: string): getPredictionConfigRes
     +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
-    -getDataset(workspaceId: ObjectId): Sample[]
 }
 
 Router ...> SensorDataPoints
@@ -142,28 +145,32 @@ interface IClassifier {
 
 class Trainer {
     +progress: float
-    -dataset: DataFrame[] | DataFrame
-    -windowSize: integer
-    -slidingStep: integer
-    +<<create>>Trainer(dataset: Sample[], imputation: Imputation, features: Feature[],\nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
-    +train(): (IClassifier, PerformanceMetrics)
-    -splitToWindows(dataSet: Sample[]): DataFrame[]
-    -extractFeature(): DataFrame
+    -{static}databaseClient: DatabaseClient
+    -workspaceId: ObjectId
+    -imputation: Imputation
+    -features: Feature[]
+    -normalizer: Normalizer
+    -classifier: Classifier
+    -hyperparameters: Hyperparameter[]
+    +<<create>>Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+    +train(): void
+    +{static}setDatabaseClient(databaseClient: DatabaseClient): void
+    -requestSampleHash(): string
+    -requestDataSet(): Sample[]
+    -getDataset(): WorkspaceData
+    -splitToWindows(data: Sample[]): DataFrame[]
+    -impute(data: DataFrame[]): (DataFrame[], IImputer)
+    -extractFeature(data: DataFrame[]): DataFrame
+    -normalize(data: DataFrame): DataFrame
 }
 
-Trainer ---> "1" IImputer : imputer
-Trainer ---> "1" INormalizer : normalizer
-Trainer ---> "1" IClassifier : classifier
-
-Trainer ...> Imputation
-Trainer ...> Feature
-Trainer ...> Normalizer
-Trainer ...> Classifier
 Trainer ...> IClassifier
+Trainer ...> IImputer
+Trainer ...> INormalizer
 Trainer ...> PerformanceMetrics
 Trainer ...> Sample
 Trainer ...> Factory
-Trainer ...> Hyperparameter
+Trainer ...> Workspace
 
 class PerformanceMetrics {
     +labels: Map<string, List[(string, integer)]>
@@ -180,6 +187,8 @@ MLModel ---> "1" Normalizer : normalizer
 MLModel ---> "1" Classifier : classifier
 MLModel ...> "1..*" Hyperparameter: hyperparameters
 MLModel ---> "1" PerformanceMetrics : performance_metrics
+MLModel ...> "1" IImputer : imputer_object
+MLModel ...> "1" INormalizer: normalizer_object
 MLModel ---> "1" IClassifier : classifier_object
 
 class MLModelModel {
@@ -225,4 +234,39 @@ enum Classifier {
     +KNEIGHBOR_CLASSIFIER
 }
 
+Workspace *--- "1" WorkspaceData: processedData
+
+class WorkspaceData {
+    +id: ObjectId
+    +sampleHash: string
+    +data: Sample[]
+}
+
+WorkspaceData o--- "*" SlidingWindow : slidingWindows
+
+class SlidingWindow {
+    +id: ObjectId
+    +window_size: integer
+    +sliding_step: integer
+    +data: DataFrame
+}
+
+SlidingWindow o--- "*" ImputedData : imputedDatas
+
+class ImputedData {
+    +id: ObjectId
+    +imputation: string
+    +data: DataFrame
+    +imputer_object: IImputer
+}
+
+ImputedData o--- "*" ExtractedFeature : extractedFeatures
+
+class ExtractedFeature {
+    +id: ObjectId
+    +feature: string
+    +data: DataFrame
+}
+
 @enduml
+
