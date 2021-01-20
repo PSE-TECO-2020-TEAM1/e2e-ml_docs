@@ -123,17 +123,17 @@ Factory ...> Hyperparameter
 
 interface IImputer {
     +fit(df: DataFrame): void
-    +transform(): DataFrame
+    +transform(df: DataFrame): DataFrame[]
 }
 
 interface INormalizer {
     +fit(df: DataFrame): void
-    +transform(): DataFrame
+    +transform(df: DataFrame): DataFrame
 }
 
 interface IClassifier {
     +fit(df: DataFrame): void
-    +predict(): ndarray
+    +predict(df: DataFrame): ndarray
 }
 
 class Trainer {
@@ -145,7 +145,7 @@ class Trainer {
     -normalizer: Normalizer
     -classifier: Classifier
     -hyperparameters: Hyperparameter[]
-    +<<create>>Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+    +<<create>>Trainer(workspaceId: ObjectId, model_name: string ,imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
     +train(): void
     +{static}setDatabaseClient(databaseClient: DatabaseClient): void
     -requestSampleHash(): string
@@ -153,7 +153,7 @@ class Trainer {
     -getDataset(): WorkspaceData
     -splitToWindows(data: Sample[]): DataFrame[]
     -impute(data: DataFrame[]): (DataFrame[], IImputer)
-    -extractFeature(data: DataFrame[]): DataFrame
+    -extractFeature(data: DataFrame[], feature: Feature): DataFrame
     -normalize(data: DataFrame): DataFrame
 }
 
