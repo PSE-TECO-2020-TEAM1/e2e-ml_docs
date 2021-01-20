@@ -121,7 +121,7 @@ Trainer -> INormalizer: fit(data)
 return 
 Trainer -> INormalizer: transform(data)
 return data: DataFrame
-return
+return data: DataFrame
 
 ' complete note
 note over Trainer
@@ -152,6 +152,5 @@ return
 return
 return
 return
-
 
 @enduml
