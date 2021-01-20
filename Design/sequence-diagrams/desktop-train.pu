@@ -5,6 +5,11 @@ actor User
 participant App
 participant Router
 participant Trainer
+participant Factory
+participant IImputer
+participant INormalizer
+participant IClassifier
+participant MLModel
 database Database
 'participant Workspace
 box "External Service"
@@ -38,11 +43,115 @@ return parameters: GetParametersRes
 User -> App: train(workspaceId: ObjectId)
 App -> Router: train(workspaceId: ObjectId, req: TrainReq)
 create Trainer
-Router -> Trainer: <<create>> Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+Router -> Trainer: <<create>> Trainer(workspaceId, model_name, imputation, features, \nnormalizer, classifier, hyperparameter)
 return trainer: Trainer
 Router -> Trainer: train()
 
-Trainer -> Database: workspaces.find_one({"_id": workspaceId}).processedData
-return processedData: WorkspaceData
+Trainer -> ExpressServer: getSamples({"workspaceId": workspaceId, "onlyIDs": false, "onlyHash": true})
+return currentSampleHash: string
+
+Trainer -> Database: workspaces.find_one({"_id": workspaceId}, {"processedData.sampleHash": 1})
+return previousSampleHash: string
+
+alt currentSampleHash != previousSampleHash
+    Trainer -> ExpressServer: getSamples({"workspaceId": workspaceId, "onlyIDs": false, "onlyHash": false})
+    return data: Sample[]
+    Trainer -> Database: workspaces.update_one({"workspaceId": workspaceID}, {"$set": {"processedData.$.sampleHash": currentSampleHash,"processedData.$.data": data}})
+    return
+
+else currentSampleHash == previousSampleHash
+    Trainer -> Database: workspaces.find_one({"_id": workspaceId}, {"processedData": 1})
+    return processedData: WorkspaceData
+end
+
+opt no data windows in processedData with given window size/sliding step
+    Trainer -> Trainer: splitToWindows(data)
+    return dataWindows: DataFrame[]
+    Trainer -> Database: slidingWindows.insert_one(window_size, sliding_step, data)
+    return
+end 
+note over Trainer
+if there were data windows in processedData:
+slidingWindow = processedData.slidingWindows[window size/sliding step]
+end note
+
+opt data not imputed with the given imputer before
+    Trainer -> Trainer: impute(slidingWindow.data)
+    Trainer -> Factory: getImputer(imputation)
+    create IImputer
+    Factory -> IImputer: <<create>>IImputer()
+    return imputer_object: IImputer
+    return imputer_object: IImputer
+    Trainer -> IImputer: fit(data)
+    return
+    Trainer -> IImputer: transform(data)
+    return data: DataFrame[]
+    return (data: DataFrame[], imputer_object: IImputer)
+    Trainer -> Database: imputedDatas.insert_one(imputation, data, imputer_object)
+    return
+end
+note over Trainer
+if data was imputed with the given imputer 
+imputedData = slidingWindow.imputedDatas[imputation]: ImputedData
+end note
+
+loop feature in features
+    opt feature not extracted before
+        Trainer -> Trainer: extractFeature(imputedData.data, feature)
+        return data: DataFrame
+        Trainer -> Database: extractedFeatures.insert_one(feature, data)
+        return  
+    end
+    note over Trainer
+    if feature was extracted before
+    extractedFeature = imputedData.extractedFeatures[feature]: ExtractedFeature
+    end note
+end
+note over Trainer
+data = all features
+end note
+
+Trainer -> Trainer: normalize(data)
+Trainer -> Factory: getNormalizer(normalizer)
+create INormalizer
+Factory -> INormalizer: <<create>>INormalizer()
+return normalizer_object: INormalizer
+return normalizer_object: INormalizer
+Trainer -> INormalizer: fit(data)
+return 
+Trainer -> INormalizer: transform(data)
+return data: DataFrame
+return
+
+' complete note
+note over Trainer
+train_x: data to train
+train_y: labels of data to train
+test_x: data to test
+test_y: labels of data to test
+end note
+
+Trainer -> Factory: getClassifier(classifier, hyperparameters)
+create IClassifier
+Factory -> IClassifier: <<create>>IClassifier()
+return classifier_object: IClassifier
+return classifier_object: IClassifier
+Trainer -> IClassifier: fit(train_x, train_y)
+return
+Trainer -> IClassifier: predict(test_x)
+return prediction
+
+Trainer ->] : classification_report(test_y, prediction)
+return performance_metrics: DataFrame
+
+create MLModel
+Trainer -> MLModel: <<create>>MLModel(model_name, imputation, features, normalizer, classifier, hyperparameters,\nperformance_metrics, imputer_object, normalizer_object, classifier_object)
+return model
+Trainer -> Database: models.insertOne(model)
+return
+return
+return
+return
+
 
 @enduml
