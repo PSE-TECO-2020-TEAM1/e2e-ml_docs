@@ -21,26 +21,26 @@ class Sensor {
 
 Workspace o--- "*" MLModel : mlModels
 
-class getParametersRes {
+class GetParametersRes {
     +imputation: string[]
     +features: string[]
     +normalizers: string[]
     +classifiers: {string, Hyperparameter[]}[]
 }
 
-getParametersRes ...> Hyperparameter
+GetParametersRes ...> Hyperparameter
 
 class Hyperparameter {
     +name: string
     +format: string
 }
 
-'getParametersRes ---> "5" Imputation: imputations
-'getParametersRes ---> "11" Feature: features
-'getParametersRes ---> "5" Normalizer: normalizers
-'getParametersRes ---> "4" Classifier: classifiers
+'GetParametersRes ---> "5" Imputation: imputations
+'GetParametersRes ---> "11" Feature: features
+'GetParametersRes ---> "5" Normalizer: normalizers
+'GetParametersRes ---> "4" Classifier: classifiers
 
-class trainReq {
+class TrainReq {
     +model_name: string
     +imputation: string
     +features: string[]
@@ -48,9 +48,9 @@ class trainReq {
     +classifier: {string, Hyperparameter[]}
 }
 
-trainReq ...> Hyperparameter
+TrainReq ...> Hyperparameter
 
-class getModelRes {
+class GetModelRes {
     +performance_metrics: PerformanceMetrics
     +imputation: string
     +features: string[]
@@ -58,10 +58,10 @@ class getModelRes {
     +classifier: {string, Hyperparameter[]}
 }
 
-getModelRes ...> Hyperparameter
-getModelRes ...> PerformanceMetrics
+GetModelRes ...> Hyperparameter
+GetModelRes ...> PerformanceMetrics
 
-class getPredictionConfigRes {
+class GetPredictionConfigRes {
     +sensors: {string, integer}[]
 }
 
@@ -72,13 +72,13 @@ class Router {
 
     +<<create>> Router(databaseClient: DatabaseClient): void
     +createModelWorkspace(workspaceId: ObjectId): void
-    +getParameters(): getParametersRes
-    +train(workspaceId: ObjectId, req: trainReq): void
+    +getParameters(): GetParametersRes
+    +train(workspaceId: ObjectId, req: TrainReq): void
     +trainingProgress(workspaceId: ObjectId): integer
     +getModels(workspaceId: ObjectId): (ObjectId, string)[]
-    +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
+    +getModel(workspaceId: ObjectId, modelId: ObjectId) : GetModelRes
     +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
-    +getPredictionConfig(predictionId: string): getPredictionConfigRes
+    +getPredictionConfig(predictionId: string): GetPredictionConfigRes
     +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
 }
 
@@ -102,10 +102,10 @@ class DataPoint {
 Sample "1" ---> "*" SensorDataPoints : allSensorDataPoints
 SensorDataPoints "1" ---> "*" DataPoint : dataPoints
 
-Router ...> getParametersRes
-Router ...> trainReq
-Router ...> getModelRes
-Router ...> getPredictionConfigRes
+Router ...> GetParametersRes
+Router ...> TrainReq
+Router ...> GetModelRes
+Router ...> GetPredictionConfigRes
 
 class Factory <<static>> {
     +{static} getImputer(imputation: Imputation): IImputer
