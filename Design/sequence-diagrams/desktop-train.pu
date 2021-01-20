@@ -23,7 +23,7 @@ create Router
 App -> Router: <<create>> Router(db)
 return router: Router
 
-User -> App: createModelWorkspace(workspaceId: ObjectId)
+ExpressServer -> App: createModelWorkspace(workspaceId: ObjectId)
 App -> Router: createModelWorkspace(workspaceId: ObjectId)
 Router -> Database: workspaces.insert_one({"_id": workspaceId})
 'create Workspace
