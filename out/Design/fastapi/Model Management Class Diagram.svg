@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="2293px" preserveAspectRatio="none" style="width:2990px;height:2293px;" version="1.1" viewBox="0 0 2990 2293" width="2990px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ksbq0y0tlysg" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[335f4d9be48430461c68bf6d6fdba145]
+class App--><rect codeLine="2" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="60.8047" id="App" style="stroke:#A80036;stroke-width:1.5;" width="283" x="644.5" y="7"/><ellipse cx="769.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M772.7188,28.6406 Q772.1406,28.9375 771.5,29.0781 Q770.8594,29.2344 770.1563,29.2344 Q767.6563,29.2344 766.3281,27.5938 Q765.0156,25.9375 765.0156,22.8125 Q765.0156,19.6875 766.3281,18.0313 Q767.6563,16.375 770.1563,16.375 Q770.8594,16.375 771.5,16.5313 Q772.1563,16.6875 772.7188,16.9844 L772.7188,19.7031 Q772.0938,19.125 771.5,18.8594 Q770.9063,18.5781 770.2813,18.5781 Q768.9375,18.5781 768.25,19.6563 Q767.5625,20.7188 767.5625,22.8125 Q767.5625,24.9063 768.25,25.9844 Q768.9375,27.0469 770.2813,27.0469 Q770.9063,27.0469 771.5,26.7813 Q772.0938,26.5 772.7188,25.9219 L772.7188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="790.25" y="27.1543">App</text><line style="stroke:#A80036;stroke-width:1.5;" x1="645.5" x2="926.5" y1="39" y2="39"/><line style="stroke:#A80036;stroke-width:1.5;" x1="645.5" x2="926.5" y1="47" y2="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="271" x="650.5" y="61.2104">establishDatabaseConnection(): DatabaseClient</text><!--MD5=[a3ca736ecbdf9770d2cfef15820cfe41]
+class Router--><rect codeLine="67" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="214.4609" id="Router" style="stroke:#A80036;stroke-width:1.5;" width="520" x="526" y="191"/><ellipse cx="760.75" cy="207" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M763.7188,212.6406 Q763.1406,212.9375 762.5,213.0781 Q761.8594,213.2344 761.1563,213.2344 Q758.6563,213.2344 757.3281,211.5938 Q756.0156,209.9375 756.0156,206.8125 Q756.0156,203.6875 757.3281,202.0313 Q758.6563,200.375 761.1563,200.375 Q761.8594,200.375 762.5,200.5313 Q763.1563,200.6875 763.7188,200.9844 L763.7188,203.7031 Q763.0938,203.125 762.5,202.8594 Q761.9063,202.5781 761.2813,202.5781 Q759.9375,202.5781 759.25,203.6563 Q758.5625,204.7188 758.5625,206.8125 Q758.5625,208.9063 759.25,209.9844 Q759.9375,211.0469 761.2813,211.0469 Q761.9063,211.0469 762.5,210.7813 Q763.0938,210.5 763.7188,209.9219 L763.7188,212.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="781.25" y="211.1543">Router</text><line style="stroke:#A80036;stroke-width:1.5;" x1="527" x2="1045" y1="223" y2="223"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="534" y="231"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="546" y="237.2104">databaseClient: DatabaseClient</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="534" y="243.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="189" x="546" y="250.0151">trainers: Map&lt;ObjectId, Trainer&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="534" y="256.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="546" y="262.8198">predictors: Map&lt;ObjectId, IClassifier&gt;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="527" x2="1045" y1="269.4141" y2="269.4141"/><ellipse cx="537" cy="280.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="309" x="546" y="283.6245">«create» Router(databaseClient: DatabaseClient): void</text><ellipse cx="537" cy="293.2188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="294" x="546" y="296.4292">createModelWorkspace(workspaceId: ObjectId): void</text><ellipse cx="537" cy="306.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="207" x="546" y="309.2339">getParameters(): getParametersRes</text><ellipse cx="537" cy="318.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="272" x="546" y="322.0386">train(workspaceId: ObjectId, req: trainReq): void</text><ellipse cx="537" cy="331.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="276" x="546" y="334.8433">trainingProgress(workspaceId: ObjectId): integer</text><ellipse cx="537" cy="344.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="302" x="546" y="347.6479">getModels(workspaceId: ObjectId): (ObjectId, string)[]</text><ellipse cx="537" cy="357.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="375" x="546" y="360.4526">getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes</text><ellipse cx="537" cy="370.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="365" x="546" y="373.2573">getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string</text><ellipse cx="537" cy="382.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="364" x="546" y="386.062">getPredictionConfig(predictionId: string): getPredictionConfigRes</text><ellipse cx="537" cy="395.6563" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="494" x="546" y="398.8667">submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void</text><!--MD5=[ffb1acde51167dc19cd255ffd0a5273d]
+class Workspace--><rect codeLine="8" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="86.4141" id="Workspace" style="stroke:#A80036;stroke-width:1.5;" width="148" x="803" y="1151"/><ellipse cx="839.15" cy="1167" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M842.1188,1172.6406 Q841.5406,1172.9375 840.9,1173.0781 Q840.2594,1173.2344 839.5563,1173.2344 Q837.0563,1173.2344 835.7281,1171.5938 Q834.4156,1169.9375 834.4156,1166.8125 Q834.4156,1163.6875 835.7281,1162.0313 Q837.0563,1160.375 839.5563,1160.375 Q840.2594,1160.375 840.9,1160.5313 Q841.5563,1160.6875 842.1188,1160.9844 L842.1188,1163.7031 Q841.4938,1163.125 840.9,1162.8594 Q840.3063,1162.5781 839.6813,1162.5781 Q838.3375,1162.5781 837.65,1163.6563 Q836.9625,1164.7188 836.9625,1166.8125 Q836.9625,1168.9063 837.65,1169.9844 Q838.3375,1171.0469 839.6813,1171.0469 Q840.3063,1171.0469 840.9,1170.7813 Q841.4938,1170.5 842.1188,1169.9219 L842.1188,1172.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="69" x="857.85" y="1171.1543">Workspace</text><line style="stroke:#A80036;stroke-width:1.5;" x1="804" x2="950" y1="1183" y2="1183"/><ellipse cx="814" cy="1194" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="823" y="1197.2104">id: ObjectId</text><ellipse cx="814" cy="1206.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="823" y="1210.0151">user: string</text><ellipse cx="814" cy="1219.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="823" y="1222.8198">predictionIds: string[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="804" x2="950" y1="1229.4141" y2="1229.4141"/><!--MD5=[97d46ae094d28e0d28828e4b8046fed1]
+class Sensor--><rect codeLine="16" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="Sensor" style="stroke:#A80036;stroke-width:1.5;" width="151" x="833.5" y="1395"/><ellipse cx="882.75" cy="1411" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M885.7188,1416.6406 Q885.1406,1416.9375 884.5,1417.0781 Q883.8594,1417.2344 883.1563,1417.2344 Q880.6563,1417.2344 879.3281,1415.5938 Q878.0156,1413.9375 878.0156,1410.8125 Q878.0156,1407.6875 879.3281,1406.0313 Q880.6563,1404.375 883.1563,1404.375 Q883.8594,1404.375 884.5,1404.5313 Q885.1563,1404.6875 885.7188,1404.9844 L885.7188,1407.7031 Q885.0938,1407.125 884.5,1406.8594 Q883.9063,1406.5781 883.2813,1406.5781 Q881.9375,1406.5781 881.25,1407.6563 Q880.5625,1408.7188 880.5625,1410.8125 Q880.5625,1412.9063 881.25,1413.9844 Q881.9375,1415.0469 883.2813,1415.0469 Q883.9063,1415.0469 884.5,1414.7813 Q885.0938,1414.5 885.7188,1413.9219 L885.7188,1416.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="903.25" y="1415.1543">Sensor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="834.5" x2="983.5" y1="1427" y2="1427"/><ellipse cx="844.5" cy="1438" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="853.5" y="1441.2104">name: string</text><ellipse cx="844.5" cy="1450.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="853.5" y="1454.0151">samplingRate: integer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="834.5" x2="983.5" y1="1460.6094" y2="1460.6094"/><!--MD5=[dd23dae11e2dfa78b56f69205b9cfd9a]
+class MLModel--><rect codeLine="171" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="MLModel" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1507.5" y="1395"/><ellipse cx="1528.8" cy="1411" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1531.7688,1416.6406 Q1531.1906,1416.9375 1530.55,1417.0781 Q1529.9094,1417.2344 1529.2063,1417.2344 Q1526.7063,1417.2344 1525.3781,1415.5938 Q1524.0656,1413.9375 1524.0656,1410.8125 Q1524.0656,1407.6875 1525.3781,1406.0313 Q1526.7063,1404.375 1529.2063,1404.375 Q1529.9094,1404.375 1530.55,1404.5313 Q1531.2063,1404.6875 1531.7688,1404.9844 L1531.7688,1407.7031 Q1531.1438,1407.125 1530.55,1406.8594 Q1529.9563,1406.5781 1529.3313,1406.5781 Q1527.9875,1406.5781 1527.3,1407.6563 Q1526.6125,1408.7188 1526.6125,1410.8125 Q1526.6125,1412.9063 1527.3,1413.9844 Q1527.9875,1415.0469 1529.3313,1415.0469 Q1529.9563,1415.0469 1530.55,1414.7813 Q1531.1438,1414.5 1531.7688,1413.9219 L1531.7688,1416.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="1544.2" y="1415.1543">MLModel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1508.5" x2="1605.5" y1="1427" y2="1427"/><ellipse cx="1518.5" cy="1438" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="1527.5" y="1441.2104">id: ObjectId</text><ellipse cx="1518.5" cy="1450.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="1527.5" y="1454.0151">name: string</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1508.5" x2="1605.5" y1="1460.6094" y2="1460.6094"/><!--MD5=[bf7e8da69b2c556ceb7bcb3746c1f2b7]
+class getParametersRes--><rect codeLine="23" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="99.2188" id="getParametersRes" style="stroke:#A80036;stroke-width:1.5;" width="257" x="283.5" y="849"/><ellipse cx="349.25" cy="865" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M352.2188,870.6406 Q351.6406,870.9375 351,871.0781 Q350.3594,871.2344 349.6563,871.2344 Q347.1563,871.2344 345.8281,869.5938 Q344.5156,867.9375 344.5156,864.8125 Q344.5156,861.6875 345.8281,860.0313 Q347.1563,858.375 349.6563,858.375 Q350.3594,858.375 351,858.5313 Q351.6563,858.6875 352.2188,858.9844 L352.2188,861.7031 Q351.5938,861.125 351,860.8594 Q350.4063,860.5781 349.7813,860.5781 Q348.4375,860.5781 347.75,861.6563 Q347.0625,862.7188 347.0625,864.8125 Q347.0625,866.9063 347.75,867.9844 Q348.4375,869.0469 349.7813,869.0469 Q350.4063,869.0469 351,868.7813 Q351.5938,868.5 352.2188,867.9219 L352.2188,870.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="117" x="369.75" y="869.1543">getParametersRes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="284.5" x2="539.5" y1="881" y2="881"/><ellipse cx="294.5" cy="892" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="303.5" y="895.2104">imputation: string[]</text><ellipse cx="294.5" cy="904.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="303.5" y="908.0151">features: string[]</text><ellipse cx="294.5" cy="917.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="116" x="303.5" y="920.8198">normalizers: string[]</text><ellipse cx="294.5" cy="930.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="231" x="303.5" y="933.6245">classifiers: {string, Hyperparameter[]}[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="284.5" x2="539.5" y1="940.2188" y2="940.2188"/><!--MD5=[61e227b0aa69cd141036ab5194fdf452]
+class Hyperparameter--><rect codeLine="32" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="Hyperparameter" style="stroke:#A80036;stroke-width:1.5;" width="134" x="306" y="1684.5"/><ellipse cx="321" cy="1700.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M323.9688,1706.1406 Q323.3906,1706.4375 322.75,1706.5781 Q322.1094,1706.7344 321.4063,1706.7344 Q318.9063,1706.7344 317.5781,1705.0938 Q316.2656,1703.4375 316.2656,1700.3125 Q316.2656,1697.1875 317.5781,1695.5313 Q318.9063,1693.875 321.4063,1693.875 Q322.1094,1693.875 322.75,1694.0313 Q323.4063,1694.1875 323.9688,1694.4844 L323.9688,1697.2031 Q323.3438,1696.625 322.75,1696.3594 Q322.1563,1696.0781 321.5313,1696.0781 Q320.1875,1696.0781 319.5,1697.1563 Q318.8125,1698.2188 318.8125,1700.3125 Q318.8125,1702.4063 319.5,1703.4844 Q320.1875,1704.5469 321.5313,1704.5469 Q322.1563,1704.5469 322.75,1704.2813 Q323.3438,1704 323.9688,1703.4219 L323.9688,1706.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="102" x="335" y="1704.6543">Hyperparameter</text><line style="stroke:#A80036;stroke-width:1.5;" x1="307" x2="439" y1="1716.5" y2="1716.5"/><ellipse cx="317" cy="1727.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="326" y="1730.7104">name: string</text><ellipse cx="317" cy="1740.3047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="326" y="1743.5151">format: string</text><line style="stroke:#A80036;stroke-width:1.5;" x1="307" x2="439" y1="1750.1094" y2="1750.1094"/><!--MD5=[7ade388cc829076849bf101d778b34cb]
+class trainReq--><rect codeLine="42" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="112.0234" id="trainReq" style="stroke:#A80036;stroke-width:1.5;" width="242" x="7" y="978"/><ellipse cx="97.25" cy="994" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M100.2188,999.6406 Q99.6406,999.9375 99,1000.0781 Q98.3594,1000.2344 97.6563,1000.2344 Q95.1563,1000.2344 93.8281,998.5938 Q92.5156,996.9375 92.5156,993.8125 Q92.5156,990.6875 93.8281,989.0313 Q95.1563,987.375 97.6563,987.375 Q98.3594,987.375 99,987.5313 Q99.6563,987.6875 100.2188,987.9844 L100.2188,990.7031 Q99.5938,990.125 99,989.8594 Q98.4063,989.5781 97.7813,989.5781 Q96.4375,989.5781 95.75,990.6563 Q95.0625,991.7188 95.0625,993.8125 Q95.0625,995.9063 95.75,996.9844 Q96.4375,998.0469 97.7813,998.0469 Q98.4063,998.0469 99,997.7813 Q99.5938,997.5 100.2188,996.9219 L100.2188,999.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="117.75" y="998.1543">trainReq</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="248" y1="1010" y2="1010"/><ellipse cx="18" cy="1021" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="27" y="1024.2104">model_name: string</text><ellipse cx="18" cy="1033.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="27" y="1037.0151">imputation: string</text><ellipse cx="18" cy="1046.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="27" y="1049.8198">features: string[]</text><ellipse cx="18" cy="1059.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="27" y="1062.6245">normalizer: string</text><ellipse cx="18" cy="1072.2188" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="216" x="27" y="1075.4292">classifier: {string, Hyperparameter[]}</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="248" y1="1082.0234" y2="1082.0234"/><!--MD5=[bd99546f0646b7ebc7e9ca17bf6ab82e]
+class getModelRes--><rect codeLine="52" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="112.0234" id="getModelRes" style="stroke:#A80036;stroke-width:1.5;" width="270" x="355" y="1376"/><ellipse cx="445.25" cy="1392" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M448.2188,1397.6406 Q447.6406,1397.9375 447,1398.0781 Q446.3594,1398.2344 445.6563,1398.2344 Q443.1563,1398.2344 441.8281,1396.5938 Q440.5156,1394.9375 440.5156,1391.8125 Q440.5156,1388.6875 441.8281,1387.0313 Q443.1563,1385.375 445.6563,1385.375 Q446.3594,1385.375 447,1385.5313 Q447.6563,1385.6875 448.2188,1385.9844 L448.2188,1388.7031 Q447.5938,1388.125 447,1387.8594 Q446.4063,1387.5781 445.7813,1387.5781 Q444.4375,1387.5781 443.75,1388.6563 Q443.0625,1389.7188 443.0625,1391.8125 Q443.0625,1393.9063 443.75,1394.9844 Q444.4375,1396.0469 445.7813,1396.0469 Q446.4063,1396.0469 447,1395.7813 Q447.5938,1395.5 448.2188,1394.9219 L448.2188,1397.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="465.75" y="1396.1543">getModelRes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="356" x2="624" y1="1408" y2="1408"/><ellipse cx="366" cy="1419" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="244" x="375" y="1422.2104">performance_metrics: PerformanceMetrics</text><ellipse cx="366" cy="1431.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="375" y="1435.0151">imputation: string</text><ellipse cx="366" cy="1444.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="375" y="1447.8198">features: string[]</text><ellipse cx="366" cy="1457.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="375" y="1460.6245">normalizer: string</text><ellipse cx="366" cy="1470.2188" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="216" x="375" y="1473.4292">classifier: {string, Hyperparameter[]}</text><line style="stroke:#A80036;stroke-width:1.5;" x1="356" x2="624" y1="1480.0234" y2="1480.0234"/><!--MD5=[37ac11eab40003dca68879d70e1f5bec]
+class PerformanceMetrics--><rect codeLine="167" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="60.8047" id="PerformanceMetrics" style="stroke:#A80036;stroke-width:1.5;" width="267" x="1091.5" y="1691"/><ellipse cx="1158.25" cy="1707" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1161.2188,1712.6406 Q1160.6406,1712.9375 1160,1713.0781 Q1159.3594,1713.2344 1158.6563,1713.2344 Q1156.1563,1713.2344 1154.8281,1711.5938 Q1153.5156,1709.9375 1153.5156,1706.8125 Q1153.5156,1703.6875 1154.8281,1702.0313 Q1156.1563,1700.375 1158.6563,1700.375 Q1159.3594,1700.375 1160,1700.5313 Q1160.6563,1700.6875 1161.2188,1700.9844 L1161.2188,1703.7031 Q1160.5938,1703.125 1160,1702.8594 Q1159.4063,1702.5781 1158.7813,1702.5781 Q1157.4375,1702.5781 1156.75,1703.6563 Q1156.0625,1704.7188 1156.0625,1706.8125 Q1156.0625,1708.9063 1156.75,1709.9844 Q1157.4375,1711.0469 1158.7813,1711.0469 Q1159.4063,1711.0469 1160,1710.7813 Q1160.5938,1710.5 1161.2188,1709.9219 L1161.2188,1712.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="125" x="1178.75" y="1711.1543">PerformanceMetrics</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1092.5" x2="1357.5" y1="1723" y2="1723"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1092.5" x2="1357.5" y1="1731" y2="1731"/><ellipse cx="1102.5" cy="1742" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="241" x="1111.5" y="1745.2104">labels: Map&lt;string, List[(string, integer)]&gt;</text><!--MD5=[5d86651f22acdbc57a64eb3cc043a5ea]
+class getPredictionConfigRes--><rect codeLine="63" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="60.8047" id="getPredictionConfigRes" style="stroke:#A80036;stroke-width:1.5;" width="184" x="767" y="643"/><ellipse cx="784.7" cy="659" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M787.6688,664.6406 Q787.0906,664.9375 786.45,665.0781 Q785.8094,665.2344 785.1063,665.2344 Q782.6063,665.2344 781.2781,663.5938 Q779.9656,661.9375 779.9656,658.8125 Q779.9656,655.6875 781.2781,654.0313 Q782.6063,652.375 785.1063,652.375 Q785.8094,652.375 786.45,652.5313 Q787.1063,652.6875 787.6688,652.9844 L787.6688,655.7031 Q787.0438,655.125 786.45,654.8594 Q785.8563,654.5781 785.2313,654.5781 Q783.8875,654.5781 783.2,655.6563 Q782.5125,656.7188 782.5125,658.8125 Q782.5125,660.9063 783.2,661.9844 Q783.8875,663.0469 785.2313,663.0469 Q785.8563,663.0469 786.45,662.7813 Q787.0438,662.5 787.6688,661.9219 L787.6688,664.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="146" x="799.3" y="663.1543">getPredictionConfigRes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="768" x2="950" y1="675" y2="675"/><ellipse cx="778" cy="686" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="787" y="689.2104">sensors: {string, integer}[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="768" x2="950" y1="695.8047" y2="695.8047"/><!--MD5=[e35288619cf6b96892c8547edc00b794]
+class SensorDataPoints--><rect codeLine="92" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="60.8047" id="SensorDataPoints" style="stroke:#A80036;stroke-width:1.5;" width="145" x="1019.5" y="1401.5"/><ellipse cx="1034.5" cy="1417.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1037.4688,1423.1406 Q1036.8906,1423.4375 1036.25,1423.5781 Q1035.6094,1423.7344 1034.9063,1423.7344 Q1032.4063,1423.7344 1031.0781,1422.0938 Q1029.7656,1420.4375 1029.7656,1417.3125 Q1029.7656,1414.1875 1031.0781,1412.5313 Q1032.4063,1410.875 1034.9063,1410.875 Q1035.6094,1410.875 1036.25,1411.0313 Q1036.9063,1411.1875 1037.4688,1411.4844 L1037.4688,1414.2031 Q1036.8438,1413.625 1036.25,1413.3594 Q1035.6563,1413.0781 1035.0313,1413.0781 Q1033.6875,1413.0781 1033,1414.1563 Q1032.3125,1415.2188 1032.3125,1417.3125 Q1032.3125,1419.4063 1033,1420.4844 Q1033.6875,1421.5469 1035.0313,1421.5469 Q1035.6563,1421.5469 1036.25,1421.2813 Q1036.8438,1421 1037.4688,1420.4219 L1037.4688,1423.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="113" x="1048.5" y="1421.6543">SensorDataPoints</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1020.5" x2="1163.5" y1="1433.5" y2="1433.5"/><ellipse cx="1030.5" cy="1444.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="1039.5" y="1447.7104">sensor: string</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1020.5" x2="1163.5" y1="1454.3047" y2="1454.3047"/><!--MD5=[9681492165142af2a4a3a169d90ee8d4]
+class Sample--><rect codeLine="88" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="60.8047" id="Sample" style="stroke:#A80036;stroke-width:1.5;" width="94" x="1057" y="1163.5"/><ellipse cx="1079.2" cy="1179.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1082.1688,1185.1406 Q1081.5906,1185.4375 1080.95,1185.5781 Q1080.3094,1185.7344 1079.6063,1185.7344 Q1077.1063,1185.7344 1075.7781,1184.0938 Q1074.4656,1182.4375 1074.4656,1179.3125 Q1074.4656,1176.1875 1075.7781,1174.5313 Q1077.1063,1172.875 1079.6063,1172.875 Q1080.3094,1172.875 1080.95,1173.0313 Q1081.6063,1173.1875 1082.1688,1173.4844 L1082.1688,1176.2031 Q1081.5438,1175.625 1080.95,1175.3594 Q1080.3563,1175.0781 1079.7313,1175.0781 Q1078.3875,1175.0781 1077.7,1176.1563 Q1077.0125,1177.2188 1077.0125,1179.3125 Q1077.0125,1181.4063 1077.7,1182.4844 Q1078.3875,1183.5469 1079.7313,1183.5469 Q1080.3563,1183.5469 1080.95,1183.2813 Q1081.5438,1183 1082.1688,1182.4219 L1082.1688,1185.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="1094.8" y="1183.6543">Sample</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1058" x2="1150" y1="1195.5" y2="1195.5"/><ellipse cx="1068" cy="1206.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="1077" y="1209.7104">label: string</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1058" x2="1150" y1="1216.3047" y2="1216.3047"/><!--MD5=[3512c909caa28192c0057f20071d7997]
+class Trainer--><rect codeLine="138" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="291.2891" id="Trainer" style="stroke:#A80036;stroke-width:1.5;" width="505" x="1372.5" y="528"/><ellipse cx="1598.75" cy="544" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1601.7188,549.6406 Q1601.1406,549.9375 1600.5,550.0781 Q1599.8594,550.2344 1599.1563,550.2344 Q1596.6563,550.2344 1595.3281,548.5938 Q1594.0156,546.9375 1594.0156,543.8125 Q1594.0156,540.6875 1595.3281,539.0313 Q1596.6563,537.375 1599.1563,537.375 Q1599.8594,537.375 1600.5,537.5313 Q1601.1563,537.6875 1601.7188,537.9844 L1601.7188,540.7031 Q1601.0938,540.125 1600.5,539.8594 Q1599.9063,539.5781 1599.2813,539.5781 Q1597.9375,539.5781 1597.25,540.6563 Q1596.5625,541.7188 1596.5625,543.8125 Q1596.5625,545.9063 1597.25,546.9844 Q1597.9375,548.0469 1599.2813,548.0469 Q1599.9063,548.0469 1600.5,547.7813 Q1601.0938,547.5 1601.7188,546.9219 L1601.7188,549.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="1619.25" y="548.1543">Trainer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1373.5" x2="1876.5" y1="560" y2="560"/><ellipse cx="1383.5" cy="571" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="1392.5" y="574.2104">progress: float</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="580.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="179" x="1392.5" y="587.0151">databaseClient: DatabaseClient</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="593.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="1392.5" y="599.8198">workspaceId: ObjectId</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="606.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="1392.5" y="612.6245">imputation: Imputation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="619.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="1392.5" y="625.4292">features: Feature[]</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="632.0234"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="1392.5" y="638.2339">normalizer: Normalizer</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="644.8281"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="1392.5" y="651.0386">classifier: Classifier</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="657.6328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="208" x="1392.5" y="663.8433">hyperparameters: Hyperparameter[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1373.5" x2="1876.5" y1="670.4375" y2="670.4375"/><ellipse cx="1383.5" cy="681.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="475" x="1392.5" y="684.6479">«create»Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[],</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="471" x="1392.5" y="697.4526">normalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])</text><ellipse cx="1383.5" cy="707.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="1392.5" y="710.2573">train(): void</text><ellipse cx="1383.5" cy="719.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="322" x="1392.5" y="723.062">setDatabaseClient(databaseClient: DatabaseClient): void</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="729.6563"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="1392.5" y="735.8667">requestSampleHash(): string</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="742.4609"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="1392.5" y="748.6714">requestDataSet(): Sample[]</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="755.2656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="1392.5" y="761.4761">getDataset(): WorkspaceData</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="768.0703"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="1392.5" y="774.2808">splitToWindows(data: Sample[]): DataFrame[]</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="780.875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="291" x="1392.5" y="787.0854">impute(data: DataFrame[]): (DataFrame[], IImputer)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="793.6797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="263" x="1392.5" y="799.8901">extractFeature(data: DataFrame[]): DataFrame</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1380.5" y="806.4844"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="228" x="1392.5" y="812.6948">normalize(data: DataFrame): DataFrame</text><!--MD5=[8978861afbca9337b5c2568c4ea8c73b]
+class DataPoint--><rect codeLine="96" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="DataPoint" style="stroke:#A80036;stroke-width:1.5;" width="135" x="675.5" y="1684.5"/><ellipse cx="708.95" cy="1700.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M711.9188,1706.1406 Q711.3406,1706.4375 710.7,1706.5781 Q710.0594,1706.7344 709.3563,1706.7344 Q706.8563,1706.7344 705.5281,1705.0938 Q704.2156,1703.4375 704.2156,1700.3125 Q704.2156,1697.1875 705.5281,1695.5313 Q706.8563,1693.875 709.3563,1693.875 Q710.0594,1693.875 710.7,1694.0313 Q711.3563,1694.1875 711.9188,1694.4844 L711.9188,1697.2031 Q711.2938,1696.625 710.7,1696.3594 Q710.1063,1696.0781 709.4813,1696.0781 Q708.1375,1696.0781 707.45,1697.1563 Q706.7625,1698.2188 706.7625,1700.3125 Q706.7625,1702.4063 707.45,1703.4844 Q708.1375,1704.5469 709.4813,1704.5469 Q710.1063,1704.5469 710.7,1704.2813 Q711.2938,1704 711.9188,1703.4219 L711.9188,1706.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="62" x="727.05" y="1704.6543">DataPoint</text><line style="stroke:#A80036;stroke-width:1.5;" x1="676.5" x2="809.5" y1="1716.5" y2="1716.5"/><ellipse cx="686.5" cy="1727.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="695.5" y="1730.7104">timestamp: integer</text><ellipse cx="686.5" cy="1740.3047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="695.5" y="1743.5151">values: integer[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="676.5" x2="809.5" y1="1750.1094" y2="1750.1094"/><!--MD5=[dcda66dabdb739ec36f1175150e3c9d5]
+class Factory--><rect codeLine="109" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="92.3516" id="Factory" style="stroke:#A80036;stroke-width:1.5;" width="501" x="1830.5" y="1386"/><ellipse cx="2053.75" cy="1404.9688" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2056.7188,1410.6094 Q2056.1406,1410.9063 2055.5,1411.0469 Q2054.8594,1411.2031 2054.1563,1411.2031 Q2051.6563,1411.2031 2050.3281,1409.5625 Q2049.0156,1407.9063 2049.0156,1404.7813 Q2049.0156,1401.6563 2050.3281,1400 Q2051.6563,1398.3438 2054.1563,1398.3438 Q2054.8594,1398.3438 2055.5,1398.5 Q2056.1563,1398.6563 2056.7188,1398.9531 L2056.7188,1401.6719 Q2056.0938,1401.0938 2055.5,1400.8281 Q2054.9063,1400.5469 2054.2813,1400.5469 Q2052.9375,1400.5469 2052.25,1401.625 Q2051.5625,1402.6875 2051.5625,1404.7813 Q2051.5625,1406.875 2052.25,1407.9531 Q2052.9375,1409.0156 2054.2813,1409.0156 Q2054.9063,1409.0156 2055.5,1408.75 Q2056.0938,1408.4688 2056.7188,1407.8906 L2056.7188,1410.6094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="48" x="2073.25" y="1402.1387">«static»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="2074.25" y="1416.1074">Factory</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1831.5" x2="2330.5" y1="1423.9375" y2="1423.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1831.5" x2="2330.5" y1="1431.9375" y2="1431.9375"/><ellipse cx="1841.5" cy="1442.9375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="253" x="1850.5" y="1446.1479">getImputer(imputation: Imputation): IImputer</text><ellipse cx="1841.5" cy="1455.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="288" x="1850.5" y="1458.9526">getNormalizer(normalizer: Normalizer): INormalizer</text><ellipse cx="1841.5" cy="1468.5469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="475" x="1850.5" y="1471.7573">getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier</text><!--MD5=[9c734dc920dc815387b01a6646933af2]
+class Imputation--><rect codeLine="186" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="112.0234" id="Imputation" style="stroke:#A80036;stroke-width:1.5;" width="326" x="1398" y="1665.5"/><ellipse cx="1523.25" cy="1681.5" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1527.3594,1687.5 L1519.6406,1687.5 L1519.6406,1675.1094 L1527.3594,1675.1094 L1527.3594,1677.2656 L1522.0938,1677.2656 L1522.0938,1679.9375 L1526.8594,1679.9375 L1526.8594,1682.0938 L1522.0938,1682.0938 L1522.0938,1685.3438 L1527.3594,1685.3438 L1527.3594,1687.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="1543.75" y="1685.6543">Imputation</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1399" x2="1723" y1="1697.5" y2="1697.5"/><ellipse cx="1409" cy="1708.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="1418" y="1711.7104">MEAN_IMPUTATION</text><ellipse cx="1409" cy="1721.3047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="300" x="1418" y="1724.5151">LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION</text><ellipse cx="1409" cy="1734.1094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="132" x="1418" y="1737.3198">LINEAR_INTERPOLATION</text><ellipse cx="1409" cy="1746.9141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="133" x="1418" y="1750.1245">SPLINE_INTERPOLATION</text><ellipse cx="1409" cy="1759.7188" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="1418" y="1762.9292">MOVING_AVERAGE_IMPUTATION</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1399" x2="1723" y1="1769.5234" y2="1769.5234"/><!--MD5=[8457de11c48b8726c6046073eee38663]
+class IImputer--><rect codeLine="123" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="IImputer" style="stroke:#A80036;stroke-width:1.5;" width="161" x="2432.5" y="1684.5"/><ellipse cx="2482.25" cy="1700.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2478.1719,1696.2656 L2478.1719,1694.1094 L2485.5625,1694.1094 L2485.5625,1696.2656 L2483.0938,1696.2656 L2483.0938,1704.3438 L2485.5625,1704.3438 L2485.5625,1706.5 L2478.1719,1706.5 L2478.1719,1704.3438 L2480.6406,1704.3438 L2480.6406,1696.2656 L2478.1719,1696.2656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="53" x="2502.75" y="1704.6543">IImputer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2433.5" x2="2592.5" y1="1716.5" y2="1716.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2433.5" x2="2592.5" y1="1724.5" y2="1724.5"/><ellipse cx="2443.5" cy="1735.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="2452.5" y="1738.7104">fit(df: DataFrame): void</text><ellipse cx="2443.5" cy="1748.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="135" x="2452.5" y="1751.5151">transform(): DataFrame</text><!--MD5=[ede0181d4181218d8964651ef40924d4]
+class Normalizer--><rect codeLine="210" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="112.0234" id="Normalizer" style="stroke:#A80036;stroke-width:1.5;" width="169" x="1990.5" y="1665.5"/><ellipse cx="2038.25" cy="1681.5" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2042.3594,1687.5 L2034.6406,1687.5 L2034.6406,1675.1094 L2042.3594,1675.1094 L2042.3594,1677.2656 L2037.0938,1677.2656 L2037.0938,1679.9375 L2041.8594,1679.9375 L2041.8594,1682.0938 L2037.0938,1682.0938 L2037.0938,1685.3438 L2042.3594,1685.3438 L2042.3594,1687.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="65" x="2058.75" y="1685.6543">Normalizer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1991.5" x2="2158.5" y1="1697.5" y2="1697.5"/><ellipse cx="2001.5" cy="1708.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="2010.5" y="1711.7104">MIN_MAX_SCALER</text><ellipse cx="2001.5" cy="1721.3047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="2010.5" y="1724.5151">NORMALIZER</text><ellipse cx="2001.5" cy="1734.1094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="143" x="2010.5" y="1737.3198">QUANTILE_TRANSFORMER</text><ellipse cx="2001.5" cy="1746.9141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="96" x="2010.5" y="1750.1245">ROBUST_SCALER</text><ellipse cx="2001.5" cy="1759.7188" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="2010.5" y="1762.9292">STANDARD_SCALER</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1991.5" x2="2158.5" y1="1769.5234" y2="1769.5234"/><!--MD5=[afd71199cb7f7a4b2ac1f35be00e124b]
+class INormalizer--><rect codeLine="128" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="INormalizer" style="stroke:#A80036;stroke-width:1.5;" width="161" x="2760.5" y="1684.5"/><ellipse cx="2802.05" cy="1700.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2797.9719,1696.2656 L2797.9719,1694.1094 L2805.3625,1694.1094 L2805.3625,1696.2656 L2802.8938,1696.2656 L2802.8938,1704.3438 L2805.3625,1704.3438 L2805.3625,1706.5 L2797.9719,1706.5 L2797.9719,1704.3438 L2800.4406,1704.3438 L2800.4406,1696.2656 L2797.9719,1696.2656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="2821.95" y="1704.6543">INormalizer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2761.5" x2="2920.5" y1="1716.5" y2="1716.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2761.5" x2="2920.5" y1="1724.5" y2="1724.5"/><ellipse cx="2771.5" cy="1735.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="2780.5" y="1738.7104">fit(df: DataFrame): void</text><ellipse cx="2771.5" cy="1748.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="135" x="2780.5" y="1751.5151">transform(): DataFrame</text><!--MD5=[e5192d39c070dac6a79b288c93719d10]
+class Classifier--><rect codeLine="218" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="99.2188" id="Classifier" style="stroke:#A80036;stroke-width:1.5;" width="193" x="1761.5" y="1672"/><ellipse cx="1825.75" cy="1688" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1829.8594,1694 L1822.1406,1694 L1822.1406,1681.6094 L1829.8594,1681.6094 L1829.8594,1683.7656 L1824.5938,1683.7656 L1824.5938,1686.4375 L1829.3594,1686.4375 L1829.3594,1688.5938 L1824.5938,1688.5938 L1824.5938,1691.8438 L1829.8594,1691.8438 L1829.8594,1694 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="1846.25" y="1692.1543">Classifier</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1762.5" x2="1953.5" y1="1704" y2="1704"/><ellipse cx="1772.5" cy="1715" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="91" x="1781.5" y="1718.2104">MLP_CLASSIFIER</text><ellipse cx="1772.5" cy="1727.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="1781.5" y="1731.0151">SV_CLASSIFIER</text><ellipse cx="1772.5" cy="1740.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="167" x="1781.5" y="1743.8198">RANDOM_FOREST_CLASSIFIER</text><ellipse cx="1772.5" cy="1753.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="135" x="1781.5" y="1756.6245">KNEIGHBOR_CLASSIFIER</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1762.5" x2="1953.5" y1="1763.2188" y2="1763.2188"/><!--MD5=[16f65de706887ed6f4af921ea0af9269]
+class IClassifier--><rect codeLine="133" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="73.6094" id="IClassifier" style="stroke:#A80036;stroke-width:1.5;" width="157" x="2195.5" y="1684.5"/><ellipse cx="2240.75" cy="1700.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2236.6719,1696.2656 L2236.6719,1694.1094 L2244.0625,1694.1094 L2244.0625,1696.2656 L2241.5938,1696.2656 L2241.5938,1704.3438 L2244.0625,1704.3438 L2244.0625,1706.5 L2236.6719,1706.5 L2236.6719,1704.3438 L2239.1406,1704.3438 L2239.1406,1696.2656 L2236.6719,1696.2656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="58" x="2261.25" y="1704.6543">IClassifier</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2196.5" x2="2351.5" y1="1716.5" y2="1716.5"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2196.5" x2="2351.5" y1="1724.5" y2="1724.5"/><ellipse cx="2206.5" cy="1735.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="2215.5" y="1738.7104">fit(df: DataFrame): void</text><ellipse cx="2206.5" cy="1748.3047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="2215.5" y="1751.5151">predict(): ndarray</text><!--MD5=[82c53a10f238a1092cf5f0b044477708]
+class Feature--><rect codeLine="196" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="188.8516" id="Feature" style="stroke:#A80036;stroke-width:1.5;" width="211" x="845.5" y="1627"/><ellipse cx="922.25" cy="1643" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M926.3594,1649 L918.6406,1649 L918.6406,1636.6094 L926.3594,1636.6094 L926.3594,1638.7656 L921.0938,1638.7656 L921.0938,1641.4375 L925.8594,1641.4375 L925.8594,1643.5938 L921.0938,1643.5938 L921.0938,1646.8438 L926.3594,1646.8438 L926.3594,1649 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="942.75" y="1647.1543">Feature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="846.5" x2="1055.5" y1="1659" y2="1659"/><ellipse cx="856.5" cy="1670" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="20" x="865.5" y="1673.2104">MIN</text><ellipse cx="856.5" cy="1682.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="23" x="865.5" y="1686.0151">MAX</text><ellipse cx="856.5" cy="1695.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="865.5" y="1698.8198">VARIANCE</text><ellipse cx="856.5" cy="1708.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="45" x="865.5" y="1711.6245">ENERGY</text><ellipse cx="856.5" cy="1721.2188" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="865.5" y="1724.4292">AUTOREGRESSIVE_CORRELATION</text><ellipse cx="856.5" cy="1734.0234" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="31" x="865.5" y="1737.2339">MEAN</text><ellipse cx="856.5" cy="1746.8281" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="19" x="865.5" y="1750.0386">IQR</text><ellipse cx="856.5" cy="1759.6328" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="865.5" y="1762.8433">PEARSON_CORRELATION</text><ellipse cx="856.5" cy="1772.4375" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="865.5" y="1775.6479">SKEWNESS</text><ellipse cx="856.5" cy="1785.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="57" x="865.5" y="1788.4526">KURTOSIS</text><ellipse cx="856.5" cy="1798.0469" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="121" x="865.5" y="1801.2573">FOURIER_TRANSFORM</text><line style="stroke:#A80036;stroke-width:1.5;" x1="846.5" x2="1055.5" y1="1807.8516" y2="1807.8516"/><!--MD5=[4e53285a7af1f3f5fb0a9646b155b9e8]
+class WorkspaceData--><rect codeLine="227" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="86.4141" id="WorkspaceData" style="stroke:#A80036;stroke-width:1.5;" width="138" x="660" y="1389"/><ellipse cx="678.15" cy="1405" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M681.1188,1410.6406 Q680.5406,1410.9375 679.9,1411.0781 Q679.2594,1411.2344 678.5563,1411.2344 Q676.0563,1411.2344 674.7281,1409.5938 Q673.4156,1407.9375 673.4156,1404.8125 Q673.4156,1401.6875 674.7281,1400.0313 Q676.0563,1398.375 678.5563,1398.375 Q679.2594,1398.375 679.9,1398.5313 Q680.5563,1398.6875 681.1188,1398.9844 L681.1188,1401.7031 Q680.4938,1401.125 679.9,1400.8594 Q679.3063,1400.5781 678.6813,1400.5781 Q677.3375,1400.5781 676.65,1401.6563 Q675.9625,1402.7188 675.9625,1404.8125 Q675.9625,1406.9063 676.65,1407.9844 Q677.3375,1409.0469 678.6813,1409.0469 Q679.3063,1409.0469 679.9,1408.7813 Q680.4938,1408.5 681.1188,1407.9219 L681.1188,1410.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="99" x="692.85" y="1409.1543">WorkspaceData</text><line style="stroke:#A80036;stroke-width:1.5;" x1="661" x2="797" y1="1421" y2="1421"/><ellipse cx="671" cy="1432" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="680" y="1435.2104">id: ObjectId</text><ellipse cx="671" cy="1444.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="680" y="1448.0151">sampleHash: string</text><ellipse cx="671" cy="1457.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="680" y="1460.8198">data: Sample[]</text><line style="stroke:#A80036;stroke-width:1.5;" x1="661" x2="797" y1="1467.4141" y2="1467.4141"/><!--MD5=[f5cafbfba536e985242e35eb6b10b2b9]
+class SlidingWindow--><rect codeLine="235" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="99.2188" id="SlidingWindow" style="stroke:#A80036;stroke-width:1.5;" width="144" x="496" y="1672"/><ellipse cx="521.8" cy="1688" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M524.7688,1693.6406 Q524.1906,1693.9375 523.55,1694.0781 Q522.9094,1694.2344 522.2063,1694.2344 Q519.7063,1694.2344 518.3781,1692.5938 Q517.0656,1690.9375 517.0656,1687.8125 Q517.0656,1684.6875 518.3781,1683.0313 Q519.7063,1681.375 522.2063,1681.375 Q522.9094,1681.375 523.55,1681.5313 Q524.2063,1681.6875 524.7688,1681.9844 L524.7688,1684.7031 Q524.1438,1684.125 523.55,1683.8594 Q522.9563,1683.5781 522.3313,1683.5781 Q520.9875,1683.5781 520.3,1684.6563 Q519.6125,1685.7188 519.6125,1687.8125 Q519.6125,1689.9063 520.3,1690.9844 Q520.9875,1692.0469 522.3313,1692.0469 Q522.9563,1692.0469 523.55,1691.7813 Q524.1438,1691.5 524.7688,1690.9219 L524.7688,1693.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="88" x="538.2" y="1692.1543">SlidingWindow</text><line style="stroke:#A80036;stroke-width:1.5;" x1="497" x2="639" y1="1704" y2="1704"/><ellipse cx="507" cy="1715" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="516" y="1718.2104">id: ObjectId</text><ellipse cx="507" cy="1727.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="118" x="516" y="1731.0151">window_size: integer</text><ellipse cx="507" cy="1740.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="116" x="516" y="1743.8198">sliding_step: integer</text><ellipse cx="507" cy="1753.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="516" y="1756.6245">data: DataFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="497" x2="639" y1="1763.2188" y2="1763.2188"/><!--MD5=[8734d03e56797d9b457370eb70d0d4ff]
+class ImputedData--><rect codeLine="244" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="99.2188" id="ImputedData" style="stroke:#A80036;stroke-width:1.5;" width="165" x="485.5" y="1955"/><ellipse cx="523.9" cy="1971" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M526.8688,1976.6406 Q526.2906,1976.9375 525.65,1977.0781 Q525.0094,1977.2344 524.3063,1977.2344 Q521.8063,1977.2344 520.4781,1975.5938 Q519.1656,1973.9375 519.1656,1970.8125 Q519.1656,1967.6875 520.4781,1966.0313 Q521.8063,1964.375 524.3063,1964.375 Q525.0094,1964.375 525.65,1964.5313 Q526.3063,1964.6875 526.8688,1964.9844 L526.8688,1967.7031 Q526.2438,1967.125 525.65,1966.8594 Q525.0563,1966.5781 524.4313,1966.5781 Q523.0875,1966.5781 522.4,1967.6563 Q521.7125,1968.7188 521.7125,1970.8125 Q521.7125,1972.9063 522.4,1973.9844 Q523.0875,1975.0469 524.4313,1975.0469 Q525.0563,1975.0469 525.65,1974.7813 Q526.2438,1974.5 526.8688,1973.9219 L526.8688,1976.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="543.1" y="1975.1543">ImputedData</text><line style="stroke:#A80036;stroke-width:1.5;" x1="486.5" x2="649.5" y1="1987" y2="1987"/><ellipse cx="496.5" cy="1998" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="505.5" y="2001.2104">id: ObjectId</text><ellipse cx="496.5" cy="2010.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="505.5" y="2014.0151">imputation: string</text><ellipse cx="496.5" cy="2023.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="505.5" y="2026.8198">data: DataFrame</text><ellipse cx="496.5" cy="2036.4141" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="139" x="505.5" y="2039.6245">imputer_object: IImputer</text><line style="stroke:#A80036;stroke-width:1.5;" x1="486.5" x2="649.5" y1="2046.2188" y2="2046.2188"/><!--MD5=[90470f66e70f106bf7618dd09af05ca1]
+class ExtractedFeature--><rect codeLine="253" fill="#FEFECE" filter="url(#f1ksbq0y0tlysg)" height="86.4141" id="ExtractedFeature" style="stroke:#A80036;stroke-width:1.5;" width="141" x="497.5" y="2193"/><ellipse cx="512.5" cy="2209" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M515.4688,2214.6406 Q514.8906,2214.9375 514.25,2215.0781 Q513.6094,2215.2344 512.9063,2215.2344 Q510.4063,2215.2344 509.0781,2213.5938 Q507.7656,2211.9375 507.7656,2208.8125 Q507.7656,2205.6875 509.0781,2204.0313 Q510.4063,2202.375 512.9063,2202.375 Q513.6094,2202.375 514.25,2202.5313 Q514.9063,2202.6875 515.4688,2202.9844 L515.4688,2205.7031 Q514.8438,2205.125 514.25,2204.8594 Q513.6563,2204.5781 513.0313,2204.5781 Q511.6875,2204.5781 511,2205.6563 Q510.3125,2206.7188 510.3125,2208.8125 Q510.3125,2210.9063 511,2211.9844 Q511.6875,2213.0469 513.0313,2213.0469 Q513.6563,2213.0469 514.25,2212.7813 Q514.8438,2212.5 515.4688,2211.9219 L515.4688,2214.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="109" x="526.5" y="2213.1543">ExtractedFeature</text><line style="stroke:#A80036;stroke-width:1.5;" x1="498.5" x2="637.5" y1="2225" y2="2225"/><ellipse cx="508.5" cy="2236" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="517.5" y="2239.2104">id: ObjectId</text><ellipse cx="508.5" cy="2248.8047" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="517.5" y="2252.0151">feature: string</text><ellipse cx="508.5" cy="2261.6094" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="517.5" y="2264.8198">data: DataFrame</text><line style="stroke:#A80036;stroke-width:1.5;" x1="498.5" x2="637.5" y1="2271.4141" y2="2271.4141"/><!--MD5=[53d6e21f6fdca70820fe4c8078d4c90e]
+link App to Router--><path codeLine="6" d="M786,68.15 C786,97.02 786,142.7 786,185.68 " fill="none" id="App-to-Router" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="786,190.91,790,181.91,786,185.91,782,181.91,786,190.91" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="777.7188" y="179.9082">1</text><!--MD5=[322033abbcd976e736d326f35cb8d41a]
+reverse link Workspace to Sensor--><path codeLine="14" d="M884.48,1250.17 C890.54,1294.83 898.89,1356.42 904.11,1394.97 " fill="none" id="Workspace-backto-Sensor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="882.72,1237.19,879.5674,1243.6754,884.3414,1249.08,887.494,1242.5945,882.72,1237.19" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="50" x="894" y="1311.0669">sensors</text><!--MD5=[cbeda563e899d974c1edda9a5e6b1c22]
+reverse link Workspace to MLModel--><path codeLine="21" d="M964.06,1216.9 C1037.52,1236.09 1145.1,1265.87 1237,1298 C1334.4,1332.05 1444.91,1380.17 1507.26,1408.22 " fill="none" id="Workspace-backto-MLModel" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="951.21,1213.56,956.0107,1218.9408,962.8241,1216.5789,958.0233,1211.1981,951.21,1213.56" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="1282" y="1311.0669">mlModels</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1492.4404" y="1400.7311">*</text><!--MD5=[a89a5a117185bdb9be94c5ab3d2d4b7f]
+link getParametersRes to Hyperparameter--><path codeLine="30" d="M371.35,948.18 C340.02,990.72 302,1055.62 302,1120 C302,1120 302,1120 302,1558.5 C302,1602.69 324.44,1648.4 344.09,1679.95 " fill="none" id="getParametersRes-to-Hyperparameter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="346.97,1684.5,345.5448,1674.7548,344.2995,1680.2729,338.7814,1679.0276,346.97,1684.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[83ad4d2ef9da46cc2de002a97b85b693]
+link trainReq to Hyperparameter--><path codeLine="50" d="M155.67,1090.23 C168.09,1119.93 180,1157.62 180,1193 C180,1193 180,1193 180,1558.5 C180,1624.13 246.29,1668.48 301.17,1693.94 " fill="none" id="trainReq-to-Hyperparameter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="305.77,1696.05,299.2598,1688.6596,301.226,1693.9638,295.9219,1695.93,305.77,1696.05" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a3d1fa3d68b3a715e12e52193866f770]
+link getModelRes to Hyperparameter--><path codeLine="60" d="M453.32,1488.42 C447.08,1498.2 440.76,1508.34 435,1518 C426.95,1531.49 423.82,1534.4 418,1549 C400.84,1592.06 388.3,1643.81 380.88,1679.12 " fill="none" id="getModelRes-to-Hyperparameter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="379.82,1684.21,385.5659,1676.211,380.8363,1679.3144,377.7329,1674.5848,379.82,1684.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a28c86c3baa9990f4ea253350ac8b31f]
+link getModelRes to PerformanceMetrics--><path codeLine="61" d="M625.08,1483.38 C630.77,1485.02 636.43,1486.57 642,1488 C813.67,1531.91 876.08,1472.68 1036,1549 C1104.1,1581.5 1165.23,1646.65 1198.53,1686.63 " fill="none" id="getModelRes-to-PerformanceMetrics" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1202.06,1690.9,1199.4128,1681.4136,1198.876,1687.0449,1193.2446,1686.508,1202.06,1690.9" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a5368334c2cc51e70f1de6f9d181889e]
+link Router to SensorDataPoints--><path codeLine="84" d="M983.88,405.27 C996.34,422.94 1004,443.12 1004,466 C1004,466 1004,466 1004,1307.5 C1004,1342.86 1028.22,1375.11 1051.25,1397.78 " fill="none" id="Router-to-SensorDataPoints" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1054.94,1401.34,1051.2379,1392.2134,1051.3408,1397.8693,1045.6849,1397.9722,1054.94,1401.34" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[33cf2d40d4233925e588e8fcb55ebd8e]
+link Router to Sample--><path codeLine="85" d="M1046.23,378.85 C1072.08,401.17 1089,429.66 1089,466 C1089,466 1089,466 1089,1035 C1089,1077.63 1094.48,1126.45 1098.81,1158.4 " fill="none" id="Router-to-Sample" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1099.5,1163.38,1102.2291,1153.9168,1098.8149,1158.4272,1094.3045,1155.013,1099.5,1163.38" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cf8a1be432557aacda854a498618c3b1]
+link Router to Trainer--><path codeLine="86" d="M1045.52,405.03 C1069.07,415.03 1092.51,425.12 1115,435 C1197.64,471.3 1287.07,512.34 1367.62,549.97 " fill="none" id="Router-to-Trainer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1372.42,552.21,1365.9572,544.7782,1367.8894,550.0948,1362.5728,552.0271,1372.42,552.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c116f180d657507a74c58bb66331fe38]
+link Sample to SensorDataPoints--><path codeLine="101" d="M1102.48,1224.89 C1100.26,1268.6 1096.13,1349.79 1093.77,1396.15 " fill="none" id="Sample-to-SensorDataPoints" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1093.51,1401.35,1097.967,1392.5673,1093.7668,1396.3566,1089.9775,1392.1564,1093.51,1401.35" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="129" x="1099" y="1311.0669">allSensorDataPoints</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1093.4278" y="1244.3063">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="1086.0996" y="1390.5823">*</text><!--MD5=[0657603cd11b3fce28381937a63fe3cf]
+link SensorDataPoints to DataPoint--><path codeLine="102" d="M1047.18,1462.75 C1033.05,1471.48 1017.16,1480.65 1002,1488 C931.64,1522.1 896.2,1497.93 837,1549 C796.52,1583.91 770.28,1640.74 756.07,1679.33 " fill="none" id="SensorDataPoints-to-DataPoint" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="754.23,1684.42,761.0527,1677.3172,755.9307,1679.7181,753.5297,1674.5961,754.23,1684.42" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="68" x="838" y="1562.0669">dataPoints</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1029.5686" y="1482.3797">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="748.6552" y="1673.3157">*</text><!--MD5=[5476b1f1806b2121a8f39f4dcae9cf40]
+link Router to getParametersRes--><path codeLine="104" d="M617.23,405.22 C607.39,414.63 598.19,424.58 590,435 C490.12,562.17 440.95,751.9 421.87,843.79 " fill="none" id="Router-to-getParametersRes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="420.82,848.89,426.5613,840.8876,421.8335,843.9938,418.7273,839.266,420.82,848.89" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[308718a0d730a8fd85d78af34162f397]
+link Router to trainReq--><path codeLine="105" d="M577.78,405.01 C522.41,439.38 465.43,480.96 420,528 C288.07,664.61 192.74,872.05 151.18,973.26 " fill="none" id="Router-to-trainReq" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="149.24,977.99,156.3581,971.1832,151.1387,973.3645,148.9573,968.1452,149.24,977.99" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9deb31f18e58bae32d10aa01918c41e7]
+link Router to getModelRes--><path codeLine="106" d="M635.5,405.11 C623.56,423.31 616,443.66 616,466 C616,466 616,466 616,1307.5 C616,1332.63 603.06,1354.33 585.48,1372.23 " fill="none" id="Router-to-getModelRes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="581.9,1375.75,591.1136,1372.2702,585.4569,1372.236,585.4912,1366.5792,581.9,1375.75" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f7278930e2df141d45aa6edfdab2f1ee]
+link Router to getPredictionConfigRes--><path codeLine="107" d="M806.72,405.03 C822.04,483.38 841.94,585.2 852.21,637.74 " fill="none" id="Router-to-getPredictionConfigRes" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="853.17,642.67,855.3756,633.0713,852.2141,637.7622,847.5232,634.6007,853.17,642.67" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9753c219ee7002fbb14055c800108e80]
+link Factory to Imputation--><path codeLine="115" d="M1973.35,1478.05 C1927.5,1498.28 1873.89,1523.35 1827,1549 C1763.82,1583.56 1695.61,1627.69 1644.08,1662.52 " fill="none" id="Factory-to-Imputation" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1639.77,1665.44,1649.4637,1663.6989,1643.9081,1662.6335,1644.9734,1657.0779,1639.77,1665.44" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7dfc8bb12dbb7bbb40329fb56cf5edc8]
+link Factory to IImputer--><path codeLine="116" d="M2331.52,1464.83 C2382.85,1482.25 2432.09,1508.78 2468,1549 C2500.08,1584.93 2509.76,1641.01 2512.43,1679.18 " fill="none" id="Factory-to-IImputer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2512.75,1684.21,2516.1759,1674.9762,2512.4354,1679.2199,2508.1917,1675.4795,2512.75,1684.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e0667b63458ee80073626b3598bcce8f]
+link Factory to Normalizer--><path codeLine="117" d="M2128.73,1478.23 C2148.83,1502.75 2165.94,1534.43 2158,1566 C2149.61,1599.35 2132.46,1633.35 2115.92,1660.94 " fill="none" id="Factory-to-Normalizer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2113.27,1665.31,2121.3663,1659.702,2115.8697,1661.039,2114.5327,1655.5424,2113.27,1665.31" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a18a022600c46d6f80a3378abb313fa8]
+link Factory to INormalizer--><path codeLine="118" d="M2331.79,1442.23 C2511.74,1454.46 2733.1,1482.89 2796,1549 C2829.4,1584.11 2838.74,1640.89 2840.98,1679.42 " fill="none" id="Factory-to-INormalizer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2841.24,1684.49,2844.7711,1675.2959,2840.9825,1679.4966,2836.7817,1675.708,2841.24,1684.49" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e2b46bbe17e54935f3b015a9928df17e]
+link Factory to Classifier--><path codeLine="119" d="M2045.91,1478.24 C2006.1,1529.56 1941.26,1613.16 1899.11,1667.49 " fill="none" id="Factory-to-Classifier" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1895.87,1671.68,1904.5459,1667.0185,1898.9338,1667.7286,1898.2236,1662.1165,1895.87,1671.68" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[51e41e8fe6a0efa2a5169ce7236720cf]
+link Factory to IClassifier--><path codeLine="120" d="M2141.12,1478.13 C2154.66,1490.11 2168.2,1503.72 2179,1518 C2217.12,1568.4 2245.16,1636.55 2260.54,1679.52 " fill="none" id="Factory-to-IClassifier" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2262.26,1684.37,2263.0226,1674.5507,2260.5892,1679.6574,2255.4825,1677.224,2262.26,1684.37" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4d74b3b77be4052ff265a3bbb6697019]
+link Factory to Hyperparameter--><path codeLine="121" d="M1926.32,1478.02 C1816.23,1508.14 1664.26,1545.82 1528,1566 C1296.79,1600.24 693.93,1537.54 478,1627 C450.31,1638.47 425.02,1660.46 406.2,1680.23 " fill="none" id="Factory-to-Hyperparameter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="402.53,1684.15,411.6111,1680.3377,405.9568,1680.509,405.7855,1674.8547,402.53,1684.15" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[66c0079cb6efef33573ac35a2e795ff2]
+link Trainer to IClassifier--><path codeLine="159" d="M1877.59,717.66 C2161.72,773.56 2584,882.03 2584,1033 C2584,1033 2584,1033 2584,1558.5 C2584,1639.55 2486.69,1589.19 2415,1627 C2384.91,1642.87 2353.2,1663.51 2327.48,1681.36 " fill="none" id="Trainer-to-IClassifier" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2323.08,1684.43,2332.7509,1682.5661,2327.1822,1681.5713,2328.177,1676.0026,2323.08,1684.43" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[52da106f5979dad62a0485f3c2f397a6]
+link Trainer to IImputer--><path codeLine="160" d="M1877.73,693.41 C2252.54,728.52 2912,820.48 2912,1033 C2912,1033 2912,1033 2912,1558.5 C2912,1639.55 2818.1,1596.52 2743,1627 C2695.12,1646.44 2641.65,1668.17 2598.32,1685.79 " fill="none" id="Trainer-to-IImputer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2593.62,1687.7,2603.464,1688.0087,2598.2505,1685.8135,2600.4456,1680.6,2593.62,1687.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[eae98dd5c036caa220bac409aa204eb4]
+link Trainer to INormalizer--><path codeLine="161" d="M1877.69,691.15 C2178.72,714.46 2660.83,763.83 2819,849 C2915.45,900.94 2983,923.45 2983,1033 C2983,1033 2983,1033 2983,1558.5 C2983,1609.74 2942.33,1652.54 2904.52,1681.25 " fill="none" id="Trainer-to-INormalizer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2900.4,1684.33,2910.0037,1682.1464,2904.4051,1681.3368,2905.2147,1675.7382,2900.4,1684.33" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[04bdf09e20b228327ced12b30748e866]
+link Trainer to PerformanceMetrics--><path codeLine="162" d="M1490.04,819.31 C1446.38,880.57 1409,955.61 1409,1033 C1409,1033 1409,1033 1409,1268 C1409,1419.95 1382.81,1460.52 1316,1597 C1299.95,1629.79 1275,1662.87 1255.28,1686.53 " fill="none" id="Trainer-to-PerformanceMetrics" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1251.91,1690.54,1260.7604,1686.2191,1255.125,1686.7106,1254.6334,1681.0752,1251.91,1690.54" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2d542f5d581cc1fe51b82c67f512cb7d]
+link Trainer to Sample--><path codeLine="163" d="M1413.45,819.08 C1402.79,828.79 1392.56,838.79 1383,849 C1285.58,953.08 1312.53,1018.94 1213,1121 C1196.29,1138.13 1174.84,1153.38 1155.39,1165.37 " fill="none" id="Trainer-to-Sample" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1151.02,1168.04,1160.7876,1166.7773,1155.291,1165.4403,1156.628,1159.9437,1151.02,1168.04" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[19caef2456a5c4d8bdba842f5f588fe6]
+link Trainer to Factory--><path codeLine="164" d="M1759.96,819.31 C1803.62,880.57 1841,955.61 1841,1033 C1841,1033 1841,1033 1841,1307.5 C1841,1340.97 1859.68,1365.38 1886.63,1383.18 " fill="none" id="Trainer-to-Factory" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1891.02,1385.97,1885.5799,1377.7599,1886.8035,1383.2828,1881.2805,1384.5064,1891.02,1385.97" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5ba6dee4b61ea88a07fcaac5bf0d0bde]
+link Trainer to Workspace--><path codeLine="165" d="M1372.18,808.52 C1350.18,821.72 1328.51,835.31 1308,849 C1163.26,945.58 1006.8,1078.41 928.21,1147.34 " fill="none" id="Trainer-to-Workspace" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="924.07,1150.98,933.4717,1148.0461,927.8267,1147.6804,928.1924,1142.0354,924.07,1150.98" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b8fdb012546bbf2dd196c6d45f773619]
+link MLModel to Imputation--><path codeLine="176" d="M1539.47,1469.36 C1533.28,1484.1 1527.09,1501.51 1524,1518 C1515.02,1565.93 1526.13,1620.3 1538.46,1660.62 " fill="none" id="MLModel-to-Imputation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1539.96,1665.47,1541.1035,1655.6877,1538.4735,1660.6961,1533.4652,1658.0661,1539.96,1665.47" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="69" x="1521" y="1562.0669">imputation</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1528.7518" y="1654.4041">1</text><!--MD5=[029313963d55ac4ec39c3b0d2f41347b]
+link MLModel to Feature--><path codeLine="177" d="M1507.45,1437.19 C1407.93,1447.83 1180.62,1483.6 1032,1596 C1021.92,1603.62 1012.74,1612.89 1004.47,1622.89 " fill="none" id="MLModel-to-Feature" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1001.22,1626.9,1009.9818,1622.4022,1004.3574,1623.0068,1003.7527,1617.3824,1001.22,1626.9" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="53" x="1105" y="1562.0669">features</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="981.3055" y="1615.842">1..*</text><!--MD5=[7ec5f8e69aaa5266063083dcaeb84db3]
+link MLModel to Normalizer--><path codeLine="178" d="M1606.79,1450.68 C1687.33,1480.47 1849.51,1545.48 1972,1627 C1987.25,1637.15 2002.51,1649.5 2016.43,1661.85 " fill="none" id="MLModel-to-Normalizer" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2020.32,1665.33,2016.2699,1656.3524,2016.5901,1662.0002,2010.9423,1662.3203,2020.32,1665.33" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="68" x="1869" y="1562.0669">normalizer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="2004.8016" y="1654.2462">1</text><!--MD5=[1371574284103a0cbf7d723a43050f40]
+link MLModel to Classifier--><path codeLine="179" d="M1594.82,1469.12 C1647.35,1519.3 1742.74,1610.4 1803.1,1668.06 " fill="none" id="MLModel-to-Classifier" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1807.03,1671.81,1803.2732,1662.7058,1803.41,1668.361,1797.7548,1668.4978,1807.03,1671.81" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="55" x="1697" y="1562.0669">classifier</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1791.2998" y="1660.8285">1</text><!--MD5=[7b5fda034b602536544d723dd666b5cf]
+link MLModel to Hyperparameter--><path codeLine="180" d="M1507.37,1441.12 C1435.69,1452.65 1298.94,1473.93 1182,1488 C1038.4,1505.28 663.9,1485.38 534,1549 C474.55,1578.12 425.84,1639.12 398.1,1679.95 " fill="none" id="MLModel-to-Hyperparameter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="395.15,1684.33,403.4913,1679.0934,397.94,1680.1808,396.8526,1674.6294,395.15,1684.33" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="111" x="535" y="1562.0669">hyperparameters</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="374.047" y="1673.4867">1..*</text><!--MD5=[0b4198ca7fa1b0a64ffac7fe88282362]
+link MLModel to PerformanceMetrics--><path codeLine="181" d="M1507.23,1457.54 C1454.13,1485.54 1369.85,1535.39 1312,1596 C1285.5,1623.77 1261,1660.22 1244.8,1686.49 " fill="none" id="MLModel-to-PerformanceMetrics" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1242.08,1690.95,1250.19,1685.3617,1244.6901,1686.6854,1243.3665,1681.1855,1242.08,1690.95" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="137" x="1364" y="1562.0669">performance_metrics</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1236.9412" y="1679.7293">1</text><!--MD5=[eccaef359e44d4a13ccea5fc4e44b67b]
+link MLModel to IImputer--><path codeLine="182" d="M1606.95,1444.16 C1658.49,1455.57 1741.24,1473.62 1813,1488 C2063.17,1538.13 2140.66,1515.17 2370,1627 C2401.38,1642.3 2434.14,1663.3 2460.37,1681.52 " fill="none" id="MLModel-to-IImputer" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2464.52,1684.42,2459.423,1675.9926,2460.4178,1681.5613,2454.8491,1682.5561,2464.52,1684.42" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="2223" y="1562.0669">imputer_object</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="2446.844" y="1673.3157">1</text><!--MD5=[2307f43f57b56dcecc233d55c017d2b9]
+link MLModel to INormalizer--><path codeLine="183" d="M1606.77,1445.14 C1658.16,1457.34 1740.8,1476 1813,1488 C2165.62,1546.63 2271.8,1480.26 2610,1596 C2671.8,1617.15 2736.83,1653.66 2782.09,1681.69 " fill="none" id="MLModel-to-INormalizer" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2786.41,1684.38,2780.8857,1676.2264,2782.166,1681.7364,2776.6559,1683.0168,2786.41,1684.38" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="114" x="2506" y="1562.0669">normalizer_object</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="2767.9737" y="1673.5456">1</text><!--MD5=[dfefe4fccfe8c18a79142a9a92e8820b]
+link MLModel to IClassifier--><path codeLine="184" d="M1606.89,1445.29 C1735.94,1477.59 2077.62,1566.57 2177,1627 C2200.23,1641.12 2222.35,1661.69 2239.59,1679.94 " fill="none" id="MLModel-to-IClassifier" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2243.42,1684.04,2240.2021,1674.7317,2240.0079,1680.3852,2234.3544,1680.191,2243.42,1684.04" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="101" x="2031" y="1562.0669">classifier_object</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="2229.4766" y="1673.4244">1</text><!--MD5=[56c39a65c7f004d9c2dae1ef40c85288]
+link Router to Workspace--><path codeLine="194" d="M725.41,405.35 C718.57,424.93 714,445.64 714,466 C714,466 714,466 714,1035 C714,1086.63 756.68,1126.79 798.37,1153.71 " fill="none" id="Router-to-Workspace" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="802.65,1156.43,797.1776,1148.2414,798.4229,1153.7595,792.9048,1155.0048,802.65,1156.43" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a8a954797bcd2386f88201b63e07686c]
+reverse link Workspace to WorkspaceData--><path codeLine="225" d="M823.53,1247.25 C809.5,1262.72 795.19,1280.29 784,1298 C766.06,1326.42 751.78,1361.69 742.28,1388.76 " fill="none" id="Workspace-backto-WorkspaceData" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="832.67,1237.41,825.6566,1239.087,824.5071,1246.2059,831.5205,1244.5289,832.67,1237.41" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="97" x="785" y="1311.0669">processedData</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="735.701" y="1378.0358">1</text><!--MD5=[5f6ce763c028a7b1677e904aaa16eaf0]
+reverse link WorkspaceData to SlidingWindow--><path codeLine="233" d="M698.95,1486.65 C669.25,1539.7 624.18,1620.17 595.42,1671.53 " fill="none" id="WorkspaceData-backto-SlidingWindow" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="705.42,1475.11,698.9972,1478.3884,699.5531,1485.578,705.9759,1482.2996,705.42,1475.11" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="94" x="665" y="1562.0669">slidingWindows</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="591.6343" y="1660.8686">*</text><!--MD5=[3b3203a3d348f0a90c0df0878ed46b6f]
+reverse link SlidingWindow to ImputedData--><path codeLine="242" d="M568,1784.37 C568,1835.72 568,1907.75 568,1955 " fill="none" id="SlidingWindow-backto-ImputedData" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="568,1771.13,564,1777.13,568,1783.13,572,1777.13,568,1771.13" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="91" x="569" y="1890.0669">imputedDatas</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="560.5078" y="1944.0452">*</text><!--MD5=[9cb27c1e816386b7e04c4cb8980fc8e0]
+reverse link ImputedData to ExtractedFeature--><path codeLine="251" d="M568,2067.21 C568,2107.02 568,2157.74 568,2192.95 " fill="none" id="ImputedData-backto-ExtractedFeature" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="568,2054.17,564,2060.17,568,2066.17,572,2060.17,568,2054.17" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="117" x="569" y="2128.0669">extractedFeatures</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="560.4422" y="2181.9381">*</text><!--MD5=[2008ef21e1fdd03c23895c871362c2c9]
+@startuml Model Management Class Diagram
+
+class App {
+    establishDatabaseConnection(): DatabaseClient
+}
+
+App - - -> "1" Router
+
+class Workspace {
+    +id: ObjectId
+    +user: string
+    +predictionIds: string[]
+}
+
+Workspace *- - - Sensor : sensors
+
+class Sensor {
+    +name: string
+    +samplingRate: integer
+}
+
+Workspace o- - - "*" MLModel : mlModels
+
+class getParametersRes {
+    +imputation: string[]
+    +features: string[]
+    +normalizers: string[]
+    +classifiers: {string, Hyperparameter[]}[]
+}
+
+getParametersRes ...> Hyperparameter
+
+class Hyperparameter {
+    +name: string
+    +format: string
+}
+
+'getParametersRes - - -> "5" Imputation: imputations
+'getParametersRes - - -> "11" Feature: features
+'getParametersRes - - -> "5" Normalizer: normalizers
+'getParametersRes - - -> "4" Classifier: classifiers
+
+class trainReq {
+    +model_name: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+trainReq ...> Hyperparameter
+
+class getModelRes {
+    +performance_metrics: PerformanceMetrics
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+getModelRes ...> Hyperparameter
+getModelRes ...> PerformanceMetrics
+
+class getPredictionConfigRes {
+    +sensors: {string, integer}[]
+}
+
+class Router {
+    -databaseClient: DatabaseClient
+    -trainers: Map<ObjectId, Trainer> 
+    -predictors: Map<ObjectId, IClassifier>
+
+    +<<create>> Router(databaseClient: DatabaseClient): void
+    +createModelWorkspace(workspaceId: ObjectId): void
+    +getParameters(): getParametersRes
+    +train(workspaceId: ObjectId, req: trainReq): void
+    +trainingProgress(workspaceId: ObjectId): integer
+    +getModels(workspaceId: ObjectId): (ObjectId, string)[]
+    +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
+    +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
+    +getPredictionConfig(predictionId: string): getPredictionConfigRes
+    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
+}
+
+Router ...> SensorDataPoints
+Router ...> Sample
+Router ...> Trainer
+
+class Sample {
+    +label: string
+}
+
+class SensorDataPoints {
+    +sensor: string
+}
+
+class DataPoint {
+    +timestamp: integer
+    +values: integer[]
+}
+
+Sample "1" - - -> "*" SensorDataPoints : allSensorDataPoints
+SensorDataPoints "1" - - -> "*" DataPoint : dataPoints
+
+Router ...> getParametersRes
+Router ...> trainReq
+Router ...> getModelRes
+Router ...> getPredictionConfigRes
+
+class Factory <<static>> {
+    +{static} getImputer(imputation: Imputation): IImputer
+    +{static} getNormalizer(normalizer: Normalizer): INormalizer
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier
+}
+
+Factory ...> Imputation
+Factory ...> IImputer
+Factory ...> Normalizer
+Factory ...> INormalizer
+Factory ...> Classifier
+Factory ...> IClassifier
+Factory ...> Hyperparameter
+
+interface IImputer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface INormalizer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface IClassifier {
+    +fit(df: DataFrame): void
+    +predict(): ndarray
+}
+
+class Trainer {
+    +progress: float
+    -{static}databaseClient: DatabaseClient
+    -workspaceId: ObjectId
+    -imputation: Imputation
+    -features: Feature[]
+    -normalizer: Normalizer
+    -classifier: Classifier
+    -hyperparameters: Hyperparameter[]
+    +<<create>>Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+    +train(): void
+    +{static}setDatabaseClient(databaseClient: DatabaseClient): void
+    -requestSampleHash(): string
+    -requestDataSet(): Sample[]
+    -getDataset(): WorkspaceData
+    -splitToWindows(data: Sample[]): DataFrame[]
+    -impute(data: DataFrame[]): (DataFrame[], IImputer)
+    -extractFeature(data: DataFrame[]): DataFrame
+    -normalize(data: DataFrame): DataFrame
+}
+
+Trainer ...> IClassifier
+Trainer ...> IImputer
+Trainer ...> INormalizer
+Trainer ...> PerformanceMetrics
+Trainer ...> Sample
+Trainer ...> Factory
+Trainer ...> Workspace
+
+class PerformanceMetrics {
+    +labels: Map<string, List[(string, integer)]>
+}
+
+class MLModel {
+    +id: ObjectId
+    +name: string
+}
+
+MLModel - - -> "1" Imputation : imputation
+MLModel - - -> "1..*" Feature : features
+MLModel - - -> "1" Normalizer : normalizer
+MLModel - - -> "1" Classifier : classifier
+MLModel ...> "1..*" Hyperparameter: hyperparameters
+MLModel - - -> "1" PerformanceMetrics : performance_metrics
+MLModel - - -> "1" IImputer : imputer_object
+MLModel - - -> "1" INormalizer: normalizer_object
+MLModel - - -> "1" IClassifier : classifier_object
+
+enum Imputation {
+    +MEAN_IMPUTATION
+    +LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION
+    +LINEAR_INTERPOLATION
+    +SPLINE_INTERPOLATION
+    +MOVING_AVERAGE_IMPUTATION
+}
+
+Router ...> Workspace
+
+enum Feature {
+    +MIN
+    +MAX
+    +VARIANCE
+    +ENERGY
+    +AUTOREGRESSIVE_CORRELATION
+    +MEAN
+    +IQR
+    +PEARSON_CORRELATION
+    +SKEWNESS
+    +KURTOSIS
+    +FOURIER_TRANSFORM
+}
+
+enum Normalizer {
+    +MIN_MAX_SCALER
+    +NORMALIZER
+    +QUANTILE_TRANSFORMER
+    +ROBUST_SCALER
+    +STANDARD_SCALER
+} 
+
+enum Classifier {
+    +MLP_CLASSIFIER
+    +SV_CLASSIFIER
+    +RANDOM_FOREST_CLASSIFIER
+    +KNEIGHBOR_CLASSIFIER
+}
+
+Workspace *- - - "1" WorkspaceData: processedData
+
+class WorkspaceData {
+    +id: ObjectId
+    +sampleHash: string
+    +data: Sample[]
+}
+
+WorkspaceData o- - - "*" SlidingWindow : slidingWindows
+
+class SlidingWindow {
+    +id: ObjectId
+    +window_size: integer
+    +sliding_step: integer
+    +data: DataFrame
+}
+
+SlidingWindow o- - - "*" ImputedData : imputedDatas
+
+class ImputedData {
+    +id: ObjectId
+    +imputation: string
+    +data: DataFrame
+    +imputer_object: IImputer
+}
+
+ImputedData o- - - "*" ExtractedFeature : extractedFeatures
+
+class ExtractedFeature {
+    +id: ObjectId
+    +feature: string
+    +data: DataFrame
+}
+
+@enduml
+
+@startuml Model Management Class Diagram
+
+class App {
+    establishDatabaseConnection(): DatabaseClient
+}
+
+App - - -> "1" Router
+
+class Workspace {
+    +id: ObjectId
+    +user: string
+    +predictionIds: string[]
+}
+
+Workspace *- - - Sensor : sensors
+
+class Sensor {
+    +name: string
+    +samplingRate: integer
+}
+
+Workspace o- - - "*" MLModel : mlModels
+
+class getParametersRes {
+    +imputation: string[]
+    +features: string[]
+    +normalizers: string[]
+    +classifiers: {string, Hyperparameter[]}[]
+}
+
+getParametersRes ...> Hyperparameter
+
+class Hyperparameter {
+    +name: string
+    +format: string
+}
+
+
+class trainReq {
+    +model_name: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+trainReq ...> Hyperparameter
+
+class getModelRes {
+    +performance_metrics: PerformanceMetrics
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+getModelRes ...> Hyperparameter
+getModelRes ...> PerformanceMetrics
+
+class getPredictionConfigRes {
+    +sensors: {string, integer}[]
+}
+
+class Router {
+    -databaseClient: DatabaseClient
+    -trainers: Map<ObjectId, Trainer> 
+    -predictors: Map<ObjectId, IClassifier>
+
+    +<<create>> Router(databaseClient: DatabaseClient): void
+    +createModelWorkspace(workspaceId: ObjectId): void
+    +getParameters(): getParametersRes
+    +train(workspaceId: ObjectId, req: trainReq): void
+    +trainingProgress(workspaceId: ObjectId): integer
+    +getModels(workspaceId: ObjectId): (ObjectId, string)[]
+    +getModel(workspaceId: ObjectId, modelId: ObjectId) : getModelRes
+    +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
+    +getPredictionConfig(predictionId: string): getPredictionConfigRes
+    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
+}
+
+Router ...> SensorDataPoints
+Router ...> Sample
+Router ...> Trainer
+
+class Sample {
+    +label: string
+}
+
+class SensorDataPoints {
+    +sensor: string
+}
+
+class DataPoint {
+    +timestamp: integer
+    +values: integer[]
+}
+
+Sample "1" - - -> "*" SensorDataPoints : allSensorDataPoints
+SensorDataPoints "1" - - -> "*" DataPoint : dataPoints
+
+Router ...> getParametersRes
+Router ...> trainReq
+Router ...> getModelRes
+Router ...> getPredictionConfigRes
+
+class Factory <<static>> {
+    +{static} getImputer(imputation: Imputation): IImputer
+    +{static} getNormalizer(normalizer: Normalizer): INormalizer
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier
+}
+
+Factory ...> Imputation
+Factory ...> IImputer
+Factory ...> Normalizer
+Factory ...> INormalizer
+Factory ...> Classifier
+Factory ...> IClassifier
+Factory ...> Hyperparameter
+
+interface IImputer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface INormalizer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface IClassifier {
+    +fit(df: DataFrame): void
+    +predict(): ndarray
+}
+
+class Trainer {
+    +progress: float
+    -{static}databaseClient: DatabaseClient
+    -workspaceId: ObjectId
+    -imputation: Imputation
+    -features: Feature[]
+    -normalizer: Normalizer
+    -classifier: Classifier
+    -hyperparameters: Hyperparameter[]
+    +<<create>>Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+    +train(): void
+    +{static}setDatabaseClient(databaseClient: DatabaseClient): void
+    -requestSampleHash(): string
+    -requestDataSet(): Sample[]
+    -getDataset(): WorkspaceData
+    -splitToWindows(data: Sample[]): DataFrame[]
+    -impute(data: DataFrame[]): (DataFrame[], IImputer)
+    -extractFeature(data: DataFrame[]): DataFrame
+    -normalize(data: DataFrame): DataFrame
+}
+
+Trainer ...> IClassifier
+Trainer ...> IImputer
+Trainer ...> INormalizer
+Trainer ...> PerformanceMetrics
+Trainer ...> Sample
+Trainer ...> Factory
+Trainer ...> Workspace
+
+class PerformanceMetrics {
+    +labels: Map<string, List[(string, integer)]>
+}
+
+class MLModel {
+    +id: ObjectId
+    +name: string
+}
+
+MLModel - - -> "1" Imputation : imputation
+MLModel - - -> "1..*" Feature : features
+MLModel - - -> "1" Normalizer : normalizer
+MLModel - - -> "1" Classifier : classifier
+MLModel ...> "1..*" Hyperparameter: hyperparameters
+MLModel - - -> "1" PerformanceMetrics : performance_metrics
+MLModel - - -> "1" IImputer : imputer_object
+MLModel - - -> "1" INormalizer: normalizer_object
+MLModel - - -> "1" IClassifier : classifier_object
+
+enum Imputation {
+    +MEAN_IMPUTATION
+    +LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION
+    +LINEAR_INTERPOLATION
+    +SPLINE_INTERPOLATION
+    +MOVING_AVERAGE_IMPUTATION
+}
+
+Router ...> Workspace
+
+enum Feature {
+    +MIN
+    +MAX
+    +VARIANCE
+    +ENERGY
+    +AUTOREGRESSIVE_CORRELATION
+    +MEAN
+    +IQR
+    +PEARSON_CORRELATION
+    +SKEWNESS
+    +KURTOSIS
+    +FOURIER_TRANSFORM
+}
+
+enum Normalizer {
+    +MIN_MAX_SCALER
+    +NORMALIZER
+    +QUANTILE_TRANSFORMER
+    +ROBUST_SCALER
+    +STANDARD_SCALER
+} 
+
+enum Classifier {
+    +MLP_CLASSIFIER
+    +SV_CLASSIFIER
+    +RANDOM_FOREST_CLASSIFIER
+    +KNEIGHBOR_CLASSIFIER
+}
+
+Workspace *- - - "1" WorkspaceData: processedData
+
+class WorkspaceData {
+    +id: ObjectId
+    +sampleHash: string
+    +data: Sample[]
+}
+
+WorkspaceData o- - - "*" SlidingWindow : slidingWindows
+
+class SlidingWindow {
+    +id: ObjectId
+    +window_size: integer
+    +sliding_step: integer
+    +data: DataFrame
+}
+
+SlidingWindow o- - - "*" ImputedData : imputedDatas
+
+class ImputedData {
+    +id: ObjectId
+    +imputation: string
+    +data: DataFrame
+    +imputer_object: IImputer
+}
+
+ImputedData o- - - "*" ExtractedFeature : extractedFeatures
+
+class ExtractedFeature {
+    +id: ObjectId
+    +feature: string
+    +data: DataFrame
+}
+
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 12:36:27 TRT 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

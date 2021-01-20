@@ -1,0 +1,259 @@
+@startuml Model Management Class Diagram
+
+class App {
+    establishDatabaseConnection(): DatabaseClient
+}
+
+App ---> "1" Router
+
+class Workspace {
+    +id: ObjectId
+    +user: string
+    +predictionIds: string[]
+}
+
+Workspace *--- Sensor : sensors
+
+class Sensor {
+    +name: string
+    +samplingRate: integer
+}
+
+Workspace o--- "*" MLModel : mlModels
+
+class GetParametersRes {
+    +imputation: string[]
+    +features: string[]
+    +normalizers: string[]
+    +classifiers: {string, Hyperparameter[]}[]
+}
+
+GetParametersRes ...> Hyperparameter
+
+class Hyperparameter {
+    +name: string
+    +format: string
+}
+
+'GetParametersRes ---> "5" Imputation: imputations
+'GetParametersRes ---> "11" Feature: features
+'GetParametersRes ---> "5" Normalizer: normalizers
+'GetParametersRes ---> "4" Classifier: classifiers
+
+class TrainReq {
+    +model_name: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+TrainReq ...> Hyperparameter
+
+class GetModelRes {
+    +performance_metrics: PerformanceMetrics
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+    +classifier: {string, Hyperparameter[]}
+}
+
+GetModelRes ...> Hyperparameter
+GetModelRes ...> PerformanceMetrics
+
+class GetPredictionConfigRes {
+    +sensors: {string, integer}[]
+}
+
+class Router {
+    -databaseClient: DatabaseClient
+    -trainers: Map<ObjectId, Trainer> 
+    -predictors: Map<ObjectId, IClassifier>
+
+    +<<create>> Router(databaseClient: DatabaseClient): void
+    +createModelWorkspace(workspaceId: ObjectId): void
+    +getParameters(): GetParametersRes
+    +train(workspaceId: ObjectId, req: TrainReq): void
+    +trainingProgress(workspaceId: ObjectId): integer
+    +getModels(workspaceId: ObjectId): (ObjectId, string)[]
+    +getModel(workspaceId: ObjectId, modelId: ObjectId) : GetModelRes
+    +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
+    +getPredictionConfig(predictionId: string): GetPredictionConfigRes
+    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
+}
+
+Router ...> SensorDataPoints
+Router ...> Sample
+Router ...> Trainer
+
+class Sample {
+    +label: string
+}
+
+class SensorDataPoints {
+    +sensor: string
+}
+
+class DataPoint {
+    +timestamp: integer
+    +values: integer[]
+}
+
+Sample "1" ---> "*" SensorDataPoints : allSensorDataPoints
+SensorDataPoints "1" ---> "*" DataPoint : dataPoints
+
+Router ...> GetParametersRes
+Router ...> TrainReq
+Router ...> GetModelRes
+Router ...> GetPredictionConfigRes
+
+class Factory <<static>> {
+    +{static} getImputer(imputation: Imputation): IImputer
+    +{static} getNormalizer(normalizer: Normalizer): INormalizer
+    +{static} getClassifier(classifier: Classifier, hyperparameters: Hyperparameter[]): IClassifier
+}
+
+Factory ...> Imputation
+Factory ...> IImputer
+Factory ...> Normalizer
+Factory ...> INormalizer
+Factory ...> Classifier
+Factory ...> IClassifier
+Factory ...> Hyperparameter
+
+interface IImputer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface INormalizer {
+    +fit(df: DataFrame): void
+    +transform(): DataFrame
+}
+
+interface IClassifier {
+    +fit(df: DataFrame): void
+    +predict(): ndarray
+}
+
+class Trainer {
+    +progress: float
+    -{static}databaseClient: DatabaseClient
+    -workspaceId: ObjectId
+    -imputation: Imputation
+    -features: Feature[]
+    -normalizer: Normalizer
+    -classifier: Classifier
+    -hyperparameters: Hyperparameter[]
+    +<<create>>Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+    +train(): void
+    +{static}setDatabaseClient(databaseClient: DatabaseClient): void
+    -requestSampleHash(): string
+    -requestDataSet(): Sample[]
+    -getDataset(): WorkspaceData
+    -splitToWindows(data: Sample[]): DataFrame[]
+    -impute(data: DataFrame[]): (DataFrame[], IImputer)
+    -extractFeature(data: DataFrame[]): DataFrame
+    -normalize(data: DataFrame): DataFrame
+}
+
+Trainer ...> IClassifier
+Trainer ...> IImputer
+Trainer ...> INormalizer
+Trainer ...> PerformanceMetrics
+Trainer ...> Sample
+Trainer ...> Factory
+Trainer ...> Workspace
+
+class PerformanceMetrics {
+    +labels: Map<string, List[(string, integer)]>
+}
+
+class MLModel {
+    +id: ObjectId
+    +name: string
+}
+
+MLModel ---> "1" Imputation : imputation
+MLModel ---> "1..*" Feature : features
+MLModel ---> "1" Normalizer : normalizer
+MLModel ---> "1" Classifier : classifier
+MLModel ...> "1..*" Hyperparameter: hyperparameters
+MLModel ---> "1" PerformanceMetrics : performance_metrics
+MLModel ---> "1" IImputer : imputer_object
+MLModel ---> "1" INormalizer: normalizer_object
+MLModel ---> "1" IClassifier : classifier_object
+
+enum Imputation {
+    +MEAN_IMPUTATION
+    +LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION
+    +LINEAR_INTERPOLATION
+    +SPLINE_INTERPOLATION
+    +MOVING_AVERAGE_IMPUTATION
+}
+
+enum Feature {
+    +MIN
+    +MAX
+    +VARIANCE
+    +ENERGY
+    +AUTOREGRESSIVE_CORRELATION
+    +MEAN
+    +IQR
+    +PEARSON_CORRELATION
+    +SKEWNESS
+    +KURTOSIS
+    +FOURIER_TRANSFORM
+}
+
+enum Normalizer {
+    +MIN_MAX_SCALER
+    +NORMALIZER
+    +QUANTILE_TRANSFORMER
+    +ROBUST_SCALER
+    +STANDARD_SCALER
+} 
+
+enum Classifier {
+    +MLP_CLASSIFIER
+    +SV_CLASSIFIER
+    +RANDOM_FOREST_CLASSIFIER
+    +KNEIGHBOR_CLASSIFIER
+}
+
+Workspace *--- "1" WorkspaceData: processedData
+
+class WorkspaceData {
+    +id: ObjectId
+    +sampleHash: string
+    +data: Sample[]
+}
+
+WorkspaceData o--- "*" SlidingWindow : slidingWindows
+
+class SlidingWindow {
+    +id: ObjectId
+    +window_size: integer
+    +sliding_step: integer
+    +data: DataFrame
+}
+
+SlidingWindow o--- "*" ImputedData : imputedDatas
+
+class ImputedData {
+    +id: ObjectId
+    +imputation: string
+    +data: DataFrame
+    +imputer_object: IImputer
+}
+
+ImputedData o--- "*" ExtractedFeature : extractedFeatures
+
+class ExtractedFeature {
+    +id: ObjectId
+    +feature: string
+    +data: DataFrame
+}
+
+@enduml
+

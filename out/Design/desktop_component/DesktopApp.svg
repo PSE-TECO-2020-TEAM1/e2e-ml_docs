@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1100px" preserveAspectRatio="none" style="width:3219px;height:1100px;" version="1.1" viewBox="0 0 3219 1100" width="3219px" zoomAndPan="magnify"><defs><filter height="300%" id="f17ydf5c71uzdq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02827f611b01ba0a5e885c30d6bdece7]
+cluster react-qr-code--><polygon fill="#FFFFFF" filter="url(#f17ydf5c71uzdq)" points="60,1004,175,1004,182,1026.2969,185,1026.2969,185,1093,60,1093,60,1004" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="60" x2="182" y1="1026.2969" y2="1026.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="109" x="64" y="1018.9951">react-qr-code</text><!--MD5=[964f4cc3cc4367d87713c01095b16070]
+cluster raviger--><polygon fill="#FFFFFF" filter="url(#f17ydf5c71uzdq)" points="2990,890,3052,890,3059,912.2969,3202,912.2969,3202,979,2990,979,2990,890" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="2990" x2="3059" y1="912.2969" y2="912.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="56" x="2994" y="904.9951">raviger</text><!--MD5=[66cc03732dea02ea9e254efd56068a17]
+cluster MaterialUI--><polygon fill="#FFFFFF" filter="url(#f17ydf5c71uzdq)" points="899,1004,982,1004,989,1026.2969,2617,1026.2969,2617,1093,899,1093,899,1004" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="899" x2="989" y1="1026.2969" y2="1026.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="77" x="903" y="1018.9951">MaterialUI</text><!--MD5=[1e4cb910f29302ffde398267229f9ae5]
+cluster DesktopApp--><polygon fill="#FFFFFF" filter="url(#f17ydf5c71uzdq)" points="16,6,118,6,125,28.2969,2120,28.2969,2120,865,16,865,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="125" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="96" x="20" y="20.9951">DesktopApp</text><!--MD5=[6536340259e77c2b48d324a67d6ba0e9]
+class react-qr-code.QRCode--><rect codeLine="5" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="react-qr-code.QRCode" style="stroke:#A80036;stroke-width:1.5;" width="87" x="80.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="81.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="99.5" y="1061.1074">QRCode</text><line style="stroke:#A80036;stroke-width:1.5;" x1="81.5" x2="166.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="81.5" x2="166.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[f61c4e792b851d4e5ebe23508921abac]
+class raviger.useRoutes--><rect codeLine="6" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="raviger.useRoutes" style="stroke:#A80036;stroke-width:1.5;" width="73" x="3120.5" y="917"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="45" x="3134.5" y="933.1387">«hook»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="3123.5" y="947.1074">useRoutes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3121.5" x2="3192.5" y1="954.9375" y2="954.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="3121.5" x2="3192.5" y1="962.9375" y2="962.9375"/><!--MD5=[0cfa1bc92fbd3ca765d90f78dfb7bb23]
+class raviger.Link--><rect codeLine="7" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="raviger.Link" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2998.5" y="917"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2999.5" y="933.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="3030" y="947.1074">Link</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2999.5" x2="3084.5" y1="954.9375" y2="954.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2999.5" x2="3084.5" y1="962.9375" y2="962.9375"/><!--MD5=[3d2d30bfdeddb5f917555437760c0598]
+class MaterialUI.TextField--><rect codeLine="8" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.TextField" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1911.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1912.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="1927.5" y="1061.1074">TextField</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1912.5" x2="1997.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1912.5" x2="1997.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[717c1e3bc9807dc78d2b32b1fcb59ae7]
+class MaterialUI.Button--><rect codeLine="9" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.Button" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1517.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1518.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="1540" y="1061.1074">Button</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1518.5" x2="1603.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1518.5" x2="1603.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[4a7d697cf2bb192b7a71a419973cd47b]
+class MaterialUI.Checkbox--><rect codeLine="10" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.Checkbox" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1029.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1030.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="1043" y="1061.1074">Checkbox</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1030.5" x2="1115.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1030.5" x2="1115.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[aeaa0139fd5efcc57f99a635a8409e92]
+class MaterialUI.Dropdown--><rect codeLine="11" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.Dropdown" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1639.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1640.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="63" x="1651.5" y="1061.1074">Dropdown</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1640.5" x2="1725.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1640.5" x2="1725.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[387280d03ce3f358003b695e4108d98f]
+class MaterialUI.FormControlLabel--><rect codeLine="12" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.FormControlLabel" style="stroke:#A80036;stroke-width:1.5;" width="115" x="1761.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1776.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="109" x="1764.5" y="1061.1074">FormControlLabel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1762.5" x2="1875.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1762.5" x2="1875.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[461fa0dc3cc993555d381d15830966c5]
+class MaterialUI.Accordion--><rect codeLine="13" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.Accordion" style="stroke:#A80036;stroke-width:1.5;" width="87" x="907.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="908.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="62" x="920" y="1061.1074">Accordion</text><line style="stroke:#A80036;stroke-width:1.5;" x1="908.5" x2="993.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="908.5" x2="993.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[b01752a9ac6a409e7127acb40ef6ba6d]
+class MaterialUI.List--><rect codeLine="14" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.List" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1273.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1274.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21" x="1306.5" y="1061.1074">List</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1274.5" x2="1359.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1274.5" x2="1359.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[65d41ade89e3c809ca228e5215f0a060]
+class MaterialUI.ListItem--><rect codeLine="15" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.ListItem" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1395.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1396.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="1415" y="1061.1074">ListItem</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1396.5" x2="1481.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1396.5" x2="1481.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[218fa4ff7fcde78c4deb5706b0a63e5e]
+class MaterialUI.ListItemIcon--><rect codeLine="16" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.ListItemIcon" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1151.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1152.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="1158" y="1061.1074">ListItemIcon</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1152.5" x2="1237.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1152.5" x2="1237.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[bfd6560e990f0bba91f1e08c34427f66]
+class MaterialUI.Table--><rect codeLine="17" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.Table" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2155.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2156.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="2182" y="1061.1074">Table</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2156.5" x2="2241.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2156.5" x2="2241.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[af2a3e2cadcf1f6ee37d6e93c60f857f]
+class MaterialUI.TableHead--><rect codeLine="18" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.TableHead" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2033.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2034.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="2043.5" y="1061.1074">TableHead</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2034.5" x2="2119.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2034.5" x2="2119.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[ab6a90b6783edf5b3e995898f8044bd7]
+class MaterialUI.TableRow--><rect codeLine="19" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.TableRow" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2277.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2278.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="2291.5" y="1061.1074">TableRow</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2278.5" x2="2363.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2278.5" x2="2363.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[0c736e819594c6720973842f7b86d860]
+class MaterialUI.TableCell--><rect codeLine="20" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.TableCell" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2521.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2522.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="2537" y="1061.1074">TableCell</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2522.5" x2="2607.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2522.5" x2="2607.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[ae47ee23b5d43f2412886b5e3f5e97e8]
+class MaterialUI.TableBody--><rect codeLine="21" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="MaterialUI.TableBody" style="stroke:#A80036;stroke-width:1.5;" width="87" x="2399.5" y="1031"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="2400.5" y="1047.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="2411" y="1061.1074">TableBody</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2400.5" x2="2485.5" y1="1068.9375" y2="1068.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2400.5" x2="2485.5" y1="1076.9375" y2="1076.9375"/><!--MD5=[c8de476e2b01591ff00aed72aa4ddcbc]
+class IModelOptions--><rect codeLine="24" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="IModelOptions" style="stroke:#A80036;stroke-width:1.5;" width="94" x="1684" y="128.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1696" y="144.6387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="88" x="1687" y="158.6074">IModelOptions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1685" x2="1777" y1="166.4375" y2="166.4375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1685" x2="1777" y1="174.4375" y2="174.4375"/><!--MD5=[87c1ffe07f85f10d5a3345078971bd0b]
+class IWorkspace--><rect codeLine="25" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="IWorkspace" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1813" y="128.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1817" y="144.6387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="72" x="1816" y="158.6074">IWorkspace</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1814" x2="1890" y1="166.4375" y2="166.4375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1814" x2="1890" y1="174.4375" y2="174.4375"/><!--MD5=[234388652ba6e8f0c30a11b3768311a7]
+class ISensor--><rect codeLine="26" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="ISensor" style="stroke:#A80036;stroke-width:1.5;" width="72" x="1926" y="128.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1927" y="144.6387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="47" x="1938.5" y="158.6074">ISensor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1927" x2="1997" y1="166.4375" y2="166.4375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1927" x2="1997" y1="174.4375" y2="174.4375"/><!--MD5=[365c73541b5d89fa9ed0b4b6b8fb15b0]
+class ILabel--><rect codeLine="27" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="ILabel" style="stroke:#A80036;stroke-width:1.5;" width="72" x="1695" y="338"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1696" y="354.1387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="36" x="1713" y="368.1074">ILabel</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1696" x2="1766" y1="375.9375" y2="375.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1696" x2="1766" y1="383.9375" y2="383.9375"/><!--MD5=[67875e46cf7daac10c7ea2e10d51b798]
+class ISample--><rect codeLine="28" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="ISample" style="stroke:#A80036;stroke-width:1.5;" width="72" x="1802" y="338"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1803" y="354.1387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="49" x="1813.5" y="368.1074">ISample</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1803" x2="1873" y1="375.9375" y2="375.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1803" x2="1873" y1="383.9375" y2="383.9375"/><!--MD5=[2f455e791a888327f10a94873a575a02]
+class ISampleDetails--><rect codeLine="29" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="ISampleDetails" style="stroke:#A80036;stroke-width:1.5;" width="98" x="1909" y="338"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="70" x="1923" y="354.1387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="92" x="1912" y="368.1074">ISampleDetails</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1910" x2="2006" y1="375.9375" y2="375.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1910" x2="2006" y1="383.9375" y2="383.9375"/><!--MD5=[68767c78be08caa96780c014af9fbeaa]
+class API--><rect codeLine="31" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="244.8438" id="API" style="stroke:#A80036;stroke-width:1.5;" width="396" x="1109" y="33"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="1297.5" y="49.1387">API</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1110" x2="1504" y1="56.9688" y2="56.9688"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1117" y="64.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="72" x="1129" y="71.1792">token: string</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1110" x2="1504" y1="77.7734" y2="77.7734"/><ellipse cx="1120" cy="88.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="272" x="1129" y="91.9839">auth(username: string, password: string) : void</text><ellipse cx="1120" cy="101.5781" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="152" x="1129" y="104.7886">isAuthenticated() : boolean</text><ellipse cx="1120" cy="114.3828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="221" x="1129" y="117.5933">train(options: IModelOptions) : boolean</text><ellipse cx="1120" cy="127.1875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="1129" y="130.3979">getWorkspaces(): IWorkspace[]</text><ellipse cx="1120" cy="139.9922" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="200" x="1129" y="143.2026">createWorkspace(IWorkspace): void</text><ellipse cx="1120" cy="152.7969" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="1129" y="156.0073">getAvailableSensors(): ISensor[]</text><ellipse cx="1120" cy="165.6016" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="1129" y="168.812">getSamples(): ISample[]</text><ellipse cx="1120" cy="178.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="213" x="1129" y="181.6167">deleteSample(sample: ISample): void</text><ellipse cx="1120" cy="191.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="169" x="1129" y="194.4214">getDataCollectionURL(): string</text><ellipse cx="1120" cy="204.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="1129" y="207.2261">getLabels(): ILabel[]</text><ellipse cx="1120" cy="216.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="268" x="1129" y="220.0308">deleteWorkspace(workspace: IWorkspace): void</text><ellipse cx="1120" cy="229.625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="1129" y="232.8354">createLabel(ILabel): void</text><ellipse cx="1120" cy="242.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="297" x="1129" y="245.6401">getSampleDetails(sample: ISample): ISampleDetails</text><ellipse cx="1120" cy="255.2344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="370" x="1129" y="258.4448">setSampleTimeframe(sample: ISample, frame: Timeframe): void</text><ellipse cx="1120" cy="268.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="1129" y="271.2495">getModelMetrics(): IModelMetrics</text><!--MD5=[335f4d9be48430461c68bf6d6fdba145]
+class App--><rect codeLine="52" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="App" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1183.5" y="458"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1184.5" y="474.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="1215" y="488.1074">App</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1184.5" x2="1269.5" y1="495.9375" y2="495.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1184.5" x2="1269.5" y1="503.9375" y2="503.9375"/><!--MD5=[d10018d7374cb536a2ec2f77e731452b]
+class Header--><rect codeLine="54" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="75.5469" id="Header" style="stroke:#A80036;stroke-width:1.5;" width="127" x="1040.5" y="590.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1061.5" y="606.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="1081" y="620.6074">Header</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1041.5" x2="1166.5" y1="628.4375" y2="628.4375"/><polygon fill="none" points="1051.5,651.2422,1055.5,655.2422,1051.5,659.2422,1047.5,655.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="1060.5" y="659.4526">route: component</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1041.5" x2="1087.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1041.5" x2="1087.5" y1="644.8398" y2="644.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="1087.5" y="646.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1120.5" x2="1166.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1120.5" x2="1166.5" y1="644.8398" y2="644.8398"/><!--MD5=[78db28fca035ae5473085c70d9719e0b]
+class LoginPage--><rect codeLine="60" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="88.3516" id="LoginPage" style="stroke:#A80036;stroke-width:1.5;" width="125" x="880.5" y="584.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="900.5" y="600.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="65" x="910.5" y="614.6074">LoginPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="881.5" x2="1004.5" y1="622.4375" y2="622.4375"/><polygon fill="none" points="891.5,645.2422,895.5,649.2422,891.5,653.2422,887.5,649.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="900.5" y="653.4526">username: string</text><polygon fill="none" points="891.5,658.0469,895.5,662.0469,891.5,666.0469,887.5,662.0469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="900.5" y="666.2573">password: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="881.5" x2="928.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="881.5" x2="928.5" y1="638.8398" y2="638.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="29" x="928.5" y="640.1479">state</text><line style="stroke:#A80036;stroke-width:1.0;" x1="957.5" x2="1004.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="957.5" x2="1004.5" y1="638.8398" y2="638.8398"/><!--MD5=[18ab30ef130e1b5e97368894570d58a8]
+class WorkspacesListPage--><rect codeLine="70" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="53.9375" id="WorkspacesListPage" style="stroke:#A80036;stroke-width:1.5;" width="135" x="1794.5" y="601.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1819.5" y="617.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="129" x="1797.5" y="631.6074">WorkspacesListPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1795.5" x2="1928.5" y1="639.4375" y2="639.4375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1795.5" x2="1928.5" y1="647.4375" y2="647.4375"/><!--MD5=[54cf9871e56424424107dc3145e3cabc]
+class WorkspaceCreationPage--><rect codeLine="76" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="101.1563" id="WorkspaceCreationPage" style="stroke:#A80036;stroke-width:1.5;" width="171" x="1366.5" y="578"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1409.5" y="594.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="154" x="1375" y="608.1074">WorkspaceCreationPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1367.5" x2="1536.5" y1="615.9375" y2="615.9375"/><polygon fill="none" points="1377.5,638.7422,1381.5,642.7422,1377.5,646.7422,1373.5,642.7422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="1386.5" y="646.9526">selectedSensors: string[]</text><polygon fill="none" points="1377.5,651.5469,1381.5,655.5469,1377.5,659.5469,1373.5,655.5469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="1386.5" y="659.7573">samplingRates: int[]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="1390.5" y="672.562"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1367.5" x2="1437.5" y1="630.3398" y2="630.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1367.5" x2="1437.5" y1="632.3398" y2="632.3398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="29" x="1437.5" y="633.6479">state</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1466.5" x2="1536.5" y1="630.3398" y2="630.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1466.5" x2="1536.5" y1="632.3398" y2="632.3398"/><!--MD5=[c9f1451ce8238934e23e7f9fc17facfe]
+class WorkspacePage--><rect codeLine="90" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="75.5469" id="WorkspacePage" style="stroke:#A80036;stroke-width:1.5;" width="128" x="1203" y="590.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1224.5" y="606.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="101" x="1216.5" y="620.6074">WorkspacePage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1204" x2="1330" y1="628.4375" y2="628.4375"/><polygon fill="none" points="1214,651.2422,1218,655.2422,1214,659.2422,1210,655.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="1223" y="659.4526">workspace: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1204" x2="1250.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1204" x2="1250.5" y1="644.8398" y2="644.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="1250.5" y="646.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1283.5" x2="1330" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1283.5" x2="1330" y1="644.8398" y2="644.8398"/><!--MD5=[2b343c20b2df7b16f479f389dd4eb438]
+class SampleList--><rect codeLine="99" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="101.1563" id="SampleList" style="stroke:#A80036;stroke-width:1.5;" width="219" x="720.5" y="747.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="787.5" y="763.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="796.5" y="777.6074">SampleList</text><line style="stroke:#A80036;stroke-width:1.5;" x1="721.5" x2="938.5" y1="785.4375" y2="785.4375"/><polygon fill="none" points="731.5,808.2422,735.5,812.2422,731.5,816.2422,727.5,812.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="740.5" y="816.4526">samples: ISample[]</text><polygon fill="#FFFF44" points="731.5,821.0469,735.5,825.0469,731.5,829.0469,727.5,825.0469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="740.5" y="829.2573">onCollect: (): void</text><polygon fill="#FFFF44" points="731.5,833.8516,735.5,837.8516,731.5,841.8516,727.5,837.8516" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="193" x="740.5" y="842.062">onDelete: (sample: ISample): void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="721.5" x2="813.5" y1="799.8398" y2="799.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="721.5" x2="813.5" y1="801.8398" y2="801.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="813.5" y="803.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="846.5" x2="938.5" y1="799.8398" y2="799.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="846.5" x2="938.5" y1="801.8398" y2="801.8398"/><!--MD5=[1c47c8c3c7bba2e38e1706f366991e8a]
+class ModelOptions--><rect codeLine="111" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="105.1563" id="ModelOptions" style="stroke:#A80036;stroke-width:1.5;" width="246" x="439" y="745.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="519.5" y="761.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="85" x="519.5" y="775.6074">ModelOptions</text><line style="stroke:#A80036;stroke-width:1.5;" x1="440" x2="684" y1="783.4375" y2="783.4375"/><polygon fill="#FFFF44" points="450,806.2422,454,810.2422,450,814.2422,446,810.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="220" x="459" y="814.4526">onTrain: (options: IModelOptions): void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="440" x2="545.5" y1="797.8398" y2="797.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="440" x2="545.5" y1="799.8398" y2="799.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="545.5" y="801.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="578.5" x2="684" y1="797.8398" y2="797.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="578.5" x2="684" y1="799.8398" y2="799.8398"/><polygon fill="none" points="450,835.8516,454,839.8516,450,843.8516,446,839.8516" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="459" y="844.062">options: IModelOptions</text><line style="stroke:#A80036;stroke-width:1.0;" x1="440" x2="547.5" y1="827.4492" y2="827.4492"/><line style="stroke:#A80036;stroke-width:1.0;" x1="440" x2="547.5" y1="829.4492" y2="829.4492"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="29" x="547.5" y="830.7573">state</text><line style="stroke:#A80036;stroke-width:1.0;" x1="576.5" x2="684" y1="827.4492" y2="827.4492"/><line style="stroke:#A80036;stroke-width:1.0;" x1="576.5" x2="684" y1="829.4492" y2="829.4492"/><!--MD5=[ce23d02559d849a1c87a2ab9904158cd]
+class WorkspaceLabelsPage--><rect codeLine="122" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="75.5469" id="WorkspaceLabelsPage" style="stroke:#A80036;stroke-width:1.5;" width="147" x="1964.5" y="590.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1995.5" y="606.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="141" x="1967.5" y="620.6074">WorkspaceLabelsPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1965.5" x2="2110.5" y1="628.4375" y2="628.4375"/><polygon fill="none" points="1975.5,651.2422,1979.5,655.2422,1975.5,659.2422,1971.5,655.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="1984.5" y="659.4526">workspace: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1965.5" x2="2021.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1965.5" x2="2021.5" y1="644.8398" y2="644.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="2021.5" y="646.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2054.5" x2="2110.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="2054.5" x2="2110.5" y1="644.8398" y2="644.8398"/><!--MD5=[5c593f570ba82226c19a3b941f99808d]
+class WorkspaceCollectDataPage--><rect codeLine="136" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="75.5469" id="WorkspaceCollectDataPage" style="stroke:#A80036;stroke-width:1.5;" width="179" x="480.5" y="590.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="527.5" y="606.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="173" x="483.5" y="620.6074">WorkspaceCollectDataPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="481.5" x2="658.5" y1="628.4375" y2="628.4375"/><polygon fill="none" points="491.5,651.2422,495.5,655.2422,491.5,659.2422,487.5,655.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="500.5" y="659.4526">workspace: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="481.5" x2="553.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="481.5" x2="553.5" y1="644.8398" y2="644.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="553.5" y="646.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="586.5" x2="658.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="586.5" x2="658.5" y1="644.8398" y2="644.8398"/><!--MD5=[0d309447b4aa52e4faa22c23352e10af]
+class QRView--><rect codeLine="142" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="88.3516" id="QRView" style="stroke:#A80036;stroke-width:1.5;" width="97" x="306.5" y="754"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="312.5" y="770.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="332.5" y="784.1074">QRView</text><line style="stroke:#A80036;stroke-width:1.5;" x1="307.5" x2="402.5" y1="791.9375" y2="791.9375"/><polygon fill="none" points="317.5,814.7422,321.5,818.7422,317.5,822.7422,313.5,818.7422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="326.5" y="822.9526">text: string</text><polygon fill="none" points="317.5,827.5469,321.5,831.5469,317.5,835.5469,313.5,831.5469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="326.5" y="835.7573">value: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="307.5" x2="338.5" y1="806.3398" y2="806.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="307.5" x2="338.5" y1="808.3398" y2="808.3398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="338.5" y="809.6479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="371.5" x2="402.5" y1="806.3398" y2="806.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="371.5" x2="402.5" y1="808.3398" y2="808.3398"/><!--MD5=[c0eb37fbb215622e6a666656f2dfc6b4]
+class WorkspaceSampleDetailsPage--><rect codeLine="150" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="88.3516" id="WorkspaceSampleDetailsPage" style="stroke:#A80036;stroke-width:1.5;" width="196" x="24" y="584.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="79.5" y="600.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="190" x="27" y="614.6074">WorkspaceSampleDetailsPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="25" x2="219" y1="622.4375" y2="622.4375"/><polygon fill="none" points="35,645.2422,39,649.2422,35,653.2422,31,649.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="44" y="653.4526">workspace: string</text><polygon fill="none" points="35,658.0469,39,662.0469,35,666.0469,31,662.0469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="83" x="44" y="666.2573">sample: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="105.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25" x2="105.5" y1="638.8398" y2="638.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="105.5" y="640.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="138.5" x2="219" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="138.5" x2="219" y1="638.8398" y2="638.8398"/><!--MD5=[7e4b98bc19037f240052b6c46d2b0b16]
+class Timeframe--><rect codeLine="157" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="65.5781" id="Timeframe" style="stroke:#A80036;stroke-width:1.5;" width="105" x="1678.5" y="452"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="65" x="1698.5" y="468.1387">Timeframe</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1679.5" x2="1782.5" y1="475.9688" y2="475.9688"/><ellipse cx="1689.5" cy="486.9688" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="1698.5" y="490.1792">start: number</text><ellipse cx="1689.5" cy="499.7734" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="1698.5" y="502.9839">end: number</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1679.5" x2="1782.5" y1="509.5781" y2="509.5781"/><!--MD5=[6a486754e08deb3add63f1b08082ff3f]
+class SampleChart--><rect codeLine="163" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="117.9609" id="SampleChart" style="stroke:#A80036;stroke-width:1.5;" width="247" x="24.5" y="739"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="105.5" y="755.1387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="108" y="769.1074">SampleChart</text><line style="stroke:#A80036;stroke-width:1.5;" x1="25.5" x2="270.5" y1="776.9375" y2="776.9375"/><polygon fill="none" points="35.5,799.7422,39.5,803.7422,35.5,807.7422,31.5,803.7422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="44.5" y="807.9526">frames: Timeframe[]</text><line style="stroke:#A80036;stroke-width:1.0;" x1="25.5" x2="133.5" y1="791.3398" y2="791.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25.5" x2="133.5" y1="793.3398" y2="793.3398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="29" x="133.5" y="794.6479">state</text><line style="stroke:#A80036;stroke-width:1.0;" x1="162.5" x2="270.5" y1="791.3398" y2="791.3398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="162.5" x2="270.5" y1="793.3398" y2="793.3398"/><polygon fill="none" points="35.5,829.3516,39.5,833.3516,35.5,837.3516,31.5,833.3516" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="44.5" y="837.562">sample: Sample</text><polygon fill="#FFFF44" points="35.5,842.1563,39.5,846.1563,35.5,850.1563,31.5,846.1563" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="221" x="44.5" y="850.3667">onRelabel: (frames: Timeframe[]): void</text><line style="stroke:#A80036;stroke-width:1.0;" x1="25.5" x2="131.5" y1="820.9492" y2="820.9492"/><line style="stroke:#A80036;stroke-width:1.0;" x1="25.5" x2="131.5" y1="822.9492" y2="822.9492"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="131.5" y="824.2573">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="164.5" x2="270.5" y1="820.9492" y2="820.9492"/><line style="stroke:#A80036;stroke-width:1.0;" x1="164.5" x2="270.5" y1="822.9492" y2="822.9492"/><!--MD5=[0a7c71ff3a4a7d265baef5da83008fba]
+class WorkspaceModelsPage--><rect codeLine="173" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="75.5469" id="WorkspaceModelsPage" style="stroke:#A80036;stroke-width:1.5;" width="151" x="694.5" y="590.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="727.5" y="606.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="145" x="697.5" y="620.6074">WorkspaceModelsPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="695.5" x2="844.5" y1="628.4375" y2="628.4375"/><polygon fill="none" points="705.5,651.2422,709.5,655.2422,705.5,659.2422,701.5,655.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="714.5" y="659.4526">workspace: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="695.5" x2="753.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="695.5" x2="753.5" y1="644.8398" y2="644.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="753.5" y="646.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="786.5" x2="844.5" y1="642.8398" y2="642.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="786.5" x2="844.5" y1="644.8398" y2="644.8398"/><!--MD5=[44d61c80bef5d6d4a94b99ca5ffded3a]
+class WorkspaceModelDetailsPage--><rect codeLine="183" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="88.3516" id="WorkspaceModelDetailsPage" style="stroke:#A80036;stroke-width:1.5;" width="187" x="1572.5" y="584.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="1623.5" y="600.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="181" x="1575.5" y="614.6074">WorkspaceModelDetailsPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1573.5" x2="1758.5" y1="622.4375" y2="622.4375"/><polygon fill="none" points="1583.5,645.2422,1587.5,649.2422,1583.5,653.2422,1579.5,649.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="1592.5" y="653.4526">workspace: string</text><polygon fill="none" points="1583.5,658.0469,1587.5,662.0469,1583.5,666.0469,1579.5,662.0469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="1592.5" y="666.2573">model: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1573.5" x2="1649.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1573.5" x2="1649.5" y1="638.8398" y2="638.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="1649.5" y="640.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1682.5" x2="1758.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1682.5" x2="1758.5" y1="638.8398" y2="638.8398"/><!--MD5=[a06e29626e50f7bda4f2089fc11df11b]
+class WorkspaceModelClassifyPage--><rect codeLine="199" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="88.3516" id="WorkspaceModelClassifyPage" style="stroke:#A80036;stroke-width:1.5;" width="190" x="255" y="584.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="85" x="307.5" y="600.6387">«component»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="184" x="258" y="614.6074">WorkspaceModelClassifyPage</text><line style="stroke:#A80036;stroke-width:1.5;" x1="256" x2="444" y1="622.4375" y2="622.4375"/><polygon fill="none" points="266,645.2422,270,649.2422,266,653.2422,262,649.2422" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="275" y="653.4526">workspace: string</text><polygon fill="none" points="266,658.0469,270,662.0469,266,666.0469,262,662.0469" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="76" x="275" y="666.2573">model: string</text><line style="stroke:#A80036;stroke-width:1.0;" x1="256" x2="333.5" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="256" x2="333.5" y1="638.8398" y2="638.8398"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="333.5" y="640.1479">props</text><line style="stroke:#A80036;stroke-width:1.0;" x1="366.5" x2="444" y1="636.8398" y2="636.8398"/><line style="stroke:#A80036;stroke-width:1.0;" x1="366.5" x2="444" y1="638.8398" y2="638.8398"/><!--MD5=[a208462cf75916f722e38c4f47d42c0f]
+class chart-js--><rect codeLine="4" fill="#FEFECE" filter="url(#f17ydf5c71uzdq)" height="39.9688" id="chart-js" style="stroke:#A80036;stroke-width:1.5;" width="53" x="202.5" y="1038"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="205.5" y="1054.1387">chart-js</text><line style="stroke:#A80036;stroke-width:1.5;" x1="203.5" x2="254.5" y1="1061.9688" y2="1061.9688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="203.5" x2="254.5" y1="1069.9688" y2="1069.9688"/><!--MD5=[7581cb052967e9f230cca5ce60eff644]
+reverse link API to App--><path codeLine="50" d="M1275.9952,283.2008 C1260.3879,347.4835 1242.8537,419.7026 1233.5786,457.9044 " fill="none" id="API-backto-App" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1277.211,278.1936,1271.2005,285.9957,1276.0313,283.0524,1278.9746,287.8833,1277.211,278.1936" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8465ece2fdb9babcead6afd1b540df8c]
+reverse link raviger.useRoutes to App--><path codeLine="51" d="M3131.2144,913.2027 C3122.9124,904.756 3113.2012,896.2221 3103,890 C2714.9343,653.3014 2573.9108,671.1428 2129,578 C1961.4305,542.9191 1427.5021,500.3176 1270.6964,488.2973 " fill="none" id="raviger.useRoutes-backto-App" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3134.6834,916.8104,3131.3285,907.5506,3131.2178,913.2063,3125.562,913.0956,3134.6834,916.8104" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[aa1091f531fbe5a05d43f0853b1d1dd8]
+link App to Header--><path codeLine="53" d="M1203.5751,512.329 C1185.653,533.2381 1160.6188,562.4448 1140.1357,586.3417 " fill="none" id="App-to-Header" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1136.6287,590.4331,1145.5229,586.203,1139.8827,586.6368,1139.4489,580.9966,1136.6287,590.4331" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[70ac0cff922c188dad5fb06043a408b1]
+link App to LoginPage--><path codeLine="59" d="M1183.1918,502.9338 C1141.3094,520.5523 1076.7628,548.949 1023,578 C1018.8614,580.2363 1014.6476,582.6043 1010.4271,585.0465 " fill="none" id="App-to-LoginPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1005.848,587.723,1015.6365,586.6347,1010.1647,585.1999,1011.5995,579.728,1005.848,587.723" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fa03f49df2748381ef646d99933e2cc4]
+link LoginPage to MaterialUI.TextField--><path codeLine="65" d="M1005.6336,670.9365 C1011.3719,673.9293 1017.2074,676.676 1023,679 C1147.579,728.9806 1191.8956,695.8439 1319,739 C1549.0005,817.0927 1583.7134,890.7215 1810,979 C1846.2881,993.1566 1859.947,985.0889 1894,1004 C1905.1439,1010.1887 1916.0017,1018.7127 1925.3936,1027.1606 " fill="none" id="LoginPage-to-MaterialUI.TextField" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1929.3256,1030.7695,1925.3998,1021.7369,1925.642,1027.3886,1919.9903,1027.6307,1929.3256,1030.7695" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5f3178b2ae8b618e2ec348e4bdbffeec]
+link LoginPage to MaterialUI.Button--><path codeLine="66" d="M1005.8447,670.4393 C1011.5371,673.5401 1017.3045,676.4475 1023,679 C1111.1895,718.523 1149.5409,688.6021 1232,739 C1356.7554,815.2488 1342.5905,887.9602 1457,979 C1474.2981,992.7647 1482.0805,991.0546 1500,1004 C1509.8312,1011.1022 1519.9204,1019.5053 1528.9917,1027.5408 " fill="none" id="LoginPage-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1532.8133,1030.9572,1528.7696,1021.9767,1529.0857,1027.6248,1523.4377,1027.9409,1532.8133,1030.9572" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[36583806614bd04fdeaddc7252756ecd]
+link LoginPage to API--><path codeLine="67" d="M977.0108,584.3047 C1029.5403,516.0451 1132.382,382.4074 1209.3645,282.3725 " fill="none" id="LoginPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1212.5506,278.2323,1203.8917,282.9253,1209.5012,282.1948,1210.2317,287.8043,1212.5506,278.2323" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b2f92e8a7f74e7c0e729463317f1ac7a]
+link App to WorkspacesListPage--><path codeLine="69" d="M1270.6193,490.2728 C1383.5594,504.2589 1683.2485,543.5872 1777,578 C1791.3323,583.2609 1805.9662,590.9622 1818.962,598.7731 " fill="none" id="App-to-WorkspacesListPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1823.3037,601.4229,1817.7053,593.3199,1819.0358,598.8181,1813.5376,600.1486,1823.3037,601.4229" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[16d41c272525ceb99a0ccacf64ec80ae]
+link WorkspacesListPage to MaterialUI.Button--><path codeLine="71" d="M1865.4893,655.6941 C1870.073,701.898 1873.6068,797.2936 1836,865 C1796.1949,936.6642 1762.6669,939.1999 1691,979 C1662.4847,994.8359 1650.0414,987.3393 1622,1004 C1611.1477,1010.4479 1600.4481,1018.9633 1591.1138,1027.3209 " fill="none" id="WorkspacesListPage-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1587.2005,1030.8866,1596.5471,1027.7817,1590.8964,1027.519,1591.159,1021.8683,1587.2005,1030.8866" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0ed2f900188ac5e65560c0bcbc661666]
+link WorkspacesListPage to raviger.Link--><path codeLine="72" d="M1899.1725,655.5302 C1913.4487,664.5472 1930.329,673.6508 1947,679 C2246.4293,775.078 2350.1683,650.7589 2652,739 C2787.0626,778.4858 2929.403,867.0812 2998.8177,913.8163 " fill="none" id="WorkspacesListPage-to-raviger.Link" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3003.2836,916.8332,2998.0648,908.4807,2999.1403,914.0344,2993.5867,915.1099,3003.2836,916.8332" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5188b0cf8dff2a9ad4d369345c11f869]
+link WorkspacesListPage to API--><path codeLine="73" d="M1819.5365,601.364 C1806.1823,593.3525 1791.2084,584.892 1777,578 C1710.1632,545.5798 1681.7991,560.6813 1621,518 C1530.4525,454.4351 1449.3092,359.1989 1392.2009,282.2924 " fill="none" id="WorkspacesListPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1389.1586,278.1821,1391.2978,287.7958,1392.1332,282.201,1397.7281,283.0364,1389.1586,278.1821" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b0732a4bb2a1d8cd67b4cac84e5a8e35]
+link App to WorkspaceCreationPage--><path codeLine="75" d="M1269.5853,512.16 C1297.3848,529.8899 1334.6208,553.6382 1368.2009,575.0548 " fill="none" id="App-to-WorkspaceCreationPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1372.7006,577.9246,1367.2634,569.7126,1368.485,575.236,1362.9616,576.4576,1372.7006,577.9246" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d3a58cd3c28320a24a7c8da1ac7e2499]
+link WorkspaceCreationPage to MaterialUI.Button--><path codeLine="82" d="M1464.8242,679.0321 C1487.4939,768.3592 1534.0266,951.715 1552.8393,1025.8438 " fill="none" id="WorkspaceCreationPage-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1554.1452,1030.9896,1555.8082,1021.2822,1552.9152,1026.1433,1548.0541,1023.2502,1554.1452,1030.9896" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1ad43b29bce4d1455fbca486774a8077]
+link WorkspaceCreationPage to MaterialUI.Checkbox--><path codeLine="83" d="M1366.4041,672.7263 C1316.1135,699.2037 1260.5509,729.5091 1251,739 C1163.9254,825.5271 1106.7658,963.5725 1084.0623,1025.7665 " fill="none" id="WorkspaceCreationPage-to-MaterialUI.Checkbox" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1082.2294,1030.8292,1089.0545,1023.7286,1083.9316,1026.1279,1081.5324,1021.005,1082.2294,1030.8292" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c511fb15b7ca72fe7287a2996cb9dc42]
+link WorkspaceCreationPage to MaterialUI.FormControlLabel--><path codeLine="84" d="M1516.8672,679.2471 C1538.2144,697.1794 1561.4658,718.1045 1581,739 C1671.5988,835.9126 1760.173,966.8916 1798.7988,1026.3257 " fill="none" id="WorkspaceCreationPage-to-MaterialUI.FormControlLabel" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1801.7151,1030.8233,1800.1748,1021.0956,1798.9948,1026.628,1793.4624,1025.4481,1801.7151,1030.8233" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ebdb2f2c3a21e59acd369789ff705211]
+link WorkspaceCreationPage to MaterialUI.TextField--><path codeLine="85" d="M1537.5596,670.5712 C1584.7695,694.4861 1637.9855,722.8062 1659,739 C1775.0062,828.3945 1885.0485,965.3145 1931.6434,1026.5289 " fill="none" id="WorkspaceCreationPage-to-MaterialUI.TextField" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1934.8878,1030.8038,1932.6332,1021.2165,1931.8651,1026.8209,1926.2606,1026.0528,1934.8878,1030.8038" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d712f7fff7dc7e84b3bda8411545b8ae]
+link WorkspaceCreationPage to MaterialUI.Dropdown--><path codeLine="86" d="M1485.4629,679.0319 C1497.399,697.6423 1510.6822,719.0503 1522,739 C1580.208,841.6025 1640.773,967.7849 1668.078,1025.9078 " fill="none" id="WorkspaceCreationPage-to-MaterialUI.Dropdown" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1670.3012,1030.6463,1670.0995,1020.7995,1668.1774,1026.1198,1662.8571,1024.1976,1670.3012,1030.6463" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c5fb0b2d9fc26a42d97c58f40b32ddbf]
+link WorkspaceCreationPage to API--><path codeLine="87" d="M1436.4894,577.9035 C1415.1007,508.132 1375.8278,380.0211 1346.1203,283.1131 " fill="none" id="WorkspaceCreationPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1344.6241,278.2323,1343.4378,288.0095,1346.0897,283.0127,1351.0864,285.6646,1344.6241,278.2323" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1de2e20bdd5fd299ab46ad9549c06206]
+link App to WorkspacePage--><path codeLine="89" d="M1234.6178,512.329 C1240.3739,532.9789 1248.3859,561.7219 1255.0002,585.4505 " fill="none" id="App-to-WorkspacePage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1256.389,590.4331,1257.8252,580.6895,1255.0463,585.6168,1250.119,582.8379,1256.389,590.4331" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ec5de7d5a3fc576b360aba20440dd28b]
+link WorkspacePage to raviger.Link--><path codeLine="94" d="M1322.4078,666.6214 C1331.0355,671.3655 1340.0597,675.6997 1349,679 C1428.99,708.5282 2723.7872,897.7408 2993.1516,936.9095 " fill="none" id="WorkspacePage-to-raviger.Link" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2998.1878,937.6417,2989.857,932.3884,2993.2398,936.9223,2988.7059,940.3051,2998.1878,937.6417" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1f10651cd99b2836a98c8d617593b693]
+link WorkspacePage to MaterialUI.Button--><path codeLine="95" d="M1308.6655,666.7456 C1329.592,687.093 1354.5594,713.1906 1374,739 C1448.0293,837.2813 1448.8969,873.3707 1512,979 C1521.3764,994.6953 1532.0493,1011.9692 1541.0353,1026.3512 " fill="none" id="WorkspacePage-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1543.7666,1030.7168,1542.384,1020.9655,1541.1146,1026.4781,1535.602,1025.2087,1543.7666,1030.7168" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[296c7744abb3d20d503b367b6880b4c6]
+link WorkspacePage to API--><path codeLine="96" d="M1275.5719,590.345 C1280.0005,569.1467 1285.0758,542.2335 1288,518 C1297.3446,440.558 1302.0947,353.2604 1304.5086,283.7412 " fill="none" id="WorkspacePage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1304.6925,278.3445,1300.3881,287.2029,1304.5221,283.3416,1308.3834,287.4756,1304.6925,278.3445" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8f34c716880a173d066d3b40087353a3]
+link WorkspacePage to SampleList--><path codeLine="98" d="M1208.7763,666.5753 C1200.9331,671.0432 1192.8744,675.3148 1185,679 C1107.3827,715.3245 1015.5597,745.7957 944.7472,766.8088 " fill="none" id="WorkspacePage-to-SampleList" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="939.6855,768.3054,949.4503,769.5894,944.4803,766.8877,947.182,761.9177,939.6855,768.3054" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bdb639335a84737219c40e4a8d528ecc]
+link SampleList to MaterialUI.Button--><path codeLine="105" d="M939.5028,836.133 C1052.374,874.746 1233.8263,934.8974 1393,979 C1440.0632,992.0399 1456.6164,981.5756 1500,1004 C1511.6467,1010.02 1522.8568,1018.7604 1532.4194,1027.4618 " fill="none" id="SampleList-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1536.1377,1030.9184,1532.2697,1021.8609,1532.4757,1027.514,1526.8226,1027.7201,1536.1377,1030.9184" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b2a8a52fdc98b4f0b467ce2c1767f451]
+link SampleList to MaterialUI.List--><path codeLine="106" d="M833.7759,848.6235 C839.8326,890.7303 855.5144,948.5259 896,979 C960.0706,1027.2268 1182.0433,972.9956 1256,1004 C1268.5517,1009.262 1280.286,1018.1978 1290.0441,1027.3021 " fill="none" id="SampleList-to-MaterialUI.List" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1293.8229,1030.9284,1290.0989,1021.8107,1290.2153,1027.4664,1284.5597,1027.5829,1293.8229,1030.9284" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[05914f746c7cf04d491f390874c08d50]
+link SampleList to MaterialUI.ListItem--><path codeLine="107" d="M889.1477,848.6761 C942.7332,891.4244 1025.8182,950.1283 1109,979 C1222.4323,1018.3714 1267.8155,956.2888 1378,1004 C1390.3748,1009.3584 1401.9932,1018.2158 1411.7021,1027.2226 " fill="none" id="SampleList-to-MaterialUI.ListItem" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1415.4649,1030.8094,1411.7105,1021.7042,1411.8458,1027.3594,1406.1906,1027.4948,1415.4649,1030.8094" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[711e7bfb329d120a8548d81ec11157c9]
+link SampleList to MaterialUI.ListItemIcon--><path codeLine="108" d="M781.775,848.6083 C749.8991,888.1777 719.7568,942.4299 754,979 C782.9214,1009.8866 1094.9472,987.7116 1134,1004 C1146.5612,1009.2391 1158.2979,1018.1693 1168.0552,1027.2754 " fill="none" id="SampleList-to-MaterialUI.ListItemIcon" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1171.8336,1030.9028,1168.1116,1021.7843,1168.2268,1027.44,1162.5711,1027.5552,1171.8336,1030.9028" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[611533c48738343e26f2be2c73fd7ebf]
+link WorkspacePage to ModelOptions--><path codeLine="110" d="M1212.1386,666.6286 C1203.3611,671.4348 1194.1488,675.7851 1185,679 C981.333,750.5682 911.616,683.4874 703,739 C697.6009,740.4367 692.1361,742.0362 686.6529,743.7619 " fill="none" id="WorkspacePage-to-ModelOptions" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="681.6136,745.3813,691.4058,746.436,686.3739,743.8516,688.9583,738.8196,681.6136,745.3813" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ec9566b23c0217f5a6376d7924a2ed79]
+link ModelOptions to MaterialUI.Accordion--><path codeLine="117" d="M537.1071,850.6274 C522.4103,890.2595 511.7942,943.6295 541,979 C586.3436,1033.9147 803.6071,1051.071 902.1764,1056.08 " fill="none" id="ModelOptions-to-MaterialUI.Accordion" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="907.3517,1056.3374,898.5616,1051.8952,902.3579,1056.089,898.1641,1059.8853,907.3517,1056.3374" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9c330a62a1abaaea125fc0b5e1a30048]
+link ModelOptions to MaterialUI.Button--><path codeLine="118" d="M667.8083,850.6001 C679.5637,855.7465 691.4574,860.6601 703,865 C877.2313,930.5084 922.5287,947.5963 1106,979 C1192.4741,993.8013 1418.9898,970.3223 1500,1004 C1512.5673,1009.2245 1524.3055,1018.151 1534.0624,1027.2583 " fill="none" id="ModelOptions-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1537.8404,1030.8864,1534.1197,1021.7674,1534.2341,1027.4231,1528.5784,1027.5375,1537.8404,1030.8864" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[852a557a73d26634996fcfa7c50c7bc2]
+link ModelOptions to MaterialUI.Checkbox--><path codeLine="119" d="M561.1616,850.8045 C563.6079,892.4712 574.4126,948.4895 612,979 C681.1489,1035.1296 929.7448,969.8505 1012,1004 C1024.5698,1009.2185 1036.3086,1018.1436 1046.0653,1027.2513 " fill="none" id="ModelOptions-to-MaterialUI.Checkbox" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1049.8432,1030.8797,1046.123,1021.7605,1046.2371,1027.4162,1040.5814,1027.5302,1049.8432,1030.8797" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[151fbd84d084d4f81c39339e45dea2aa]
+link App to WorkspaceLabelsPage--><path codeLine="121" d="M1270.8016,488.4819 C1406.6934,499.6245 1819.6296,536.1377 1947,578 C1955.4001,580.7608 1963.9141,584.3115 1972.1914,588.2493 " fill="none" id="App-to-WorkspaceLabelsPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1976.7633,590.4741,1970.4209,582.9393,1972.2674,588.2863,1966.9204,590.1328,1976.7633,590.4741" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4af5534fd590f8ba48964f77633bf5fe]
+link WorkspaceLabelsPage to API--><path codeLine="126" d="M1975.0179,590.409 C1965.8231,585.7802 1956.312,581.4701 1947,578 C1825.2976,532.6472 1774.8525,580.4977 1661,518 C1646.3446,509.9551 1524.225,383.5954 1427.4624,282.2991 " fill="none" id="WorkspaceLabelsPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1423.7425,278.4042,1427.0659,287.6754,1427.1959,282.02,1432.8512,282.15,1423.7425,278.4042" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[38fb18cc7eaf30374b58bdd08026224c]
+link WorkspaceLabelsPage to MaterialUI.Button--><path codeLine="127" d="M2022.8868,666.6962 C1990.9848,741.6177 1909.0032,906.8228 1781,979 C1718.6885,1014.1356 1686.7127,973.5124 1622,1004 C1609.9139,1009.6941 1598.4417,1018.5382 1588.776,1027.4326 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.Button" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1585.0251,1030.97,1594.317,1027.7051,1588.6626,1027.5395,1588.8282,1021.885,1585.0251,1030.97" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d174267f8e55c9a6dd1e6268ee642616]
+link WorkspaceLabelsPage to MaterialUI.TextField--><path codeLine="128" d="M2095.3457,666.5276 C2118.4564,685.3003 2142.558,710.1353 2155,739 C2197.2228,836.9541 2223.4242,897.1714 2155,979 C2114.7351,1027.1528 2072.4852,976.6254 2016,1004 C2004.0896,1009.7722 1992.7358,1018.5399 1983.1233,1027.3419 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.TextField" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1979.3901,1030.842,1988.6916,1027.6045,1983.0377,1027.4222,1983.22,1021.7683,1979.3901,1030.842" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0dae1177f44339d2bf9aba86c35ff827]
+link WorkspaceLabelsPage to MaterialUI.Table--><path codeLine="129" d="M2111.5659,644.5624 C2193.8641,664.1976 2319.3169,699.7005 2347,739 C2408.4294,826.2066 2409.6525,894.1553 2345,979 C2321.1332,1010.3208 2294.4563,984.9374 2260,1004 C2248.8462,1010.1708 2237.9854,1018.6894 2228.5938,1027.138 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.Table" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2224.6622,1030.7475,2233.9971,1027.6074,2228.3454,1027.366,2228.5867,1021.7143,2224.6622,1030.7475" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a40672a497cc9bb972ccd9ef2b2edfa0]
+link WorkspaceLabelsPage to MaterialUI.TableBody--><path codeLine="130" d="M2111.8759,638.1569 C2216.6507,653.5329 2400.1573,687.2344 2440,739 C2505.3855,823.952 2473.6116,962.8041 2454.2216,1025.4854 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.TableBody" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2452.618,1030.5883,2459.1322,1023.2015,2454.117,1025.8183,2451.5002,1020.8031,2452.618,1030.5883" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0eda4d213a7cfe406abd09234ecb5708]
+link WorkspaceLabelsPage to MaterialUI.TableHead--><path codeLine="131" d="M2111.5289,637.7541 C2172.6903,649.758 2256.111,677.1003 2297,739 C2355.7917,828.0018 2366.32,897.929 2297,979 C2250.5113,1033.3694 2202.7127,973.5124 2138,1004 C2125.9139,1009.6941 2114.4417,1018.5382 2104.776,1027.4326 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.TableHead" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2101.0251,1030.97,2110.317,1027.7051,2104.6626,1027.5395,2104.8282,1021.885,2101.0251,1030.97" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ef7f86ea0f99ae48b67c39880ed9d0d6]
+link WorkspaceLabelsPage to MaterialUI.TableRow--><path codeLine="132" d="M2111.8819,640.7832 C2206.4356,658.1835 2362.1102,693.0721 2396,739 C2459.3379,824.8363 2432.8345,880.0416 2393,979 C2385.6526,997.2528 2372.04,1013.9379 2358.6126,1027.2227 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.TableRow" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2354.8356,1030.878,2364.0847,1027.4936,2358.4286,1027.4009,2358.5213,1021.7448,2354.8356,1030.878" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[767d85d07cf12dc08006c47e7b5a8baa]
+link WorkspaceLabelsPage to MaterialUI.TableCell--><path codeLine="133" d="M2111.8245,637.4855 C2224.7775,652.7125 2432.9083,687.0836 2485,739 C2563.8683,817.6029 2569.0004,961.5705 2566.9701,1025.6999 " fill="none" id="WorkspaceLabelsPage-to-MaterialUI.TableCell" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2566.7834,1030.9159,2571.103,1022.0649,2566.9624,1025.9191,2563.1082,1021.7785,2566.7834,1030.9159" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[642be8c007b1a005122a0c531d086f18]
+link App to WorkspaceCollectDataPage--><path codeLine="135" d="M1183.2684,488.3128 C1088.908,496.3392 859.9405,520.5595 677,578 C667.7376,580.9082 658.2483,584.4639 648.9316,588.3287 " fill="none" id="App-to-WorkspaceCollectDataPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="644.0774,590.3762,653.9245,590.5639,648.6843,588.4329,650.8153,583.1928,644.0774,590.3762" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f8f4262731e92e406b67bf152b0828c4]
+link WorkspaceCollectDataPage to QRView--><path codeLine="141" d="M516.0018,666.7224 C487.3034,687.4891 451.7072,713.9755 421,739 C416.4392,742.7168 411.7665,746.6413 407.1175,750.6283 " fill="none" id="WorkspaceCollectDataPage-to-QRView" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="403.2208,753.9889,412.6486,751.1401,407.0072,750.7234,407.4239,745.0819,403.2208,753.9889" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6f05b28775aaf5551d2580d7d4ef051b]
+link QRView to react-qr-code.QRCode--><path codeLine="147" d="M315.814,842.1055 C269.1138,894.6685 192.2855,981.1419 151.4748,1027.0759 " fill="none" id="QRView-to-react-qr-code.QRCode" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="148.1198,1030.8521,157.0877,1026.7806,151.4407,1027.1142,151.1071,1021.4672,148.1198,1030.8521" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[db24f55fef353bbc8b4dc923f2680a72]
+link App to WorkspaceSampleDetailsPage--><path codeLine="149" d="M1183.263,487.2474 C1016.438,496.107 420.2932,530.4703 237,578 C231.6671,579.3829 226.2667,580.9847 220.864,582.7487 " fill="none" id="App-to-WorkspaceSampleDetailsPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="215.9037,584.4128,225.7086,585.3426,220.6441,582.8225,223.1641,577.758,215.9037,584.4128" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[395c3b7fb7deec52d3dc2f4d7f9032ff]
+link WorkspaceSampleDetailsPage to API--><path codeLine="155" d="M220.075,585.1371 C225.7922,582.7012 231.4651,580.3071 237,578 C537.1162,452.9052 888.2443,316.0507 1104.1338,232.9829 " fill="none" id="WorkspaceSampleDetailsPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1108.8903,231.153,1099.0542,230.6515,1104.2238,232.9484,1101.9269,238.118,1108.8903,231.153" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ffe23677109f8affa479d9e540af3909]
+link WorkspaceSampleDetailsPage to SampleChart--><path codeLine="162" d="M128.7633,672.5917 C131.6207,691.2196 135.0049,713.2819 138.132,733.6682 " fill="none" id="WorkspaceSampleDetailsPage-to-SampleChart" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="138.921,738.812,141.5101,729.3095,138.1629,733.8698,133.6026,730.5226,138.921,738.812" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[890a18e4c2be3410c361c5e5619a01e6]
+link SampleChart to chart-js--><path codeLine="170" d="M166.4815,857.3234 C183.6855,912.5462 208.5055,992.2151 221.0701,1032.5462 " fill="none" id="SampleChart-to-chart-js" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="222.6866,1037.7348,223.8284,1027.9524,221.1993,1032.9611,216.1906,1030.332,222.6866,1037.7348" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[dc2013c7cba27841cd9cf5a600f30634]
+link App to WorkspaceModelsPage--><path codeLine="172" d="M1183.3301,492.5318 C1113.8886,505.3052 974.7255,534.1763 863,578 C855.4222,580.9724 847.6817,584.4285 840.062,588.1118 " fill="none" id="App-to-WorkspaceModelsPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="835.3357,590.4323,845.1774,590.0564,839.8239,588.2287,841.6516,582.8752,835.3357,590.4323" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f5e72e18f9ae2df0bb3f05496aa17866]
+link WorkspaceModelsPage to API--><path codeLine="177" d="M813.3191,590.3437 C888.6072,524.0284 1046.7483,384.7348 1163.8608,281.5798 " fill="none" id="WorkspaceModelsPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1167.6612,278.2323,1158.2637,281.1797,1163.9092,281.5373,1163.5516,287.1828,1167.6612,278.2323" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d83f47143f5360a07a607eb6885a95cb]
+link WorkspaceModelsPage to MaterialUI.List--><path codeLine="178" d="M838.7945,666.5314 C846.9117,670.8179 855.1115,675.0574 863,679 C920.2826,707.6293 948.3269,694.1123 994,739 C1078.3586,821.9081 1014.5684,907.7765 1109,979 C1161.9094,1018.9061 1196.2264,975.3815 1256,1004 C1267.9377,1009.7156 1279.2988,1018.468 1288.9097,1027.2735 " fill="none" id="WorkspaceModelsPage-to-MaterialUI.List" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1292.6417,1030.7759,1288.8162,1021.7004,1288.9957,1027.3544,1283.3417,1027.5339,1292.6417,1030.7759" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3ee047ee10403074ee6d91f7a0a7cec7]
+link WorkspaceModelsPage to MaterialUI.ListItem--><path codeLine="179" d="M836.5901,666.5183 C845.3551,670.9702 854.3115,675.2532 863,679 C941.5966,712.8939 970.6899,698.323 1046,739 C1124.1441,781.2077 1323.8982,955.6403 1404.5016,1027.1786 " fill="none" id="WorkspaceModelsPage-to-MaterialUI.ListItem" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1408.7124,1030.9185,1404.6395,1021.9513,1404.974,1027.5982,1399.327,1027.9327,1408.7124,1030.9185" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[31e133ffaea873fd73a93a68d8a359d6]
+link WorkspaceModelsPage to MaterialUI.ListItemIcon--><path codeLine="180" d="M838.0899,666.635 C890.1085,696.1001 953.5016,732.8692 957,739 C984.7545,787.6383 988.199,818.496 957,865 C940.6764,889.3313 912.3236,865.6687 896,890 C873.9626,922.8481 869.5313,949.6053 896,979 C931.5855,1018.5193 1085.3263,982.5764 1134,1004 C1146.3425,1009.4325 1157.9526,1018.3088 1167.6639,1027.3101 " fill="none" id="WorkspaceModelsPage-to-MaterialUI.ListItemIcon" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1171.4281,1030.8936,1167.6674,1021.791,1167.8066,1027.4461,1162.1515,1027.5853,1171.4281,1030.8936" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[632e4f73432856b208e7a7c69ded2f60]
+link App to WorkspaceModelDetailsPage--><path codeLine="182" d="M1270.6434,495.1477 C1334.1289,510.4071 1455.2561,541.4067 1555,578 C1559.0715,579.4937 1563.2021,581.0717 1567.3563,582.711 " fill="none" id="App-to-WorkspaceModelDetailsPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1572.2417,584.6621,1565.3673,577.6093,1567.5984,582.8076,1562.4,585.0386,1572.2417,584.6621" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ab67442fde4cbbb284c55e57ebd96298]
+link WorkspaceModelDetailsPage to API--><path codeLine="188" d="M1576.2967,584.4721 C1546.5481,566.786 1514.9504,544.3016 1491,518 C1456.9796,480.6397 1403.4523,371.6654 1362.8828,282.8766 " fill="none" id="WorkspaceModelDetailsPage-to-API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1360.7178,278.1305,1360.8137,287.9789,1362.7929,282.6796,1368.0922,284.6587,1360.7178,278.1305" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[86e99824ef3ab9262526540601b7b754]
+link WorkspaceModelDetailsPage to MaterialUI.List--><path codeLine="189" d="M1629.9654,672.8463 C1559.1314,760.0189 1403.342,951.7425 1342.2701,1026.9012 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.List" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1339.0838,1030.8223,1347.8637,1026.3599,1342.2369,1026.9418,1341.6549,1021.315,1339.0838,1030.8223" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[572610b587f9497cce10aa32a3c88e9d]
+link WorkspaceModelDetailsPage to MaterialUI.ListItem--><path codeLine="190" d="M1742.0745,672.5431 C1765.0364,690.0434 1787.4613,712.4082 1800,739 C1823.8835,789.6516 1830.1465,817.8069 1800,865 C1720.8924,988.8396 1622.9789,923.5608 1500,1004 C1489.643,1010.7744 1479.2397,1019.2264 1470.0316,1027.4178 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.ListItem" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1466.1621,1030.9068,1475.5248,1027.8507,1469.8755,1027.5586,1470.1676,1021.9092,1466.1621,1030.9068" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6dd3c0bec99c693d4180f0d6a29d2517]
+link WorkspaceModelDetailsPage to MaterialUI.ListItemIcon--><path codeLine="191" d="M1572.4867,671.9437 C1537.926,690.1897 1499.5272,713.1915 1468,739 C1358.6603,828.5065 1258.3762,965.3689 1216.1266,1026.5487 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.ListItemIcon" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1213.1856,1030.8211,1221.5836,1025.6759,1216.0207,1026.7026,1214.994,1021.1397,1213.1856,1030.8211" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bee263a5ff92c114ef84ace87f63c001]
+link WorkspaceModelDetailsPage to MaterialUI.Table--><path codeLine="192" d="M1759.7021,672.494 C1765.514,674.7975 1771.3116,676.9877 1777,679 C1877.406,714.5197 1923.787,675.1113 2009,739 C2110.0337,814.7503 2167.6982,961.3637 2189.2059,1026.0318 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.Table" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2190.8134,1030.9165,2191.7995,1021.1171,2189.2504,1026.1671,2184.2005,1023.6179,2190.8134,1030.9165" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5b1026bf06adfbf2a1a208b63d209754]
+link WorkspaceModelDetailsPage to MaterialUI.TableBody--><path codeLine="193" d="M1757.6196,672.5224 C1764.1047,674.9118 1770.6059,677.105 1777,679 C1948.9356,729.9545 2019.6318,651.2093 2176,739 C2300.2273,808.7457 2391.5415,960.4183 2426.903,1026.3439 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.TableBody" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2429.352,1030.94,2428.6499,1021.1162,2427.0007,1026.5273,2421.5896,1024.8782,2429.352,1030.94" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ee4d8c9ee68a8450bcea06007460d8c6]
+link WorkspaceModelDetailsPage to MaterialUI.TableHead--><path codeLine="194" d="M1759.6428,671.7252 C1765.496,674.2338 1771.3163,676.6779 1777,679 C1849.2349,708.5127 1884.3775,686.3832 1942,739 C2028.6044,818.081 2061.6037,961.7983 2072.411,1025.7813 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.TableHead" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2073.2706,1030.9853,2075.7504,1021.4537,2072.4557,1026.0521,2067.8573,1022.7575,2073.2706,1030.9853" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[558704f441de66ccd5a489feab7cf1b2]
+link WorkspaceModelDetailsPage to MaterialUI.TableRow--><path codeLine="195" d="M1758.6364,672.5692 C1764.7917,674.8986 1770.9489,677.0698 1777,679 C1911.1135,721.7793 1969.1266,663.597 2088,739 C2201.7329,811.1423 2278.087,960.3254 2307.4812,1025.8953 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.TableRow" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2309.6828,1030.8469,2309.6812,1020.998,2307.6514,1026.2782,2302.3712,1024.2483,2309.6828,1030.8469" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ff108fbf22b37bab4a882b5ed30a2dd6]
+link WorkspaceModelDetailsPage to MaterialUI.TableCell--><path codeLine="196" d="M1756.9401,672.5089 C1763.6445,674.9361 1770.3758,677.1387 1777,679 C1989.9236,738.827 2074.1657,638.1437 2271,739 C2403.2244,806.7508 2506.2431,959.5029 2546.5543,1026.0288 " fill="none" id="WorkspaceModelDetailsPage-to-MaterialUI.TableCell" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2549.3479,1030.6673,2548.1313,1020.8939,2546.7684,1026.3841,2541.2782,1025.0211,2549.3479,1030.6673" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[313e39decccc4a5ad9fbc04e2e44bb84]
+link App to WorkspaceModelClassifyPage--><path codeLine="198" d="M1183.4654,485.7769 C1065.3567,488.8441 729.8385,503.9481 463,578 C458.0307,579.3791 453,580.9434 447.963,582.6461 " fill="none" id="App-to-WorkspaceModelClassifyPage" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="442.926,584.3933,452.7398,585.2231,447.6499,582.7548,450.1182,577.6648,442.926,584.3933" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e6c600969e36591cad2c8bc01eac09fa]
+link WorkspaceModelClassifyPage to QRView--><path codeLine="204" d="M351.3006,672.5917 C351.9895,695.9436 352.8375,724.6928 353.5478,748.7714 " fill="none" id="WorkspaceModelClassifyPage-to-QRView" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="353.6972,753.835,357.4298,744.7209,353.5496,748.8372,349.4333,744.957,353.6972,753.835" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6496db6343c0378dd7a99c4fc65f45d0]
+link IModelOptions to IWorkspace--><!--MD5=[0a6efd3e40295aaddd2696fe0cd3fc9c]
+link IWorkspace to ISensor--><!--MD5=[aa5819818dd34ed6ce4f03ab069a4dde]
+link IModelOptions to ILabel--><!--MD5=[b88aaf8eee83d12fa9791c55ccb070a7]
+link ILabel to ISample--><!--MD5=[46bdb88854c49e671391f8543c76fe23]
+link ISample to ISampleDetails--><!--MD5=[17bc65f953c52784d629c7ddea9a19d7]
+link ILabel to Timeframe--><!--MD5=[c506bd6fd0660a106fe3b08582d749f8]
+@startuml
+' skinparam monochrome true
+hide circle
+
+class "chart-js"
+class "react-qr-code.QRCode" << component >>
+class "raviger.useRoutes" << hook >>
+class "raviger.Link" << component >>
+class "MaterialUI.TextField" << component >>
+class "MaterialUI.Button" << component >>
+class "MaterialUI.Checkbox" << component >>
+class "MaterialUI.Dropdown" << component >>
+class "MaterialUI.FormControlLabel" << component >>
+class "MaterialUI.Accordion" << component >>
+class "MaterialUI.List" << component >>
+class "MaterialUI.ListItem" << component >>
+class "MaterialUI.ListItemIcon" << component >>
+class "MaterialUI.Table" << component >>
+class "MaterialUI.TableHead" << component >>
+class "MaterialUI.TableRow" << component >>
+class "MaterialUI.TableCell" << component >>
+class "MaterialUI.TableBody" << component >>
+
+package DesktopApp {
+    interface IModelOptions << interface >>
+    interface IWorkspace << interface >>
+    interface ISensor << interface >>
+    interface ILabel << interface >>
+    interface ISample << interface >>
+    interface ISampleDetails << interface >>
+
+    class API {
+        -token: string
+        +auth(username: string, password: string) : void
+        +isAuthenticated() : boolean
+        +train(options: IModelOptions) : boolean
+        +getWorkspaces(): IWorkspace[]
+        +createWorkspace(IWorkspace): void
+        +getAvailableSensors(): ISensor[]
+        +getSamples(): ISample[]
+        +deleteSample(sample: ISample): void
+        +getDataCollectionURL(): string
+        +getLabels(): ILabel[]
+        +deleteWorkspace(workspace: IWorkspace): void
+        +createLabel(ILabel): void
+        +getSampleDetails(sample: ISample): ISampleDetails
+        +setSampleTimeframe(sample: ISample, frame: Timeframe): void
+        +getModelMetrics(): IModelMetrics
+    }
+
+    API <... App
+    "raviger.useRoutes" <... App
+    class App << component >>
+    App - -> Header
+    class Header << component >> {
+        ==props==
+        # route: component
+    }
+
+    App - -> LoginPage
+    class LoginPage << component >> {
+        ==state==
+        # username: string
+        # password: string
+    }
+    LoginPage ...> "MaterialUI.TextField"
+    LoginPage ...> "MaterialUI.Button"
+    LoginPage ...> API
+
+    App - -> WorkspacesListPage
+    class WorkspacesListPage << component >>
+    WorkspacesListPage ...> "MaterialUI.Button"
+    WorkspacesListPage ...> "raviger.Link"
+    WorkspacesListPage ...> API
+
+    App - -> WorkspaceCreationPage
+    class WorkspaceCreationPage << component >> {
+        ==state==
+        # selectedSensors: string[]
+        # samplingRates: int[]
+
+    }
+    WorkspaceCreationPage ...> "MaterialUI.Button"
+    WorkspaceCreationPage ...> "MaterialUI.Checkbox"
+    WorkspaceCreationPage ...> "MaterialUI.FormControlLabel"
+    WorkspaceCreationPage ...> "MaterialUI.TextField"
+    WorkspaceCreationPage ...> "MaterialUI.Dropdown"
+    WorkspaceCreationPage ...> API
+
+    App - -> WorkspacePage
+    class WorkspacePage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspacePage ...> "raviger.Link"
+    WorkspacePage ...> "MaterialUI.Button"
+    WorkspacePage ...> API
+
+    WorkspacePage - -> SampleList
+    class SampleList << component >> {
+        ==props==
+        # samples: ISample[]
+        # onCollect: (): void
+        # onDelete: (sample: ISample): void
+    }
+    SampleList ...> "MaterialUI.Button"
+    SampleList ...> "MaterialUI.List"
+    SampleList ...> "MaterialUI.ListItem"
+    SampleList ...> "MaterialUI.ListItemIcon"
+
+    WorkspacePage - -> ModelOptions
+    class ModelOptions << component >> {
+        ==props==
+        # onTrain: (options: IModelOptions): void 
+        ==state==
+        # options: IModelOptions
+    }
+    ModelOptions ...> "MaterialUI.Accordion"
+    ModelOptions ...> "MaterialUI.Button"
+    ModelOptions ...> "MaterialUI.Checkbox"
+
+    App - -> WorkspaceLabelsPage
+    class WorkspaceLabelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceLabelsPage ...> API
+    WorkspaceLabelsPage ...> "MaterialUI.Button"
+    WorkspaceLabelsPage ...> "MaterialUI.TextField"
+    WorkspaceLabelsPage ...> "MaterialUI.Table"
+    WorkspaceLabelsPage ...> "MaterialUI.TableBody"
+    WorkspaceLabelsPage ...> "MaterialUI.TableHead"
+    WorkspaceLabelsPage ...> "MaterialUI.TableRow"
+    WorkspaceLabelsPage ...> "MaterialUI.TableCell"
+
+    App - -> WorkspaceCollectDataPage
+    class WorkspaceCollectDataPage << component >> {
+        ==props==
+        # workspace: string
+    }
+
+    WorkspaceCollectDataPage - -> QRView
+    class QRView << component >> {
+        ==props==
+        # text: string
+        # value: string
+    }
+    QRView ...> "react-qr-code.QRCode"
+
+    App - -> WorkspaceSampleDetailsPage
+    class WorkspaceSampleDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # sample: string
+    }
+    WorkspaceSampleDetailsPage ...> API
+    
+    interface Timeframe {
+        + start: number
+        + end: number
+    }
+
+    WorkspaceSampleDetailsPage - -> SampleChart
+    class SampleChart << component >> {
+        ==state==
+        # frames: Timeframe[]
+        ==props==
+        # sample: Sample
+        # onRelabel: (frames: Timeframe[]): void
+    }
+    SampleChart ...> "chart-js"
+
+    App - -> WorkspaceModelsPage
+    class WorkspaceModelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceModelsPage ...> API
+    WorkspaceModelsPage ...> "MaterialUI.List"
+    WorkspaceModelsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelsPage ...> "MaterialUI.ListItemIcon"
+
+    App - -> WorkspaceModelDetailsPage
+    class WorkspaceModelDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelDetailsPage ...> API
+    WorkspaceModelDetailsPage ...> "MaterialUI.List"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItemIcon"
+    WorkspaceModelDetailsPage ...> "MaterialUI.Table"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableBody"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableHead"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableRow"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableCell"
+
+    App - -> WorkspaceModelClassifyPage
+    class WorkspaceModelClassifyPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelClassifyPage - -> QRView
+
+}
+@enduml
+
+@startuml
+hide circle
+
+class "chart-js"
+class "react-qr-code.QRCode" << component >>
+class "raviger.useRoutes" << hook >>
+class "raviger.Link" << component >>
+class "MaterialUI.TextField" << component >>
+class "MaterialUI.Button" << component >>
+class "MaterialUI.Checkbox" << component >>
+class "MaterialUI.Dropdown" << component >>
+class "MaterialUI.FormControlLabel" << component >>
+class "MaterialUI.Accordion" << component >>
+class "MaterialUI.List" << component >>
+class "MaterialUI.ListItem" << component >>
+class "MaterialUI.ListItemIcon" << component >>
+class "MaterialUI.Table" << component >>
+class "MaterialUI.TableHead" << component >>
+class "MaterialUI.TableRow" << component >>
+class "MaterialUI.TableCell" << component >>
+class "MaterialUI.TableBody" << component >>
+
+package DesktopApp {
+    interface IModelOptions << interface >>
+    interface IWorkspace << interface >>
+    interface ISensor << interface >>
+    interface ILabel << interface >>
+    interface ISample << interface >>
+    interface ISampleDetails << interface >>
+
+    class API {
+        -token: string
+        +auth(username: string, password: string) : void
+        +isAuthenticated() : boolean
+        +train(options: IModelOptions) : boolean
+        +getWorkspaces(): IWorkspace[]
+        +createWorkspace(IWorkspace): void
+        +getAvailableSensors(): ISensor[]
+        +getSamples(): ISample[]
+        +deleteSample(sample: ISample): void
+        +getDataCollectionURL(): string
+        +getLabels(): ILabel[]
+        +deleteWorkspace(workspace: IWorkspace): void
+        +createLabel(ILabel): void
+        +getSampleDetails(sample: ISample): ISampleDetails
+        +setSampleTimeframe(sample: ISample, frame: Timeframe): void
+        +getModelMetrics(): IModelMetrics
+    }
+
+    API <... App
+    "raviger.useRoutes" <... App
+    class App << component >>
+    App - -> Header
+    class Header << component >> {
+        ==props==
+        # route: component
+    }
+
+    App - -> LoginPage
+    class LoginPage << component >> {
+        ==state==
+        # username: string
+        # password: string
+    }
+    LoginPage ...> "MaterialUI.TextField"
+    LoginPage ...> "MaterialUI.Button"
+    LoginPage ...> API
+
+    App - -> WorkspacesListPage
+    class WorkspacesListPage << component >>
+    WorkspacesListPage ...> "MaterialUI.Button"
+    WorkspacesListPage ...> "raviger.Link"
+    WorkspacesListPage ...> API
+
+    App - -> WorkspaceCreationPage
+    class WorkspaceCreationPage << component >> {
+        ==state==
+        # selectedSensors: string[]
+        # samplingRates: int[]
+
+    }
+    WorkspaceCreationPage ...> "MaterialUI.Button"
+    WorkspaceCreationPage ...> "MaterialUI.Checkbox"
+    WorkspaceCreationPage ...> "MaterialUI.FormControlLabel"
+    WorkspaceCreationPage ...> "MaterialUI.TextField"
+    WorkspaceCreationPage ...> "MaterialUI.Dropdown"
+    WorkspaceCreationPage ...> API
+
+    App - -> WorkspacePage
+    class WorkspacePage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspacePage ...> "raviger.Link"
+    WorkspacePage ...> "MaterialUI.Button"
+    WorkspacePage ...> API
+
+    WorkspacePage - -> SampleList
+    class SampleList << component >> {
+        ==props==
+        # samples: ISample[]
+        # onCollect: (): void
+        # onDelete: (sample: ISample): void
+    }
+    SampleList ...> "MaterialUI.Button"
+    SampleList ...> "MaterialUI.List"
+    SampleList ...> "MaterialUI.ListItem"
+    SampleList ...> "MaterialUI.ListItemIcon"
+
+    WorkspacePage - -> ModelOptions
+    class ModelOptions << component >> {
+        ==props==
+        # onTrain: (options: IModelOptions): void 
+        ==state==
+        # options: IModelOptions
+    }
+    ModelOptions ...> "MaterialUI.Accordion"
+    ModelOptions ...> "MaterialUI.Button"
+    ModelOptions ...> "MaterialUI.Checkbox"
+
+    App - -> WorkspaceLabelsPage
+    class WorkspaceLabelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceLabelsPage ...> API
+    WorkspaceLabelsPage ...> "MaterialUI.Button"
+    WorkspaceLabelsPage ...> "MaterialUI.TextField"
+    WorkspaceLabelsPage ...> "MaterialUI.Table"
+    WorkspaceLabelsPage ...> "MaterialUI.TableBody"
+    WorkspaceLabelsPage ...> "MaterialUI.TableHead"
+    WorkspaceLabelsPage ...> "MaterialUI.TableRow"
+    WorkspaceLabelsPage ...> "MaterialUI.TableCell"
+
+    App - -> WorkspaceCollectDataPage
+    class WorkspaceCollectDataPage << component >> {
+        ==props==
+        # workspace: string
+    }
+
+    WorkspaceCollectDataPage - -> QRView
+    class QRView << component >> {
+        ==props==
+        # text: string
+        # value: string
+    }
+    QRView ...> "react-qr-code.QRCode"
+
+    App - -> WorkspaceSampleDetailsPage
+    class WorkspaceSampleDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # sample: string
+    }
+    WorkspaceSampleDetailsPage ...> API
+    
+    interface Timeframe {
+        + start: number
+        + end: number
+    }
+
+    WorkspaceSampleDetailsPage - -> SampleChart
+    class SampleChart << component >> {
+        ==state==
+        # frames: Timeframe[]
+        ==props==
+        # sample: Sample
+        # onRelabel: (frames: Timeframe[]): void
+    }
+    SampleChart ...> "chart-js"
+
+    App - -> WorkspaceModelsPage
+    class WorkspaceModelsPage << component >> {
+        ==props==
+        # workspace: string
+    }
+    WorkspaceModelsPage ...> API
+    WorkspaceModelsPage ...> "MaterialUI.List"
+    WorkspaceModelsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelsPage ...> "MaterialUI.ListItemIcon"
+
+    App - -> WorkspaceModelDetailsPage
+    class WorkspaceModelDetailsPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelDetailsPage ...> API
+    WorkspaceModelDetailsPage ...> "MaterialUI.List"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItem"
+    WorkspaceModelDetailsPage ...> "MaterialUI.ListItemIcon"
+    WorkspaceModelDetailsPage ...> "MaterialUI.Table"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableBody"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableHead"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableRow"
+    WorkspaceModelDetailsPage ...> "MaterialUI.TableCell"
+
+    App - -> WorkspaceModelClassifyPage
+    class WorkspaceModelClassifyPage << component >> {
+        ==props==
+        # workspace: string
+        # model: string
+    }
+    WorkspaceModelClassifyPage - -> QRView
+
+}
+@enduml
+
+PlantUML version 1.2020.26(Mon Dec 21 17:45:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

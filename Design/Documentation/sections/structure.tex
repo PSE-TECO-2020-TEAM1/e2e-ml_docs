@@ -1,4 +1,5 @@
 \section{Structure}
+
 \subsection{Architecture}
 \begin{figure}[hb]
     \centering
@@ -6,4 +7,6 @@
     \caption{System Architecture as Microservices}
     \label{fig:microservices}
 \end{figure}
-Microservices architecture is used as the general system design. \textbf{TBD}
+
+\subsection{Mobile and Desktop Clients}
+Clients are implemented in a client-side-routed web app fashion using React and a routing library called raviger. All communication is routed through the API class, which, alongside dealing with authentication, acts as an adapter to the backend.

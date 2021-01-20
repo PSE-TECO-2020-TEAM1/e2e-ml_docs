@@ -1,0 +1,48 @@
+@startuml Desktop Client - Training a model
+autoactivate on
+
+actor User
+participant App
+participant Router
+participant Trainer
+database Database
+'participant Workspace
+box "External Service"
+participant ExpressServer
+end box
+
+App -> Database : establishDatabaseConnection()
+return db: DatabaseClient
+
+create Router
+App -> Router: <<create>> Router(db)
+return router: Router
+
+User -> App: createModelWorkspace(workspaceId: ObjectId)
+App -> Router: createModelWorkspace(workspaceId: ObjectId)
+Router -> Database: workspaces.insert_one({"_id": workspaceId})
+'create Workspace
+'Database -> Workspace: <<create>> Workspace()
+'return
+return
+return
+return
+
+User -> App: getParameters()
+App -> Router: getParameters()
+Router -> Database: parameters.find()
+return parameters: GetParametersRes
+return parameters: GetParametersRes
+return parameters: GetParametersRes
+
+User -> App: train(workspaceId: ObjectId)
+App -> Router: train(workspaceId: ObjectId, req: TrainReq)
+create Trainer
+Router -> Trainer: <<create>> Trainer(workspaceId: ObjectId, imputation: Imputation, features: Feature[], \nnormalizer: Normalizer, classifier: Classifier, hyperparameters: Hyperparameter[])
+return trainer: Trainer
+Router -> Trainer: train()
+
+Trainer -> Database: workspaces.find_one({"_id": workspaceId}).processedData
+return processedData: WorkspaceData
+
+@enduml
