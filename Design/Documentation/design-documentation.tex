@@ -12,7 +12,8 @@
 \usepackage{csquotes} % provides \enquote{} macro for "quotes"
 \usepackage{graphicx} % embed graphics
 \usepackage[toc]{glossaries}
- 
+\usepackage{pdfpages}
+
 % definitions
 \newcommand{\pseProjectName}{An Interactive End-To-End Machine Learning Platform}
 \newcommand{\pseTitle}{\pseProjectName}
@@ -47,6 +48,8 @@ pdftitle={\pseDocTitle}}
 \include{sections/introduction}
 \newpage
 \include{sections/structure}
+\newpage
+\include{sections/api}
 \newpage
 \include{sections/class-description}
 \newpage
