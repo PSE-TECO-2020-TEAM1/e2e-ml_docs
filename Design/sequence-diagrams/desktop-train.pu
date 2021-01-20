@@ -12,8 +12,8 @@ participant IClassifier
 participant MLModel
 database Database
 'participant Workspace
-box "External Service"
-participant ExpressServer
+box "External Server"
+participant WorkspaceManagementServer
 end box
 
 App -> Database : establishDatabaseConnection()
@@ -40,7 +40,7 @@ return parameters: GetParametersRes
 return parameters: GetParametersRes
 return parameters: GetParametersRes
 
-User -> App: train(workspaceId: ObjectId)
+User -> App: train(workspaceId: ObjectId, req: TrainReq)
 App -> Router: train(workspaceId: ObjectId, req: TrainReq)
 create Trainer
 Router -> Trainer: <<create>> Trainer(workspaceId, model_name, imputation, features, \nnormalizer, classifier, hyperparameter)
