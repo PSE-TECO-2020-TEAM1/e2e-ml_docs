@@ -8,7 +8,11 @@
     \label{fig:microservices}
 \end{figure}
 
-General system architecture is designed according to the microservices architecture. Details of each microservice can be found below.
+General system architecture is designed according to the microservices architecture. Details of each component of the system architecture can be found below.
+
+\subsection{Mobile and Desktop Clients}
+Clients are implemented in a client-side-routed web app fashion using React and a routing library called raviger. All communication is routed through the API class, which, alongside dealing with authentication, acts as an adapter to the backend.
+
 
 \subsection{Authentication}
 Authentication service handles the registration of new users and authentication of registered users. The user registers by choosing a username, a password and supplying his email address. The authentication service then sends a verification token to this email address. The user creation is completed after the email verification.
@@ -17,6 +21,5 @@ Authentication service handles the registration of new users and authentication 
 \subsection{Workspace Management}
 Workspace Management Service manages the workspaces of the system. When the user creates a workspace, a database entry corresponding to that workspace is created in this service. All the data that is needed for data collection and storage of a workspace, i.e. the sensors that are used in the workspace, the labels that the user created and the samples that were collected, are stored in the database of this service. Workspace Management serves an endpoint to receive raw sensor data for each workspace and stores the data without any processing. It serves the collected data to the Model Management service for processing and model training purposes. The server runs on Node.js and uses MongoDB to store its data. In short, the service creates an interface between the database and the client.
 
-\subsection{Mobile and Desktop Clients}
-Clients are implemented in a client-side-routed web app fashion using React and a routing library called raviger. All communication is routed through the API class, which, alongside dealing with authentication, acts as an adapter to the backend.
-
+\subsection{Databases}
+MongoDB is the primary database technology. For the services that run on Node.js, Mongoose object modeling library is used to access the database. For the services that run on Python, Pymongo is used.
