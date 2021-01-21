@@ -15,13 +15,8 @@ Authentication service handles the registration of new users and authentication 
 \par The service uses JSON Web Tokens as the authentication method. After logging in, the user receives a cryptographically encrypted access token which is saved as a cookie. We encrypt the JWT that includes the username of the user and an expiration time (15 minutes after the creation) with a secret phrase that is shared among all the services that wish to use authentication. After receiving the access token with the requests, the services are able to decrypt the access token and verify the user identity. The user receives a refresh token in addition to the access token. This refresh token is used to renew an expired access token. This way, the user does not need to enter his credentials each time the token expires.
 
 \subsection{Workspace Management}
-Workspace Management Service manages the workspaces of the system. When the user creates a workspace, a database entry
-corresponding to that workspace is created in this service. All the data that is needed for data collection and storage
-of a workspace, i.e. the sensors that are used in the workspace, the labels that the user created and the samples that were collected,
-are stored in the database of this service. Workspace Management serves an endpoint to receive raw sensor data for each
-workspace and stores the data without any processing. It serves the collected data to the Model Management service for
-processing and model training purposes. The server runs on Node.js and uses MongoDB to store its data. In short,
-the service creates an interface between the database and the client.
+Workspace Management Service manages the workspaces of the system. When the user creates a workspace, a database entry corresponding to that workspace is created in this service. All the data that is needed for data collection and storage of a workspace, i.e. the sensors that are used in the workspace, the labels that the user created and the samples that were collected, are stored in the database of this service. Workspace Management serves an endpoint to receive raw sensor data for each workspace and stores the data without any processing. It serves the collected data to the Model Management service for processing and model training purposes. The server runs on Node.js and uses MongoDB to store its data. In short, the service creates an interface between the database and the client.
 
 \subsection{Mobile and Desktop Clients}
 Clients are implemented in a client-side-routed web app fashion using React and a routing library called raviger. All communication is routed through the API class, which, alongside dealing with authentication, acts as an adapter to the backend.
+

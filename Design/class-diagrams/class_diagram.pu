@@ -143,8 +143,10 @@ class WorkspaceController {
     +getWorkspaceSensors(req: GetWorkspaceSensorsReq, res: Object): void
     +getSubmissionId(req: GetSubmissionIdReq, res: Object) : void
     +getSubmissionConfig(req: GetSubmissionConfigReq, res: Object): void
+    -generateSubmissionId(): string
 }
 
+WorkspaceController ...> SensorType
 WorkspaceController ...> GetWorkspacesRes
 WorkspaceController ...> CreateWorkspaceReq
 WorkspaceController ...> CreateWorkspaceRes

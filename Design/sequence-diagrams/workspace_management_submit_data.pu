@@ -1,0 +1,49 @@
+@startuml Workspace Management Submit Data
+autoactivate on
+
+actor DesktopClient as desktop
+
+participant WorkspaceController as wc
+participant WorkspaceModel as wm
+participant Workspace
+participant SampleController as sc
+participant Label
+participant LabelController as lc
+
+actor MobileClient as mobile
+
+desktop -> wc: getSubmissionId(req)
+wc -> wm: find(req.workspaceId)
+return workspace
+alt workspace has no submissionId
+    wc -> wc: generateSubmissionId()
+    return submissionId
+    wc -> Workspace: setSubmissionId(submissionId)
+    deactivate
+end
+return submissionId
+note left: generate a QR\ncode with this id
+
+mobile -> wc: getSubmissionConfig(req)
+note right: user scanned the\n QR code with\n the submission id
+
+wc -> wm: find(req.workspaceId)
+return workspace
+return {workspace.sensors, workspace.labels}
+
+mobile -> wc: submitSample(req)
+wc -> sc: SampleModel(req)
+return sampleId
+wc -> lc: find(req.label)
+return label
+wc -> Label: pushSampleId(sampleId)
+note right: add a reference of the\nsample to the label
+deactivate
+wc -> wm: find(req.workspaceId)
+return workspace
+wc -> Workspace: pushSampleId(sampleId)
+deactivate
+return OK
+
+
+@enduml

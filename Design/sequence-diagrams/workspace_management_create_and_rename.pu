@@ -13,6 +13,12 @@ wc -> wm: find(req.user)
 return workspaceId[]
 return workspaceId[]
 
+participant SensorType
+client -> wc: getSensors(req)
+wc -> SensorType
+return SensorType[]
+return SensorType[]
+
 client -> wc: createWorkspace(req)
 wc -> wm: WorkspaceModel(req.name, req.sensors[])
 return workspaceId

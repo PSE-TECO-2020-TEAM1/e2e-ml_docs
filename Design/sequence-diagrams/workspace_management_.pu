@@ -1,0 +1,46 @@
+@startuml Workspace Management Manage Labels
+autoactivate on
+
+actor DesktopClient as desktop
+
+participant LabelController as lc
+participant LabelModel as lm
+participant Label
+participant WorkspaceModel as wm
+participant Workspace
+participant SampleController
+
+desktop -> lc: createLabel(req)
+lc -> lm: LabelModel(req.labelName)
+return labelId
+lc -> wm: find(req.workspaceId)
+return workspace
+lc -> Workspace: pushLabel(labelId)
+deactivate
+return OK
+
+desktop -> lc: describeLabel(req)
+lc -> lm: find(req.labelId)
+return label
+lc -> Label: setName(req.name)
+deactivate
+return OK
+
+desktop -> lc: deleteLabel(req)
+lc -> lm: find(req.labelId)
+return label
+
+loop for sampleId in label
+    lc -> wm: remove(samples: {sampleId})
+    note right: remove the sample\nfrom the workspace
+    return
+    lc -> SampleController: remove(sampleId)
+    return
+end
+note left: delete all samples \nwith this label
+
+lc -> lm: remove(req.labelId)
+return
+return OK
+
+@enduml
