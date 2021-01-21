@@ -256,8 +256,6 @@ interface SubmitSampleReq {
     +submissionId: string
 }
 
-SubmitSampleReq -[hidden]-> SubmitSampleRes
-
 interface GetSamplesReq {
     +workspaceId: ObjectId
     +onlyIds: boolean
