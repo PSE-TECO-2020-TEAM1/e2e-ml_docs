@@ -1,6 +1,18 @@
-\section{Processes}
-\subsection{Authentication}
+\section{Sequence Diagrams}
 
+\subsection{General Sequence}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = .98\textwidth, height = .80\textheight]{figures/seq-general.png}}
+    \caption{General Sequence}
+    \label{fig:seq-general}
+\end{figure}
+
+\textbf{explanation}
+
+\subsection{Desktop Client}
+
+\subsubsection{Authentication}
 \begin{figure}[hb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-desktop-auth.png}}
@@ -11,7 +23,7 @@
 \textbf{explanation}
 \newpage
 
-\subsection{Workspace Creation}
+\subsubsection{Workspace Creation}
 \begin{figure}[!htb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-desktop-workspace-create.png}}
@@ -22,17 +34,7 @@
 \textbf{explanation}
 \newpage
 
-\subsection{General Sequence}
-\begin{figure}[!htb]
-    \centering
-    \fbox{\includegraphics[width = .98\textwidth, height = .89\textheight]{figures/seq-general.png}}
-    \caption{General Sequence}
-    \label{fig:seq-general}
-\end{figure}
-
-\textbf{explanation}
-
-\subsection{Fitting a Sample}
+\subsubsection{Fitting a Sample}
 \begin{figure}[!htb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-fitting-a-sample.png}}
@@ -43,7 +45,7 @@
 \textbf{explanation}
 \newpage
 
-\subsection{Training a Model}
+\subsubsection{Training a Model}
 \begin{figure}[!htb]
     \centering
     \fbox{\includegraphics[width = 0.98\textwidth, height = 0.85\textheight]{figures/seq-training-a-model.png}}
@@ -52,3 +54,67 @@
 \end{figure}
 
 \textbf{explanation}
+
+
+\subsection{Mobile Client}
+
+\subsubsection{Prediction}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.80\textheight]{figures/seq-mobile-predict.png}}
+    \caption{Mobile Prediction Sequence}
+    \label{fig:seq-mobile-predict}
+\end{figure}
+
+\textbf{explanation}
+
+\subsection{Authentication}
+
+\subsubsection{Login}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.78\textheight]{figures/seq-auth-login.png}}
+    \caption{Authentication Login}
+    \label{fig:seq-auth-login}
+\end{figure}
+\textbf{explanation}
+
+\subsubsection{Registration and Validation}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.78\textheight]{figures/seq-auth-register-and-validate.png}}
+    \caption{Registration and Validation}
+    \label{fig:seq-auth-register-and-validate}
+\end{figure}
+\textbf{explanation}
+
+\subsection{Workspace Management}
+\subsubsection{General}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.78\textheight]{figures/seq-workspace-management.png}}
+    \caption{General Workspace Management}
+    \label{fig:seq-workspace-management}
+\end{figure}
+\textbf{explanation}
+
+\subsubsection{Create and Rename}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.78\textheight]{figures/seq-workspace-create-and-rename.png}}
+    \caption{Create and Rename}
+    \label{fig:seq-workspace-create-and-rename}
+\end{figure}
+\textbf{explanation}
+\newpage
+
+\subsubsection{Submit Data}
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = 0.98\textwidth, height = 0.78\textheight]{figures/seq-workspace-submit-data.png}}
+    \caption{Submit Data}
+    \label{fig:seq-workspace-submit-data}
+\end{figure}
+\textbf{explanation}
+
+\subsection{Model Management}
