@@ -1,0 +1,28 @@
+@startuml Workspace Management Create and Rename Workspace
+autoactivate on
+
+actor DesktopClient as client
+
+participant WorkspaceController as wc
+participant WorkspaceModel as wm
+participant Workspace
+
+client -> wc: getWorkspaces(req)
+note left: confirm no\nworkspaces
+wc -> wm: find(req.user)
+return workspaceId[]
+return workspaceId[]
+
+client -> wc: createWorkspace(req)
+wc -> wm: WorkspaceModel(req.name, req.sensors[])
+return workspaceId
+return workspaceId
+
+client -> wc: renameWorkspace(req)
+wc -> wm: find(req.workspaceId)
+return workspace
+wc-> Workspace: setName(req.name)
+deactivate
+return OK
+
+@enduml

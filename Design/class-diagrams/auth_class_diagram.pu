@@ -11,44 +11,51 @@ class TokenContent {
 
 class AuthenticationController {
     +signUp(req: SignUpReq, res: Object) : void
+    +validateEmail(req: ValidateEmailReq, res: Object): void
     +login(req: LoginReq, res: Object) : void
     -signToken(content: TokenContent, secret: string) : string
     +refresh(req: RefreshReq, res: Object) : void
     -extractToken(token: string, secret: string) : TokenContent
+    -generateRefreshToken(): string
 }
 
 AuthenticationController --> TokenContent
+AuthenticationController --> EmailValidator
 
 interface SignUpReq {
-    -seeApiDocumentation
+    +email: string
+    +username: string
+    +passwordHash: string
 }
-interface SignUpRes {
-    -seeApiDocumentation
+
+interface ValidateEmailReq {
+    +token: string
 }
-SignUpReq -[hidden]-> SignUpRes
 
 interface LoginReq {
-    -seeApiDocumentation
+    +username: string
+    +passwordHash: string
 }
 interface LoginRes {
-    -seeApiDocumentation
+    +access_token: string
+    +refresh_token: string
 }
 LoginReq -[hidden]-> LoginRes
 
 interface RefreshReq {
-    -seeApiDocumentation
+    +refresh_token: string
 }
 interface RefreshRes {
-    -seeApiDocumentation
+    +new_access_token: string
 }
 RefreshReq -[hidden]-> RefreshRes
 
 AuthenticationController ..> SignUpReq
-AuthenticationController ..> SignUpRes
 AuthenticationController ..> LoginReq
 AuthenticationController ..> LoginRes
 AuthenticationController ..> RefreshReq
 AuthenticationController ..> RefreshRes
+AuthenticationController ..> ValidateEmailReq
 
 App --> AuthenticationController
 
@@ -59,11 +66,21 @@ class UserModel {
 AuthenticationController --> UserModel
 
 class User {
+    +id: ObjectId
+    +email: string
+    +validatedEmail: boolean
     +username: string
     +passwordHash: string
     +authToken: string
     +refreshToken: string
     +isValidPassword() : boolean
+}
+
+class EmailValidator {
+    +userToToken: Map<ObjectId, string>
+    +{static} sendTokenToEmail(user: ObjectId, email: string): void
+    +{static} checkToken(user: ObjectId, token: string): boolean
+    -generateValidationToken(): string
 }
 
 UserModel *-- User : users

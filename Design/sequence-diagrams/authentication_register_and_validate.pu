@@ -1,0 +1,29 @@
+@startuml Authentication Register and Validate
+autoactivate on
+
+actor DesktopClient as dc
+
+participant AuthenticationController as ac
+participant EmailValidator as validator
+participant UserModel
+participant User
+
+dc -> ac: signUp(req)
+ac -> UserModel: UserModel(req.email, req.username, req.passwordHash)
+return userId
+ac -> validator: sendTokenToEmail(userId, req.email)
+validator -> validator: generateValidationToken()
+return validationToken
+return
+return OK
+
+dc -> ac: validateEmail(req)
+ac -> validator: checkToken(req.user)
+return true
+ac -> UserModel: find(req.user)
+return user
+ac -> User: setValidated(true)
+deactivate
+return OK
+
+@enduml

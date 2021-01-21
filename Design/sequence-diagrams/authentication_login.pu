@@ -1,0 +1,34 @@
+@startuml Authentication Register and Validate
+autoactivate on
+
+actor DesktopClient as dc
+
+participant AuthenticationController as ac
+participant UserModel
+participant User
+
+dc -> ac: login(req)
+ac -> UserModel: find(req.user)
+return user
+ac -> User: isValidPassword(req.passwordHash)
+return true
+ac -> ac: signToken(user)
+return {access_token, refresh_token}
+return {access_token, refresh_token}
+
+|||
+|||
+
+dc -> ac: refresh(req)
+note left: after 15 minutes
+ac -> ac: extractToken(req.access_token)
+return
+ac -> UserModel: find(req.user)
+return user
+ac -> ac: compareRefreshToken
+return true
+ac -> ac: generateRefreshToken()
+return new_refresh_token
+return new_refresh_token
+
+@enduml

@@ -6,7 +6,6 @@ skinparam titleBorderRoundCorner 15
 skinparam titleBorderThickness 2
 skinparam titleBackgroundColor Turquoise
 
-title An Interactive End-To-End Machine Learning Platform
 
 class App{
 
@@ -138,6 +137,7 @@ GetSubmissionConfigReq -[hidden]-> GetSubmissionConfigRes
 class WorkspaceController {
     +getWorkspaces(req: Object, res: Object) : void
     +createWorkspace(req: CreateWorkspaceReq, res: Object) : void
+    +renameWorkspace(req: RenameWorkspaceReq, res: Object) : void
     +deleteWorkspace(req: DeleteWorkspaceReq, res: Object) : void
     +getSensors(req: GetSensorsReq, res: Object) : void
     +getWorkspaceSensors(req: GetWorkspaceSensorsReq, res: Object): void
