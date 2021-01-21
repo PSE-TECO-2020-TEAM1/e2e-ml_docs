@@ -1,0 +1,61 @@
+@startuml Mobile Client - Classifying Actions
+autoactivate on
+
+actor DesktopClient
+actor MobileClient
+participant App
+participant Router
+participant Predictor
+database Database
+box "External Server"
+participant WorkspaceManagementServer
+end box
+
+DesktopClient -> App: getModels(workspaceId)
+App -> Router: getModels(workspaceId)
+Router -> Database: models.find()
+return ml_models: (ObjectId, string)[]
+return ml_models: (ObjectId, string)[]
+return ml_models: (ObjectId, string)[]
+
+note over DesktopClient
+    ml_models: (modelId, model_name)[]
+end note
+
+DesktopClient -> App: getPredictionId(workspaceID, modelId)
+App -> Router: getPredictionId(workspaceID, modelId)
+Router -> Router: generatePredictionId(workspaceId, modelId)
+return predictionId: string
+Router -> Database: workspaces.update({"workspaceId": workspaceId}, {$push: {"predictionIds": (predictionId, modelId)}})
+return
+return predictionId: string
+return predictionId: string
+
+MobileClient -> DesktopClient: scan QR code
+return predictionId: string
+
+MobileClient -> App: getPredictionConfig(predictionId)
+App -> Router : getPredictionConfig(predictionId)
+Router -> Database: workspaces.find_one({"predictionIds": predictionId})
+return workspace: Workspace
+Router -> WorkspaceManagementServer: getLabels(workspace.id))
+return (ObjectId, label_name)[]
+note over Router
+    labels: Map<ObjectId, label_name>
+end note
+create Predictor
+Router -> Predictor: <<create>>Predictor(workspace.imputation_object, workspace.normalizer_object,\nworkspace.classifier_object, label)
+return predictor: Predictor
+note over Router
+    insert (predictorId, predictor) entry in router.predictors
+end note
+Router -> WorkspaceManagementServer: getWorkspaceSensors(workspaceId)
+return sensors: (string, integer)[]
+return sensors: (string, integer)[]
+return sensors: (string, integer)[]
+
+note over MobileClient
+    sensors: (sensor_name, samplingRate)[]
+end note
+
+@enduml

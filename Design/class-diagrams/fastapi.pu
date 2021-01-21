@@ -9,8 +9,11 @@ App ---> "1" Router
 class Workspace {
     +id: ObjectId
     +user: string
-    +predictionIds: string[]
+    +predictionIds: (string, ObjectId)[]
 }
+note right of Workspace::predictionIds
+(predictionId, modelId)
+end note
 
 Workspace *--- Sensor : sensors
 
@@ -65,10 +68,14 @@ class GetPredictionConfigRes {
     +sensors: {string, integer}[]
 }
 
+note right of GetPredictionConfigRes::sensors
+sensors: (name, samplingRate)
+end note
+
 class Router {
     -databaseClient: DatabaseClient
     -trainers: Map<ObjectId, Trainer> 
-    -predictors: Map<ObjectId, IClassifier>
+    -predictors: Map<string, Predictor>
 
     +<<create>> Router(databaseClient: DatabaseClient): void
     +createModelWorkspace(workspaceId: ObjectId): void
@@ -79,12 +86,33 @@ class Router {
     +getModel(workspaceId: ObjectId, modelId: ObjectId) : GetModelRes
     +getPredictionId(workspaceId: ObjectId, modelId: ObjectId): string
     +getPredictionConfig(predictionId: string): GetPredictionConfigRes
-    +submitDataWindow(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
+    +submitData(predictionId: string, allSensorDataPoints: SensorDataPoints[]): void
+    +getPrediction(predictionId: string): string
+    -generatePredictionId(workspaceId: ObjectId, modelId: ObjectId): string
 }
 
 Router ...> SensorDataPoints
 Router ...> Sample
 Router ...> Trainer
+Router ...> Predictor
+
+class Predictor {
+    -labels: Map<ObjectId, string>
+    -predictions: Map<ObjectId, integer>
+    +<<create>>Predictor(imputation_object: IImputer, classifier_object: IClassifier,\nnormalizer_object: INormalizer, labels: Map<ObjectId, string>)
+    +predict(allSensorDataPoints:SensorDataPoints[]): void
+    +getMostFrequentPrediction(): string
+    -resetPredictions(): void
+}
+
+note right of Predictor::getMostFrequentPrediction
+    resetPredictions();
+end note
+
+Predictor ---> IImputer: imputer_object
+Predictor ---> IClassifier: classifier_object
+Predictor ---> INormalizer: normalizer_object
+Predictor ...> SensorDataPoints
 
 class Sample {
     +label: string
