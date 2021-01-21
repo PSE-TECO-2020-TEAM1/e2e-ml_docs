@@ -99,14 +99,19 @@ Router ...> Predictor
 class Predictor {
     -labels: Map<ObjectId, string>
     -predictions: Map<ObjectId, integer>
-    +<<create>>Predictor(imputation_object: IImputer, classifier_object: IClassifier,\nnormalizer_object: INormalizer, labels: Map<ObjectId, string>)
+    +<<create>>Predictor(imputation_object: IImputer, normalizer_object: INormalizer,\nclassifier_object: IClassifier, features: Feature[] , labels: Map<ObjectId, string>)
     +predict(allSensorDataPoints:SensorDataPoints[]): void
-    +getMostFrequentPrediction(): string
-    -resetPredictions(): void
+    +getMostFrequentPredictionAndReset(): string
+    -extractFeature(data: DataFrame[], feature: Feature): DataFrame
+    -incrementPredictionCount(labelId: ObjectId): void
 }
 
 note right of Predictor::getMostFrequentPrediction
     resetPredictions();
+end note
+
+note left of Predictor::incrementPredictionCount
+    predictions[labelId]++
 end note
 
 Predictor ---> IImputer: imputer_object

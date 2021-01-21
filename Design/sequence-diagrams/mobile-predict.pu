@@ -6,6 +6,9 @@ actor MobileClient
 participant App
 participant Router
 participant Predictor
+participant IImputer
+participant INormalizer
+participant IClassifier
 database Database
 box "External Server"
 participant WorkspaceManagementServer
@@ -44,7 +47,7 @@ note over Router
     labels: Map<ObjectId, label_name>
 end note
 create Predictor
-Router -> Predictor: <<create>>Predictor(workspace.imputation_object, workspace.normalizer_object,\nworkspace.classifier_object, label)
+Router -> Predictor: <<create>>Predictor(workspace.imputation_object, workspace.normalizer_object,\nworkspace.classifier_object, workspaces.features, labels)
 return predictor: Predictor
 note over Router
     insert (predictorId, predictor) entry in router.predictors
@@ -57,5 +60,40 @@ return sensors: (string, integer)[]
 note over MobileClient
     sensors: (sensor_name, samplingRate)[]
 end note
+
+loop while MobileClient submits data
+    MobileClient -> App: submitData(predictionId, data)
+    App -> Router: submitData(predictionId, data)
+    Router -> Predictor: predict(data)
+    Predictor -> IImputer: transform(data)
+    return data: DataFrame[]
+    
+    loop feature : features
+        Predictor -> Predictor: extractFeature(data, feature)
+        return data: DataFrame
+    end
+    note over Predictor
+        dataframes of all features in one DataFrame instance data
+    end note
+
+    Predictor -> INormalizer: transform(data)
+    return data: DataFrame
+    Predictor -> IClassifier: predict(data)
+    return predictions: ObjectId[]
+
+    loop labelId in predictions
+        Predictor -> Predictor: incrementLabelCount(labelId)
+        return
+    end
+
+    opt MobileClient requests most frequent prediction
+        MobileClient -> App: getPrediction(predictionId)
+        App -> Router: getPrediction(predictionId)
+        Router -> Predictor: getMostFrequentPredictionAndReset()
+        return label_name: string
+        return label_name: string
+        return label_name: string
+    end
+end
 
 @enduml

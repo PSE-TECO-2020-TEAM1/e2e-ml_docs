@@ -126,9 +126,9 @@ return data: DataFrame
 ' complete note
 note over Trainer
 train_x: data to train
-train_y: labels of data to train
+train_y: ids of labels of data to train
 test_x: data to test
-test_y: labels of data to test
+test_y: ids of labels of data to test
 end note
 
 Trainer -> Factory: getClassifier(classifier, hyperparameters)
@@ -139,7 +139,7 @@ return classifier_object: IClassifier
 Trainer -> IClassifier: fit(train_x, train_y)
 return
 Trainer -> IClassifier: predict(test_x)
-return prediction
+return prediction: ObjectId[]
 
 Trainer ->] : classification_report(test_y, prediction)
 return performance_metrics: DataFrame
