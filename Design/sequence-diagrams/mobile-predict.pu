@@ -1,4 +1,4 @@
-@startuml Mobile Client - New Sample
+@startuml Mobile Client - Predict
 autoactivate on
 
 actor User as u

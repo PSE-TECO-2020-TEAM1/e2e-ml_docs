@@ -12,6 +12,7 @@ This sequence diagram shows the interaction between the components of the system
 \subsection{Desktop Client}
 
 \subsubsection{Authentication}
+This sequence diagram shows the process of logging in to the desktop client.
 \begin{figure}[hb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-desktop-auth.png}}
@@ -19,10 +20,8 @@ This sequence diagram shows the interaction between the components of the system
     \label{fig:seq-desktop-auth}
 \end{figure}
 
-\textbf{explanation}
-\newpage
-
 \subsubsection{Workspace Creation}
+This sequence diagram shows the process of creating a new workspace with sensors "Sensor X" and "Sensor Y".
 \begin{figure}[!htb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-desktop-workspace-create.png}}
@@ -30,10 +29,8 @@ This sequence diagram shows the interaction between the components of the system
     \label{fig:seq-desktop-workspace-create}
 \end{figure}
 
-\textbf{explanation}
-\newpage
-
 \subsubsection{Timeframing a Sample}
+This sequence diagram shows the process of viewing the details and changing the timeframes of the sample "Sample 1".
 \begin{figure}[!htb]
     \centering
     \fbox{\includegraphics[width = .98\textwidth]{figures/seq-timeframing-a-sample.png}}
@@ -41,14 +38,21 @@ This sequence diagram shows the interaction between the components of the system
     \label{fig:seq-timeframing-a-sample}
 \end{figure}
 
-\textbf{explanation}
-\newpage
-
 \subsection{Mobile Client}
+
+\subsubsection{Timeframing a Sample}
+This sequence diagram shows the process of viewing the details and changing the timeframes of the sample "Sample 1".
+\begin{figure}[!htb]
+    \centering
+    \fbox{\includegraphics[width = .98\textwidth]{figures/seq-timeframing-a-sample.png}}
+    \caption{Sample Timeframing Sequence}
+    \label{fig:seq-timeframing-a-sample}
+\end{figure}
+
 
 \subsection{Authentication}
 
-This diagram shows the registration and validation process of new user accounts. The user first registers with his email, username and a password of his choice and then receives an email that has a validation code. The user enters this token to the desktop client and validates his account.
+This diagram shows the registration and validation process of new user accounts. The user first registers with his email, username and a password of his choice and then receives an email that has a validation link. Upon clicking this link the account is validated.
 \subsubsection{Registration and Validation}
 \begin{figure}[!htb]
     \centering

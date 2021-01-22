@@ -1,4 +1,4 @@
-@startuml DesktopApp
+@startuml MobileApp
 ' skinparam monochrome true
 ' skinparam linetype ortho
 hide circle
