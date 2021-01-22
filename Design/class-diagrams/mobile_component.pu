@@ -1,0 +1,116 @@
+@startuml DesktopApp
+' skinparam monochrome true
+hide circle
+
+class "highcharts"
+class "raviger.useRoutes" << hook >>
+class "raviger.Link" << component >>
+' class "MaterialUI.TextField" << component >>
+' class "MaterialUI.Button" << component >>
+' class "MaterialUI.Checkbox" << component >>
+' class "MaterialUI.Dropdown" << component >>
+' class "MaterialUI.FormControlLabel" << component >>
+' class "MaterialUI.Accordion" << component >>
+' class "MaterialUI.List" << component >>
+' class "MaterialUI.ListItem" << component >>
+' class "MaterialUI.ListItemIcon" << component >>
+' class "MaterialUI.Table" << component >>
+' class "MaterialUI.TableHead" << component >>
+' class "MaterialUI.TableRow" << component >>
+' class "MaterialUI.TableCell" << component >>
+' class "MaterialUI.TableBody" << component >>
+' class "MaterialUI.CircularProgressWithLabel" << component >>
+
+package MobileApp {
+    interface ISensor << interface >> {
+        name: string,
+        samplingRate: number
+    }
+    interface ILabel << interface >> {
+        name: string,
+        description: string
+    }
+    interface ISensorDatapoints << interface >>
+    ISensorDatapoints --> "*" IDatapoint : datapoints
+    ISensorDatapoints --> ISensor: sensor
+    interface IDatapoint << interface >> {
+        timestamp: Date
+        data: any
+    }
+    interface ISubmissionConfiguration << interface >>
+    ISubmissionConfiguration --> "*" ILabel : labels
+    ISubmissionConfiguration --> "*" ISensor : sensors
+    interface IPredictionConfiguration << interface >>
+    IPredictionConfiguration --> "*" ISensor : sensors
+
+    class API {
+        +getLabels(): ILabel[]
+        +submitSample(id: string, label: ILabel, start: Date, end: Date, data: ISensorDatapoints[]): void
+        +getSubmissionConfiguration(id: string): ISubmissionConfiguration
+        +discardSubmission(id: string): void
+        +getPredictionConfiguration(id: string): IPredictionConfiguration
+        +sendDataToPredict(id: string, data: ISensorDatapoints[]): void
+        +getPrediction(id: string): ILabel
+    }
+
+    API <-- App
+    "raviger.useRoutes" <... App
+    class App << component >>
+    App ...> Header
+    class Header << component >> {
+        ==props==
+        # route: component
+    }
+    Header ...> "raviger.Link"
+
+    App ...> LabelSelectionPage
+    class LabelSelectionPage << component >> {
+        ==props==
+        # submissionId: string
+    }
+    LabelSelectionPage ...> API
+    LabelSelectionPage ...> "raviger.Link"
+
+    App ...> RecordingConfigurationPage
+    class RecordingConfigurationPage << component >> {
+        ==props==
+        # submissionId: string
+        # label: string
+        ==state==
+        # countdown: number
+        # duration: number
+    }
+    RecordingConfigurationPage ...> "raviger.Link"
+
+    App ...> RecordingPage
+    class RecordingPage << component >> {
+        ==props==
+        # submissionId: string
+        # label: string
+        # countdown: number
+        # duration: number
+        ==state==
+        # start: Date
+        # end: Date
+        # sensorData: ISensorDatapoints[]
+    }
+    RecordingPage ...> "raviger.Link"
+    RecordingPage ...> "highcharts"
+    RecordingPage ...> API
+
+    App ...> PredictionPage
+    class PredictionPage << component >> {
+        ==props==
+        # predictionId: string
+        ==state==
+        # start: Date
+        # end: Date
+        # sensorData: ISensorDatapoints[]
+    }
+    PredictionPage ...> "raviger.Link"
+    PredictionPage ...> "highcharts"
+    PredictionPage ...> API
+
+}
+
+@enduml
