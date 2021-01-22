@@ -5,20 +5,12 @@
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/app.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The main class of the authentication service.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{SERVER\_SECRET} the encryption key that is shared among all the services to decrypt tokens
 \end{itemize}
 
 \subsection{Authentication}
@@ -28,20 +20,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/1.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The database collection of the registered users.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{findOne} returns the user that has the matching username
 \end{itemize}
 
 \subsubsection{User}
@@ -49,20 +33,21 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/2.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+A registered user
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
+    \item \textbf{email} email of the user
+    \item \textbf{validatedEmail} iff the email is validated
+    \item \textbf{username} username of the user
+    \item \textbf{passwordHash} hash of the password of the user
+    \item \textbf{authToken} the current authentication token of the user
+    \item \textbf{refreshToken} the current refresh token of the user
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{isValidPassword} iff the supplied password is valid
 \end{itemize}
 
 \subsubsection{Validate Email}
