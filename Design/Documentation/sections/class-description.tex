@@ -218,13 +218,13 @@ This class represents data points of a specific sensor.
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/9.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class holds the values of a specific sensor at a specific timestamp.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{value}
-    \item \textbf{timestamp}
+    \item \textbf{value} the values of the sensor at the specified time
+    \item \textbf{timestamp} the timestamp of the sensor values
 \end{itemize}
 
 \subsubsection{TimeFrame}
@@ -233,13 +233,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/10.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represents a timeframe, which describes a valid intervall of a recorded sample. By setting the wished timeframes, the user can discard parts of a recording.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{start}
-    \item \textbf{end}
+    \item \textbf{start} start of the timeframe
+    \item \textbf{end} end of the timeframe
 \end{itemize}
 
 \subsection{Model Management}
@@ -250,30 +250,30 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/1.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+Objects of this class performs a machine learning model training process. A new instance is created with each model training. The raw data is fetched from the workspace management service if it is not already present in the local database. The data preprocessing steps are performed before the training and are stored in the local database. For the compatible parameters, the processed data is fetched directly from the database for training. The detailed functioning of the class can be found in the corresponding sequence diagram. The model is saved to the database of the server once the training concludes.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{progress}
-    \item \textbf{databaseClient}
-    \item \textbf{workspaceId}
-    \item \textbf{imputation}
-    \item \textbf{features}
-    \item \textbf{normalizer}
-    \item \textbf{classifier}
-    \item \textbf{hyperparameters}
+    \item \textbf{progress} the progress of the training in percent
+    \item \textbf{databaseClient} the database client the class uses for database communication
+    \item \textbf{workspaceId} the id of the workspace that the training takes place on
+    \item \textbf{imputation} the imputation method of the training
+    \item \textbf{features} the features to be extracted
+    \item \textbf{normalizer} the normalization method of the training
+    \item \textbf{classifier} the classifier of the training
+    \item \textbf{hyperparameters} the hyperparameters of the classifier as well as the window sizes for the sliding window process
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{train}
-    \item \textbf{setDatabaseClient}
-    \item \textbf{requestSampleHash}
-    \item \textbf{requestDataSet}
-    \item \textbf{splitToWindows}
-    \item \textbf{impute}
-    \item \textbf{extractFeature}
-    \item \textbf{normalize}
+    \item \textbf{train} the method that initiates the model training
+    \item \textbf{setDatabaseClient} the static method that sets the database client for the class
+    \item \textbf{requestSampleHash} the method that asks the workspace management server for the hash of the samples of the workspace. If the hash is same as the one stored in the local database, samples are directly used from the local database and fetched from the external service otherwise.
+    \item \textbf{requestDataSet} the method that requests the data set of the workspace
+    \item \textbf{splitToWindows} the method that splits the data set into windows according to the hyper parameters. This method uses the available data from the database if the same computation is already performed before.
+    \item \textbf{impute} the method that imputes the training data according to the selected imputation method. This method uses the available data form the database if the same computation is already performed before.
+    \item \textbf{extractFeature} this method extracts the features for the training. If a feature with compatible parameters are extracted before, the stored data is used instead of extracting them again.
+    \item \textbf{normalize} this method normalizes the data with the specified normalization method
 \end{itemize}
 
 \subsubsection{Workspace}
@@ -282,13 +282,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/2.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The document that includes all the relevant information about a workspace.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{user}
-    \item \textbf{predictionIds}
+    \item \textbf{user} the user of the workspace
+    \item \textbf{predictionIds} the generated prediction ids belonging to the workspace
 \end{itemize}
 
 \subsubsection{Sensor}
@@ -297,13 +297,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/3.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The class represents a sensor of the workspace with its sampling rate.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item textbf{name}
-    \item textbf{samplingRate}
+    \item textbf{name} name of the sensor
+    \item textbf{samplingRate} sampling rate of the sensor
 \end{itemize}
 
 \subsubsection{MLModel}
@@ -312,12 +312,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/4.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This document stores all the relevant information about a trained machine learning model.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{name}
+    \item \textbf{name} the name of the model
 \end{itemize}
 
 \subsubsection{Imputation}
@@ -326,7 +326,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/5.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This enumeration includes all the available imputation methods.
 \newline
 \newline
 
@@ -336,9 +336,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/6.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
-\newline
-\newline
+This enumeration includes all the available features to extract.
 \newline
 \newline
 
@@ -348,7 +346,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/7.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This enumeration includes all the normalization methods to use.
 \newline
 \newline
 
