@@ -17,13 +17,13 @@ return
 return sdetails: ISampleDetails
 sd -> sd: render sample metadata box
 deactivate
-sd -> h: render graph with fittings
+sd -> h: render graph with timeframes
 deactivate
 deactivate
 
 u -> sd: click "Relabel Sample"
-u -> h: select label windows
-h --> sd: fittings
+u -> h: select label timeframes
+h --> sd
 deactivate h
 sd -> api: setSampleTimeframe(sample: ISample, frame: Timeframe)
 api ->]: REST
