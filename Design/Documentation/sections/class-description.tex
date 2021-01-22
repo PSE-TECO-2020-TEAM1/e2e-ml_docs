@@ -20,7 +20,7 @@ The main class of the authentication service.
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/1.png}}
 \end{wrapfigure} 
 \par
-The database collection of the registered users.
+The collection of registered users in the database.
 \newline
 \newline
 \textbf{Methods}
@@ -55,7 +55,7 @@ A registered user
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/3.png}}
 \end{wrapfigure} 
 \par
-This class sends an email to the user with a token and checks if the given token is correct.
+This static class sends an email to the user with a token and checks if the given token is correct.
 \newline
 \newline
 \textbf{Attributes}
@@ -64,9 +64,9 @@ This class sends an email to the user with a token and checks if the given token
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{sendTokenToEmail} 
-    \item \textbf{checkToken}
-    \item \textbf{generateValidationToken}
+    \item \textbf{sendTokenToEmail} sends a token to the given email 
+    \item \textbf{checkToken} compares the received token with the token sent to email
+    \item \textbf{generateValidationToken} generates a validation token
 \end{itemize}
 
 \subsubsection{TokenContent}
@@ -74,13 +74,13 @@ This class sends an email to the user with a token and checks if the given token
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/4.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class depicts a unencrypted access token.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{username}
-    \item \textbf{expiration}
+    \item \textbf{username} username of the owner of the token
+    \item \textbf{expiration} expiration time of the token
 \end{itemize}
 
 \subsection{Workspace Management}
@@ -90,12 +90,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/1.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The collection of workspaces in the database.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{find}
+    \item \textbf{find} returns the workspace with the given ID.
 \end{itemize}
 
 \subsubsection{Workspace}
@@ -103,27 +103,14 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/2.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The document that includes all the relevant information about a workspace.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{name}
-    \item \textbf{user}
-    \item \textbf{submissionIds}
-\end{itemize}
-
-\subsubsection{Sensor}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/3.png}}
-\end{wrapfigure} 
-\par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
-\newline
-\newline
-\textbf{Attributes}
-\begin{itemize}
-    \item \textbf{samplingRate}
+    \item \textbf{name} name of the workspace
+    \item \textbf{user} user of the workspace
+    \item \textbf{submissionIds} all valid submission IDs of the workspace
 \end{itemize}
 
 \subsubsection{SensorType}
@@ -131,14 +118,28 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/4.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This enumeration consists of the supported sensors.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{maxSamplingRate}
-    \item \textbf{defaultSamplingRate}
-    \item \textbf{dataFormat}
+    \item \textbf{maxSamplingRate} the maximum sampling rate of the sensor
+    \item \textbf{defaultSamplingRate} the default sampling rate of the sensor
+    \item \textbf{dataFormat} the data format of the sensor
+\end{itemize}
+
+\subsubsection{Sensor}
+\begin{wrapfigure}{l}{4.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/3.png}}
+\end{wrapfigure} 
+\par
+This class represents a chosen sensor of the workspace. 
+\newline
+\newline
+
+\textbf{Attributes}
+\begin{itemize}
+    \item \textbf{samplingRate} the selected sampling rate of the sensor
 \end{itemize}
 
 \subsubsection{Label}
@@ -146,13 +147,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/5.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represent an action that describes a sample.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{name}
-    \item \textbf{description}
+    \item \textbf{name} name of the label
+    \item \textbf{description} description of the label
 \end{itemize}
 
 \subsubsection{SampleModel}
@@ -160,12 +161,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/6.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+The collection of samples in the database.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{find}
+    \item \textbf{find} returns the sample with the given ID.
 \end{itemize}
 
 \subsubsection{Sample}
@@ -173,17 +174,17 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/7.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represents a document in the database that contains raw sensor data, its selected timeframes and its label.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{start}
-    \item \textbf{end}
+    \item \textbf{start} the timestamp of the start of recording
+    \item \textbf{end} the timestamp of the end of recording
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{setTimeFrames}
+    \item \textbf{setTimeFrames} sets the timeframes of the sample
 \end{itemize}
 
 \subsubsection{SensorDataPoints}
@@ -191,12 +192,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/8.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represents data points of a specific sensor.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{sensor\_id}
+    \item \textbf{sensor\_id} the ID of the sensor to which the data belongs
 \end{itemize}
 
 \subsubsection{DataPoint}
