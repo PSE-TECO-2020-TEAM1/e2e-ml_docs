@@ -5,9 +5,11 @@
 \label{App}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/app.png}}
-\end{wrapfigure} 
-\par
+\end{wrapfigure}
+~\\
 The main class of the authentication service.
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -20,22 +22,31 @@ The main class of the authentication service.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/1.png}}
 \end{wrapfigure} 
-\par
+~\\
 The collection of registered users in the database.
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
     \item \textbf{findOne} returns the user that has the matching username
 \end{itemize}
-
+\newpage
 \subsubsection{User}
 \label{User}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/2.png}}
-\end{wrapfigure} 
-\par
-A registered user
+\end{wrapfigure}
+~\\
+Represents a registered user.
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -51,13 +62,13 @@ A registered user
 \begin{itemize}
     \item \textbf{isValidPassword} iff the supplied password is valid
 \end{itemize}
-
+\newpage
 \subsubsection{EmailValidator}
 \label{EmailValidator}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/3.png}}
+\begin{wrapfigure}{l}{5.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=5.5cm]{classes/auth/3.png}}
 \end{wrapfigure} 
-\par
+~\\
 This static class sends an email to the user with a token and checks if the given token is correct.
 \newline
 \newline
@@ -74,11 +85,14 @@ This static class sends an email to the user with a token and checks if the give
 
 \subsubsection{TokenContent}
 \label{TokenContent}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/4.png}}
+\begin{wrapfigure}{l}{3.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=3.5cm]{classes/auth/4.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class depicts a unencrypted access token.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -87,6 +101,7 @@ This class depicts a unencrypted access token.
     \item \textbf{expiration} expiration time of the token
 \end{itemize}
 
+\newpage
 \subsection{Workspace Management}
 
 \subsubsection{WorkspaceModel}
@@ -94,8 +109,10 @@ This class depicts a unencrypted access token.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/1.png}}
 \end{wrapfigure} 
-\par
+~\\
 The collection of workspaces in the database.
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
@@ -108,8 +125,12 @@ The collection of workspaces in the database.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/2.png}}
 \end{wrapfigure} 
-\par
+~\\
 The document that includes all the relevant information about a workspace.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -119,13 +140,18 @@ The document that includes all the relevant information about a workspace.
     \item \textbf{submissionIds} all valid submission IDs of the workspace
 \end{itemize}
 
+\newpage
 \subsubsection{SensorType}
 \label{SensorType}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/4.png}}
 \end{wrapfigure} 
-\par
+~\\
 This enumeration consists of the supported sensors.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -140,23 +166,30 @@ This enumeration consists of the supported sensors.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/3.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represents a chosen sensor of the workspace. 
 \newline
 \newline
-
+\newline
+\newline
+\newline
 \textbf{Attributes}
 \begin{itemize}
     \item \textbf{samplingRate} the selected sampling rate of the sensor
 \end{itemize}
 
+\newpage
 \subsubsection{Label}
 \label{Label}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/5.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represent an action that describes a sample.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -167,11 +200,14 @@ This class represent an action that describes a sample.
 
 \subsubsection{SampleModel}
 \label{SampleModel}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/6.png}}
+\begin{wrapfigure}{l}{5.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=5.5cm]{classes/workspace-management/6.png}}
 \end{wrapfigure} 
-\par
+~\\
 The collection of samples in the database.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
@@ -179,13 +215,15 @@ The collection of samples in the database.
     \item \textbf{find} returns the sample with the given ID.
 \end{itemize}
 
+\newpage
 \subsubsection{Sample}
 \label{Sample}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/7.png}}
-\end{wrapfigure} 
-\par
+\begin{wrapfigure}{l}{5.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.7\baselineskip\relax]{\includegraphics[width=5.5cm]{classes/workspace-management/7.png}}
+\end{wrapfigure}
+~\\
 This class represents a document in the database that contains raw sensor data, its selected timeframes and its label.
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -201,10 +239,12 @@ This class represents a document in the database that contains raw sensor data, 
 \subsubsection{SensorDataPoints}
 \label{SensorDataPoints}
 \begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/8.png}}
+    \raisebox{0pt}[\dimexpr\height-0.8\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/8.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represents data points of a specific sensor.
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -212,13 +252,16 @@ This class represents data points of a specific sensor.
     \item \textbf{sensor\_id} the ID of the sensor to which the data belongs
 \end{itemize}
 
+\newpage
 \subsubsection{DataPoint}
 \label{DataPoint}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/9.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class holds the values of a specific sensor at a specific timestamp.
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -232,8 +275,9 @@ This class holds the values of a specific sensor at a specific timestamp.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/10.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represents a timeframe, which describes a valid intervall of a recorded sample. By setting the wished timeframes, the user can discard parts of a recording.
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -242,12 +286,13 @@ This class represents a timeframe, which describes a valid intervall of a record
     \item \textbf{end} end of the timeframe
 \end{itemize}
 
+\newpage
 \subsection{Model Management}
 
 \subsubsection{Trainer}
 \label{Trainer}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/1.png}}
+\begin{wrapfigure}{l}{7.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=7.5cm]{classes/model-management/1.png}}
 \end{wrapfigure} 
 \par
 Objects of this class performs a machine learning model training process. A new instance is created with each model training. The raw data is fetched from the workspace management service if it is not already present in the local database. The data preprocessing steps are performed before the training and are stored in the local database. For the compatible parameters, the processed data is fetched directly from the database for training. The detailed functioning of the class can be found in the corresponding sequence diagram. The model is saved to the database of the server once the training concludes.
@@ -278,11 +323,13 @@ Objects of this class performs a machine learning model training process. A new 
 
 \subsubsection{Workspace}
 \label{mm-Workspace}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/2.png}}
+\begin{wrapfigure}{l}{3.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=3.5cm]{classes/model-management/2.png}}
 \end{wrapfigure} 
-\par
+~\\
 The document that includes all the relevant information about a workspace.
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -291,13 +338,15 @@ The document that includes all the relevant information about a workspace.
     \item \textbf{predictionIds} the generated prediction ids belonging to the workspace
 \end{itemize}
 
+\newpage
 \subsubsection{Sensor}
 \label{mm-Sensor}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/3.png}}
+\begin{wrapfigure}{l}{3.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=3.5cm]{classes/model-management/3.png}}
 \end{wrapfigure} 
-\par
-The class represents a sensor of the workspace with its sampling rate.
+~\\
+This class represents a sensor of the workspace with its sampling rate.
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -308,11 +357,13 @@ The class represents a sensor of the workspace with its sampling rate.
 
 \subsubsection{MLModel}
 \label{MLModel}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/4.png}}
+\begin{wrapfigure}{l}{2.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=2.5cm]{classes/model-management/4.png}}
 \end{wrapfigure} 
-\par
+~\\
 This document stores all the relevant information about a trained machine learning model.
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -322,40 +373,42 @@ This document stores all the relevant information about a trained machine learni
 
 \subsubsection{Imputation}
 \label{Imputation}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/5.png}}
+\begin{wrapfigure}{l}{5.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=5.5cm]{classes/model-management/5.png}}
 \end{wrapfigure} 
-\par
+~\\
 This enumeration includes all the available imputation methods.
 \newline
 \newline
-
+\newline
+\newpage
 \subsubsection{Feature}
 \label{Feature}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/6.png}}
+\begin{wrapfigure}{l}{3.5cm}
+    \raisebox{0pt}[\dimexpr\height-1.8\baselineskip\relax]{\includegraphics[width=3.5cm]{classes/model-management/6.png}}
 \end{wrapfigure} 
-\par
 This enumeration includes all the available features to extract.
 \newline
 \newline
-
+\newline
+\newline
+\newline
 \subsubsection{Normalizer}
 \label{Normalizer}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/7.png}}
+\begin{wrapfigure}{l}{3.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=3.5cm]{classes/model-management/7.png}}
 \end{wrapfigure} 
-\par
+~\\
 This enumeration includes all the normalization methods to use.
 \newline
 \newline
-
+\newline
+\newline
 \subsubsection{Factory}
 \label{Factory}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/8.png}}
+\begin{wrapfigure}{l}{9.5cm}
+    \raisebox{0pt}[\dimexpr\height-1.0\baselineskip\relax]{\includegraphics[width=9.5cm]{classes/model-management/8.png}}
 \end{wrapfigure} 
-\par
 This static class is responsible for creating imputer, normalizer and classifier objects.
 \newline
 \newline
@@ -371,8 +424,11 @@ This static class is responsible for creating imputer, normalizer and classifier
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/9.png}}
 \end{wrapfigure} 
-\par
+~\\
 This is an interface for an imputer object.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
@@ -386,8 +442,11 @@ This is an interface for an imputer object.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/10.png}}
 \end{wrapfigure} 
-\par
+~\\
 This is an interface for a normalizer object.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
@@ -396,13 +455,17 @@ This is an interface for a normalizer object.
     \item \textbf{transform} normalizes the given data
 \end{itemize}
 
+\newpage
 \subsubsection{IClassifier}
 \label{IClassifier}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/11.png}}
 \end{wrapfigure} 
-\par
+~\\
 This is an interface for a classifier object.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Methods}
@@ -413,11 +476,12 @@ This is an interface for a classifier object.
 
 \subsubsection{PerfomanceMetrics}
 \label{PerformanceMetrics}
-\begin{wrapfigure}{l}{4.5cm}
-    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/12.png}}
+\begin{wrapfigure}{l}{6.5cm}
+    \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=6.5cm]{classes/model-management/12.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represents the performance metrics of a trained model.
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -430,8 +494,11 @@ This class represents the performance metrics of a trained model.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/13.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class represents a hyperparameter for training a model.
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -445,8 +512,12 @@ This class represents a hyperparameter for training a model.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/14.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class holds the sample data from the last training.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -460,8 +531,12 @@ This class holds the sample data from the last training.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/15.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class hold the sample data from recent trainings which is split into windows.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -471,13 +546,18 @@ This class hold the sample data from recent trainings which is split into window
     \item \textbf{data} the sliding windows
 \end{itemize}
 
+\newpage
 \subsubsection{ImputedData}
 \label{ImputedData}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/16.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class holds the imputed data from recent trainings.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
@@ -492,8 +572,12 @@ This class holds the imputed data from recent trainings.
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/17.png}}
 \end{wrapfigure} 
-\par
+~\\
 This class holds the extracted features of the data from recent trainings.
+\newline
+\newline
+\newline
+\newline
 \newline
 \newline
 \textbf{Attributes}
