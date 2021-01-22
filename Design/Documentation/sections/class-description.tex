@@ -1,6 +1,8 @@
 \section{Class Description}
-\subsection{Example}
+
+\subsection{Authentication}
 \subsubsection{App}
+\label{App}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/app.png}}
 \end{wrapfigure} 
@@ -13,9 +15,8 @@ The main class of the authentication service.
     \item \textbf{SERVER\_SECRET} the encryption key that is shared among all the services to decrypt tokens
 \end{itemize}
 
-\subsection{Authentication}
-
-\subsubsection{User Model}
+\subsubsection{UserModel}
+\label{UserModel}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/1.png}}
 \end{wrapfigure} 
@@ -29,6 +30,7 @@ The collection of registered users in the database.
 \end{itemize}
 
 \subsubsection{User}
+\label{User}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/2.png}}
 \end{wrapfigure} 
@@ -51,6 +53,7 @@ A registered user
 \end{itemize}
 
 \subsubsection{EmailValidator}
+\label{EmailValidator}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/3.png}}
 \end{wrapfigure} 
@@ -70,6 +73,7 @@ This static class sends an email to the user with a token and checks if the give
 \end{itemize}
 
 \subsubsection{TokenContent}
+\label{TokenContent}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/4.png}}
 \end{wrapfigure} 
@@ -86,6 +90,7 @@ This class depicts a unencrypted access token.
 \subsection{Workspace Management}
 
 \subsubsection{WorkspaceModel}
+\label{WorkspaceModel}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/1.png}}
 \end{wrapfigure} 
@@ -99,6 +104,7 @@ The collection of workspaces in the database.
 \end{itemize}
 
 \subsubsection{Workspace}
+\label{wm-Workspace}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/2.png}}
 \end{wrapfigure} 
@@ -114,6 +120,7 @@ The document that includes all the relevant information about a workspace.
 \end{itemize}
 
 \subsubsection{SensorType}
+\label{SensorType}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/4.png}}
 \end{wrapfigure} 
@@ -129,6 +136,7 @@ This enumeration consists of the supported sensors.
 \end{itemize}
 
 \subsubsection{Sensor}
+\label{Sensor}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/3.png}}
 \end{wrapfigure} 
@@ -143,6 +151,7 @@ This class represents a chosen sensor of the workspace.
 \end{itemize}
 
 \subsubsection{Label}
+\label{Label}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/5.png}}
 \end{wrapfigure} 
@@ -157,6 +166,7 @@ This class represent an action that describes a sample.
 \end{itemize}
 
 \subsubsection{SampleModel}
+\label{SampleModel}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/6.png}}
 \end{wrapfigure} 
@@ -170,6 +180,7 @@ The collection of samples in the database.
 \end{itemize}
 
 \subsubsection{Sample}
+\label{Sample}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/7.png}}
 \end{wrapfigure} 
@@ -188,6 +199,7 @@ This class represents a document in the database that contains raw sensor data, 
 \end{itemize}
 
 \subsubsection{SensorDataPoints}
+\label{SensorDataPoints}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/8.png}}
 \end{wrapfigure} 
@@ -201,6 +213,7 @@ This class represents data points of a specific sensor.
 \end{itemize}
 
 \subsubsection{DataPoint}
+\label{DataPoint}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/9.png}}
 \end{wrapfigure} 
@@ -215,6 +228,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \end{itemize}
 
 \subsubsection{TimeFrame}
+\label{TimeFrame}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/workspace-management/10.png}}
 \end{wrapfigure} 
@@ -231,6 +245,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \subsection{Model Management}
 
 \subsubsection{Trainer}
+\label{Trainer}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/1.png}}
 \end{wrapfigure} 
@@ -262,6 +277,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \end{itemize}
 
 \subsubsection{Workspace}
+\label{mm-Workspace}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/2.png}}
 \end{wrapfigure} 
@@ -276,6 +292,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \end{itemize}
 
 \subsubsection{Sensor}
+\label{mm-Sensor}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/3.png}}
 \end{wrapfigure} 
@@ -290,6 +307,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \end{itemize}
 
 \subsubsection{MLModel}
+\label{MLModel}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/4.png}}
 \end{wrapfigure} 
@@ -303,6 +321,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \end{itemize}
 
 \subsubsection{Imputation}
+\label{Imputation}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/5.png}}
 \end{wrapfigure} 
@@ -312,6 +331,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 
 \subsubsection{Feature}
+\label{Feature}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/6.png}}
 \end{wrapfigure} 
@@ -323,6 +343,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 
 \subsubsection{Normalizer}
+\label{Normalizer}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/7.png}}
 \end{wrapfigure} 
@@ -332,6 +353,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 
 \subsubsection{Factory}
+\label{Factory}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/8.png}}
 \end{wrapfigure} 
@@ -347,6 +369,7 @@ This static class is responsible for creating imputer, normalizer and classifier
 \end{itemize}
 
 \subsubsection{IImputer}
+\label{IImputer}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/9.png}}
 \end{wrapfigure} 
@@ -361,6 +384,7 @@ This is an interface for an imputer object.
 \end{itemize}
 
 \subsubsection{INormalizer}
+\label{INormalizer}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/10.png}}
 \end{wrapfigure} 
@@ -375,6 +399,7 @@ This is an interface for a normalizer object.
 \end{itemize}
 
 \subsubsection{IClassifier}
+\label{IClassifier}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/11.png}}
 \end{wrapfigure} 
@@ -389,6 +414,7 @@ This is an interface for a classifier object.
 \end{itemize}
 
 \subsubsection{PerfomanceMetrics}
+\label{PerformanceMetrics}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/12.png}}
 \end{wrapfigure} 
@@ -402,6 +428,7 @@ This class represents the performance metrics of a trained model.
 \end{itemize}
 
 \subsubsection{Hyperparameter}
+\label{Hyperparameter}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/13.png}}
 \end{wrapfigure} 
@@ -416,6 +443,7 @@ This class represents a hyperparameter for training a model.
 \end{itemize}
 
 \subsubsection{WorkspaceData}
+\label{WorkspaceData}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/14.png}}
 \end{wrapfigure} 
@@ -430,6 +458,7 @@ This class holds the sample data from the last training.
 \end{itemize}
 
 \subsubsection{SlidingWindow}
+\label{SlidingWindow}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/15.png}}
 \end{wrapfigure} 
@@ -445,6 +474,7 @@ This class hold the sample data from recent trainings which is split into window
 \end{itemize}
 
 \subsubsection{ImputedData}
+\label{ImputedData}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/16.png}}
 \end{wrapfigure} 
@@ -460,6 +490,7 @@ This class holds the imputed data from recent trainings.
 \end{itemize}
 
 \subsubsection{ExtractedFeature}
+\label{ExtractedFeature}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/17.png}}
 \end{wrapfigure} 
