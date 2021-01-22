@@ -10,10 +10,18 @@ u -> app : scan QR code with predictionId
 app --> pp **
 deactivate app
 activate pp
-pp -> api : getPredictionConfiguration(id: string):
+pp -> api : getPredictionConfiguration(id: string)
 api ->]: REST
 return
 return IPredictionConfiguration
 note left: listen via effect hook
-
+pp -> api : sendDataToPredict(id: string,\ndata: ISensorDatapoints[])
+api ->]: REST
+return
+return
+note left: get prediction via effect hook
+pp -> api : getPrediction(id: string)
+api ->]: REST
+return
+return
 @enduml
