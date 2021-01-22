@@ -4,24 +4,38 @@ autoactivate on
 actor User as u
 participant App as app << component >>
 participant LabelSelectionPage as lsp << component >>
-participant RecordingPage as rp << component >>
 participant RecordingConfigurationPage as rcp << component >>
+participant RecordingPage as rp << component >>
 participant API as api
 
 u -> app : scan QR code with submissionId
-app -> lsp **
+app --> lsp **
 deactivate app
 activate lsp
 lsp -> api : getSubmissionConfiguration(id: string):
 api ->]: REST
 return
 return ISubmissionConfiguration
-lsp -> lsp: render label buttons
-deactivate
 deactivate
 
 u -> lsp : select "Label 1"
-
-
-
+lsp --> rcp **
+deactivate lsp
+u -> rcp : enter countdown "5s"
+deactivate
+u -> rcp : enter duration "10s"
+deactivate
+u -> rcp : click "start recording"
+rcp --> rp **
+deactivate rcp
+activate rp
+rp -> rp : start recording
+note left: after "5s"\nvia an effect hook
+return
+note left: after "10s"
+rp -> api: submitSample(id: string,\nlabel: ILabel, start: Date,\nend: Date, data: ISensorDatapoints[])
+api ->]: REST
+return
+return
+deactivate
 @enduml
