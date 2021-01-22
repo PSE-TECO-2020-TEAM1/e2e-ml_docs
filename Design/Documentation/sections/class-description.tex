@@ -336,14 +336,14 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/8.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This static class is responsible for creating imputer, normalizer and classifier objects.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{getImputer}
-    \item \textbf{getNormalizer}
-    \item \textbf{getClassifier}
+    \item \textbf{getImputer} creates and returns an imputer object with the given name of the imputer
+    \item \textbf{getNormalizer} creates and returns a normalizer object with the given name of the normalizer
+    \item \textbf{getClassifier} creates and returns a classifier object with the given name of the classifier
 \end{itemize}
 
 \subsubsection{IImputer}
@@ -351,13 +351,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/9.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This is an interface for an imputer object.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{fit}
-    \item \textbf{transform}
+    \item \textbf{fit} fits the given data in the imputer object
+    \item \textbf{transform} imputes the given data
 \end{itemize}
 
 \subsubsection{INormalizer}
@@ -365,13 +365,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/10.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This is an interface for a normalizer object.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{fit}
-    \item \textbf{transform}
+    \item \textbf{fit} fits the given data in the normalizer object
+    \item \textbf{transform} normalizes the given data
 \end{itemize}
 
 \subsubsection{IClassifier}
@@ -379,13 +379,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/11.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This is an interface for a classifier object.
 \newline
 \newline
 \textbf{Methods}
 \begin{itemize}
-    \item \textbf{fit}
-    \item \textbf{predict}
+    \item \textbf{fit} fits the given data in the classifier object
+    \item \textbf{predict} predicts of which label this data is
 \end{itemize}
 
 \subsubsection{PerfomanceMetrics}
@@ -393,12 +393,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/12.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represents the performance metrics of a trained model.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{labels}
+    \item \textbf{labels} map of labels to their performance metrics
 \end{itemize}
 
 \subsubsection{Hyperparameter}
@@ -406,13 +406,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/13.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class represents a hyperparameter for training a model.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{name}
-    \item \textbf{format}
+    \item \textbf{name} name of the hyperparameter
+    \item \textbf{format} the format of the value that the hyperparameter can get
 \end{itemize}
 
 \subsubsection{WorkspaceData}
@@ -420,13 +420,13 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/14.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class holds the sample data from the last training.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{sampleHash}
-    \item \textbf{data}
+    \item \textbf{sampleHash} hash of the sample data
+    \item \textbf{data} the sample data
 \end{itemize}
 
 \subsubsection{SlidingWindow}
@@ -434,14 +434,14 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/15.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class hold the sample data from recent trainings which is split into windows.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{window\_size}
-    \item \textbf{sliding\_step}
-    \item \textbf{data}
+    \item \textbf{window\_size} size of the windows
+    \item \textbf{sliding\_step} the sliding step of the windows
+    \item \textbf{data} the sliding windows
 \end{itemize}
 
 \subsubsection{ImputedData}
@@ -449,14 +449,14 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/16.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class holds the imputed data from recent trainings.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{imputation}
-    \item \textbf{data}
-    \item \textbf{imputer\_object}
+    \item \textbf{imputation} the used imputation method
+    \item \textbf{data} the imputed data
+    \item \textbf{imputer\_object} the used imputer object
 \end{itemize}
 
 \subsubsection{ExtractedFeature}
@@ -464,11 +464,11 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/model-management/17.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class holds the extracted features of the data from recent trainings.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item \textbf{feature}
-    \item \textbf{data}
+    \item \textbf{feature} the extracted feature
+    \item \textbf{data} the values of the feature
 \end{itemize}
