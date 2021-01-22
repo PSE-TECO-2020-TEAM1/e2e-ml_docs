@@ -50,28 +50,26 @@ A registered user
     \item \textbf{isValidPassword} iff the supplied password is valid
 \end{itemize}
 
-\subsubsection{Validate Email}
+\subsubsection{EmailValidator}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/3.png}}
 \end{wrapfigure} 
 \par
-This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
+This class sends an email to the user with a token and checks if the given token is correct.
 \newline
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
+    \item \textbf{userToToken} maps the user id to the sent token
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{sendTokenToEmail} 
+    \item \textbf{checkToken}
+    \item \textbf{generateValidationToken}
 \end{itemize}
 
-\subsubsection{Token Content}
+\subsubsection{TokenContent}
 \begin{wrapfigure}{l}{4.5cm}
     \raisebox{0pt}[\dimexpr\height-0.5\baselineskip\relax]{\includegraphics[width=4.5cm]{classes/auth/4.png}}
 \end{wrapfigure} 
@@ -81,15 +79,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{username}
+    \item \textbf{expiration}
 \end{itemize}
 
 \subsection{Workspace Management}
@@ -102,17 +93,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{find}
 \end{itemize}
 
 \subsubsection{Workspace}
@@ -125,15 +108,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{name}
+    \item \textbf{user}
+    \item \textbf{submissionIds}
 \end{itemize}
 
 \subsubsection{Sensor}
@@ -146,15 +123,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{samplingRate}
 \end{itemize}
 
 \subsubsection{SensorType}
@@ -167,15 +136,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{maxSamplingRate}
+    \item \textbf{defaultSamplingRate}
+    \item \textbf{dataFormat}
 \end{itemize}
 
 \subsubsection{Label}
@@ -188,15 +151,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{name}
+    \item \textbf{description}
 \end{itemize}
 
 \subsubsection{SampleModel}
@@ -207,17 +163,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{find}
 \end{itemize}
 
 \subsubsection{Sample}
@@ -230,15 +178,12 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
+    \item \textbf{start}
+    \item \textbf{end}
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{setTimeFrames}
 \end{itemize}
 
 \subsubsection{SensorDataPoints}
@@ -251,15 +196,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{sensor\_id}
 \end{itemize}
 
 \subsubsection{DataPoint}
@@ -272,15 +209,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{value}
+    \item \textbf{timestamp}
 \end{itemize}
 
 \subsubsection{TimeFrame}
@@ -293,15 +223,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{start}
+    \item \textbf{end}
 \end{itemize}
 
 \subsection{Model Management}
@@ -316,15 +239,25 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
+    \item \textbf{progress}
+    \item \textbf{databaseClient}
+    \item \textbf{workspaceId}
+    \item \textbf{imputation}
+    \item \textbf{features}
+    \item \textbf{normalizer}
+    \item \textbf{classifier}
+    \item \textbf{hyperparameters}
 \end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{train}
+    \item \textbf{setDatabaseClient}
+    \item \textbf{requestSampleHash}
+    \item \textbf{requestDataSet}
+    \item \textbf{splitToWindows}
+    \item \textbf{impute}
+    \item \textbf{extractFeature}
+    \item \textbf{normalize}
 \end{itemize}
 
 \subsubsection{Workspace}
@@ -337,15 +270,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{user}
+    \item \textbf{predictionIds}
 \end{itemize}
 
 \subsubsection{Sensor}
@@ -358,15 +284,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item textbf{name}
+    \item textbf{samplingRate}
 \end{itemize}
 
 \subsubsection{MLModel}
@@ -379,15 +298,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{name}
 \end{itemize}
 
 \subsubsection{Imputation}
@@ -398,18 +309,6 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
-\end{itemize}
 
 \subsubsection{Feature}
 \begin{wrapfigure}{l}{4.5cm}
@@ -419,18 +318,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
-\end{itemize}
+\newline
+\newline
 
 \subsubsection{Normalizer}
 \begin{wrapfigure}{l}{4.5cm}
@@ -440,18 +329,6 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
-\end{itemize}
 
 \subsubsection{Factory}
 \begin{wrapfigure}{l}{4.5cm}
@@ -461,17 +338,11 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{getImputer}
+    \item \textbf{getNormalizer}
+    \item \textbf{getClassifier}
 \end{itemize}
 
 \subsubsection{IImputer}
@@ -482,17 +353,10 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{fit}
+    \item \textbf{transform}
 \end{itemize}
 
 \subsubsection{INormalizer}
@@ -503,17 +367,10 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{fit}
+    \item \textbf{transform}
 \end{itemize}
 
 \subsubsection{IClassifier}
@@ -524,17 +381,10 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 This class is blablabla and bla bla bla. This denotes bla bla bla and provided by Selehaddin Ozdemir. xdaslkads anu adl kl;asd k;lads l;l;kasdk ;lkdsa;k lllld kksdk mjdask hdaksjhd haso sadjh salk da.
 \newline
 \newline
-\textbf{Attributes}
-\begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
 \textbf{Methods}
 \begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{fit}
+    \item \textbf{predict}
 \end{itemize}
 
 \subsubsection{PerfomanceMetrics}
@@ -547,15 +397,7 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{labels}
 \end{itemize}
 
 \subsubsection{Hyperparameter}
@@ -568,15 +410,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{name}
+    \item \textbf{format}
 \end{itemize}
 
 \subsubsection{WorkspaceData}
@@ -589,15 +424,8 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{sampleHash}
+    \item \textbf{data}
 \end{itemize}
 
 \subsubsection{SlidingWindow}
@@ -610,15 +438,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{window\_size}
+    \item \textbf{sliding\_step}
+    \item \textbf{data}
 \end{itemize}
 
 \subsubsection{ImputedData}
@@ -631,15 +453,9 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{imputation}
+    \item \textbf{data}
+    \item \textbf{imputer\_object}
 \end{itemize}
 
 \subsubsection{ExtractedFeature}
@@ -652,13 +468,6 @@ This class is blablabla and bla bla bla. This denotes bla bla bla and provided b
 \newline
 \textbf{Attributes}
 \begin{itemize}
-    \item dsasad
-    \item dask
-    \item ozdemir
-\end{itemize}
-\textbf{Methods}
-\begin{itemize}
-    \item enes
-    \item gotten
-    \item vurduruyor
+    \item \textbf{feature}
+    \item \textbf{data}
 \end{itemize}
