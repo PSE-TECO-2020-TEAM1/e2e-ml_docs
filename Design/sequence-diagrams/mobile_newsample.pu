@@ -1,0 +1,27 @@
+@startuml Mobile Client - New Sample
+autoactivate on
+
+actor User as u
+participant App as app << component >>
+participant LabelSelectionPage as lsp << component >>
+participant RecordingPage as rp << component >>
+participant RecordingConfigurationPage as rcp << component >>
+participant API as api
+
+u -> app : scan QR code with submissionId
+app -> lsp **
+deactivate app
+activate lsp
+lsp -> api : getSubmissionConfiguration(id: string):
+api ->]: REST
+return
+return ISubmissionConfiguration
+lsp -> lsp: render label buttons
+deactivate
+deactivate
+
+u -> lsp : select "Label 1"
+
+
+
+@enduml
