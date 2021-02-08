@@ -1,13 +1,14 @@
 @startgantt
-Project starts 2021-01-25
+Project starts 2021-01-27
 saturday are closed
 sunday are closed
+monday are closed
 ' and ends 2021-02-19
-[Start] happens 2021-01-25
+[Start] happens 2021-01-27
 [End] happens 2021-02-19
 -- clients --
-[c.API] on {Ömer} lasts 1 weeks
-[c.App] on {Ömer} lasts 4 days
+[c.API] on {Ömer} lasts 2 week
+[c.App] on {Ömer} lasts 2 days
 [c.Header] on {Ömer} starts 4 day after [c.App]'s end and lasts 1 day
 -- \tdesktop client --
 [c.d.LoginPage] on {Ömer} starts at [c.App]'s end and lasts 1 day
@@ -26,51 +27,50 @@ sunday are closed
 [c.d.WorkspaceModelDetailsPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day
 [c.d.WorkspaceModelClassifyPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day
 -- \tmobile client --
-[c.m.LabelSelectionPage] on {Ömer} starts at [c.App]'s end and lasts 1 day
-[c.m.RecordingConfigurationPage] on {Ömer} starts at [c.m.LabelSelectionPage]'s end and lasts 1 day
-[c.m.RecordingPage] on {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 3 day
-[c.m.PredictionPage] on {Ömer} starts at [c.m.RecordingPage]'s end and lasts 3 day
+[c.m.LabelSelectionPage] on {Tarek} {Ömer} starts 7 days after [c.App]'s end and lasts 1 day
+[c.m.RecordingConfigurationPage] on {Tarek} {Ömer} starts at [c.m.LabelSelectionPage]'s end and lasts 1 day
+[c.m.RecordingPage] on {Tarek} {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 3 day
+[c.m.PredictionPage] on {Tarek} {Ömer} starts at [c.m.RecordingPage]'s end and lasts 3 day
 -- workspace management --
-[w.App] lasts 1 day
-[w.LabelController] lasts 1 day
-[w.WorkspaceController] lasts 1 day
-[w.Sensor] lasts 1 day
-[w.DataPoint] lasts 1 day
-[w.SensorDataPoints] lasts 1 day
-[w.TimeFrame] lasts 1 day
-[w.Sample] lasts 1 day
-[w.SampleModel] lasts 1 day
-[w.Label] lasts 1 day
-[w.Workspace] lasts 1 day
-[w.WorkspaceModel] lasts 1 day
-[w.SampleController] lasts 1 day
+[w.App] on {Murat} starts 2021-01-29 and  lasts 1 day
+[w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 5 day
+[w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 3 day
+[w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 1 day
+[w.Sensor] on {Murat} starts at [w.Workspace]'s end and lasts 1 day
+[w.SampleController] on {Murat} starts at [w.Sensor]'s end and lasts 3 day
+[w.SampleModel] on {Murat} starts at [w.SampleController]'s start and lasts 3 day
+[w.Sample] on {Murat} starts at [w.SampleController]'s start and lasts 1 day
+[w.SensorDataPoints] on {Murat} starts at [w.Sample]'s end and lasts 1 day
+[w.DataPoint] on {Murat} starts at [w.SensorDataPoints]'s start and lasts 1 day
+[w.TimeFrame] on {Murat} starts at [w.Sample]'s end and lasts 1 day
+[w.Label] on {Murat} starts at [w.Sample]'s end and lasts 1 day
+[w.LabelController] on {Murat} starts at [w.App]'s end and lasts 2 day
 -- model management --
-[m.App] lasts 1 day
-[m.Workspace] lasts 1 day
-[m.Sensor] lasts 1 day
-[m.GetParametersRes] lasts 1 day
-[m.Hyperparameter] lasts 1 day
-[m.TrainReq] lasts 1 day
-[m.GetModelRes] lasts 1 day
-[m.GetPredictionConfigRes] lasts 1 day
-[m.Router] lasts 1 day
-[m.Predictor] lasts 1 day
-[m.Sample] lasts 1 day
-[m.SensorDataPoints] lasts 1 day
-[m.DataPoint] lasts 1 day
-[m.Factory] lasts 1 day
-[m.Trainer] lasts 1 day
-[m.PerformanceMetrics] lasts 1 day
-[m.MLModel] lasts 1 day
-[m.WorkspaceData] lasts 1 day
-[m.SlidingWindow] lasts 1 day
-[m.ImputedData] lasts 1 day
-[m.ExtractedFeature] lasts 1 day
+[m.Workspace] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day
+[m.Sensor] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day 
+[m.MLModel] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day
+[m.Sample] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
+[m.SensorDataPoints] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
+[m.DataPoint] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
+[m.Factory] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day
+[m.PerformanceMetrics] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day
+[m.Trainer] on {Enes} {Atalay} starts at [m.Factory]'s end and lasts 5 day
+[m.WorkspaceData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
+[m.SlidingWindow] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
+[m.ImputedData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
+[m.ExtractedFeature] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
+[m.Predictor] on {Enes} {Atalay} starts at [m.WorkspaceData]'s end and lasts 3 day
+[m.Router] on {Tarek} starts 2021-01-29 and lasts 3 day
+[m.GetParametersRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
+[m.Hyperparameter] on {Tarek} starts at [m.Router]'s end and lasts 2 day
+[m.TrainReq] on {Tarek} starts at [m.Router]'s end and lasts 2 day
+[m.GetModelRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
+[m.GetPredictionConfigRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
+[m.App] on {Tarek} starts at [m.GetParametersRes]'s end and lasts 3 day
 -- authentication --
-[a.App] lasts 1 day
-[a.TokenContent] lasts 1 day
-[a.AuthenticationController] lasts 1 day
-[a.UserModel] lasts 1 day
-[a.User] lasts 1 day
-[a.EmailValidator] lasts 1 day
+[a.User] on {Enes} {Atalay} lasts 1 day
+[a.UserModel] on {Enes} {Atalay} lasts 1 day
+[a.AuthenticationController] on {Enes} {Atalay} starts at [a.UserModel]'s end and lasts 1 day
+[a.EmailValidator] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day
+[a.App] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day
 @endgantt
