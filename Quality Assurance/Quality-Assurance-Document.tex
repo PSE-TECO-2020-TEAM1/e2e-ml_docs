@@ -1,0 +1,57 @@
+%===============================================================
+%   Quality Assurance
+%===============================================================
+
+\documentclass[parskip=full]{scrartcl}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc} % avoid garbled Unicode text in pdf
+\usepackage{hyperref} % detailed hyperlink/pdf configuration
+\usepackage{csquotes} % provides \enquote{} macro for "quotes"
+\usepackage{graphicx} % embed graphics
+\usepackage[toc]{glossaries}
+ 
+% definitions
+\newcommand{\pseProjectName}{An Interactive End-To-End Machine Learning Platform}
+\newcommand{\pseTitle}{\pseProjectName}
+\newcommand{\pseDocTitle}{Quality Assurance}
+
+\hypersetup{ % ‘texdoc hyperref‘ for options
+pdftitle={\pseDocTitle}}
+\title{%
+    \pseTitle \\
+    \large \pseDocTitle
+    \date{\today}
+}
+\makenoidxglossaries
+\loadglsentries{glossary}
+\begin{document}
+
+\begin{titlepage}
+    \maketitle
+    \begin{center}
+        \begin{tabular}{ r l }
+            Requirements Specification & \textbf{Murat Kurnaz}         \\
+            Design                     & \textbf{Mustafa Enes Batur}   \\
+            Implementation             & \textbf{Ömer Erdinç Yağmurlu} \\
+            QA / Testing               & \textbf{Tarek Gaddour}        \\
+            Final                      & \textbf{Atalay Donat}         \\
+        \end{tabular}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\include{sections/introduction}
+\newpage
+\include{sections/Test-Scenarios}
+\newpage
+\include{sections/Coverage-Tests}
+\newpage
+\include{sections/Think-Aloud}
+
+\printnoidxglossary
+
+% END DOCUMENT
+\end{document}
