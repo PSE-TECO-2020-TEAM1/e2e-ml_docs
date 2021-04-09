@@ -7,70 +7,70 @@ monday are closed
 [Start] happens 2021-01-27
 [End] happens 2021-02-19
 -- clients --
-[c.API] on {Ömer} lasts 2 week
-[c.App] on {Ömer} lasts 2 days
+[c.API] on {Ömer} lasts 2 week and is colored in GreenYellow/Green
+[c.App] on {Ömer} lasts 2 days and is colored in GreenYellow/Green
 [c.Header] on {Ömer} starts 4 day after [c.App]'s end and lasts 1 day
 -- \tdesktop client --
-[c.d.LoginPage] on {Ömer} starts at [c.App]'s end and lasts 1 day
-[c.d.SignupPage] on {Ömer} starts at [c.App]'s end and lasts 1 day
-[c.d.WorkspacesListPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 day
-[c.d.WorkspaceCreationPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 days
-[c.d.WorkspacePage] on {Ömer} starts at [c.d.WorkspaceCreationPage]'s end and lasts 2 day
-[c.d.WorkspaceCollectDataPage] on {Ömer} starts at [c.d.WorkspacePage]'s end and lasts 1 day
-[c.d.QRView] on {Ömer} starts at [c.d.WorkspaceCollectDataPage]'s end and lasts 2 days
-[c.d.SampleList] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day
-[c.d.WorkspaceSampleDetailsPage] on {Ömer} starts at [c.d.SampleList]'s end and lasts 2 days
+[c.d.LoginPage] on {Ömer} starts at [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.SignupPage] on {Ömer} starts at [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspacesListPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceCreationPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 days and is colored in GreenYellow/Green
+[c.d.WorkspacePage] on {Ömer} starts at [c.d.WorkspaceCreationPage]'s end and lasts 2 day and is colored in GreenYellow/Green
+[c.d.WorkspaceCollectDataPage] on {Ömer} starts at [c.d.WorkspacePage]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.QRView] on {Ömer} starts at [c.d.WorkspaceCollectDataPage]'s end and lasts 2 days and is colored in GreenYellow/Green
+[c.d.SampleList] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceSampleDetailsPage] on {Ömer} starts at [c.d.SampleList]'s end and lasts 2 days and is colored in GreenYellow/Green
 [c.d.SampleChart] on {Ömer} starts 2 days after [c.d.WorkspaceSampleDetailsPage]'s end and lasts 5 days
-[c.d.ModelOptions] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day
-[c.d.WorkspaceLabelsPage] on {Ömer} starts at [c.d.ModelOptions]'s end and lasts 1 day
-[c.d.WorkspaceModelsPage] on {Ömer} starts 1 day after [c.d.ModelOptions]'s end and lasts 1 day
-[c.d.WorkspaceModelDetailsPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day
-[c.d.WorkspaceModelClassifyPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day
+[c.d.ModelOptions] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceLabelsPage] on {Ömer} starts at [c.d.ModelOptions]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModelsPage] on {Ömer} starts 1 day after [c.d.ModelOptions]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModelDetailsPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModelClassifyPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day and is colored in GreenYellow/Green
 -- \tmobile client --
-[c.m.LabelSelectionPage] on {Tarek} {Ömer} starts 7 days after [c.App]'s end and lasts 1 day
-[c.m.RecordingConfigurationPage] on {Tarek} {Ömer} starts at [c.m.LabelSelectionPage]'s end and lasts 1 day
-[c.m.RecordingPage] on {Tarek} {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 3 day
+[c.m.LabelSelectionPage] on {Tarek} {Ömer} starts 7 days after [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.m.RecordingConfigurationPage] on {Tarek} {Ömer} starts at [c.m.LabelSelectionPage]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.m.RecordingPage] on {Tarek} {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 3 day and is colored in GreenYellow/Green
 [c.m.PredictionPage] on {Tarek} {Ömer} starts at [c.m.RecordingPage]'s end and lasts 3 day
 -- workspace management --
-[w.App] on {Murat} starts 2021-01-29 and  lasts 1 day
-[w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 5 day
-[w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 3 day
-[w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 1 day
-[w.Sensor] on {Murat} starts at [w.Workspace]'s end and lasts 1 day
-[w.SampleController] on {Murat} starts at [w.Sensor]'s end and lasts 3 day
-[w.SampleModel] on {Murat} starts at [w.SampleController]'s start and lasts 3 day
-[w.Sample] on {Murat} starts at [w.SampleController]'s start and lasts 1 day
-[w.SensorDataPoints] on {Murat} starts at [w.Sample]'s end and lasts 1 day
-[w.DataPoint] on {Murat} starts at [w.SensorDataPoints]'s start and lasts 1 day
-[w.TimeFrame] on {Murat} starts at [w.Sample]'s end and lasts 1 day
-[w.Label] on {Murat} starts at [w.Sample]'s end and lasts 1 day
-[w.LabelController] on {Murat} starts at [w.App]'s end and lasts 2 day
+[w.App] on {Murat} starts 2021-01-29 and  lasts 1 day and is colored in GreenYellow/Green
+[w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 5 day and is colored in GreenYellow/Green
+[w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 3 day and is colored in GreenYellow/Green
+[w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 1 day and is colored in GreenYellow/Green
+[w.Sensor] on {Murat} starts at [w.Workspace]'s end and lasts 1 day and is colored in GreenYellow/Green
+[w.SampleController] on {Murat} starts at [w.Sensor]'s end and lasts 3 day and is colored in GreenYellow/Green
+[w.SampleModel] on {Murat} starts at [w.SampleController]'s start and lasts 3 day and is colored in GreenYellow/Green
+[w.Sample] on {Murat} starts at [w.SampleController]'s start and lasts 1 day and is colored in GreenYellow/Green
+[w.SensorDataPoints] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
+[w.DataPoint] on {Murat} starts at [w.SensorDataPoints]'s start and lasts 1 day and is colored in GreenYellow/Green
+[w.TimeFrame] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
+[w.Label] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
+[w.LabelController] on {Murat} starts at [w.App]'s end and lasts 2 day and is colored in GreenYellow/Green
 -- model management --
-[m.Workspace] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day
-[m.Sensor] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day 
-[m.MLModel] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day
-[m.Sample] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
-[m.SensorDataPoints] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
-[m.DataPoint] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day
-[m.Factory] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day
-[m.PerformanceMetrics] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day
-[m.Trainer] on {Enes} {Atalay} starts at [m.Factory]'s end and lasts 5 day
-[m.WorkspaceData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
-[m.SlidingWindow] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
-[m.ImputedData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
-[m.ExtractedFeature] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day
-[m.Predictor] on {Enes} {Atalay} starts at [m.WorkspaceData]'s end and lasts 3 day
-[m.Router] on {Tarek} starts 2021-01-29 and lasts 3 day
-[m.GetParametersRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
-[m.Hyperparameter] on {Tarek} starts at [m.Router]'s end and lasts 2 day
-[m.TrainReq] on {Tarek} starts at [m.Router]'s end and lasts 2 day
-[m.GetModelRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
-[m.GetPredictionConfigRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day
-[m.App] on {Tarek} starts at [m.GetParametersRes]'s end and lasts 3 day
+[m.Workspace] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day and is colored in GreenYellow/Green
+[m.Sensor] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day  and is colored in GreenYellow/Green
+[m.MLModel] on {Enes} {Atalay} starts 2021-02-01 and lasts 1 day and is colored in GreenYellow/Green
+[m.Sample] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day and is colored in GreenYellow/Green
+[m.SensorDataPoints] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day and is colored in GreenYellow/Green
+[m.DataPoint] on {Enes} {Atalay} starts at [m.Workspace]'s end and lasts 1 day and is colored in GreenYellow/Green
+[m.Factory] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.PerformanceMetrics] on {Enes} {Atalay} starts at [m.Sample]'s end and lasts 2 day  and is colored in GreenYellow/Green
+[m.Trainer] on {Enes} {Atalay} starts at [m.Factory]'s end and lasts 5 day and is colored in GreenYellow/Green
+[m.WorkspaceData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day  and is colored in GreenYellow/Green
+[m.SlidingWindow] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day  and is colored in GreenYellow/Green
+[m.ImputedData] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day  and is colored in GreenYellow/Green
+[m.ExtractedFeature] on {Enes} {Atalay} starts at [m.Trainer]'s end and lasts 3 day  and is colored in GreenYellow/Green
+[m.Predictor] on {Enes} {Atalay} starts at [m.WorkspaceData]'s end and lasts 3 day  and is colored in GreenYellow/Green
+[m.Router] on {Tarek} starts 2021-01-29 and lasts 3 day and is colored in GreenYellow/Green
+[m.GetParametersRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.Hyperparameter] on {Tarek} starts at [m.Router]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.TrainReq] on {Tarek} starts at [m.Router]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.GetModelRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.GetPredictionConfigRes] on {Tarek} starts at [m.Router]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.App] on {Tarek} starts at [m.GetParametersRes]'s end and lasts 3 day  and is colored in GreenYellow/Green
 -- authentication --
-[a.User] on {Enes} {Atalay} lasts 1 day
-[a.UserModel] on {Enes} {Atalay} lasts 1 day
-[a.AuthenticationController] on {Enes} {Atalay} starts at [a.UserModel]'s end and lasts 1 day
-[a.EmailValidator] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day
-[a.App] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day
+[a.User] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
+[a.UserModel] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
+[a.AuthenticationController] on {Enes} {Atalay} starts at [a.UserModel]'s end and lasts 1 day and is colored in GreenYellow/Green
+[a.EmailValidator] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day and is colored in GreenYellow/Green
+[a.App] on {Enes} {Atalay} starts at [a.AuthenticationController]'s end and lasts 1 day and is colored in GreenYellow/Green
 @endgantt
