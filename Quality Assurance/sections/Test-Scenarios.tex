@@ -1,0 +1,368 @@
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+\section{Test Scenarios}
+The following test scenarios are the one handled in the specification requirements document. Starred test scenarios indicate that extending functionalities are also tested in the scenario.
+\subsubsection{Test Scenario 1 - First Time User}
+A user opens the webpage on their computer and registers to the service. After logging in, the user creates a new workspace. The user adds a new label to this workspace and initiates data collection via scanning the QR code. On their mobile device they choose a label for the action they will record. The user then starts recording using the default configuration. After the recording concludes, the user starts another recording. With the data they have collected, the user trains and deploys a machine learning machine learning model{model}. The user then scans the deployed machine learning model models' unique QR code to identify new data they record in real-time. Lastly, the user stops the classification and examines the classified actions.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+ \hline
+FR     & Designation                                                                  &accepted              \\
+ \hline 
+/T010/ & Access web page.                                                             &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T021/ & Sign up with new credentials                                                 &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T031/ & Login with existing credentials.                                             &  X                       \\
+ \hline
+/T040/ & Create a new workspace with a name, sampling rate value and required sensors &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T070/ & Open the labels overview.                                                    &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T071/ & Create new label.                                                            &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T081/ & Initiate data collection via scanning the QR code.                           &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T230/ & Choose a label for the data that will be recorded.                           &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T260/ & Start recording data                                                         &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T280/ & Record another data after one recording completes                            &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T190/ & Train the model.                                                             &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T200/ & Open the models overview.                                                    &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T290/ & Initiate data classification via scanning the QR code.                       &  X {\color[HTML]{67FD9A} } \\
+ \hline
+/T300/ & Record data to classify                                                      &  X {\color[HTML]{67FD9A} } \\
+ \hline
+\end{tabular}
+\end{table}
+\subsubsection{Test Scenario 2 - Invalid credentials}
+User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
+
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+ \hline
+FR     & Designation                                                                  &accepted                \\
+\hline
+/T010/ & Access web page.                                                             &  X \\
+\hline
+/T032/ & Login with invalid credentials                                                                        &  X  \\
+\hline
+/T032/ & Login with invalid credentials                                               &  X {\color[HTML]{67FD9A} }                \\
+\hline
+/T031/ & Login with existing credentials. &  X {\color[HTML]{67FD9A} } \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\subsubsection{Test Scenario 3 - Unsupported Desktop Client}
+User opens the website on an unsupported desktop browser and is welcomed with an error message.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                  &accepted                \\
+\hline
+/T013/ & Access web page via Internet Explorer 6                                                                &{\color[HTML]{67FD9A} } \\
+\hline
+
+
+\end{tabular}
+\end{table}
+
+\subsubsection{Test Scenario 4 - Unsupported Mobile Client}
+User scans the QR code they received to begin recording data. It turns out their device
+doesn't support the Sensor API and the website notifiees the user about it.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+ /T092/ &  Initiate date collection via scanning the QR code. &   {\color[HTML]{67FD9A} } \\
+ \hline
+
+
+\end{tabular}
+\end{table}
+\clearpage
+\subsubsection{Test Scenario 5 - Forgotten Password*}
+User tries to login with an invalid username and/or password. After a few attempts
+user requests a new password using the "Forgot Password" functionality and successfully
+manages to login using their new password.
+
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                   &accepted                \\
+\hline
+/T010/ & Access web page.                                                             &  X {\color[HTML]{67FD9A} } \\
+\hline
+/T032/ & Login with invalid credentials                               .                                                 &  X {\color[HTML]{67FD9A} } \\
+\hline
+/T032/ & Login with invalid credentials                                                 &  X {\color[HTML]{67FD9A} }                \\
+\hline
+ /T400/ &  / Select "Forgot Password".&  {\color[HTML]{67FD9A} } \\
+ \hline
+  /T031/ &  /  Login with existing credentials&   X {\color[HTML]{67FD9A} } \\
+  \hline
+
+\end{tabular}
+\end{table}
+
+\subsubsection{Test Scenario 6 - Data Deletion}
+User logs in and opens their previously set workspace. User finds some data samples and
+labels to be improper and deletes them.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T031/  &  Login with existing credentials. &   X  \\
+ \hline
+ /T050/  &  Open an already existing workspace &   X  \\
+ \hline
+  /T130//  &  delete the selected label. &   X  \\
+ \hline
+  /T070/   &  Open the labels overview. &   X  \\
+ \hline
+ /T072/   &  Delete Label. &   X  \\
+ \hline
+\end{tabular}
+\end{table}
+\subsubsection{Test Scenario 7 - Interruption during Recording}
+User uses the link that was provided previously to start collecting data. After configuring
+the options the user starts the recording. Whilst recording, the user receives a phone
+call. Recording continues during the call. The user then discards the recording and start
+a new recording.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T031/  &  Login with existing credentials. &   X  \\
+ \hline
+ /T050//  &  Open an already existing workspace &   X  \\
+ \hline
+  /T081/  &  Initiate data collection via using the link. &   X  \\
+ \hline
+  /T230/   &  Choose a label for the data that will be recorded. &   X  \\
+ \hline
+ /T240/  &   Set the countdown to start of recording. &   X  \\
+ \hline
+  /T250/  &  Set the recording duration &   X \\
+ \hline
+ /T260/  &  Start recording data. &   X  \\
+ \hline
+  /T270/  &  Discard recorded data &  X   \\
+ \hline
+  /T280/   &  Record another data after one recording completes. &   X  \\
+ \hline
+ /T260/  &   Start recording data.
+ &   X \\
+ \hline
+\end{tabular}
+\end{table}
+\clearpage
+\subsubsection{Test Scenario 8 - Registration with Already Existing Credentials}
+User opens the website on their desktop device and tries to register with an already
+existing username.
+
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T022/  &   Sign up with existing credentials. &   X  \\
+ \hline
+
+\end{tabular}
+\end{table}
+\subsubsection{Test Scenario 9 - Multi-language Support}
+User opens the website and changes the language option to German.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T380/  &  Change the language of the desktop web client.
+ &     \\
+ \hline
+ 
+\end{tabular}
+\end{table}
+\subsubsection{Test Scenario 10 - Extensive Use of Main Functionalities}
+User opens the website and creates a new account.
+\clearpage
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T021/  &  Sign up with new credentials. &   X  \\
+ \hline
+ /T032/  &   Login with invalid credentials. &   X  \\
+ \hline
+  /T031/   &  Login with existing credentials. &   X  \\
+ \hline
+  /T040/   &  Create a new workspace with a name, sampling rate value and required
+sensors.  &   X  \\
+ \hline
+ /T060/   &   Rename the workspace &   X  \\
+ \hline
+  /T070/   &  Open the labels overview &   X  \\
+ \hline
+ /T071/   &  Create new label  &   X  \\
+ \hline
+ /T072/  &  Rename label. &    X \\
+ \hline
+ /T071/   &  Create new label  &   X  \\
+ \hline
+ /T073/  &  Delete label. &   X  \\
+ \hline
+ /T080/    & Initiate data collection via scanning the QR code. &   X  \\
+ \hline
+ /T230/   &  Choose a label for the data that will be recorded.
+ &   X  \\
+ \hline
+  /T240/ &  Set the countdown to start of recording.
+ &   X  \\
+ \hline
+ /T250/   &  Set the recording duration &   X \\
+ \hline
+ /T260/   &   Start recording data &   X  \\
+ \hline
+  /T270/    &  Discard recorded data. &   X  \\
+ \hline
+  /T280/    &  Record another data after one recording completes.  &   X  \\
+ \hline
+ /T230/    &   Choose a label for the data that will be recorded. &   X  \\
+ \hline
+ /T240/ &  Set the countdown to start of recording.
+ &   X  \\
+ \hline
+ /T250/   &  Set the recording duration &   X  \\
+ \hline
+ /T260/   &   Start recording data &   X  \\
+ \hline
+  /T090/   &  Open the sample overview  &   X  \\
+ \hline
+ /T100/    &  Choose another graph type to visualize data.  &   X \\
+ \hline
+ /T120/  &  Relabel the selected sample. &  X   \\
+ \hline
+ /T110/ & Set the relevant time frame of the selected data sample on the graph.  &   X  \\
+ \hline
+ /T130/  &  delete the selected label. &   X \\
+ \hline
+ /T140/  &Select the desired data imputation options. &   X \\
+ \hline
+ /T150/  & Select the desired feature extraction options.    &   X  \\
+ \hline
+ /T160/   &  Select the normalization options.
+ &   X  \\
+ \hline
+ /T170/ &  Select the desired machine learning model.
+ &   X  \\
+ \hline
+ /T180/ &  Set the hyperparameters of the model. &   X  \\
+ \hline
+  /T190/  &   Train the model  &   X  \\
+ \hline
+   /T200/    &  Open the models overview.  &   X  \\
+ \hline
+ /T210/     &  Open the overview of a specific model  &   X  \\
+ \hline
+ /T082/ &  Initiate data via scanning the QR code. &  X  \\
+ \hline
+ /T290/  & Record data to classify  &   X \\
+ \hline
+  /T300/   &  Stop the classification. &   X  \\
+ \hline
+ /T310/   &Restart the classification. &   X \\
+ \hline
+ /T300/   &  Stop the classification. &   X \\
+ \hline
+\end{tabular}
+\end{table}
+\clearpage
+\subsubsection{Test Scenario 11 -  Brute-force Attempt}
+User with malicious intents tries to hack an account through brute-forcing. After 5
+unsuccessful login attempts, they are presented with a CAPTCHA to solve.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T010/ &  Access web page &   X  \\
+ \hline
+ /T032/  &  Login with invalid credentials &   X  \\
+ \hline
+ /T032/  &  Login with invalid credentials &   X  \\
+ \hline
+ /T032/  &  Login with invalid credentials &   X \\
+ \hline
+ /T032/  &  Login with invalid credentials &   X \\
+ \hline
+ /T032/  &  Login with invalid credentials &   X \\
+ \hline
+ /T330/  &  Solve CAPTCHA &     \\
+ \hline
+  
+\end{tabular}
+\end{table}
+\clearpage
+\subsubsection{Test Scenario 12 - Multiple/Simultaneous Data Collection and
+Classification}
+Two mobile clients (A and B) collect data for one workspace simultaneously. Client A
+uses the link to initiate data collection, while client B scans the QR code. They both
+choose a label for their recording. Client A sets the recording countdown and duration,
+whereas client B start recording directly using the default configuration. While client
+A is recording their first data, client B starts another recording. After their recordings
+conclude, client A uses the link to initiate classification, while client B scans the QR link.
+They concurrently classify the data they record.
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
+\hline
+FR     & Designation                                                                    &accepted                \\
+\hline
+  /T081/  &  Initiate data collection via using the link. (A) &    \\
+ \hline
+  /T082/ &  Initiate data collection via scanning the QR code. (B)&    \\
+ \hline
+ /T230/   &  Choose a label for the data that will be recorded. (A) &   \\
+ \hline
+  /T230/   & Choose a label for the data that will be recorded. (B) &    \\
+ \hline
+  /T240/    &  Set the countdown to start of recording. (A) &    \\
+ \hline
+ /T260/  &  Start recording data.(B) &    \\
+ \hline
+  /T250/  &  Set the recording duration (A) &    \\
+ \hline
+  /T280/   &  Record another data after one recording completes.(B) &    \\
+ \hline
+ /T221/  &    Initiate data classification via using the link. (A)
+ &    \\
+ \hline
+ /T222/  &   / I Initiate data classification via scanning the QR code. (B)
+
+ &    \\
+ \hline
+ /T290/  &   Record data to classify. (A)&    \\
+  \hline
+  /T290/  &   Record data to classify. (B)&    \\
+  \hline
+\end{tabular}
+\end{table}
