@@ -1,0 +1,30 @@
+\section{Missing test-cases and Errors}
+\subsubsection{Missing test-cases Requirements}
+\begin{table}[h]
+\begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}}
+ \hline
+/T013/ & Access web page via Internet Explorer 6  \\
+ \hline 
+/T092/ &  Initiate date collection via scanning the QR code.  \\
+ \hline
+ /T400/ &  / Select "Forgot Password".               \\
+ \hline 
+/T380/  &  Change the language of the desktop web client. \\
+ \hline
+ /T330/  &  Solve CAPTCHA  \\
+ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Errors}
+\begin{itemize}
+  \item 1.Error: Login information is only persisted for 15 minutes.
+  \newline
+  Solution: make use of refreshToken and persist refreshed credentials into localStorage.
+  \item 2.Error:  models and labels on workspace page not updated in realtime.
+  \newline
+  Solution: Promise invalidator for:models and labels
+  \item 3.Error: sending empty mails in signups doesn't raise an error.
+  \newline
+  Solution:Currently it fails silently with an 200 OK status code.
+\end{itemize}

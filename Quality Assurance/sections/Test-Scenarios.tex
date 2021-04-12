@@ -4,6 +4,7 @@ The following test scenarios are the one handled in the specification requiremen
 \subsubsection{Test Scenario 1 - First Time User}
 A user opens the webpage on their computer and registers to the service. After logging in, the user creates a new workspace. The user adds a new label to this workspace and initiates data collection via scanning the QR code. On their mobile device they choose a label for the action they will record. The user then starts recording using the default configuration. After the recording concludes, the user starts another recording. With the data they have collected, the user trains and deploys a machine learning machine learning model{model}. The user then scans the deployed machine learning model models' unique QR code to identify new data they record in real-time. Lastly, the user stops the classification and examines the classified actions.
 \begin{table}[h]
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
  \hline
 FR     & Designation                                                                  &accepted              \\
@@ -36,8 +37,15 @@ FR     & Designation                                                            
  \hline
 /T300/ & Record data to classify                                                      &  X {\color[HTML]{67FD9A} } \\
  \hline
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
 \subsubsection{Test Scenario 2 - Invalid credentials}
 User tries to login with invalid credentials first and manages to login after a few unsuccessful attempts.
 
@@ -133,6 +141,7 @@ FR     & Designation                                                            
  \hline
 \end{tabular}
 \end{table}
+\clearpage
 \subsubsection{Test Scenario 7 - Interruption during Recording}
 User uses the link that was provided previously to start collecting data. After configuring
 the options the user starts the recording. Whilst recording, the user receives a phone
@@ -168,7 +177,7 @@ FR     & Designation                                                            
  \hline
 \end{tabular}
 \end{table}
-\clearpage
+
 \subsubsection{Test Scenario 8 - Registration with Already Existing Credentials}
 User opens the website on their desktop device and tries to register with an already
 existing username.
@@ -201,9 +210,9 @@ FR     & Designation                                                            
 \end{tabular}
 \end{table}
 \subsubsection{Test Scenario 10 - Extensive Use of Main Functionalities}
-User opens the website and creates a new account.
-\clearpage
+
 \begin{table}[h]
+\scalebox{0.79}{%
 \begin{tabular}{!{\VRule}c!{\VRule}c!{\VRule}c!{\VRule}}
 \hline
 FR     & Designation                                                                    &accepted                \\
@@ -294,7 +303,8 @@ sensors.  &   X  \\
  \hline
  /T300/   &  Stop the classification. &   X \\
  \hline
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 \clearpage
 \subsubsection{Test Scenario 11 -  Brute-force Attempt}
@@ -322,7 +332,7 @@ FR     & Designation                                                            
   
 \end{tabular}
 \end{table}
-\clearpage
+
 \subsubsection{Test Scenario 12 - Multiple/Simultaneous Data Collection and
 Classification}
 Two mobile clients (A and B) collect data for one workspace simultaneously. Client A
@@ -337,32 +347,32 @@ They concurrently classify the data they record.
 \hline
 FR     & Designation                                                                    &accepted                \\
 \hline
-  /T081/  &  Initiate data collection via using the link. (A) &    \\
+  /T081/  &  Initiate data collection via using the link. (A) &  X  \\
  \hline
-  /T082/ &  Initiate data collection via scanning the QR code. (B)&    \\
+  /T082/ &  Initiate data collection via scanning the QR code. (B)& X   \\
  \hline
- /T230/   &  Choose a label for the data that will be recorded. (A) &   \\
+ /T230/   &  Choose a label for the data that will be recorded. (A) & X  \\
  \hline
-  /T230/   & Choose a label for the data that will be recorded. (B) &    \\
+  /T230/   & Choose a label for the data that will be recorded. (B) &  X  \\
  \hline
-  /T240/    &  Set the countdown to start of recording. (A) &    \\
+  /T240/    &  Set the countdown to start of recording. (A) & X   \\
  \hline
- /T260/  &  Start recording data.(B) &    \\
+ /T260/  &  Start recording data.(B) &  X  \\
  \hline
-  /T250/  &  Set the recording duration (A) &    \\
+  /T250/  &  Set the recording duration (A) &  X  \\
  \hline
-  /T280/   &  Record another data after one recording completes.(B) &    \\
+  /T280/   &  Record another data after one recording completes.(B) & X   \\
  \hline
  /T221/  &    Initiate data classification via using the link. (A)
- &    \\
+ & X   \\
  \hline
  /T222/  &   / I Initiate data classification via scanning the QR code. (B)
 
- &    \\
+ & X   \\
  \hline
- /T290/  &   Record data to classify. (A)&    \\
+ /T290/  &   Record data to classify. (A)&  X  \\
   \hline
-  /T290/  &   Record data to classify. (B)&    \\
+  /T290/  &   Record data to classify. (B)& X   \\
   \hline
 \end{tabular}
 \end{table}
