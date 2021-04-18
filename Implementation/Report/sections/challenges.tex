@@ -21,11 +21,23 @@ We've tried to use a polyfill with the branch sensors-polyfill, but were getting
 \paragraph{Magnetometer} \
 Originally we wanted to support Magnetometer sensor too, since it was (supposedly) supported by the browsers we were targeting (on caniuse.com).
 \begin{center}
-    \includegraphics[width=0.49\textwidth]{images/magneto1.png}
-    \includegraphics[width=0.5\textwidth]{images/magneto2.png}
 \end{center}
 
+\begin{figure}[ht]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/magneto1.png}}
+    \caption{caniuse.com - Magnetometer}
+\end{figure}
+
+
+
 After implementing the sensor, however, we've noticed how no matter what we've tried, we weren't getting any data, and after more investigations we've discovered that the 'Magnetometer Sensor' and the 'Magnetometer Sensor API' are two different entities separate from each other, and dropped support for magnetometers.
+
+\begin{figure}[ht]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/magneto2.png}}
+    \caption{caniuse.com - Magnetometer API}
+\end{figure}
 
 \subsection{Workspace Management}
 \paragraph{Making a Consistent Server and Covering Failure Cases}
