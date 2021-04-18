@@ -1,1 +1,11 @@
-\subsection{workspace}
+\subsection{Workspace-Management}
+\subsubsection{Label}
+Label isn't saved as an embedded document anymore. To achieve the same functionality label now keeps the workspaceId of the workspace it belongs to and the number of samples it is the label of.
+\subsubsection{Data Point}
+ObjectId is now omitted as it is not used and causes disarray in the corresponding responses.
+\subsubsection{Sensor Data Point}
+ObjectId is omitted here as well on the same grounds. In addition name of the sensor is also added to schema to simplify communication with the client.
+\subsubsection{Sample}
+Sample does not embed the label data anymore, instead it saves the id of the label. Implementation of setTimeFrames method is also delegated to the workspaceController.
+\subsubsection{Workspace}
+TBD
