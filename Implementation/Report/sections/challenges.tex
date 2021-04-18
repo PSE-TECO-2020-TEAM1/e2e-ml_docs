@@ -1,4 +1,32 @@
 \section{Challenges}
-\subsection{Testing Clients}
-TBD
-\subsection{TBD, ADD MORE HERE}
+\subsection{Client}
+\subsubsection{Testing Clients}
+The front-end is written in React and is composed of presentational components (components), stateful components (containers) and hooks. In separating presentational and stateful components from one another we wanted to ease testing. Although testing presentational components took place without a problem using Jest.js snapshots, render tests and some simple consistency tests, stateful containers were harder to test, since they required extensive mocking of React's hook and lifecycle events.
+
+\subsubsection{Sensor Data Collection}
+\paragraph{Browser Inconsistencies} \
+
+\textit{from https://github.com/PSE-TECO-2020-TEAM1/client/issues/5\#issuecomment-817308653}
+
+There are two main APIs on sensor access in browsers right now, namely the Sensors API, which is incorporated into the web standard and supported by 71.03\% of all users worldwide.
+
+On the other hand there is the legacy DeviceMotionEvent API, which was an experimental technology designed before the aforementioned Sensors API was drafted. It is supported by 94.97\% of users worldwide (albeit with handicaps).
+
+In this application, we are using the new standard Sensors API, which is only supported by Chrome and Chromium based browsers like Edge, Brave etc. for now. Apple refuses to implement the new API citing privacy concerns, there is no information on why Firefox doesn't implement it. Since on Apple platforms all browsers from all vendors use the Safari WebView, this new API doesn't work at all on Apple devices.
+
+The DeviceMotionEvent API is unfortunately not suitable for use at all. All three different major browsers (Chrome, Safari and Firefox) have a different understanding of what coordinates they return and have no documentation of which units they return the data in.
+
+We've tried to use a polyfill with the branch sensors-polyfill, but were getting totally different results with different browsers (and with firefox totally broken results. Because of this reason we've decided not to support Apple users at all.
+
+\paragraph{Magnetometer} \
+Originally we wanted to support Magnetometer sensor too, since it was (supposedly) supported by the browsers we were targeting (on caniuse.com).
+\begin{center}
+    \includegraphics[width=0.49\textwidth]{images/magneto1.png}
+    \includegraphics[width=0.5\textwidth]{images/magneto2.png}
+\end{center}
+
+After implementing the sensor, however, we've noticed how no matter what we've tried, we weren't getting any data, and after more investigations we've discovered that the 'Magnetometer Sensor' and the 'Magnetometer Sensor API' are two different entities separate from each other, and dropped support for magnetometers.
+
+\subsection{Workspace Management}
+\subsection{Model Management}
+\subsection{Auth}
