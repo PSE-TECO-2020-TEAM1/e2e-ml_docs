@@ -28,5 +28,9 @@ Originally we wanted to support Magnetometer sensor too, since it was (supposedl
 After implementing the sensor, however, we've noticed how no matter what we've tried, we weren't getting any data, and after more investigations we've discovered that the 'Magnetometer Sensor' and the 'Magnetometer Sensor API' are two different entities separate from each other, and dropped support for magnetometers.
 
 \subsection{Workspace Management}
+\paragraph{Making a Consistent Server and Covering Failure Cases}
+As the workspace management handles storage of user data, it acts as a bridge between the client and the model management. Thus the validity of these data is a very crucial part of the work. Although the client prevents most of the invalid requests, such invalid requests could be handcrafted and sent to the server or the client itself could possibly generate an invalid data by an error so each request needed to be validated. Finding the error cases and handling them generated a lot of work, because finding the not so obvious error cases needed a general analysis of the action caused by the request on the server and possibly on the model management.
+\paragraph{Performance-Space Trade-Off Decisions}
+TBD
 \subsection{Model Management}
 \subsection{Auth}
