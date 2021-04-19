@@ -8,4 +8,18 @@ ObjectId is omitted here as well on the same grounds. In addition name of the se
 \subsubsection{Sample}
 Sample does not embed the label data anymore, instead it saves the id of the label. Implementation of setTimeFrames method is also delegated to the workspaceController.
 \subsubsection{Workspace}
-TBD
+\paragraph{SubmissionId} SubmissionId is not saved as a simple string anymore, instead it has its own interface with the field hash as string. This change was done to provide flexibility for possible future use cases, such as making submissionId expire after a while etc.
+\paragraph{Further Additions} Workspace now holds lastModifiedDate to enable model management to cache the machine learning pipeline, sample- and labelIds to speed up database queries/checks.
+\subsubsection{Routes}
+\paragraph{General Changes} Added new bad request responses that explains the error user is getting.
+\paragraph{GET /api/sensors} Removed as it didn't provide any utility other methods didn't cover.
+\paragraph{GET /api/workspaces/{workspaceId}/samples} Query parameters are changed to showDataPoints and onlyDate to be more intuitive.
+\paragraph{GET /api/workspaces/{workspaceId}/samples/{sampleId}} Response now also includes the timeframes of the sample.
+\paragraph{PUT /api/workspaces/{workspaceId}/samples/{sampleId}/relabel} labelName is now passed in the query instead of labelId.
+\paragraph{GET /api/workspaces/{workspaceId}/labels} Response body now also includes the sample count of the label.
+\paragraph{POST /api/workspaces/{workspaceId}/labels/create} labelName is now passed in the body instead of the query.
+\paragraph{PUT /api/workspaces/{workspaceId}/labels/{labelId}/rename} labelName is now passed in the body instead of the query.
+\paragraph{PUT /api/workspaces/{workspaceId}/labels/{labelId}/describe} description is now passed in the body instead of the query.
+\paragraph{GET /api/workspaces/{workspaceId}/submissionId} This route has been changed to GET /api/workspaces/{workspaceId}/generateSubmissionId to make its function clear.
+\paragraph{GET /api/submissionConfig} Label objects now include their labelId in the response body.
+\paragraph{POST /api/submitSample} submissionId is now passed in the request body.
