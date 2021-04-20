@@ -1,1 +1,61 @@
-\subsection{model}
+\subsection{Model Management}
+As described in the challenges section, we had to redesign this service. The main
+reason is the multiprocessing needs of the application that was unforeseeable for
+us during the design phase. The complete changelog requires a completely new design
+document but the following are the most important changes.
+
+\subsubsection{Router}
+\begin{itemize}
+    \item 
+    Split the Router class into two classes, CommonRoutes and WorkspaceRoutes.
+    \newline
+    \textbf{Reason:} API endpoints that need authentication are all under
+    a specific workspace, so the split made it easier to handle the authentication
+    of requests. We use an authentication middleware for all workspace routes. 
+    \item
+    Removed generatePredictionId method
+    \newline
+    \textbf{Reason:} We delegate this responsibility to the MongoDB client that
+    generates a new ID for each document that is inserted into the database.
+    \item
+    Removed the trainers and predictors fields
+    \newline
+    \textbf{Reason:} Trainers map was planned to be used to track the progress.
+    Since each trainer starts in a new process, this was not possible and we used
+    the database for progress tracking instead. Predictors are in a new class
+    PredictionManager described below.
+\end{itemize}
+
+\subsubsection{Request and Response Classes}
+\begin{itemize}
+    \item
+    Renamed the data classes.
+    \newline
+    \textbf{Reason:} The classes now represent the actual content instead of the name
+    of the API endpoint (i.e. TrainReq -> TrainingConfig)
+    \item
+    Seperate (sometimes duplicate) classes for domain models and API models
+    \newline
+    \textbf{Reason:} The first iteration of the service showed us that using the
+    same models for both internal logic and API endpoints are problematic because
+    of the possible changes to the endpoints. By seperating the classes, we had
+    the flexibility to change endpoints/parameters without affecting the logic code,
+    since the API models are converted to domain models.
+    \item
+    Added data validation for endpoints 
+    \newline
+    \textbf{Reason:} During the design, the data validation was missing. We have
+    added the data validation for models with comprehensible error messages that
+    frontend shows the end users.
+\end{itemize}
+
+\subsubsection{Database Models}
+\begin{itemize}
+    \item
+    Added (de)serialization methods for database models
+    \newline
+    \textbf{Reason:} We save large data in the database in binary form. 
+    (bytes type). To prevent errors during the deserialization because of the
+    unknown type of the binary objects, we added methods that complete
+    the type information for each binary document to database model classes.
+\end{itemize}
