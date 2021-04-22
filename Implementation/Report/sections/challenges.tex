@@ -38,11 +38,55 @@ After implementing the sensor, however, we've noticed how no matter what we've t
     \fbox{\includegraphics[width=\textwidth]{images/magneto2.png}}
     \caption{caniuse.com - Magnetometer API}
 \end{figure}
-
+\newpage
 \subsection{Workspace Management}
 \paragraph{Making a Consistent Server and Covering Failure Cases}
 As the workspace management handles storage of user data, it acts as a bridge between the client and the model management. Thus the validity of these data is a very crucial part of the work. Although the client prevents most of the invalid requests, such invalid requests could be handcrafted and sent to the server or the client itself could possibly generate an invalid data by an error so each request needed to be validated. Finding the error cases and handling them generated a lot of work, because finding the not so obvious error cases needed a general analysis of the action caused by the request on the server and possibly on the model management.
 \paragraph{Performance-Space Trade-Off Decisions}
 Swaying from the initial design is in most cases undesirable and comes with a cost. However as the implementation phase progressed, it came to light that the initial design fell short on some aspects regarding the functionality (see \ref{changes}). The app is designed to be scalable so when introducing new changes to the codebase we had to take performance related issues into consideration and it slowed down the progress when the changes had conflicting aspects regarding performance and space.
 \subsection{Model Management}
+This was a very challenging part of the project for us, since we had no 
+experience with the libraries that we use (namely scikit-learn) as well
+as the programming language Python and the machine learning pipeline. Our first
+attempt showed that our design for the service was not appropriate for the requirements
+so we had to iterate twice, which included writing the whole service from
+stratch.
+
+\subsubsection{Understanding Machine Learning Pipeline}
+During the design phase, we had tried to get a grasp of the machine learning
+process that we were going to implement but we had no real experience with it.
+This resulted in a very abstract design since we were unsure how different
+mechanisms interacted with each other. As we experimented with the frameworks,
+a series of new requirements came into play. This included changes in other
+components of the system that Model Management depended on like the front-end
+clients. As a result, we had to constantly communicate with each
+other, synchronize our works and give feedback to each other. With time, our
+better understanding of the machine learning process made things easier and
+allowed us to solve problems quickly.
+
+\subsubsection{Caching Mechanism and MongoDB Document Size Restrictions}
+The first issue that we have faced was the caching mechanism for the processed
+data which helped the training with avoiding repetitive calculations when
+possible. Our first naive approach was to store everything in an array. It
+became quickly apparent that saving the data this way complicated the code
+immensely and was very error prone. The solution was to store serialized
+DataFrame objects as a document in the database. During the testing we realized
+that MongoDB did not allow for documents larger than 16 MB in size. Another
+framework (GridFS) that wrapped MongoDB allowed us to solve this problem and
+store files without any size restrictions.
+
+\subsubsection{Multiprocessing and Serving Many Clients in Parallel}
+The biggest challenge of the Model Management service was allowing multiple
+training or prediction processes take place on the server in parallel. Because
+of the computing intensive nature of the machine learning processes, it was
+not feasiable to run the training or prediction on the same process that handled
+the client requests which would greatly reduce the server responsiveness.
+After a through research on possible solutions, we have decided that the 
+best solution was to spawn new processes for each computing intensive task (i.e.
+training/prediction), since we discovered that multithreading does not work as
+expected in programming languages that depend on an interpreter. The hardest part
+was to synchronize the processes and handle the interprocess communication. The solution for data transfer between
+the server and the child processes was using Unix Pipes and the synchronization
+problem was solved by using counting semaphores.
 \subsection{Auth}
+No notable challenges.
