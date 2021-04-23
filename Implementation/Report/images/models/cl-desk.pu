@@ -1,0 +1,237 @@
+@startuml
+interface SensorConfiguration {
+    +name: SensorName
+    +maxSamplingRate: number
+    +defaultSamplingRate: number
+}
+interface SensorImplementation {
+    +start: (samplingRate: number) => void
+    +onRead: (fn: onReadCallback) => void
+    +stop: () => void
+}
+class default {
+    -accessToken: string
+    -refreshToken: string
+    +login(a: string, r: string): void
+    +logout(): void
+    +getAccessToken(): string
+    +isAuthenticated(): boolean
+}
+enum HyperparameterType {
+    Constant
+    Integer
+    Double
+    Select
+}
+interface ClassifierOptions {
+    +hyperparameters: Record<string, Hyperparameter>
+    +conditions: string[]
+}
+interface TrainingParameters {
+    +features: string[]
+    +imputers: string[]
+    +normalizers: string[]
+    +classifiers: string[]
+    +classifierOptions: Record<string, ClassifierOptions>
+    +windowSize: number
+    +slidingStep: number
+}
+interface PerComponentConfig {
+    +sensor: string
+    +component: string
+    +imputation: string
+    +features: string[]
+    +normalizer: string
+}
+interface ModelOptions {
+    +perComponentConfigs: PerComponentConfig[]
+    +modelName: string
+    +classifier: string
+    +windowSize: number
+    +slidingStep: number
+    +hyperparameters: any
+}
+interface SensorOptions {
+    +sensorName: SensorName
+    +samplingRate: number
+}
+interface Timeframe {
+    +start: number
+    +end: number
+}
+interface IWorkspace {
+    +id: string
+    +name: string
+}
+interface ISensor {
+    +id: string
+    +name: SensorName
+    +samplingRate: number
+}
+interface ILabel {
+    +labelId: string
+    +name: string
+    +description: string
+    +sampleCount: number
+}
+interface IDatapoint {
+    +timestamp: number
+    +data: Data
+}
+interface ISensorDatapoints {
+    +sensorName: SensorName
+    +dataPoints: IDatapoint[]
+}
+interface ListedSample {
+    +label: string
+    +id: string
+}
+interface ISample {
+    +label: string
+    +start: number
+    +end: number
+    +data: ISensorDatapoints[]
+    +timeframes: Timeframe[]
+}
+interface IModel {
+    +id: string
+    +name: string
+}
+interface IMetric {
+    +name: string
+    +score: number
+}
+interface ILabelPerformance {
+    +label: string
+    +metrics: IMetric[]
+}
+interface IHyperparameter {
+    +name: string
+    +value: string
+}
+interface IModelDetails {
+    +name: string
+    +labelPerformance: ILabelPerformance[]
+    +perComponentConfigs: PerComponentConfig[]
+    +classifier: string
+    +hyperparameters: IHyperparameter[]
+}
+interface TrainingState {
+    +state: TrainingStateEnum
+    +error: string | null
+}
+enum TrainingStateEnum {
+    NO_TRAINING_YET
+    TRAINING_INITIATED
+    FEATURE_EXTRACTION
+    MODEL_TRAINING
+    CLASSIFICATION_REPORT
+    TRAINING_SUCCESSFUL
+}
+interface DesktopAPI {
+    +login(username: string, password: string): Promise<void>
+    +logout(): void
+    +signup(username: string, password: string, email: string): Promise<void>
+    +isAuthenticated(): boolean
+    +getAvailableTrainingParameters(): Promise<TrainingParameters>
+    +train(w: string, options: ModelOptions): Promise<void>
+    +getTrainingState(w: string): Promise<TrainingState>
+    +getWorkspaces(): Promise<IWorkspace[]>
+    +createWorkspace(name: string, sensors: SensorOptions[]): Promise<boolean>
+    +getWorkspaceSensors(w: string): Promise<ISensor[]>
+    +getSamples(w: string): Promise<ListedSample[]>
+    +deleteSample(w: string, sample: string): Promise<void>
+    +getDataCollectionID(w: string): Promise<string>
+    +getPredictionID(w: string, m: string): Promise<string>
+    +getLabels(w: string): Promise<ILabel[]>
+    +deleteWorkspace(w: string): Promise<void>
+    +renameWorkspace(w: string, n: string): Promise<void>
+    +createLabel(w: string, labelName: string): Promise<void>
+    +renameLabel(w: string, l: string, name: string): Promise<void>
+    +describeLabel(w: string, l: string, desc: string): Promise<void>
+    +deleteLabel(w: string, l: string): Promise<void>
+    +getSampleDetails(w: string, s: string): Promise<ISample>
+    +setSampleLabel(w: string, s: string, l: string): Promise<void>
+    +setSampleTimeframe(w: string, s: string, frames: Timeframe[]): Promise<void>
+    +getModels(w: string): Promise<IModel[]>
+    +getModelDetails(w: string, m: string): Promise<IModelDetails>
+    +renameModel(w: string, m: string, name: string): Promise<void>
+    +deleteModel(w: string, m: string): Promise<void>
+}
+class default implements DesktopAPI {
+    -lc: LoginController
+    -get(url: string): Promise<T>
+    -delete(url: string): Promise<T>
+    -put(url: string, data: T): Promise<Y>
+    -post(url: string, data: T): Promise<Y>
+    +login(username: string, password: string): Promise<void>
+    +refresh(token: string): Promise<void>
+    +logout(): void
+    +signup(username: string, password: string, email: string): Promise<void>
+    +isAuthenticated(): boolean
+    +getAvailableTrainingParameters(): Promise<TrainingParameters>
+    +train(w: string, opt: ModelOptions): Promise<void>
+    +getTrainingState(w: string): Promise<TrainingState>
+    +getWorkspaces(): Promise<IWorkspace[]>
+    +createWorkspace(name: string, sensors: SensorOptions[]): Promise<boolean>
+    +getWorkspaceSensors(w: string): Promise<ISensor[]>
+    +getSamples(w: string): Promise<ListedSample[]>
+    +deleteSample(w: string, sample: string): Promise<void>
+    +getDataCollectionID(w: string): Promise<string>
+    +getPredictionID(w: string, m: string): Promise<string>
+    +getLabels(w: string): Promise<ILabel[]>
+    +deleteWorkspace(w: string): Promise<void>
+    +renameWorkspace(w: string, n: string): Promise<void>
+    +createLabel(w: string, labelName: string): Promise<void>
+    +renameLabel(w: string, l: string, name: string): Promise<void>
+    +describeLabel(w: string, l: string, desc: string): Promise<void>
+    +deleteLabel(w: string, l: string): Promise<void>
+    +getSampleDetails(w: string, s: string): Promise<ISample>
+    +setSampleLabel(w: string, s: string, label: string): Promise<void>
+    +setSampleTimeframe(w: string, s: string, frames: Timeframe[]): Promise<void>
+    +getModels(w: string): Promise<IModel[]>
+    +getModelDetails(w: string, m: string): Promise<IModelDetails>
+    +renameModel(w: string, m: string, name: string): Promise<void>
+    +deleteModel(w: string, m: string): Promise<void>
+}
+interface Label {
+    +description: string
+    +name: string
+}
+interface Sensor {
+    +name: SensorName
+    +samplingRate: number
+}
+interface ISubmissionConfiguration {
+    +labels: Label[]
+    +sensors: Sensor[]
+}
+interface IPredictionConfiguration {
+    +sensors: Sensor[]
+}
+interface Datapoint {
+    +timestamp: number
+    +data: Data
+}
+interface SensorDatapoints {
+    +sensor: SensorName
+    +dataPoints: Datapoint[]
+}
+interface MobileAPI {
+    +submitSample(id: string, label: string, start: number, end: number, data: SensorDatapoints[]): Promise<void>
+    +getSubmissionConfiguration(id: string): Promise<ISubmissionConfiguration>
+    +startPrediction(id: string): Promise<void>
+    +predict(id: string, start: number, end: number, data: SensorDatapoints[]): Promise<void>
+    +getPredictionConfiguration(id: string): Promise<IPredictionConfiguration>
+    +getPrediction(id: string): Promise<string[]>
+}
+class SameOriginMobileAPI implements MobileAPI {
+    +predict(id: string, start: number, end: number, data: SensorDatapoints[]): Promise<void>
+    +startPrediction(id: string): Promise<void>
+    +getPrediction(id: string): Promise<string[]>
+    +submitSample(id: string, label: string, start: number, end: number, data: SensorDatapoints[]): Promise<void>
+    +getSubmissionConfiguration(id: string): Promise<ISubmissionConfiguration>
+    +getPredictionConfiguration(id: string): Promise<IPredictionConfiguration>
+}
+class default implements DesktopAPI, MobileAPI
+@enduml
