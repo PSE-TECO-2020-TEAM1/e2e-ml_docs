@@ -1,0 +1,12 @@
+@startuml
+interface SensorConfiguration {
+    +name: SensorName
+    +maxSamplingRate: number
+    +defaultSamplingRate: number
+}
+interface SensorImplementation {
+    +start: (samplingRate: number) => void
+    +onRead: (fn: onReadCallback) => void
+    +stop: () => void
+}
+@enduml
