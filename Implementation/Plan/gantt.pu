@@ -5,7 +5,7 @@ sunday are closed
 monday are closed
 ' and ends 2021-02-19
 [Start] happens 2021-01-27
-[End] happens 2021-02-19
+[End] happens 2021-03-30
 -- clients --
 [c.API] on {Ömer} lasts 2 week and is colored in GreenYellow/Green
 [c.App] on {Ömer} lasts 2 days and is colored in GreenYellow/Green
@@ -13,26 +13,26 @@ monday are closed
 -- \tdesktop client --
 [c.d.LoginPage] on {Ömer} starts at [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
 [c.d.SignupPage] on {Ömer} starts at [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspacesListPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceCreationPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 1 days and is colored in GreenYellow/Green
-[c.d.WorkspacePage] on {Ömer} starts at [c.d.WorkspaceCreationPage]'s end and lasts 2 day and is colored in GreenYellow/Green
+[c.d.WorkspacesListPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 5 day and is colored in GreenYellow/Green
+[c.d.WorkspaceCreationPage] on {Ömer} starts at [c.d.SignupPage]'s end and lasts 5 days and is colored in GreenYellow/Green
+[c.d.WorkspacePage] on {Ömer} starts at [c.d.WorkspaceCreationPage]'s end and lasts 5 day and is colored in GreenYellow/Green
 [c.d.WorkspaceCollectDataPage] on {Ömer} starts at [c.d.WorkspacePage]'s end and lasts 1 day and is colored in GreenYellow/Green
 [c.d.QRView] on {Ömer} starts at [c.d.WorkspaceCollectDataPage]'s end and lasts 2 days and is colored in GreenYellow/Green
-[c.d.SampleList] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceSampleDetailsPage] on {Ömer} starts at [c.d.SampleList]'s end and lasts 2 days and is colored in GreenYellow/Green
-[c.d.SampleChart] on {Ömer} starts 2 days after [c.d.WorkspaceSampleDetailsPage]'s end and lasts 5 days
-[c.d.ModelOptions] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceLabelsPage] on {Ömer} starts at [c.d.ModelOptions]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceModelsPage] on {Ömer} starts 1 day after [c.d.ModelOptions]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceModelDetailsPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.d.WorkspaceModelClassifyPage] on {Ömer} starts at [c.d.WorkspaceModelsPage]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.d.SampleList] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 20 day and is colored in GreenYellow/Green
+[c.d.WorkspaceSampleDetailsPage] on {Ömer} starts at [c.d.WorkspacePage]'s start and lasts 2 days and is colored in GreenYellow/Green
+[c.d.SampleChart] on {Ömer} starts 2 days after [c.d.WorkspaceSampleDetailsPage]'s end and lasts 5 days and is colored in GreenYellow/Green
+[c.d.ModelOptions] on {Ömer} starts 15 days after [c.d.WorkspacePage]'s start and lasts 15 day and is colored in GreenYellow/Green
+[c.d.WorkspaceLabels] on {Ömer} starts at [c.d.ModelOptions]'s start and lasts 4 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModels] on {Ömer} starts 1 day after [c.d.ModelOptions]'s start and lasts 7 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModelDetailsPage] on {Ömer} starts at [c.d.WorkspaceModels]'s end and lasts 4 day and is colored in GreenYellow/Green
+[c.d.WorkspaceModelClassifyPage] on {Ömer} starts at [c.d.WorkspaceModels]'s end and lasts 1 day and is colored in GreenYellow/Green
 -- \tmobile client --
-[c.m.LabelSelectionPage] on {Tarek} {Ömer} starts 7 days after [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
+[c.m.LabelSelectionPage] on {Tarek} {Ömer} starts 35 days after [c.App]'s end and lasts 1 day and is colored in GreenYellow/Green
 [c.m.RecordingConfigurationPage] on {Tarek} {Ömer} starts at [c.m.LabelSelectionPage]'s end and lasts 1 day and is colored in GreenYellow/Green
-[c.m.RecordingPage] on {Tarek} {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 3 day and is colored in GreenYellow/Green
-[c.m.PredictionPage] on {Tarek} {Ömer} starts at [c.m.RecordingPage]'s end and lasts 3 day
+[c.m.RecordingPage] on {Tarek} {Ömer} starts at [c.m.RecordingConfigurationPage]'s end and lasts 8 day and is colored in GreenYellow/Green
+[c.m.PredictionPage] on {Tarek} {Ömer} starts at [c.m.RecordingPage]'s end and lasts 4 day and is colored in GreenYellow/Green
 -- workspace management --
-[w.App] on {Murat} starts 2021-01-29 and  lasts 1 day and is colored in GreenYellow/Green
+[w.App] on {Murat} starts 2021-01-29 and  lasts 2 day and is colored in GreenYellow/Green
 [w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 5 day and is colored in GreenYellow/Green
 [w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 3 day and is colored in GreenYellow/Green
 [w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 1 day and is colored in GreenYellow/Green
