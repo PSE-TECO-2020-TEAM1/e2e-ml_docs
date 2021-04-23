@@ -1,0 +1,340 @@
+@startuml
+class app.models.domain.ml_model.MlModel {
+  config: TrainingConfig
+  label_performance_metrics: List[PerformanceMetrics]
+  column_order: List[builtins.str]
+  label_encoder_object_file_ID: bson.objectid.ObjectId
+  pipeline_object_file_ID: bson.objectid.ObjectId
+}
+class app.db.asyncdb.ml_model_repository.MlModelRepository {
+}
+class app.db.error.non_existent_error.NonExistentError {
+}
+class app.models.domain.prediction_key.PredictionKey {
+  workspace_id: bson.objectid.ObjectId
+  model_id: bson.objectid.ObjectId
+}
+class app.models.domain.sensor.SensorComponent {
+}
+enum app.ml.training.training_state.TrainingState {
+  NO_TRAINING_YET: NO_TRAINING_YET
+  TRAINING_INITIATED: TRAINING_INITIATED
+  FEATURE_EXTRACTION: FEATURE_EXTRACTION
+  MODEL_TRAINING: MODEL_TRAINING
+  CLASSIFICATION_REPORT: CLASSIFICATION_REPORT
+  TRAINING_SUCCESSFUL: TRAINING_SUCCESSFUL
+  WORKSPACE_MANAGEMENT_CONNECTION_ERROR: WORKSPACE_MANAGEMENT_CONNECTION_ERROR
+  NO_SAMPLE_ERROR: NO_SAMPLE_ERROR
+  TRAINING_ERROR: TRAINING_ERROR
+}
+class app.models.domain.workspace.Workspace {
+  user_id: bson.objectid.ObjectId
+  sensors: Dict[builtins.str, Sensor]
+  training_data_set: TrainingDataSet
+  training_state: TrainingState
+  ml_model_refs: List[bson.objectid.ObjectId]
+}
+class app.db.asyncdb.workspace_repository.WorkspaceRepository {
+}
+class app.db.syncdb.file_repository.FileRepository {
+}
+class app.db.syncdb.ml_model_repository.MlModelRepository {
+}
+enum app.ml.objects.feature.enum.Feature {
+  MINIMUM: MINIMUM
+  MAXIMUM: MAXIMUM
+  VARIANCE: VARIANCE
+  ABS_ENERGY: ABS_ENERGY
+  MEAN: MEAN
+  MEDIAN: MEDIAN
+  SKEWNESS: SKEWNESS
+  KURTOSIS: KURTOSIS
+}
+class app.models.domain.training_data_set.TrainingDataSet {
+  last_modified: int
+  sample_list_file_ID: typing.Union[bson.objectid.ObjectId, NoneType]
+  feature_extraction_cache: Dict[builtins.str, FeatureExtractionData]
+}
+class app.db.syncdb.workspace_repository.WorkspaceRepository {
+}
+class app.models.schemas.mongo_model.OID {
+}
+class app.models.schemas.parameters.ClassifierSelection {
+  classifier: Classifier
+  hyperparameters: Dict[builtins.str]
+  conditions: List[builtins.str]
+}
+class app.models.schemas.parameters.ParametersInResponse {
+  features: List[Feature]
+  imputations: List[Imputation]
+  normalizations: List[Normalization]
+  classifierSelections: List[ClassifierSelection]
+}
+class app.models.schemas.prediction_config.PredictionConfig {
+  sensors: List[SensorInPredictionConfig]
+}
+class app.models.schemas.prediction_data.PredictionData {
+  predictionId: OID
+  sample: SampleInPredict
+}
+class app.models.domain.sensor.Sensor {
+  sampling_rate: int
+  components: List[SensorComponent]
+}
+class app.models.schemas.sensor.SensorInPredictionConfig {
+  name: str
+  samplingRate: int
+}
+class app.models.schemas.sensor.SensorInWorkspace {
+  name: str
+  samplingRate: int
+  dataFormat: List[builtins.str]
+}
+class app.models.schemas.workspace_config.WorkspaceConfig {
+  workspaceId: OID
+  sensors: List[SensorInWorkspace]
+}
+class app.models.schemas.ml_model.MlModelInResponse {
+  config: TrainingConfigInResponse
+  labelPerformanceMetrics: List[PerformanceMetricsInResponse]
+}
+class app.models.schemas.ml_model.MlModelMetadataInResponse {
+  id: OID
+  name: str
+}
+class app.models.schemas.ml_model.PerformanceMetricsInResponse {
+  label: str
+  metrics: List[SingleMetricInResponse]
+}
+class app.models.schemas.prediction_config.PredictionIdInResponse {
+  predictionId: OID
+}
+class app.models.schemas.ml_model.SingleMetricInResponse {
+  name: str
+  score: float
+}
+class app.models.schemas.training_config.TrainingConfigInTrain {
+  modelName: str
+  windowSize: int
+  slidingStep: int
+  perComponentConfigs: List[PerComponentConfigInTrain]
+  classifier: Classifier
+  hyperparameters: Dict[builtins.str]
+}
+class app.models.schemas.training_state.TrainingStateInResponse {
+  state: TrainingState
+  error: typing.Union[str, NoneType]
+}
+enum app.ml.objects.classification.enum.Classifier {
+  KNEIGHBORS_CLASSIFIER: KNEIGHBORS_CLASSIFIER
+  MLP_CLASSIFIER: MLP_CLASSIFIER
+  RANDOM_FOREST_CLASSIFIER: RANDOM_FOREST_CLASSIFIER
+  SVC_CLASSIFIER: SVC_CLASSIFIER
+}
+class app.ml.objects.column_transfomer.PandasColumnTransformer {
+  steps: List[]
+}
+enum app.ml.objects.imputation.enum.Imputation {
+  MEAN_IMPUTATION: MEAN_IMPUTATION
+  ZERO_INTERPOLATION: ZERO_INTERPOLATION
+  LINEAR_INTERPOLATION: LINEAR_INTERPOLATION
+  QUADRATIC_INTERPOLATION: QUADRATIC_INTERPOLATION
+  CUBIC_INTERPOLATION: CUBIC_INTERPOLATION
+  MOVING_AVERAGE_IMPUTATION: MOVING_AVERAGE_IMPUTATION
+  LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION: LAST_OBSERVATION_CARRIED_FORWARD_IMPUTATION
+}
+enum app.ml.objects.normalization.enum.Normalization {
+  MIN_MAX_SCALER: MIN_MAX_SCALER
+  NORMALIZER: NORMALIZER
+  QUANTILE_TRANSFORMER: QUANTILE_TRANSFORMER
+  ROBUST_SCALER: ROBUST_SCALER
+  STANDARD_SCALER: STANDARD_SCALER
+}
+class app.models.domain.training_config.PipelineConfig {
+  imputation: Imputation
+  normalization: Normalization
+}
+class app.ml.prediction.data_set_manager.DataSetManager {
+}
+class app.models.domain.sliding_window.SlidingWindow {
+  window_size: int
+  sliding_step: int
+}
+class app.ml.prediction.prediction_manager.PredictionManager {
+}
+class app.ml.prediction.prediction_manager.PredictionUtil {
+  process: multiprocessing.context.Process
+  semaphore: multiprocessing.synchronize.Semaphore
+  manager_end: multiprocessing.connection.Connection
+  last_access: datetime.datetime
+}
+class app.ml.prediction.predictor.Predictor {
+}
+class app.models.schemas.prediction_data.SampleInPredict {
+  start: int
+  end: int
+  sensorDataPoints: List[DataPointsPerSensorInPredict]
+}
+class app.models.schemas.training_config.HyperparameterInResponse {
+  name: str
+  value: typing.Any
+}
+class app.models.domain.training_config.PerComponentConfig {
+  features: List[Feature]
+  pipeline_config: PipelineConfig
+}
+class app.models.schemas.training_config.PerComponentConfigInTrain {
+  sensor: str
+  component: str
+  features: List[Feature]
+  imputation: Imputation
+  normalizer: Normalization
+}
+class app.models.domain.training_config.TrainingConfig {
+  model_name: str
+  sliding_window: SlidingWindow
+  perComponentConfigs: Dict[SensorComponent, PerComponentConfig]
+  classifier: Classifier
+  hyperparameters: Dict[builtins.str]
+}
+class app.models.schemas.training_config.TrainingConfigInResponse {
+  modelName: str
+  windowSize: int
+  slidingStep: int
+  perComponentConfigs: List[PerComponentConfigInTrain]
+  classifier: Classifier
+  hyperparameters: List[HyperparameterInResponse]
+}
+class app.ml.training.data_set_manager.DataSetManager {
+}
+class app.workspace_management_api.data_source.ExternalDataSource {
+}
+class app.models.domain.feature_extraction_data.FeatureExtractionData {
+  data_windows_df_file_ID: bson.objectid.ObjectId
+  labels_of_data_windows_file_ID: bson.objectid.ObjectId
+  sensor_component_feature_df_file_IDs: Dict[SensorComponent]
+}
+class app.models.domain.sample.InterpolatedSample {
+  label: str
+  data_frame: pandas.core.frame.DataFrame
+}
+class app.workspace_management_api.error.NoSampleInWorkspaceError {
+}
+class app.ml.training.trainer.Trainer {
+}
+class app.workspace_management_api.error.WorkspaceManagementConnectionError {
+}
+class app.workspace_management_api.workspace_data_source.WorkspaceDataSource {
+}
+class app.models.domain.performance_metrics.PerformanceMetrics {
+  label: str
+  metrics: List[SingleMetric]
+}
+class app.models.domain.performance_metrics.SingleMetric {
+  name: str
+  score: float
+}
+class app.workspace_management_api.sample_model.DataPoint {
+  data: List[builtins.float]
+  timestamp: int
+}
+class app.workspace_management_api.sample_model.SampleFromWorkspace {
+  label: str
+  start: int
+  end: int
+  timeFrames: List[Timeframe]
+  sensorDataPoints: List[DataPointsPerSensor]
+}
+class app.workspace_management_api.sample_model.Timeframe {
+  start: int
+  end: int
+}
+class app.models.domain.db_doc.DbDoc {
+  _id: typing.Union[bson.objectid.ObjectId, NoneType]
+}
+class app.models.schemas.mongo_model.MongoModel {
+}
+class app.models.schemas.prediction_data.DataPointInPredict {
+  data: List[builtins.float]
+  timestamp: int
+}
+class app.models.schemas.prediction_data.DataPointsPerSensorInPredict {
+  sensor: str
+  dataPoints: List[DataPointInPredict]
+}
+class app.workspace_management_api.sample_model.DataPointsPerSensor {
+  sensorName: str
+  dataPoints: List[DataPoint]
+}
+class app.workspace_management_api.stub_source_delete.WorkspaceDataSource {
+}
+app.models.domain.ml_model.MlModel *-- app.models.domain.training_config.TrainingConfig
+app.models.domain.ml_model.MlModel *-- app.models.domain.performance_metrics.PerformanceMetrics
+app.models.domain.db_doc.DbDoc <|-- app.models.domain.ml_model.MlModel
+app.models.domain.db_doc.DbDoc <|-- app.models.domain.prediction_key.PredictionKey
+app.models.domain.workspace.Workspace *-- app.models.domain.sensor.Sensor
+app.models.domain.workspace.Workspace *-- app.models.domain.training_data_set.TrainingDataSet
+app.models.domain.workspace.Workspace *-- app.ml.training.training_state.TrainingState
+app.models.domain.db_doc.DbDoc <|-- app.models.domain.workspace.Workspace
+app.models.domain.training_data_set.TrainingDataSet *-- app.models.domain.feature_extraction_data.FeatureExtractionData
+app.models.schemas.parameters.ClassifierSelection *-- app.ml.objects.classification.enum.Classifier
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.parameters.ClassifierSelection
+app.models.schemas.parameters.ParametersInResponse *-- app.ml.objects.feature.enum.Feature
+app.models.schemas.parameters.ParametersInResponse *-- app.ml.objects.imputation.enum.Imputation
+app.models.schemas.parameters.ParametersInResponse *-- app.ml.objects.normalization.enum.Normalization
+app.models.schemas.parameters.ParametersInResponse *-- app.models.schemas.parameters.ClassifierSelection
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.parameters.ParametersInResponse
+app.models.schemas.prediction_config.PredictionConfig *-- app.models.schemas.sensor.SensorInPredictionConfig
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_config.PredictionConfig
+app.models.schemas.prediction_data.PredictionData *-- app.models.schemas.mongo_model.OID
+app.models.schemas.prediction_data.PredictionData *-- app.models.schemas.prediction_data.SampleInPredict
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_data.PredictionData
+app.models.domain.sensor.Sensor *-- app.models.domain.sensor.SensorComponent
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.sensor.SensorInPredictionConfig
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.sensor.SensorInWorkspace
+app.models.schemas.workspace_config.WorkspaceConfig *-- app.models.schemas.mongo_model.OID
+app.models.schemas.workspace_config.WorkspaceConfig *-- app.models.schemas.sensor.SensorInWorkspace
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.workspace_config.WorkspaceConfig
+app.models.schemas.ml_model.MlModelInResponse *-- app.models.schemas.training_config.TrainingConfigInResponse
+app.models.schemas.ml_model.MlModelInResponse *-- app.models.schemas.ml_model.PerformanceMetricsInResponse
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.ml_model.MlModelInResponse
+app.models.schemas.ml_model.MlModelMetadataInResponse *-- app.models.schemas.mongo_model.OID
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.ml_model.MlModelMetadataInResponse
+app.models.schemas.ml_model.PerformanceMetricsInResponse *-- app.models.schemas.ml_model.SingleMetricInResponse
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.ml_model.PerformanceMetricsInResponse
+app.models.schemas.prediction_config.PredictionIdInResponse *-- app.models.schemas.mongo_model.OID
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_config.PredictionIdInResponse
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.ml_model.SingleMetricInResponse
+app.models.schemas.training_config.TrainingConfigInTrain *-- app.models.schemas.training_config.PerComponentConfigInTrain
+app.models.schemas.training_config.TrainingConfigInTrain *-- app.ml.objects.classification.enum.Classifier
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.training_config.TrainingConfigInTrain
+app.models.schemas.training_state.TrainingStateInResponse *-- app.ml.training.training_state.TrainingState
+app.models.domain.training_config.PipelineConfig *-- app.ml.objects.imputation.enum.Imputation
+app.models.domain.training_config.PipelineConfig *-- app.ml.objects.normalization.enum.Normalization
+app.models.schemas.prediction_data.SampleInPredict *-- app.models.schemas.prediction_data.DataPointsPerSensorInPredict
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_data.SampleInPredict
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.training_config.HyperparameterInResponse
+app.models.domain.training_config.PerComponentConfig *-- app.ml.objects.feature.enum.Feature
+app.models.domain.training_config.PerComponentConfig *-- app.models.domain.training_config.PipelineConfig
+app.models.schemas.training_config.PerComponentConfigInTrain *-- app.ml.objects.feature.enum.Feature
+app.models.schemas.training_config.PerComponentConfigInTrain *-- app.ml.objects.imputation.enum.Imputation
+app.models.schemas.training_config.PerComponentConfigInTrain *-- app.ml.objects.normalization.enum.Normalization
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.training_config.PerComponentConfigInTrain
+app.models.domain.training_config.TrainingConfig *-- app.models.domain.sliding_window.SlidingWindow
+app.models.domain.training_config.TrainingConfig *-- app.models.domain.sensor.SensorComponent
+app.models.domain.training_config.TrainingConfig *-- app.models.domain.training_config.PerComponentConfig
+app.models.domain.training_config.TrainingConfig *-- app.ml.objects.classification.enum.Classifier
+app.models.schemas.training_config.TrainingConfigInResponse *-- app.models.schemas.training_config.PerComponentConfigInTrain
+app.models.schemas.training_config.TrainingConfigInResponse *-- app.ml.objects.classification.enum.Classifier
+app.models.schemas.training_config.TrainingConfigInResponse *-- app.models.schemas.training_config.HyperparameterInResponse
+app.models.domain.feature_extraction_data.FeatureExtractionData *-- app.models.domain.sensor.SensorComponent
+app.workspace_management_api.data_source.ExternalDataSource <|-- app.workspace_management_api.workspace_data_source.WorkspaceDataSource
+app.models.domain.performance_metrics.PerformanceMetrics *-- app.models.domain.performance_metrics.SingleMetric
+app.workspace_management_api.sample_model.SampleFromWorkspace *-- app.workspace_management_api.sample_model.Timeframe
+app.workspace_management_api.sample_model.SampleFromWorkspace *-- app.workspace_management_api.sample_model.DataPointsPerSensor
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_data.DataPointInPredict
+app.models.schemas.prediction_data.DataPointsPerSensorInPredict *-- app.models.schemas.prediction_data.DataPointInPredict
+app.models.schemas.mongo_model.MongoModel <|-- app.models.schemas.prediction_data.DataPointsPerSensorInPredict
+app.workspace_management_api.sample_model.DataPointsPerSensor *-- app.workspace_management_api.sample_model.DataPoint
+app.workspace_management_api.data_source.ExternalDataSource <|-- app.workspace_management_api.stub_source_delete.WorkspaceDataSource
+@enduml
