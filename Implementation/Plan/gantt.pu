@@ -46,63 +46,62 @@ monday are closed
 [w.Label] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
 [w.LabelController] on {Murat} starts at [w.App]'s end and lasts 2 day and is colored in GreenYellow/Green
 -- model management --
-[m.Main] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.Config] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 1 day and is colored in GreenYellow/Green
-[m.asyncDB.MLModelRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 3 day and is colored in GreenYellow/Green 
-[m.asyncDB.WorkspaceRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 3 day and is colored in GreenYellow/Green 
-[m.syncDB.FileRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 3 day and is colored in GreenYellow/Green 
-[m.syncDB.MLModelRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 3 day and is colored in GreenYellow/Green 
-[m.syncDB.WorkspaceRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 3 day and is colored in GreenYellow/Green 
-[m.CommonRoutes] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.WorkspaceRoutes] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.API] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.Dependancies] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.ExceptionHandling] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.Services] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.ClassifierConfigSpaces] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.classification.Enum] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.classification.Factory] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.feature.Enum] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.imputation.Enum] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.imputation.Factory] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.normalization.Enum] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.ColumnTransformer] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.PipelineFactory] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.Util] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.prediction.DataSetManager] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.PredictionManager] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.Predictor] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.ConfigParsing] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.training.DataSetManager] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.Trainer] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.TrainingManager] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green 
-[m.TrainingState] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.DataProcessing] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.SampleParsing] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.DbDoc] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.FeatureExtractionData] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.MLModel] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.PerformanceMetrics] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.PredictionKey] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.Sample] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.Sensor] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.SlidingWindow] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.TrainingConfig] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.TrainingDataSet] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.Workspace] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.MLModel] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.MongoModel] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.Parameters] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.PredictionConfig] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.PredictionData] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.Sensor] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.TrainingConfig] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.TrainingState] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.WorkspaceConfig] on {Tarek} lasts 1 day and is colored in GreenYellow/Green 
-[m.DataSource] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.SampleModel] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.WorkspaceDataSource] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
-[m.DataSource] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
+[m.Main] on {Enes} {Atalay} starts 2021-02-02 and lasts 2 day and is colored in GreenYellow/Green
+[m.Config] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 2 day and is colored in GreenYellow/Green
+[m.asyncDB.MLModelRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.asyncDB.WorkspaceRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.syncDB.FileRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.syncDB.MLModelRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.syncDB.WorkspaceRepository] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.ClassifierConfigSpaces] on {Enes} {Atalay} starts at [m.syncDB.WorkspaceRepository]'s end and lasts 2 day and is colored in GreenYellow/Green 
+[m.classification.Enum] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.classification.Factory] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.feature.Enum] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.imputation.Enum] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.imputation.Factory] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.normalization.Enum] on {Enes} {Atalay} starts at [m.ClassifierConfigSpaces]'s end and lasts 6 day and is colored in GreenYellow/Green 
+[m.DbDoc] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.FeatureExtractionData] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.domain.MLModel] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.PerformanceMetrics] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.PredictionKey] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.Sample] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.domain.Sensor] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.SlidingWindow] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.domain.TrainingConfig] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.TrainingDataSet] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.Workspace] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.SampleModel] on {Enes} {Atalay} starts at [m.normalization.Enum]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.schema.MLModel] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.MongoModel] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.Parameters] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.PredictionConfig] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.PredictionData] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.schema.Sensor] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.schema.TrainingConfig] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.schema.TrainingState] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.WorkspaceConfig] on {Tarek} starts at [m.normalization.Enum]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.ColumnTransformer] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green 
+[m.PipelineFactory] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green 
+[m.Util] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green 
+[m.ConfigParsing] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green
+[m.training.DataSetManager] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green 
+[m.Trainer] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green
+[m.TrainingManager] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green 
+[m.ml.training.TrainingState] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green
+[m.DataProcessing] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green
+[m.SampleParsing] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 20 day and is colored in GreenYellow/Green
+[m.prediction.DataSetManager] on {Enes} {Atalay} starts at [m.SampleParsing]'s end and lasts 10 day and is colored in GreenYellow/Green 
+[m.PredictionManager] on {Enes} {Atalay} starts at [m.SampleParsing]'s end and lasts 10 day and is colored in GreenYellow/Green 
+[m.Predictor] on {Enes} {Atalay} starts at [m.SampleParsing]'s end and lasts 10 day and is colored in GreenYellow/Green
+[m.WorkspaceDataSource] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green
+[m.DataSource] on {Enes} {Atalay} starts at [m.WorkspaceConfig]'s end and lasts 30 day and is colored in GreenYellow/Green
+[m.CommonRoutes] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.WorkspaceRoutes] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.API] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.Dependancies] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.ExceptionHandling] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
+[m.Services] on {Tarek} starts at [m.DataSource]'s end and lasts 5 day and is colored in GreenYellow/Green 
 -- authentication --
 [a.User] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
 [a.UserModel] on {Enes} {Atalay} lasts 1 day and is colored in GreenYellow/Green
