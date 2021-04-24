@@ -49,6 +49,16 @@ document but the following are the most important changes.
     frontend shows the end users.
 \end{itemize}
 
+\subsubsection{Database}
+\begin{itemize}
+    \item
+    Added wrapper classes for database queries
+    \newline
+    \textbf{Reason:} At first we were calling the functions of PyMongo directly in
+    the application code. We thought this was not a good idea as it was not possible
+    to use a different database. With that in mind, we implemented several wrapper
+    classes which implement database queries.
+
 \subsubsection{Database Models}
 \begin{itemize}
     \item
@@ -59,3 +69,41 @@ document but the following are the most important changes.
     unknown type of the binary objects, we added methods that complete
     the type information for each binary document to database model classes.
 \end{itemize}
+
+\subsubsection{Training}
+\begin{itemize}
+    \item
+    Training a model is handled by a new process
+    \newline
+    \textbf{Reason:} The training of a model takes a notable amount of time,
+    especially if there are a lot of samples. If the main process were to train
+    the model, any requests during the training could only be handled after the
+    training is finished. This was a terrible idea, so a new process is created
+    to handle the training and the main thread is then able to handle other
+    requests during the training.
+
+    \item
+    Added DataSetManager and TrainingManager classes
+    \newline
+    \textbf{Reason:} The Trainer class which we initially designed was a typical
+    God object in which the training pipeline, all the training algorithms and
+    the database queries are implemented. With seperation of concerns in mind, we
+    decided to split this Trainer class in three classes: DataSetManager handles 
+    the database queries, the Trainer class has all the algorithms implemented and
+    the TrainingManager handles the training pipeline.
+
+\subsubsection{Prediction}
+\begin{itemize}
+    \item
+    Prediction is handled by a new process
+    \newline
+    \textbf{Reason:} This has the same motivation with handling the training with a
+    new process: Being able to handle other requests while a prediction is under way.
+
+    \item
+    Added DataSetManager and PredictionManager classes
+    \newline
+    \textbf{Reason:} This also has the same reasoning with the training: The Predictor
+    class we had was a typical God object. The DataSetManager handles the database
+    queries, the Predictor class implements all the algorithms and the PredictionManager
+    handles the prediction pipeline.

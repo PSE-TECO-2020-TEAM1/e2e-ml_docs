@@ -1,0 +1,10 @@
+@startuml
+class default {
+    -accessToken: string
+    -refreshToken: string
+    +login(a: string, r: string): void
+    +logout(): void
+    +getAccessToken(): string
+    +isAuthenticated(): boolean
+}
+@enduml

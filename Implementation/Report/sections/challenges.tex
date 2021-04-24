@@ -43,8 +43,7 @@ After implementing the sensor, however, we've noticed how no matter what we've t
 \paragraph{Making a Consistent Server and Covering Failure Cases}
 As the workspace management handles storage of user data, it acts as a bridge between the client and the model management. Thus the validity of these data is a very crucial part of the work. Although the client prevents most of the invalid requests, such invalid requests could be handcrafted and sent to the server or the client itself could possibly generate an invalid data by an error so each request needed to be validated. Finding the error cases and handling them generated a lot of work, because finding the not so obvious error cases needed a general analysis of the action caused by the request on the server and possibly on the model management.
 \paragraph{Performance-Space Trade-Off Decisions}
-TBD
-\newpage
+Swaying from the initial design is in most cases undesirable and comes with a cost. However as the implementation phase progressed, it came to light that the initial design fell short on some aspects regarding the functionality (see \ref{changes}). The app is designed to be scalable so when introducing new changes to the codebase we had to take performance related issues into consideration and it slowed down the progress when the changes had conflicting aspects regarding performance and space.
 \subsection{Model Management}
 This was a very challenging part of the project for us, since we had no 
 experience with the libraries that we use (namely scikit-learn) as well
