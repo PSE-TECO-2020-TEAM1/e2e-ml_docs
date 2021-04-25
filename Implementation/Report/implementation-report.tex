@@ -12,6 +12,7 @@
 \usepackage{csquotes} % provides \enquote{} macro for "quotes"
 \usepackage{graphicx} % embed graphics
 \usepackage[toc]{glossaries}
+\usepackage{pdfpages}
 
 % definitions
 \newcommand{\pseProjectName}{An Interactive End-To-End Machine Learning Platform}
@@ -62,6 +63,10 @@ pdftitle={\pseDocTitle}}
 % \newpage
 % \include{sections/integration-tests}
 % \newpage
+
+\section{Appendix}
+\subsection{Client Diagram}
+\includepdf[pages=1-8]{images/clientrasterbate.pdf}
 
 \printnoidxglossary
 
