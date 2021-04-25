@@ -33,18 +33,18 @@ monday are closed
 [c.m.PredictionPage] on {Tarek} {Ömer} starts at [c.m.RecordingPage]'s end and lasts 4 day and is colored in GreenYellow/Green
 -- workspace management --
 [w.App] on {Murat} starts 2021-01-29 and  lasts 2 day and is colored in GreenYellow/Green
-[w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 5 day and is colored in GreenYellow/Green
-[w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 3 day and is colored in GreenYellow/Green
-[w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 1 day and is colored in GreenYellow/Green
-[w.Sensor] on {Murat} starts at [w.Workspace]'s end and lasts 1 day and is colored in GreenYellow/Green
-[w.SampleController] on {Murat} starts at [w.Sensor]'s end and lasts 3 day and is colored in GreenYellow/Green
-[w.SampleModel] on {Murat} starts at [w.SampleController]'s start and lasts 3 day and is colored in GreenYellow/Green
-[w.Sample] on {Murat} starts at [w.SampleController]'s start and lasts 1 day and is colored in GreenYellow/Green
+[w.WorkspaceController] on {Murat} starts 3 days after [w.App]'s end and lasts 8 day and is colored in GreenYellow/Green
+[w.WorkspaceModel] on {Murat} starts at [w.WorkspaceController]'s start and lasts 1 day and is colored in GreenYellow/Green
+[w.Workspace] on {Murat} starts at [w.WorkspaceModel]'s end and lasts 3 day and is colored in GreenYellow/Green
+[w.Sensor] on {Murat} starts at [w.Workspace]'s end and lasts 3 day and is colored in GreenYellow/Green
+[w.SampleController] on {Murat} starts at [w.Sensor]'s end and lasts 8 day and is colored in GreenYellow/Green
+[w.SampleModel] on {Murat} starts at [w.SampleController]'s start and lasts 1 day and is colored in GreenYellow/Green
+[w.Sample] on {Murat} starts at [w.SampleController]'s start and lasts 5 day and is colored in GreenYellow/Green
 [w.SensorDataPoints] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
 [w.DataPoint] on {Murat} starts at [w.SensorDataPoints]'s start and lasts 1 day and is colored in GreenYellow/Green
 [w.TimeFrame] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
 [w.Label] on {Murat} starts at [w.Sample]'s end and lasts 1 day and is colored in GreenYellow/Green
-[w.LabelController] on {Murat} starts at [w.App]'s end and lasts 2 day and is colored in GreenYellow/Green
+[w.LabelController] on {Murat} starts at [w.WorkspaceController]'s end and lasts 5 day and is colored in GreenYellow/Green
 -- model management --
 [m.Main] on {Enes} {Atalay} starts 2021-02-02 and lasts 2 day and is colored in GreenYellow/Green
 [m.Config] on {Enes} {Atalay} starts at [m.Main]'s end and lasts 2 day and is colored in GreenYellow/Green
