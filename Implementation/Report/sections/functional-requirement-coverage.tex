@@ -1,20 +1,93 @@
 \section{Functional Requirements Coverage}
 \subsection{Mandatory Requirements}
 \begin{center}
-    \begin{tabular}{c||c|c|c} 
+    \resizebox{\textwidth}{!}{\begin{tabular}{c||c|c|c} 
         Number & Requirement Name & Implemented? & Notes \\ [0.5ex]
         \hline
-        NUM & Here comes the name & YESNOPARTIALLY &  \\ 
+        F010 & Show a welcome page with a login panel when the website is accessed & YES &  \\
+        F020 & Show registration panel when clicked on register in the welcome page & YES &  \\
+        F030 & Show a workspaces overview where the available workspaces are listed after logged in & YES &  \\
+        F040 & Allow creating workspaces with the given name, sensors to be used and their sampling rate & YES &  \\
+        F050 & List the available sensors (accelerometer and gyroscope) for the recordings on the workspace creation window & YES &  \\
+        F060 & Show the workspace panel when a workspace is selected & YES &  \\
+        F070 & Allow renaming workspaces on the workspace panel by double clicking on the workspace name & YES &  \\
+        F080 & List labels with their sample count on the labels overview window  & YES &  \\
+        F090 & Allow creating labels for the actions to be recorded in the workspace  & YES &  \\
+        F100 & Allow renaming labels on the labels overview & YES &  \\
+        F110 & Allow deleting labels which in turn deletes the data samples with the selected label & YES &  \\
+        F120 & Display a link to be used for recording data to the workspace when collect data is clicked & YES &  \\
+        F130 & Display a button to copy the link to the clipboard & YES &  \\
+        F140 & Display QR code with the same link in the previous function embedded to be used for recording data & YES &  \\
+        F150 & Display the collected data samples chronologically on the workspace panel & YES &  \\
+        F160 & Visualize the selected data sample as a graph when the data sample is clicked on the workspace panel & YES &  \\
+        F170 & Allow changing the graph type & NO & (0) \\
+        F180 & Display the metadata of the selected data sample (identifier of the recording device and recording date/time) & YES &  \\
+        F190 & Allow setting the start/end time of the labeled actions on the graph view of the selected data sample & YES &  \\
+        F200 & Allow relabeling the selected data sample & YES &  \\
+        F210 & Allow deletion of the selected data sample & YES &  \\
+        F220 & Allow selecting data imputation options on the workspace panel & PARTIALLY & (1) \\
+        F230 & Allow selecting feature extration options on the workspace panel & YES &  \\
+        F240 & Allow selecting normalization options on the workspace panel& YES &  \\
+        F250 & Allow selecting machine learning model on the workspace panel with hyperparameters & YES &  \\
+        F260 & Request training of the model according to the selected options and automatically deploy it & YES &  \\
+        F270 & List trained and deployed models on the models overview & YES &  \\
+        F280 & Show the overview of the selected model when clicked on a model on the models overview & YES &  \\
+        F281 & Display the used parameters of the selected model & YES &  \\
+        F282 & Display the performance metrics of the selected model & PARTIALLY & (2) \\
+        F290 & Display a mini QR code symbol for each model on the models overview & YES &  \\
+        F300 & Display a link to use the deployed model on mobile devices when the mini QR code symbol is clicked & YES &  \\
+        F310 & Display a button to copy the link to the clipboard & YES &  \\
+        F320 & Display QR code with the same link in the previous function embedded to be used for classifying data & YES &  \\
+        F330 & Display a logout button on all pages Mobile Web Client & YES &  \\
+        F340 & Show a list of available labels that will label the recorded data when the data collection is initiated & YES &  \\
+        F350 & Show an error if not all the required sensors are available in the device & YES &  \\
+        F360 & Allow configuring the countdown duration until the recording starts & YES &  \\
+        F370 & Allow configuring the recording duration & YES &  \\
+        F380 & Show a button to initiate the recording & YES &  \\
+        F390 & Show a countdown page with the current configuration on display (label, sensors used and their sampling rates) & YES &  \\
+        F400 & Display the sensor data in real-time as curves for each sensor on a single graph & YES &  \\
+        F410 & Show a recording completed page when the recording duration times out  & YES &  \\
+        F420 & Allow discarding the last recording  & YES &  \\
+        F430 & Allow another recording with the same configuration  & YES &  \\
+        F440 & Allow editing configurations for the next recording  & YES &  \\
+        F450 & Show a page for classification when the link of a model is opened & YES &  \\
+        F460 & Start listening to the sensor data of the mobile device right after the page is loaded & YES &  \\
+        F470 & Display the sensor data in real-time as curves for each sensor on a single graph  & YES &  \\
+        F480 & Display the classified actions on the webpage in real time  & YES &  \\
+        F490 & Allow stopping the recording & YES &  \\
+        F500 & Display the classified actions as a chronological list when the recording is stopped & YES &  \\
+        F510 & Allow restarting the recording 5.1.2 Server API & YES &  \\
+        F520 & Serve authentication services  & YES &  \\
+        F530 & Handle workspace information  & YES &  \\
+        F540 & Handle workspace data set.  & YES &  \\
+        F550 & Handle label information for a workspace  & YES &  \\
+        F560 & Store data coming from a mobile client  & YES &  \\
+        F570 & Initiate the configured model training  & YES &  \\
+        F580 & Handle model information for the workspace & YES &  \\
         [1ex] 
-   \end{tabular}
+   \end{tabular}}
 \end{center}
+(0): one graph type only
+
+(1): Not all imputers implemented
+
+(2): Not all metrics implemented
 
 \subsection{Optional Requirements}
 \begin{center}
-    \begin{tabular}{c||c|c|c} 
-        Number & Requirement Name & Implemented? & Notes \\ [0.5ex]
+    \resizebox{\textwidth}{!}{\begin{tabular}{c||c|c|c} 
+        Number & Requirement Name & Implemented? \\ [0.5ex]
         \hline
-        NUM & Here comes the name & YESNOPARTIALLY &  \\ 
+        F590 & Serve a "Stay Signed In" functionality on the desktop web client & NO \\
+        F600 & Add CAPTCHA to login after 5 consecutive failed login attempts & NO \\
+        F610 & Show a sign if a data collecting device is currently active & NO \\
+        F620 & Allow listing samples by label on the workspace panel & NO \\
+        F630 & Allow adding descriptions to the labels to assist data collection & YES \\
+        F640 & Give the user non-visual feedback if an action is identified & NO \\
+        F650 & Set a sound feedback to play when an action is identified & NO \\
+        F660 & Serve a list of languages for the user interface & NO \\
+        F670 & Support magnetometer sensor & NO \\
+        F680 & Serve a "Forgot password" option that allows users to recover credentials & NO \\
         [1ex] 
-   \end{tabular}
+   \end{tabular}}
 \end{center}
